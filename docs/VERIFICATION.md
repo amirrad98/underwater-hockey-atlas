@@ -9,4 +9,4 @@
 
 The full foundation contains 27 articles, 207 deduplicated reference resources preserving 211 original observations, 57 directory entries (13 sourced map points), and 12 suppliers with 36 supplier-source observations. Supplier source details respect homepage-only public citation instructions.
 
-CI runs the production/type/lint/content/browser checks. Check the PR's status for the exact current commit; this document does not substitute for a successful remote run. Public GitHub Pages deployment remains blocked on eligibility/settings administration, as documented in DEPLOYMENT.md. Nothing has been merged, repository visibility remains private, and no purchase or credentials were created.
+CI runs the production/type/lint/content/browser checks. Check the PR's status for the exact current commit; this document does not substitute for a successful remote run. Pages eligibility and the Actions publishing source have since been confirmed in GitHub Settings. The owner authorized merge, public repository visibility and publication. The workflow uses the existing main-only environment protection; see DEPLOYMENT.md. No purchase or credentials were created.

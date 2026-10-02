@@ -2,7 +2,7 @@
 
 An integrated visual atlas of underwater hockey, connected to wiki articles and a curated resource library. Explore the sport through skills, equipment, formations and geography, then follow the sources. A dedicated UNBC Timber Whales profile connects the club to the wider sport.
 
-This private repository contains a foundational, static content prototype. No account, backend or production secrets are required. It is not an exhaustive encyclopedia or a replacement for qualified coaching and current competition rules.
+This repository contains a foundational, static content prototype. No account, backend or production secrets are required. It is not an exhaustive encyclopedia or a replacement for qualified coaching and current competition rules.
 
 ## Run locally
 
@@ -35,13 +35,13 @@ Use public sources only. Record source URL, publisher, date, access restrictions
 
 ## Review and delivery
 
-Changes are prepared on a review branch and may be proposed through a draft pull request. GitHub Pages publication is authorized separately from repository visibility: keep the repository private and do not upgrade a paid plan or add collaborators. CI checks production compilation and content integrity. Browser tests cover shared search, navigation, history and mobile layout.
+The foundation was prepared and tested in PR #1. The owner subsequently authorized merging the tested work, making this repository public, and publishing GitHub Pages. No paid-plan upgrade, collaborator changes or new credentials are needed. CI checks production compilation and content integrity. Browser tests cover shared search, navigation, history and mobile layout.
 
 ## GitHub Pages
 
-The Vite base path is `/underwater-hockey-atlas/`; use that path in local preview and on the intended project site. The Pages workflow supports a dedicated `pages-release` branch and future manual runs through GitHub Actions. See [deployment instructions and current access blocker](docs/DEPLOYMENT.md). A checked-in workflow is not evidence that a public deployment has succeeded.
+The Vite base path is `/underwater-hockey-atlas/`; use that path in local preview and on the intended project site. The Pages workflow publishes from the protected `main` branch and supports manual runs through GitHub Actions. See [deployment instructions](docs/DEPLOYMENT.md). A checked-in workflow is not evidence that a public deployment has succeeded.
 
-[GitHub documents](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages) that Pages from a private repository requires GitHub Pro, Team or Enterprise. The connected account's plan and this repository's Pages configuration were not exposed by the available connector during initial setup, and shell API authentication was unavailable. Keep visibility private; if eligibility or enabling Pages is blocked, report the exact GitHub response rather than changing visibility or buying a plan.
+Pages eligibility was confirmed in GitHub Settings and GitHub Actions was enabled as the publishing source. The existing `github-pages` environment permits `main`; its deployment protection is preserved. The successful deployment workflow output is the authoritative public URL.
 
 ## Review evidence
 

@@ -308,7 +308,7 @@
       "progressions": [
         "Choose the destination in advance.",
         "Choose between two ready receivers.",
-        "Let the coach introduce a passive lane obstacle before any live contest."
+        "Let the coach indicate one destination as unavailable using a clearly non-obstructing cue, before considering any live contest."
       ],
       "practiceSafety": "Apply the shared safety notice. Keep separate working spaces and use only pool-approved markers; the coach teaches legal stick use before adding opposition.",
       "related": [
@@ -344,7 +344,7 @@
       "safetyNoticeId": "supervised-skill-practice",
       "checkedAt": "2026-10-02",
       "contentType": "original-educational-lesson",
-      "instructionalWordCount": 451,
+      "instructionalWordCount": 457,
       "estimatedReadingMinutes": 3
     },
     {
@@ -1613,7 +1613,7 @@
       "id": "ais-breathhold",
       "title": "Breath Hold Training: Position Statement",
       "url": "https://auf.com.au/wp-content/uploads/2024/12/AIS-Breath-Hold-Training-Position-Statement-October-2020.pdf",
-      "authority": "Australian Institute of Sport / Victorian Institute of Sport; UHA mirror",
+      "authority": "Australian Institute of Sport / Victorian Institute of Sport; AUF mirror",
       "versionOrDate": "October 2020 position statement; 6-page AUF-hosted copy inspected",
       "checkedAt": "2026-10-02",
       "verificationStatus": "Publisher page or document body opened in expansion check on 2026-10-02",
@@ -1833,7 +1833,7 @@
   ],
   "validation": {
     "chapterCount": 14,
-    "instructionalWordCount": 6337,
+    "instructionalWordCount": 6343,
     "wordCountRange": [
       415,
       499

@@ -1,7 +1,9 @@
 import { test, expect } from '@playwright/test';
 import { scenarios, drills } from '../src/playbook/data';
+import { clubProfile } from '../src/club-profile';
 
 test('first load stores all core routes and local assets for offline reload', async ({ page, context }) => {
+  test.setTimeout(90_000); // Includes decoding the complete photo collection after going offline.
   const external: string[] = [];
   page.on('request', request => { if (new URL(request.url()).origin !== 'http://127.0.0.1:4197') external.push(request.url()); });
   await page.goto('/underwater-hockey-atlas/#/atlas');
@@ -28,6 +30,41 @@ test('first load stores all core routes and local assets for offline reload', as
       await expect(map).toBeVisible();
       await expect(page.locator('.world-basemap')).toHaveJSProperty('naturalWidth', 360);
       await expect(page.locator('.map-pin')).toHaveCount(13);
+    }
+    if (route === 'club') {
+      if (clubProfile.gallery.length > 6) await page.getByRole('button', { name: `Show all ${clubProfile.gallery.length} photos`, exact: true }).click();
+      for (const [index, photo] of clubProfile.gallery.entries()) {
+        const image = page.locator('.club-gallery img').nth(index);
+        await image.scrollIntoViewIfNeeded();
+        await image.evaluate(element => (element as HTMLImageElement).decode());
+        await expect(image).toHaveJSProperty('naturalWidth', photo.width);
+        await expect(image).toHaveJSProperty('naturalHeight', photo.height);
+        const original = await page.evaluate(async path => {
+          const image = new Image();
+          image.src = `/underwater-hockey-atlas/${path}`;
+          await image.decode();
+          return { width: image.naturalWidth, height: image.naturalHeight };
+        }, photo.originalSrc);
+        expect(original).toEqual({ width: photo.width, height: photo.height });
+      }
+      await expect(page.locator('.club-roster-card')).toHaveCount(20);
+      for (const image of await page.locator('.club-roster-card img, .club-hero-photo img, .club-header-logo').all()) {
+        await image.scrollIntoViewIfNeeded();
+        await image.evaluate(element => (element as HTMLImageElement).decode());
+        expect(await image.evaluate(element => (element as HTMLImageElement).naturalWidth)).toBeGreaterThan(0);
+      }
+      expect(clubProfile.media).toHaveLength(41);
+      for (const photo of clubProfile.media) {
+        const dimensions = await page.evaluate(async path => {
+          const response = await fetch(`/underwater-hockey-atlas/${path}`);
+          const image = new Image();
+          image.src = URL.createObjectURL(await response.blob());
+          await image.decode();
+          URL.revokeObjectURL(image.src);
+          return { width: image.naturalWidth, height: image.naturalHeight, mime: response.headers.get('content-type') };
+        }, photo.src);
+        expect(dimensions).toEqual({ width: photo.width, height: photo.height, mime: photo.src.endsWith('.png') ? 'image/png' : 'image/jpeg' });
+      }
     }
   }
   await page.evaluate(() => document.fonts.ready);

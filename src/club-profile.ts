@@ -1,19 +1,34 @@
-// Club facts synthesized from the field-level research catalog; original photos have separate provenance.
+// Club facts are original synthesis; media preserve the authorized published source renditions.
 import photoManifest from '../public/club/manifest.json' with { type: 'json' }
 
 export interface ClubPhoto {
   id: string
   src: string
   originalSrc: string
+  mediaType: 'club-photo' | 'roster-portrait' | 'club-logo'
+  mimeType: string
   width: number
   height: number
+  bytes: number
+  sha256: string
   alt: string
   caption: string
+  captionBasis: string
   sourceUrl: string
   sourcePageUrl: string
   sourcePageTitle: string
   credit: string
   rights: string
+  retrievedAt: string
+  viewedAt: string
+}
+export interface ClubRosterPerson {
+  name: string
+  publishedRole: string
+  sourceIds: string[]
+  photo: ClubPhoto
+  usesLogoPlaceholder: boolean
+  freshness: string
 }
 export interface ClubFact { label: string; text: string; status: string; sourceIds: string[] }
 export interface ClubProfile {
@@ -25,13 +40,225 @@ export interface ClubProfile {
   introSourceIds: string[]
   freshnessNote: string
   sections: { id: string; title: string; summary: string; sourceIds: string[]; facts: ClubFact[] }[]
-  roster: { label: string; note: string; count: number; sourceIds: string[]; roleCategories: string[]; people: { name: string; publishedRole: string; bio?: string; sourceIds: string[] }[] }
+  roster: { label: string; note: string; count: number; sourceIds: string[]; roleCategories: string[]; people: ClubRosterPerson[] }
   contacts: { label: string; url: string; sourceIds: string[] }[]
   sources: { id: string; title: string; url: string; note: string; checkedAt: string; publishedDate: string | null }[]
   gallery: ClubPhoto[]
+  hero: ClubPhoto
+  logos: ClubPhoto[]
+  media: ClubPhoto[]
   galleryNote: string
   assetManifestUrl: string
 }
+
+const clubMedia = [...photoManifest.photos, ...photoManifest.portraits, ...photoManifest.logos] as ClubPhoto[]
+function mediaById(id: string): ClubPhoto {
+  const photo = clubMedia.find(item => item.id === id)
+  if (!photo) throw new Error(`Missing club media: ${id}`)
+  return photo
+}
+const rosterPeople: ClubRosterPerson[] = [
+  {
+    "name": "Naomi C.",
+    "publishedRole": "Co-captain; biography also says co-president",
+    "sourceIds": [
+      "club_team"
+    ],
+    "photoId": "portrait-naomi-c",
+    "usesLogoPlaceholder": false,
+    "freshness": "Undated website entry; current membership and role unconfirmed."
+  },
+  {
+    "name": "Ella S.",
+    "publishedRole": "Co-captain and forward; biography also says co-president",
+    "sourceIds": [
+      "club_team"
+    ],
+    "photoId": "portrait-ella-s",
+    "usesLogoPlaceholder": false,
+    "freshness": "Undated website entry; current membership and role unconfirmed."
+  },
+  {
+    "name": "Taryn A.",
+    "publishedRole": "Treasurer; forward and defence",
+    "sourceIds": [
+      "club_team"
+    ],
+    "photoId": "portrait-taryn-a",
+    "usesLogoPlaceholder": false,
+    "freshness": "Undated website entry; current membership and role unconfirmed."
+  },
+  {
+    "name": "Professor Puck aka \"Rader\"",
+    "publishedRole": "Coach; defence",
+    "sourceIds": [
+      "club_team"
+    ],
+    "photoId": "portrait-professor-puck-aka-rader",
+    "usesLogoPlaceholder": false,
+    "freshness": "Undated website entry; current membership and role unconfirmed."
+  },
+  {
+    "name": "Tate F.",
+    "publishedRole": "Senior executive; forward, position 3",
+    "sourceIds": [
+      "club_team"
+    ],
+    "photoId": "portrait-tate-f",
+    "usesLogoPlaceholder": false,
+    "freshness": "Undated website entry; current membership and role unconfirmed."
+  },
+  {
+    "name": "Benjamin I.",
+    "publishedRole": "Social media manager; forward",
+    "sourceIds": [
+      "club_team"
+    ],
+    "photoId": "portrait-benjamin-i",
+    "usesLogoPlaceholder": false,
+    "freshness": "Undated website entry; current membership and role unconfirmed."
+  },
+  {
+    "name": "Phoenix C.",
+    "publishedRole": "Junior executive; forward",
+    "sourceIds": [
+      "club_team"
+    ],
+    "photoId": "portrait-phoenix-c",
+    "usesLogoPlaceholder": false,
+    "freshness": "Undated website entry; current membership and role unconfirmed."
+  },
+  {
+    "name": "Shayden H.",
+    "publishedRole": "Forward, positions 1 and 2",
+    "sourceIds": [
+      "club_team"
+    ],
+    "photoId": "portrait-shayden-h",
+    "usesLogoPlaceholder": false,
+    "freshness": "Undated website entry; current membership and role unconfirmed."
+  },
+  {
+    "name": "Joshua L.",
+    "publishedRole": "Defence",
+    "sourceIds": [
+      "club_team"
+    ],
+    "photoId": "portrait-joshua-l",
+    "usesLogoPlaceholder": false,
+    "freshness": "Undated website entry; current membership and role unconfirmed."
+  },
+  {
+    "name": "Keegan M.",
+    "publishedRole": "Forward",
+    "sourceIds": [
+      "club_team"
+    ],
+    "photoId": "portrait-keegan-m",
+    "usesLogoPlaceholder": false,
+    "freshness": "Undated website entry; current membership and role unconfirmed."
+  },
+  {
+    "name": "Amir A.",
+    "publishedRole": "Player",
+    "sourceIds": [
+      "club_team"
+    ],
+    "photoId": "portrait-amir-a",
+    "usesLogoPlaceholder": false,
+    "freshness": "Undated website entry; current membership and role unconfirmed."
+  },
+  {
+    "name": "Emma M.",
+    "publishedRole": "Player",
+    "sourceIds": [
+      "club_team"
+    ],
+    "photoId": "club-logo-2024",
+    "usesLogoPlaceholder": true,
+    "freshness": "Undated website entry; current membership and role unconfirmed."
+  },
+  {
+    "name": "Clea M.",
+    "publishedRole": "Player",
+    "sourceIds": [
+      "club_team"
+    ],
+    "photoId": "club-logo-2024",
+    "usesLogoPlaceholder": true,
+    "freshness": "Undated website entry; current membership and role unconfirmed."
+  },
+  {
+    "name": "Alexander M.",
+    "publishedRole": "Player",
+    "sourceIds": [
+      "club_team"
+    ],
+    "photoId": "club-logo-2024",
+    "usesLogoPlaceholder": true,
+    "freshness": "Undated website entry; current membership and role unconfirmed."
+  },
+  {
+    "name": "Piper F.",
+    "publishedRole": "Player",
+    "sourceIds": [
+      "club_team"
+    ],
+    "photoId": "portrait-piper-f",
+    "usesLogoPlaceholder": false,
+    "freshness": "Undated website entry; current membership and role unconfirmed."
+  },
+  {
+    "name": "Alex I.",
+    "publishedRole": "Player",
+    "sourceIds": [
+      "club_team"
+    ],
+    "photoId": "club-logo-2024",
+    "usesLogoPlaceholder": true,
+    "freshness": "Undated website entry; current membership and role unconfirmed."
+  },
+  {
+    "name": "Scott M.",
+    "publishedRole": "Player",
+    "sourceIds": [
+      "club_team"
+    ],
+    "photoId": "club-logo-2024",
+    "usesLogoPlaceholder": true,
+    "freshness": "Undated website entry; current membership and role unconfirmed."
+  },
+  {
+    "name": "Dannie R.",
+    "publishedRole": "Player",
+    "sourceIds": [
+      "club_team"
+    ],
+    "photoId": "club-logo-2024",
+    "usesLogoPlaceholder": true,
+    "freshness": "Undated website entry; current membership and role unconfirmed."
+  },
+  {
+    "name": "Lucas L.",
+    "publishedRole": "Player",
+    "sourceIds": [
+      "club_team"
+    ],
+    "photoId": "club-logo-2024",
+    "usesLogoPlaceholder": true,
+    "freshness": "Undated website entry; current membership and role unconfirmed."
+  },
+  {
+    "name": "Nyah D.",
+    "publishedRole": "Player",
+    "sourceIds": [
+      "club_team"
+    ],
+    "photoId": "club-logo-2024",
+    "usesLogoPlaceholder": true,
+    "freshness": "Undated website entry; current membership and role unconfirmed."
+  }
+].map(({ photoId, ...person }) => ({ ...person, photo: mediaById(photoId) }))
 
 export const clubProfile: ClubProfile = {
   "id": "timber-whales",
@@ -427,7 +654,7 @@ export const clubProfile: ClubProfile = {
   ],
   "roster": {
     "label": "Public website roster — undated",
-    "note": "The website lists 20 players and staff, without a season or update date. Treat the roles as an undated website snapshot. A later 2025 leadership handover and a 2026 AGM announcement mean the page cannot establish the present officers or lineup.",
+    "note": "The website lists 20 players and staff without a season or update date. Names and roles below are transcribed from that public, undated roster; they do not establish current membership or office. Twelve entries have published portraits and eight use the club logo. A later 2025 leadership handover and a 2026 AGM announcement mean present officers need confirmation.",
     "count": 20,
     "sourceIds": [
       "club_team",
@@ -444,7 +671,7 @@ export const clubProfile: ClubProfile = {
       "Defenders",
       "Players"
     ],
-    "people": []
+    people: rosterPeople
   },
   "contacts": [
     {
@@ -645,9 +872,28 @@ export const clubProfile: ClubProfile = {
       "note": "Tournament dates May 18–19, 2024 at UBC Aquatic Centre; club participation separately supported by official club site.",
       "checkedAt": "2026-10-02",
       "publishedDate": null
+    },
+    {
+      "id": "club_gallery_2023_2024",
+      "title": "2023–2024 Photos and Videos",
+      "url": "https://timberwhales.wixsite.com/unbc-timberwhales/portfolio",
+      "note": "Official gallery contains 33 items: 27 still photographs and six videos. No individual photograph captions were published. The season is a gallery label, not an independently established date for every photo.",
+      "checkedAt": "2026-10-02",
+      "publishedDate": null
+    },
+    {
+      "id": "club_gallery_2024_2025",
+      "title": "2024–2025 team gallery notice",
+      "url": "https://timberwhales.wixsite.com/unbc-timberwhales/2024-2025-team",
+      "note": "The page says to stay tuned for 2024–2025 team photos; no photographs are published on that page.",
+      "checkedAt": "2026-10-02",
+      "publishedDate": null
     }
   ],
-  "galleryNote": "Club website photographs are reused with the user’s explicit permission. Captions describe only visible content or text expressly published by the club.",
+  "galleryNote": "All 27 still photographs from the official 2023–2024 gallery are hosted here with project-specific permission. The source provides no individual photo captions: descriptions are neutral visual observations, and the season comes from the gallery title. Six videos are not included; the 2024–2025 gallery contains no photographs.",
   "assetManifestUrl": "club/manifest.json",
   gallery: photoManifest.photos as ClubPhoto[],
+  hero: mediaById('gallery-2023-2024-03'),
+  logos: photoManifest.logos as ClubPhoto[],
+  media: clubMedia,
 }

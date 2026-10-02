@@ -1,23 +1,65 @@
-UNBC TIMBERWHALES CLUB PHOTOGRAPHS — PROJECT REUSE PERMISSION
+UNBC TIMBERWHALES WEBSITE MEDIA — PROJECT REUSE PERMISSION
 
-The user explicitly authorized reusing the Timber Whales website photos in this
-atlas. The assistant asked: “Do you have permission to reuse the Timber Whales
-website photos on your site?” The user replied: “Oh yes, I do. I'm part of that.”
+The user explicitly authorized reusing the Timber Whales website photographs in
+this atlas. The assistant asked: “Do you have permission to reuse the Timber
+Whales website photos on your site?” The user replied: “Oh yes, I do. I'm part
+of that.” The subsequent integration request explicitly included the 27 historical
+gallery stills, 12 published roster portraits, eight roster entries using the
+website's logo placeholder, and two club logos.
 
-Scope: photographs published on https://timberwhales.wixsite.com/unbc-timberwhales
-and that site's linked club gallery, reused locally for this project. This is not
-a claim that the photographs are public domain, Creative Commons, or licensed
-for unrestricted redistribution. Copyright remains with the respective holders.
-No unrelated third-party or social-media photographs fall within this permission.
+Scope: media published on https://timberwhales.wixsite.com/unbc-timberwhales and
+its linked club gallery, reused locally for this atlas project. This is not a
+claim of public-domain, Creative Commons or unrestricted redistribution rights.
+Copyright remains with the respective holders. No unrelated third-party or
+separately collected social-media photographs fall within this permission.
 
-See manifest.json for each source page, source image URL, retrieval date, original
-file, display derivative, dimensions, byte counts and SHA-256 hashes. Downloaded
-originals are preserved without alteration. Display derivatives keep the complete
-composition and aspect ratio. Descriptive captions rely only on visible content
-or accompanying published text; no identities are inferred from faces.
+The club website footer reads © 2024 by UNBC TimberWhales. The reviewed pages do
+not provide individual photographer or artwork credits for these files. Credit
+the club website as the publishing source without inventing individual authors.
 
-The factual club profile is an original synthesis of the cited public sources.
-It distinguishes the dated fall 2026 schedule from historical listings and marks
+ACQUISITION AND FILE INTEGRITY
+
+The files were retrieved on 2026-10-02 through the supported cloud browser
+`downloadMedia` operation and transferred through the authorized research
+repository. This was not a download from the owner's native browser or Mac.
+Temporary browser-storage links, transport URLs and tokens are not public
+provenance and are not included in this asset manifest.
+
+The unchanged incoming inventory is retained at
+research/timber-whales-media/manifest.json, from research commit
+29400cd79a532b8a94dc756bd0cf89c2c0973867.
+
+These are downloaded Wix responsive renditions, not camera originals. All 41
+files were decoded and checked against their incoming SHA-256, byte count,
+width, height and MIME type: 40 JPEG files and one PNG file. The public asset
+files preserve those exact bytes. No image was recoded, cropped, reconstructed,
+enhanced or generated. Display and “original” links point to the same downloaded
+rendition. Shared uses (hero or roster logo) reference the same file.
+
+See manifest.json for every observed public image/page URL, source record,
+retrieval date, format, dimensions, size, hash, credit, caption basis and reuse
+scope. All 41 images were viewed before descriptions were authored. Gallery
+captions describe only visible content and the published 2023–2024 gallery
+season; no individual event, venue or person is inferred. The source provides no
+individual captions for these 27 gallery photographs.
+
+ROSTER AND COVERAGE
+
+Roster person labels come only from adjacent text on the public website, as
+recorded in the source manifest; no identity was inferred from a face. The whole
+website roster is undated. Published names and roles do not establish current
+membership, leadership or a current-season lineup. Twelve entries have portraits
+and eight use the club logo, as on the source page.
+
+All 27 still photographs from the 33-item 2023–2024 gallery are included. Its six
+video items are excluded from this still-media collection, not marked as failed
+downloads. The 2024–2025 gallery page contains no photographs. Generic pool
+backgrounds, equipment illustrations, social icons and redundant responsive
+variants are outside this club-media inventory. No unavailable still photos were
+reported by the completed source transfer.
+
+The factual club profile is an original synthesis of cited public sources. It
+keeps the dated fall 2026 schedule separate from historical listings and marks
 undated fees and roster information. The earlier research file's recommendation
 to seek photo permission records the state before permission was supplied; the
 authorization above is the later, task-specific permission.

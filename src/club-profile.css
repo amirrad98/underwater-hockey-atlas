@@ -10,11 +10,38 @@
 .club-evidence a, .club-gallery a { color: #226759; text-decoration: underline; text-underline-offset: 3px; }
 .club-evidence p, .club-evidence small { font-size: 12px; }
 .club-photo-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.club-gallery-controls { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin: 18px 0; }
+.club-gallery-controls p { margin: 0; font-size: 13px; }
+.gallery-toggle { min-height: 44px; padding: 10px 16px; color: #fffdf5; background: #19594f; border: 1px solid #19594f; border-radius: 4px; font-size: 13px; }
 .club-photo-grid figure { margin: 0; background: #eef1e8; border-radius: 6px; overflow: hidden; }
-.club-photo-grid img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; }
+.club-photo-grid img { display: block; width: 100%; height: auto; }
 .club-photo-grid figcaption { padding: 15px 18px; font-size: 13px; }
 .club-photo-grid figcaption p { margin-top: 0; }
 .club-photo-grid details { margin-top: 14px; font-size: 11px; }
 .club-photo-grid summary { cursor: pointer; }
 .club-aside-label { margin-top: 35px; }
+.club-photo-hero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: 45px; }
+.club-header-logo { width: 92px; height: auto; padding: 9px; background: #f6f5e9; border-radius: 50%; margin-bottom: 24px; }
+.club-hero-photo { margin: 0; background: #f6f5e9; color: #173f35; border-radius: 8px; overflow: hidden; }
+.club-hero-photo img { width: 100%; height: auto; display: block; }
+.club-hero-photo figcaption { padding: 16px 22px; }
+.club-hero-photo figcaption strong { font-size: 10px; letter-spacing: 1.4px; }
+.club-hero .club-hero-photo p { color: #456257; max-width: none; font-size: 13px; margin: 10px 0; }
+.club-photo-source { font-size: 11px; margin: 14px 0 0; overflow-wrap: anywhere; }
+.club-photo-source summary { cursor: pointer; line-height: 1.6; }
+.club-photo-source p { font-size: 11px; line-height: 1.7; }
+.club-photo-source a { text-decoration: underline; text-underline-offset: 3px; line-height: 1.8; }
+.club-roster .roster-freshness { padding: 18px 20px; background: #e8eee2; border-left: 3px solid #5d7967; }
+.club-roster-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; align-items: start; }
+.club-roster-card { min-width: 0; background: #eef1e8; border-radius: 6px; overflow: hidden; }
+.club-roster-card img { display: block; width: 100%; height: auto; }
+.club-roster-caption { padding: 16px; }
+.club-roster-caption h3 { font-size: 18px; margin: 0 0 10px; }
+.club-roster-caption .club-published-role { font-size: 13px; line-height: 1.6; margin: 0 0 10px; }
+.club-published-role span { display: block; color: #506b60; font-size: 10px; text-transform: uppercase; letter-spacing: .6px; margin-bottom: 6px; }
+.club-roster-caption small, .club-roster-caption .club-placeholder-note { font-size: 10px; line-height: 1.6; color: #506b60; }
+.club-roster-caption .club-photo-source p { font-size: 11px; }
+@media (max-width: 1000px) { .club-photo-hero { gap: 25px; } .club-roster-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 750px) { .club-photo-hero { display: grid; grid-template-columns: 1fr; } .club-header-logo { width: 76px; margin-bottom: 18px; } }
 @media (max-width: 600px) { .club-profile .club-facts > div { grid-template-columns: 1fr; gap: 7px; } .club-photo-grid { grid-template-columns: 1fr; } }
+@media (max-width: 360px) { .club-roster-grid { grid-template-columns: 1fr; } }

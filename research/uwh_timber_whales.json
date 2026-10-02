@@ -1,0 +1,970 @@
+{
+  "schema_version": "1.0",
+  "slug": "unbc-timberwhales",
+  "researched_at": "2026-10-02",
+  "research_scope": "Public club website, public club Instagram, association/university/municipal sources, and clearly identified local reporting. No private member information or outreach.",
+  "identity": {
+    "name": {
+      "value": "UNBC TimberWhales Underwater Hockey Team",
+      "source_ids": [
+        "club_home",
+        "nugss_status"
+      ],
+      "freshness": "verified_current",
+      "checked_at": "2026-10-02",
+      "as_of": "2026-10-02"
+    },
+    "aliases": {
+      "value": [
+        "UNBC Timberwhales",
+        "UNBC TimberWhales",
+        "UNBC Underwater Hockey Team"
+      ],
+      "source_ids": [
+        "club_home",
+        "instagram_profile",
+        "cuga_directory"
+      ],
+      "freshness": "verified_current",
+      "checked_at": "2026-10-02",
+      "as_of": "2026-10-02"
+    },
+    "sport": {
+      "value": "Underwater hockey",
+      "source_ids": [
+        "club_home"
+      ],
+      "freshness": "verified_current",
+      "checked_at": "2026-10-02",
+      "as_of": "2026-10-02"
+    },
+    "city": {
+      "value": "Prince George",
+      "source_ids": [
+        "cuga_directory",
+        "fall_2026_schedule"
+      ],
+      "freshness": "verified_current",
+      "checked_at": "2026-10-02",
+      "as_of": "2026-10-02"
+    },
+    "region": {
+      "value": "British Columbia",
+      "source_ids": [
+        "cuga_directory"
+      ],
+      "freshness": "verified_current",
+      "checked_at": "2026-10-02",
+      "as_of": "2026-10-02"
+    },
+    "country": {
+      "value": "Canada",
+      "source_ids": [
+        "cuga_directory"
+      ],
+      "freshness": "verified_current",
+      "checked_at": "2026-10-02",
+      "as_of": "2026-10-02"
+    },
+    "affiliation": {
+      "value": "University of Northern British Columbia student-led club recognized by NUGSS",
+      "source_ids": [
+        "nugss_status"
+      ],
+      "freshness": "verified_current",
+      "checked_at": "2026-10-02",
+      "as_of": "2026-10-02"
+    },
+    "recognition": {
+      "value": {
+        "status": "Established",
+        "approval_date": "2025-10-21"
+      },
+      "source_ids": [
+        "nugss_status"
+      ],
+      "freshness": "verified_current",
+      "checked_at": "2026-10-02",
+      "as_of": "2026-10-02",
+      "note": "Recognition approval is not a founding date."
+    },
+    "activity_status": {
+      "value": "Active for fall 2026",
+      "source_ids": [
+        "fall_2026_schedule",
+        "latest_social"
+      ],
+      "freshness": "verified_current",
+      "checked_at": "2026-10-02",
+      "as_of": "2026-10-02"
+    },
+    "revival": {
+      "value": "Revived in fall 2023",
+      "source_ids": [
+        "club_home",
+        "club_team",
+        "ckpg_2023"
+      ],
+      "freshness": "historical",
+      "checked_at": "2026-10-02",
+      "as_of": "2023",
+      "note": "Synthesis: home calls the 2023 incarnation founded; roster says restarted. Avoid claiming 2023 is the first-ever founding year."
+    },
+    "original_origin": {
+      "value": "A UNBC Timberwhales team existed by 2009; exact original founding year unverified",
+      "source_ids": [
+        "unbc_history"
+      ],
+      "freshness": "historical",
+      "checked_at": "2026-10-02",
+      "as_of": "2009"
+    }
+  },
+  "practice": {
+    "season": {
+      "value": "Fall 2026",
+      "source_ids": [
+        "fall_2026_schedule"
+      ],
+      "freshness": "verified_current",
+      "checked_at": "2026-10-02",
+      "as_of": "2026-10-02"
+    },
+    "venue": {
+      "value": "Canfor Leisure Pool",
+      "source_ids": [
+        "fall_2026_schedule",
+        "instagram_profile"
+      ],
+      "freshness": "verified_current",
+      "checked_at": "2026-10-02",
+      "as_of": "2026-10-02"
+    },
+    "address": {
+      "value": "670 Quebec Street, Prince George, British Columbia, Canada",
+      "source_ids": [
+        "city_aquatics"
+      ],
+      "freshness": "verified_current",
+      "checked_at": "2026-10-02",
+      "as_of": "2026-10-02"
+    },
+    "coordinates": {
+      "value": {
+        "latitude": 53.9144691,
+        "longitude": -122.7478262
+      },
+      "source_ids": [
+        "city_map"
+      ],
+      "freshness": "verified_current",
+      "checked_at": "2026-10-02",
+      "as_of": "2026-10-02",
+      "note": "Point extracted from municipality-linked place URL; not a separately surveyed coordinate."
+    },
+    "times": {
+      "value": [
+        {
+          "day": "Sunday",
+          "start": "17:45",
+          "end": "18:45"
+        },
+        {
+          "day": "Wednesday",
+          "start": "21:00",
+          "end": "22:00"
+        }
+      ],
+      "source_ids": [
+        "fall_2026_schedule",
+        "instagram_profile"
+      ],
+      "freshness": "verified_current",
+      "checked_at": "2026-10-02",
+      "as_of": "2026-10-02"
+    },
+    "time_basis": {
+      "value": "Local Prince George time",
+      "source_ids": [
+        "fall_2026_schedule"
+      ],
+      "freshness": "verified_current",
+      "checked_at": "2026-10-02",
+      "as_of": "2026-10-02",
+      "note": "No UTC conversion needed for display."
+    },
+    "first_practice": {
+      "value": "2026-09-13",
+      "source_ids": [
+        "fall_2026_schedule"
+      ],
+      "freshness": "historical",
+      "checked_at": "2026-10-02",
+      "as_of": "2026-09-13"
+    },
+    "exact_season_end": {
+      "value": null,
+      "source_ids": [
+        "fall_2026_schedule"
+      ],
+      "freshness": "unknown",
+      "checked_at": "2026-10-02",
+      "as_of": "2026-10-02",
+      "note": "Announcement says fall semester without an exact final date."
+    },
+    "exceptions": {
+      "value": null,
+      "source_ids": [
+        "fall_2026_schedule"
+      ],
+      "freshness": "unknown",
+      "checked_at": "2026-10-02",
+      "as_of": "2026-10-02",
+      "note": "Holiday cancellations or one-off changes not established; check club before first visit."
+    },
+    "previous_listing": {
+      "value": {
+        "venue": "Prince George Aquatic Centre",
+        "times": [
+          {
+            "day": "Wednesday",
+            "start": "20:30",
+            "end": "21:30"
+          },
+          {
+            "day": "Sunday",
+            "start": "18:30",
+            "end": "19:30"
+          }
+        ]
+      },
+      "source_ids": [
+        "cuga_directory"
+      ],
+      "freshness": "historical",
+      "checked_at": "2026-10-02",
+      "as_of": null,
+      "note": "Undated CUGA listing conflicts with explicit fall 2026 club announcement; do not present as current."
+    },
+    "previous_venue_closure": {
+      "value": "Prince George Aquatic Centre closed for renovation effective January 1, 2026",
+      "source_ids": [
+        "city_aquatics"
+      ],
+      "freshness": "verified_current",
+      "checked_at": "2026-10-02",
+      "as_of": "2026-10-02"
+    },
+    "website_calendar": {
+      "value": "Official website displayed no upcoming events and no October 2026 calendar entries",
+      "source_ids": [
+        "club_schedule"
+      ],
+      "freshness": "verified_current",
+      "checked_at": "2026-10-02",
+      "as_of": "2026-10-02",
+      "note": "Empty calendar does not mean practices stopped. The dated Instagram announcement is the stronger current schedule source."
+    }
+  },
+  "contact": {
+    "email": {
+      "value": "timberwhales@unbc.ca",
+      "source_ids": [
+        "club_contact",
+        "nugss_status",
+        "cuga_directory"
+      ],
+      "freshness": "verified_current",
+      "checked_at": "2026-10-02",
+      "as_of": "2026-10-02"
+    },
+    "website": {
+      "value": "https://timberwhales.wixsite.com/unbc-timberwhales",
+      "source_ids": [
+        "club_home",
+        "cuga_directory"
+      ],
+      "freshness": "verified_current",
+      "checked_at": "2026-10-02",
+      "as_of": "2026-10-02"
+    },
+    "instagram": {
+      "value": "https://www.instagram.com/unbctimberwhales/",
+      "source_ids": [
+        "club_contact",
+        "instagram_profile"
+      ],
+      "freshness": "verified_current",
+      "checked_at": "2026-10-02",
+      "as_of": "2026-10-02"
+    },
+    "facebook": {
+      "value": "https://www.facebook.com/share/XuauqpvVBcoMNBX5/",
+      "source_ids": [
+        "club_contact",
+        "cuga_directory"
+      ],
+      "freshness": "unknown",
+      "checked_at": "2026-10-02",
+      "as_of": "2026-10-02",
+      "note": "Officially linked destination; Facebook content itself not inspected."
+    },
+    "joining_route": {
+      "value": "Contact the club by Instagram DM or public club email before attending",
+      "source_ids": [
+        "fall_2026_schedule",
+        "club_contact"
+      ],
+      "freshness": "verified_current",
+      "checked_at": "2026-10-02",
+      "as_of": "2026-10-02",
+      "note": "Club explicitly invites questions via Instagram. Email is verified as a public club contact."
+    }
+  },
+  "joining": {
+    "new_players": {
+      "value": "New and returning players invited for fall semester",
+      "source_ids": [
+        "fall_2026_schedule",
+        "instagram_profile"
+      ],
+      "freshness": "verified_current",
+      "checked_at": "2026-10-02",
+      "as_of": "2026-10-02"
+    },
+    "non_student_eligibility": {
+      "value": null,
+      "source_ids": [],
+      "freshness": "unknown",
+      "checked_at": "2026-10-02",
+      "as_of": "2026-10-02",
+      "note": "Do not assume only students or all community members are eligible."
+    },
+    "age_limits": {
+      "value": null,
+      "source_ids": [],
+      "freshness": "unknown",
+      "checked_at": "2026-10-02",
+      "as_of": "2026-10-02"
+    },
+    "skill_requirements": {
+      "value": null,
+      "source_ids": [],
+      "freshness": "unknown",
+      "checked_at": "2026-10-02",
+      "as_of": "2026-10-02",
+      "note": "Welcoming invitation does not establish minimum swimming standard."
+    },
+    "trial": {
+      "value": "First two practices advertised as free",
+      "source_ids": [
+        "club_prices"
+      ],
+      "freshness": "unknown",
+      "checked_at": "2026-10-02",
+      "as_of": "2026-10-02",
+      "note": "Undated website offer; confirm current applicability."
+    },
+    "published_fees": {
+      "value": [
+        {
+          "label": "September–April membership",
+          "amount_text": "$40"
+        },
+        {
+          "label": "One-semester membership",
+          "amount_text": "$25"
+        }
+      ],
+      "source_ids": [
+        "club_prices"
+      ],
+      "freshness": "unknown",
+      "checked_at": "2026-10-02",
+      "as_of": "2026-10-02",
+      "note": "Undated rates, currency not explicitly labeled. Pricing widget also displays $0, and annual card says both valid for 10 months and covers 8 months. Confirm with club rather than treating as live checkout pricing."
+    },
+    "published_inclusions": {
+      "value": "Pool space and sticks are listed as covered by membership",
+      "source_ids": [
+        "club_prices"
+      ],
+      "freshness": "unknown",
+      "checked_at": "2026-10-02",
+      "as_of": "2026-10-02",
+      "note": "Do not imply all equipment is supplied or ordinary facility admission is necessarily included."
+    },
+    "waiver": {
+      "value": "Website says a signed waiver is required before playing",
+      "source_ids": [
+        "club_schedule"
+      ],
+      "freshness": "unknown",
+      "checked_at": "2026-10-02",
+      "as_of": "2026-10-02",
+      "note": "Undated joining requirement; waiver also includes image-use language. No form completed or accepted."
+    },
+    "equipment_overview": {
+      "value": [
+        "Underwater hockey stick",
+        "Mask",
+        "Snorkel",
+        "Fins",
+        "Protective cap",
+        "Glove"
+      ],
+      "source_ids": [
+        "club_gear"
+      ],
+      "freshness": "unknown",
+      "checked_at": "2026-10-02",
+      "as_of": "2026-10-02",
+      "note": "General sport equipment list, not a confirmed bring/borrow list for newcomers."
+    }
+  },
+  "people": {
+    "current_roster_verified": false,
+    "roster_display_label": "Public website roster (undated; current membership and roles unconfirmed)",
+    "public_website_roster": [
+      {
+        "display_name": "Naomi C.",
+        "published_role": "Co-captain; biography also says co-president",
+        "source_ids": [
+          "club_team"
+        ],
+        "freshness": "unknown",
+        "checked_at": "2026-10-02"
+      },
+      {
+        "display_name": "Ella S.",
+        "published_role": "Co-captain and forward; biography also says co-president",
+        "source_ids": [
+          "club_team"
+        ],
+        "freshness": "unknown",
+        "checked_at": "2026-10-02"
+      },
+      {
+        "display_name": "Taryn A.",
+        "published_role": "Treasurer; forward and defence",
+        "source_ids": [
+          "club_team"
+        ],
+        "freshness": "unknown",
+        "checked_at": "2026-10-02"
+      },
+      {
+        "display_name": "Professor Puck / Rader",
+        "published_role": "Coach; defence",
+        "source_ids": [
+          "club_team"
+        ],
+        "freshness": "unknown",
+        "checked_at": "2026-10-02"
+      },
+      {
+        "display_name": "Tate F.",
+        "published_role": "Senior executive; forward, position 3",
+        "source_ids": [
+          "club_team"
+        ],
+        "freshness": "unknown",
+        "checked_at": "2026-10-02"
+      },
+      {
+        "display_name": "Benjamin I.",
+        "published_role": "Social media manager; forward",
+        "source_ids": [
+          "club_team"
+        ],
+        "freshness": "unknown",
+        "checked_at": "2026-10-02"
+      },
+      {
+        "display_name": "Phoenix C.",
+        "published_role": "Junior executive; forward",
+        "source_ids": [
+          "club_team"
+        ],
+        "freshness": "unknown",
+        "checked_at": "2026-10-02"
+      },
+      {
+        "display_name": "Shayden H.",
+        "published_role": "Forward, positions 1 and 2",
+        "source_ids": [
+          "club_team"
+        ],
+        "freshness": "unknown",
+        "checked_at": "2026-10-02"
+      },
+      {
+        "display_name": "Joshua L.",
+        "published_role": "Defence",
+        "source_ids": [
+          "club_team"
+        ],
+        "freshness": "unknown",
+        "checked_at": "2026-10-02"
+      },
+      {
+        "display_name": "Keegan M.",
+        "published_role": "Forward",
+        "source_ids": [
+          "club_team"
+        ],
+        "freshness": "unknown",
+        "checked_at": "2026-10-02"
+      },
+      {
+        "display_name": "Amir A.",
+        "published_role": "Player",
+        "source_ids": [
+          "club_team"
+        ],
+        "freshness": "unknown",
+        "checked_at": "2026-10-02"
+      },
+      {
+        "display_name": "Emma M.",
+        "published_role": "Player",
+        "source_ids": [
+          "club_team"
+        ],
+        "freshness": "unknown",
+        "checked_at": "2026-10-02"
+      },
+      {
+        "display_name": "Clea M.",
+        "published_role": "Player",
+        "source_ids": [
+          "club_team"
+        ],
+        "freshness": "unknown",
+        "checked_at": "2026-10-02"
+      },
+      {
+        "display_name": "Alexander M.",
+        "published_role": "Player",
+        "source_ids": [
+          "club_team"
+        ],
+        "freshness": "unknown",
+        "checked_at": "2026-10-02"
+      },
+      {
+        "display_name": "Piper F.",
+        "published_role": "Player",
+        "source_ids": [
+          "club_team"
+        ],
+        "freshness": "unknown",
+        "checked_at": "2026-10-02"
+      },
+      {
+        "display_name": "Alex I.",
+        "published_role": "Player",
+        "source_ids": [
+          "club_team"
+        ],
+        "freshness": "unknown",
+        "checked_at": "2026-10-02"
+      },
+      {
+        "display_name": "Scott M.",
+        "published_role": "Player",
+        "source_ids": [
+          "club_team"
+        ],
+        "freshness": "unknown",
+        "checked_at": "2026-10-02"
+      },
+      {
+        "display_name": "Dannie R.",
+        "published_role": "Player",
+        "source_ids": [
+          "club_team"
+        ],
+        "freshness": "unknown",
+        "checked_at": "2026-10-02"
+      },
+      {
+        "display_name": "Lucas L.",
+        "published_role": "Player",
+        "source_ids": [
+          "club_team"
+        ],
+        "freshness": "unknown",
+        "checked_at": "2026-10-02"
+      },
+      {
+        "display_name": "Nyah D.",
+        "published_role": "Player",
+        "source_ids": [
+          "club_team"
+        ],
+        "freshness": "unknown",
+        "checked_at": "2026-10-02"
+      }
+    ],
+    "more_recent_leadership_evidence": {
+      "value": {
+        "announcement_date": "2025-04-03",
+        "outgoing_named": "Ella",
+        "incoming_co_presidents": [
+          "Keegan",
+          "Phoenix"
+        ]
+      },
+      "source_ids": [
+        "leadership_2025"
+      ],
+      "freshness": "historical",
+      "checked_at": "2026-10-02",
+      "as_of": "2025-04-03",
+      "note": "A later March 2026 AGM announcement advertised executive openings; no resulting officer list found. Do not label these people current officers without qualification."
+    },
+    "recent_named_players": {
+      "value": [
+        {
+          "name": "Taryn Atkinson",
+          "evidence": "Interviewed as a team member in May 2026"
+        },
+        {
+          "name": "Shayden Hiebert",
+          "evidence": "Interviewed as a team member in May 2026"
+        }
+      ],
+      "source_ids": [
+        "ckpg_2026"
+      ],
+      "freshness": "historical",
+      "checked_at": "2026-10-02",
+      "as_of": "2026-05-08"
+    },
+    "founding_generation_2023": {
+      "value": [
+        "Stephen Rader",
+        "Naomi Cole",
+        "Ella Stratton"
+      ],
+      "source_ids": [
+        "ckpg_2023"
+      ],
+      "freshness": "historical",
+      "checked_at": "2026-10-02",
+      "as_of": "2023-11-21",
+      "note": "Publicly reported organizers of the 2023 incarnation; not a claim of present office."
+    },
+    "privacy_note": "Names and roles are only those expressly published in club text or named press coverage. No identities inferred from photos; no private contacts, birth dates, personal profiles, or sensitive biographies included."
+  },
+  "activities": [
+    {
+      "title": "Fall 2026 practices and recruitment",
+      "summary": "Club resumed fall sessions and invited both new and returning players.",
+      "when": "Fall 2026",
+      "freshness": "verified_current",
+      "source_ids": [
+        "fall_2026_schedule",
+        "instagram_profile"
+      ]
+    },
+    {
+      "title": "After-practice social",
+      "summary": "Club reported a team get-together at the Dudley after practice.",
+      "when": "2026-09-27",
+      "freshness": "historical",
+      "source_ids": [
+        "latest_social"
+      ],
+      "date_note": "Completed activity, not an upcoming invitation."
+    },
+    {
+      "title": "2026 Canadian Nationals",
+      "summary": "The revived team described this as its second Nationals, reported scoring in every game, and thanked host NOVA. Local reporting placed play in Vancouver on May 16–17.",
+      "when": "2026-05-16/2026-05-17",
+      "freshness": "historical",
+      "source_ids": [
+        "nationals_2026_report",
+        "ckpg_2026"
+      ],
+      "result_note": "No rank, medal, or final score claimed."
+    },
+    {
+      "title": "Third annual 3v3 tournament",
+      "summary": "Club posted a recap of its third annual end-of-semester three-on-three tournament.",
+      "when": "Reported 2026-03-30",
+      "freshness": "historical",
+      "source_ids": [
+        "tournament_3v3_2026"
+      ],
+      "date_note": "Post date; exact event date not specified."
+    },
+    {
+      "title": "2026 annual general meeting announcement",
+      "summary": "A March 25 AGM was announced with executive positions available.",
+      "when": "2026-03-25",
+      "freshness": "historical",
+      "source_ids": [
+        "agm_2026"
+      ],
+      "date_note": "Announcement verified; meeting outcomes not verified."
+    },
+    {
+      "title": "2024 Canadian Nationals",
+      "summary": "The club website documents participation in May 2024; tournament portal gives May 18–19 at UBC Aquatic Centre.",
+      "when": "2024-05-18/2024-05-19",
+      "freshness": "historical",
+      "source_ids": [
+        "club_gear",
+        "club_team",
+        "nationals_2024_event"
+      ]
+    }
+  ],
+  "original_profile_text": {
+    "short": "The UNBC TimberWhales are an active underwater-hockey club in Prince George, British Columbia, recognized by NUGSS. For fall 2026, the club announces Sunday 5:45–6:45 pm and Wednesday 9–10 pm practices at Canfor Leisure Pool, with new and returning players welcome.",
+    "wiki": "Revived in fall 2023, the UNBC TimberWhales build on a UNBC underwater-hockey team documented by 2009. The club combines pool training, an annual three-on-three tournament, national competition and team socials. Its website records participation in the 2024 Canadian Nationals, and its May 2026 report celebrates a second Nationals appearance for the revived team. Fall 2026 practices take place at Canfor Leisure Pool, 670 Quebec Street, on Sundays from 5:45 to 6:45 pm and Wednesdays from 9 to 10 pm. Contact timberwhales@unbc.ca or the club’s Instagram for first-visit details. The website advertises two free trial practices, but fees, equipment availability and joining requirements should be confirmed. Its public roster is undated and should not be treated as a current-season lineup.",
+    "freshness_banner": "Fall 2026 hours verified from the club’s September 12 announcement; checked October 2, 2026. The CUGA directory still shows an older venue and schedule.",
+    "who_plays_text": "The public website lists 20 players and staff, but provides no roster date. An April 2025 post named Keegan and Phoenix as incoming co-presidents; a March 2026 AGM announcement means current officers need confirmation. Taryn Atkinson and Shayden Hiebert were publicly interviewed as players in May 2026."
+  },
+  "media": {
+    "license_status": "No explicit reusable license found for club photographs, logo, roster portraits, Instagram images or videos.",
+    "recommended_use": "Link to official profile, individual source posts, and club gallery instead of copying or rehosting media. Obtain permission before reuse; member consent allowing the club to post does not grant an outside atlas reuse rights.",
+    "copied_media": [],
+    "media_link_options": [
+      {
+        "label": "Official club profile and photographs",
+        "url": "https://www.instagram.com/unbctimberwhales/"
+      },
+      {
+        "label": "2026 nationals reel",
+        "url": "https://www.instagram.com/unbctimberwhales/reel/DYgBTDwp0S-/"
+      },
+      {
+        "label": "Club team page",
+        "url": "https://timberwhales.wixsite.com/unbc-timberwhales/team"
+      }
+    ]
+  },
+  "open_questions": [
+    "Current 2026–27 officers and full current roster",
+    "Current membership rates and explicit currency",
+    "Whether non-students and minors may join, and minimum swimming ability",
+    "What loan equipment is available",
+    "Season end date and holiday practice exceptions",
+    "Original founding year of the pre-2009 UNBC team"
+  ],
+  "sources": [
+    {
+      "id": "club_home",
+      "title": "UNBC TimberWhales official home",
+      "url": "https://timberwhales.wixsite.com/unbc-timberwhales",
+      "publisher_type": "club",
+      "access_method": "browser",
+      "published_date": null,
+      "retrieved_at": "2026-10-02",
+      "evidence_note": "Home describes a fall 2023 start; roster says restart. Home calendar had no October 2026 entries."
+    },
+    {
+      "id": "club_team",
+      "title": "Public team page",
+      "url": "https://timberwhales.wixsite.com/unbc-timberwhales/team",
+      "publisher_type": "club",
+      "access_method": "browser",
+      "published_date": null,
+      "retrieved_at": "2026-10-02",
+      "evidence_note": "Twenty public roster entries, with initials for most surnames; no roster season/update date."
+    },
+    {
+      "id": "club_schedule",
+      "title": "Official schedule and waiver page",
+      "url": "https://timberwhales.wixsite.com/unbc-timberwhales/schedule",
+      "publisher_type": "club",
+      "access_method": "browser",
+      "published_date": null,
+      "retrieved_at": "2026-10-02",
+      "evidence_note": "No upcoming events or October 2026 calendar events displayed. Requires waiver before playing; no recurring times shown."
+    },
+    {
+      "id": "club_prices",
+      "title": "Published membership plans",
+      "url": "https://timberwhales.wixsite.com/unbc-timberwhales/plans-pricing",
+      "publisher_type": "club",
+      "access_method": "browser",
+      "published_date": null,
+      "retrieved_at": "2026-10-02",
+      "evidence_note": "First two practices free; text rates $40 Sept–April and $25 semester. Widget also shows $0 and conflicting annual validity."
+    },
+    {
+      "id": "club_contact",
+      "title": "Official contact page",
+      "url": "https://timberwhales.wixsite.com/unbc-timberwhales/contact",
+      "publisher_type": "club",
+      "access_method": "browser",
+      "published_date": null,
+      "retrieved_at": "2026-10-02",
+      "evidence_note": "Public club email and Instagram/Facebook links."
+    },
+    {
+      "id": "club_gear",
+      "title": "Sport and equipment explanation",
+      "url": "https://timberwhales.wixsite.com/unbc-timberwhales/underwater-hockey",
+      "publisher_type": "club",
+      "access_method": "browser",
+      "published_date": null,
+      "retrieved_at": "2026-10-02",
+      "evidence_note": "Equipment overview and explicit May 2024 nationals mention."
+    },
+    {
+      "id": "instagram_profile",
+      "title": "Official Instagram profile",
+      "url": "https://www.instagram.com/unbctimberwhales/",
+      "publisher_type": "club_social",
+      "access_method": "browser",
+      "published_date": null,
+      "retrieved_at": "2026-10-02",
+      "evidence_note": "Bio agrees with dated fall 2026 schedule; recent practice/recruitment posts visible."
+    },
+    {
+      "id": "fall_2026_schedule",
+      "title": "Fall-semester practice announcement",
+      "url": "https://www.instagram.com/p/DdNdRpuRzGU/",
+      "publisher_type": "club_social",
+      "access_method": "browser",
+      "published_date": "2026-09-12",
+      "retrieved_at": "2026-10-02",
+      "evidence_note": "Displayed date September 12; DOM timestamp 2026-09-13T02:17:53.000Z. Specifies fall semester and first practice September 13."
+    },
+    {
+      "id": "latest_social",
+      "title": "After-practice team social",
+      "url": "https://www.instagram.com/p/Dd0TIBNAOkB/",
+      "publisher_type": "club_social",
+      "access_method": "browser",
+      "published_date": "2026-09-27",
+      "retrieved_at": "2026-10-02",
+      "evidence_note": "Post timestamp 2026-09-28T04:14:18.000Z. Caption describes a completed after-practice social at the Dudley; date is local Pacific conversion."
+    },
+    {
+      "id": "nationals_2026_report",
+      "title": "Club report from 2026 Canadian Nationals",
+      "url": "https://www.instagram.com/unbctimberwhales/reel/DYgBTDwp0S-/",
+      "publisher_type": "club_social",
+      "access_method": "browser",
+      "published_date": "2026-05-18",
+      "retrieved_at": "2026-10-02",
+      "evidence_note": "Displayed date May 18; post timestamp 2026-05-19T00:38:50.000Z. Reports second nationals for revived team, scoring in every game, and thanks NOVA."
+    },
+    {
+      "id": "leadership_2025",
+      "title": "Public leadership handover",
+      "url": "https://www.instagram.com/p/DIANciESja3/?img_index=1",
+      "publisher_type": "club_social",
+      "access_method": "browser",
+      "published_date": "2025-04-03",
+      "retrieved_at": "2026-10-02",
+      "evidence_note": "Original timestamp 2025-04-03T23:43:20.000Z. Ella hands over co-presidency to Keegan and Phoenix. Does not establish October 2026 officers."
+    },
+    {
+      "id": "agm_2026",
+      "title": "2026 AGM announcement",
+      "url": "https://www.instagram.com/unbctimberwhales/p/DV4sXZrjzX6/",
+      "publisher_type": "club_social",
+      "access_method": "browser",
+      "published_date": "2026-03-14",
+      "retrieved_at": "2026-10-02",
+      "evidence_note": "Announces March 25 AGM with executive positions open. Displayed March 14; timestamp 2026-03-15T00:59:10.000Z. Election results not found."
+    },
+    {
+      "id": "tournament_3v3_2026",
+      "title": "Third annual 3v3 tournament report",
+      "url": "https://www.instagram.com/unbctimberwhales/p/DWhHJkUiaZ0/",
+      "publisher_type": "club_social",
+      "access_method": "browser",
+      "published_date": "2026-03-30",
+      "retrieved_at": "2026-10-02",
+      "evidence_note": "Timestamp 2026-03-30T17:42:47.000Z. Reports completed end-of-semester third annual 3v3 tournament; precise event day not stated."
+    },
+    {
+      "id": "nugss_status",
+      "title": "NUGSS recognized student-led organizations",
+      "url": "https://www.nugss.ca/slo-list",
+      "publisher_type": "student_union",
+      "access_method": "web",
+      "published_date": "2025-10-21",
+      "retrieved_at": "2026-10-02",
+      "evidence_note": "Lists UNBC TimberWhales Underwater Hockey Team as Established and gives approval date October 21, 2025. Page still visible October 2, 2026."
+    },
+    {
+      "id": "cuga_directory",
+      "title": "CUGA where-to-play directory",
+      "url": "https://cuga.org/where-to-play-hockey/",
+      "publisher_type": "national_association",
+      "access_method": "web",
+      "published_date": null,
+      "retrieved_at": "2026-10-02",
+      "evidence_note": "Outdated venue and times, retained as superseded evidence; public email/site/social links verified."
+    },
+    {
+      "id": "city_aquatics",
+      "title": "City of Prince George aquatics",
+      "url": "https://www.princegeorge.ca/parks-recreation/aquatics",
+      "publisher_type": "municipal",
+      "access_method": "web",
+      "published_date": null,
+      "retrieved_at": "2026-10-02",
+      "evidence_note": "Current Sept–Dec 2026 facility information: Canfor at 670 Quebec Street. PG Aquatic Centre closed for renovation effective January 1, 2026."
+    },
+    {
+      "id": "city_map",
+      "title": "Canfor Leisure Pool map linked by City",
+      "url": "https://www.google.com/maps/place/Canfor%2BLeisure%2BPool/@53.9144313,-122.7498719,17z/data=!3m1!4b1!4m5!3m4!1s0x538899683bc1a4a1:0x9493fa07ccfd0ab6!8m2!3d53.9144691!4d-122.7478262",
+      "publisher_type": "municipal_link_to_map",
+      "access_method": "web",
+      "published_date": null,
+      "retrieved_at": "2026-10-02",
+      "evidence_note": "Destination coordinates encoded in City-linked place URL; use !3d/!4d values, not map viewport coordinates."
+    },
+    {
+      "id": "ckpg_2026",
+      "title": "Timberwhales prepare for 2026 nationals",
+      "url": "https://ckpgtoday.ca/2026/05/08/unbc-timberwhales-ready-to-capsize-their-competition/",
+      "publisher_type": "local_press",
+      "access_method": "web_search",
+      "published_date": "2026-05-08",
+      "retrieved_at": "2026-10-02",
+      "evidence_note": "Search returned article text; direct web open returned 403. Names Taryn Atkinson and Shayden Hiebert as team members; nationals May 16–17 in Vancouver."
+    },
+    {
+      "id": "unbc_history",
+      "title": "UNBC October 4, 2024 board package",
+      "url": "https://www.unbc.ca/sites/default/files/sections/governance/2024-10-04-board-public-session-meeting-package-minus-minutes-corrected.pdf",
+      "publisher_type": "university",
+      "access_method": "web",
+      "published_date": "2024-10-04",
+      "retrieved_at": "2026-10-02",
+      "evidence_note": "Memorial award description says Vincent Budac was an early Timberwhales member while a student; graduated 2009. Establishes existence by 2009, not exact foundation year."
+    },
+    {
+      "id": "ckpg_2023",
+      "title": "Contemporary report on 2023 team start",
+      "url": "https://ckpgtoday.ca/2023/11/21/hockey-takes-a-dive-with-the-unbc-timberwhales/",
+      "publisher_type": "local_press",
+      "access_method": "web",
+      "published_date": "2023-11-21",
+      "retrieved_at": "2026-10-02",
+      "evidence_note": "Stephen Rader proposed a team to biochemistry students; Naomi Cole and Ella Stratton organized it. Current revival interpretation supported by club roster restart wording."
+    },
+    {
+      "id": "nationals_2024_event",
+      "title": "2024 Canadian Nationals event record",
+      "url": "https://uwhportal.com/events/ca-2024-canada-underwater-hockey-nationals",
+      "publisher_type": "tournament_portal",
+      "access_method": "web",
+      "published_date": null,
+      "retrieved_at": "2026-10-02",
+      "evidence_note": "Tournament dates May 18–19, 2024 at UBC Aquatic Centre; club participation separately supported by official club site."
+    }
+  ]
+}

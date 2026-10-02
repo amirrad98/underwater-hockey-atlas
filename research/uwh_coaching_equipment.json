@@ -1,0 +1,2698 @@
+{
+  "schemaVersion": "1.0",
+  "title": "Underwater hockey coaching, tactics, equipment, and visual-library research",
+  "checkedAt": "2026-10-02",
+  "scope": "Verified source catalog plus original editorial seeds and conceptual diagrams. No project code, assets copied from sources, purchases, uploads, or publishing.",
+  "editorialPolicy": {
+    "sourceHierarchy": "Use applicable official rules for rules and equipment compliance. Use federation education for local training pathways. Label coaching ideas, research, and vendor claims separately.",
+    "copyright": "These summaries, card concepts, normalized schematic layouts, and analysis workflows are original. Sources retain their own rights. No source text, photographs, paid PDFs, video files, or source diagrams should be copied into the site or GitHub repository.",
+    "licensing": "No source-wide permissive license was verified. Public accessibility is not permission to mirror. Embed only using the publisher's permitted embed mechanism; prefer a direct source link when permission or playback is unclear.",
+    "safety": "All in-water learning requires an appropriately supervised club or coaching setting and the applicable safety guidance. Do not train breath-hold alone, prescribe apnea duration/distance targets, hyperventilation, breath-hold contests, or urge someone to remain submerged. The separate safety research should supply authoritative safety copy.",
+    "medical": "Do not turn research abstracts or historical training manuals into medical, nutrition, rehabilitation, or breath-hold prescriptions.",
+    "dates": "A recent crawl is not a publication date. Display document version/date separately from checkedAt.",
+    "completeness": "A broad starting library, not a claim to exhaust every country, club, vendor, video, or coaching tradition."
+  },
+  "sourceCount": 48,
+  "sources": [
+    {
+      "id": "atlantis",
+      "title": "Atlantis Underwater Hockey Wiki",
+      "url": "https://wiki.atlantissports.org/",
+      "country": "USA",
+      "languages": [
+        "en"
+      ],
+      "type": "community library",
+      "authority": "Community / publisher",
+      "access": "Free public library",
+      "summary": "Large community knowledge base spanning skills, drills, formations, officiating, coaching, and club development.",
+      "versionDate": null,
+      "checkedAt": "2026-10-02",
+      "verification": "homepage timeout; deep pages indexed",
+      "rights": "No reusable-content license verified. Link and summarize; do not copy diagrams, photographs, videos, or full text.",
+      "notes": "Homepage timed out. Deep pages are discoverable in search. Treat tactical recommendations as community practice, never current official rules."
+    },
+    {
+      "id": "atlantis-level2",
+      "title": "Atlantis Level 2 lesson plan",
+      "url": "https://wiki.atlantissports.org/en/Coaching/Level-2/Lesson-Plan-2",
+      "country": "USA",
+      "languages": [
+        "en"
+      ],
+      "type": "community coaching",
+      "authority": "Community / publisher",
+      "access": "Free",
+      "summary": "Progressive pathway from movement and puck control to support, decisions, and game understanding.",
+      "versionDate": null,
+      "checkedAt": "2026-10-02",
+      "verification": "opened blank; indexed text",
+      "rights": "No reusable-content license verified. Link and summarize; do not copy diagrams, photographs, videos, or full text.",
+      "notes": "Opened with no extracted text; full text available in search. Relative edit date was shown; do not invent an exact publication date."
+    },
+    {
+      "id": "atlantis-support",
+      "title": "Atlantis Level 2 Block 5 (version conflict)",
+      "url": "https://wiki.atlantissports.org/en/Coaching/Level-2/Lesson-Plan-2/Level-2-Block-5",
+      "country": "USA",
+      "languages": [
+        "en"
+      ],
+      "type": "community drills",
+      "authority": "Community / publisher",
+      "access": "Free",
+      "summary": "A changing coaching block addressing team spacing and support; indexed and direct snapshots differ.",
+      "versionDate": null,
+      "checkedAt": "2026-10-02",
+      "verification": "opened; direct and search-indexed snapshots conflict",
+      "rights": "No reusable-content license verified. Link and summarize; do not copy diagrams, photographs, videos, or full text.",
+      "notes": "Search-indexed snapshot says Support & Connection, edited 14 April 2026. Direct-open snapshot says Formation Under Pressure (2-3-1), with no document date. Current exact revision is unresolved. Use as a linked coaching resource, not a fixed curriculum or quoted authoritative passage."
+    },
+    {
+      "id": "atlantis-overloads",
+      "title": "Atlantis attacking fundamentals",
+      "url": "https://wiki.atlantissports.org/en/Coaching/Level-2/Drill-Library-2/Level-2-Block-4",
+      "country": "USA",
+      "languages": [
+        "en"
+      ],
+      "type": "community drills",
+      "authority": "Community / publisher",
+      "access": "Free",
+      "summary": "Introduces individual contests and small-sided numerical advantages to connect control skills with decisions.",
+      "versionDate": "2026-04-14",
+      "checkedAt": "2026-10-02",
+      "verification": "opened blank; indexed text",
+      "rights": "No reusable-content license verified. Link and summarize; do not copy diagrams, photographs, videos, or full text.",
+      "notes": "Do not copy its badge structure or drill wording; create a distinct original exercise card with attribution."
+    },
+    {
+      "id": "atlantis-star",
+      "title": "Atlantis star drill",
+      "url": "https://wiki.atlantissports.org/players/individual_drills/star-drill",
+      "country": "USA",
+      "languages": [
+        "en"
+      ],
+      "type": "community drills",
+      "authority": "Community / publisher",
+      "access": "Free",
+      "summary": "Puck-control practice develops reach and control under the body in several directions.",
+      "versionDate": "2024-04-28",
+      "checkedAt": "2026-10-02",
+      "verification": "direct timeout; indexed text",
+      "rights": "No reusable-content license verified. Link and summarize; do not copy diagrams, photographs, videos, or full text.",
+      "notes": "Original teaching diagram can show a generic reach envelope instead of reproducing the source illustration."
+    },
+    {
+      "id": "atlantis-flick",
+      "title": "Atlantis flick: full motion",
+      "url": "https://wiki.atlantissports.org/players/individual_fundamentals/puck_handling/passes/flicks_full_motion",
+      "country": "USA",
+      "languages": [
+        "en"
+      ],
+      "type": "community technique",
+      "authority": "Community / publisher",
+      "access": "Free; embedded videos",
+      "summary": "Illustrated technical explanation of the flick with demonstration and match-example videos; highlights danger from uncontrolled shots.",
+      "versionDate": "2026-01-27",
+      "checkedAt": "2026-10-02",
+      "verification": "opened; text inspected",
+      "rights": "No reusable-content license verified. Link and summarize; do not copy diagrams, photographs, videos, or full text.",
+      "notes": "Link the original lesson. Do not reproduce the motion prescription as universally correct or flick toward another player's head."
+    },
+    {
+      "id": "atlantis-strike",
+      "title": "Atlantis: reaching the puck",
+      "url": "https://wiki.atlantissports.org/players/individual_fundamentals/moving_in_the_water/strikes/reaching_the_puck",
+      "country": "USA",
+      "languages": [
+        "en"
+      ],
+      "type": "community tactics",
+      "authority": "Community / publisher",
+      "access": "Free; embedded clips",
+      "summary": "Explores options after a strike: support behind or beside the puck and choices informed by space.",
+      "versionDate": null,
+      "checkedAt": "2026-10-02",
+      "verification": "opened blank; indexed text",
+      "rights": "No reusable-content license verified. Link and summarize; do not copy diagrams, photographs, videos, or full text.",
+      "notes": "The commentary is tactical. Check legal positioning and physical engagement against the current official rules."
+    },
+    {
+      "id": "atlantis-132",
+      "title": "Atlantis 1-3-2 formation",
+      "url": "https://wiki.atlantissports.org/en/teams/formations/1-3-2",
+      "country": "USA",
+      "languages": [
+        "en"
+      ],
+      "type": "community tactics",
+      "authority": "Community / publisher",
+      "access": "Free",
+      "summary": "Detailed roles and tactical trade-offs for a one-forward, three-midfielder, two-back shape.",
+      "versionDate": null,
+      "checkedAt": "2026-10-02",
+      "verification": "indexed text; direct cache miss",
+      "rights": "No reusable-content license verified. Link and summarize; do not copy diagrams, photographs, videos, or full text.",
+      "notes": "Page has two variant headings and unfinished video slots. Do not imply those videos exist. Role names vary by country and club."
+    },
+    {
+      "id": "atlantis-beginners",
+      "title": "Atlantis beginner classes",
+      "url": "https://wiki.atlantissports.org/en/club-organization/recruitment/beginner-classes",
+      "country": "USA",
+      "languages": [
+        "en"
+      ],
+      "type": "community coaching",
+      "authority": "Community / publisher",
+      "access": "Free",
+      "summary": "Outlines beginner-session priorities: introduce equipment and a few core rules, then allow supported play.",
+      "versionDate": "2024-04-27",
+      "checkedAt": "2026-10-02",
+      "verification": "opened; text inspected",
+      "rights": "No reusable-content license verified. Link and summarize; do not copy diagrams, photographs, videos, or full text.",
+      "notes": "Simplified rule statements are educational, not authoritative; combine with safeguarding and supervision guidance."
+    },
+    {
+      "id": "ffessm-guide",
+      "title": "FFESSM Guide de l'Entraîneur",
+      "url": "https://hockeysub.ffessm.fr/uploads/media/docs/0001/10/c91b83580386fe1b0353f71814fcdf5fe6446f71.pdf",
+      "country": "France",
+      "languages": [
+        "fr"
+      ],
+      "type": "federation coaching manual",
+      "authority": "Federation",
+      "access": "Free PDF; 111 pages",
+      "summary": "Benjamin Mayen's extensive player-development guide connects perception, decision-making, skills, session design, and long-term development.",
+      "versionDate": "2021",
+      "checkedAt": "2026-10-02",
+      "verification": "opened",
+      "rights": "No reusable-content license verified. Link and summarize; do not copy diagrams, photographs, videos, or full text.",
+      "notes": "Official federation-hosted coach reference, but not the rulebook. Landing page labels the guide 2021; use that label rather than crawl date."
+    },
+    {
+      "id": "ffessm-training",
+      "title": "FFESSM coach qualification hub",
+      "url": "https://hockeysub.ffessm.fr/encadrement",
+      "country": "France",
+      "languages": [
+        "fr"
+      ],
+      "type": "federation training",
+      "authority": "Federation",
+      "access": "Public information; course participation separate",
+      "summary": "Official route into MEF1 and MEF2 coaching, with manuals, procedures, assessment material, and the coach guide.",
+      "versionDate": "2019-01-06",
+      "checkedAt": "2026-10-02",
+      "verification": "opened",
+      "rights": "No reusable-content license verified. Link and summarize; do not copy diagrams, photographs, videos, or full text.",
+      "notes": "Qualifications are federation-specific; do not equate them automatically with other national schemes."
+    },
+    {
+      "id": "ffessm-ie",
+      "title": "FFESSM Initiateur-Entraîneur",
+      "url": "https://hockeysub.ffessm.fr/initiateur-entraineur",
+      "country": "France",
+      "languages": [
+        "fr"
+      ],
+      "type": "federation training",
+      "authority": "Federation",
+      "access": "Public information and downloadable course documents",
+      "summary": "Entry coaching pathway includes theory, pool practice, practical assessment, and trainer resources.",
+      "versionDate": "2025-03-27",
+      "checkedAt": "2026-10-02",
+      "verification": "opened; text inspected",
+      "rights": "No reusable-content license verified. Link and summarize; do not copy diagrams, photographs, videos, or full text.",
+      "notes": "Page dated 27 March 2025; participant eligibility and current requirements must be checked at source."
+    },
+    {
+      "id": "ffessm-theses",
+      "title": "FFESSM MEF2 thesis library",
+      "url": "https://hockeysub.ffessm.fr/memoires-ef2",
+      "country": "France",
+      "languages": [
+        "fr"
+      ],
+      "type": "federation-hosted research library",
+      "authority": "Federation",
+      "access": "Free index and downloadable documents",
+      "summary": "Advanced coaches' projects include video analysis, player tracking, club development, training structure, and performance pathways.",
+      "versionDate": "multiple dates",
+      "checkedAt": "2026-10-02",
+      "verification": "opened",
+      "rights": "No reusable-content license verified. Link and summarize; do not copy diagrams, photographs, videos, or full text.",
+      "notes": "Individual theses are dated proposals and evidence of coaching practice, not federation-wide mandates. Video-analysis thesis listed November 2015."
+    },
+    {
+      "id": "wuha-manual",
+      "title": "Wellington schools coaching manual",
+      "url": "https://www.wuha.org.nz/uploads/6/1/4/5/6145499/word_wuha_manual_6.pdf",
+      "country": "New Zealand",
+      "languages": [
+        "en"
+      ],
+      "type": "association coaching manual",
+      "authority": "Association",
+      "access": "Free PDF; 51 pages",
+      "summary": "A substantial school-coaching reference covering preparation, skills, team organization, drills, and a season's work.",
+      "versionDate": "1999-06 / revision 2",
+      "checkedAt": "2026-10-02",
+      "verification": "opened",
+      "rights": "No reusable-content license verified. Link and summarize; do not copy diagrams, photographs, videos, or full text.",
+      "notes": "Document is June 1999 revision 2, editor Steve Stoke. Historical rules, nutrition, and apnea advice require modern review."
+    },
+    {
+      "id": "tuha-beginners",
+      "title": "Tasmania beginner's guide",
+      "url": "https://www.underwaterhockey.com.au/uploads/1/0/4/3/10438895/beginners_guide_to_underwater_hockey.pdf",
+      "country": "Australia",
+      "languages": [
+        "en"
+      ],
+      "type": "association beginner manual",
+      "authority": "Association",
+      "access": "Free PDF; 16 pages",
+      "summary": "Accessible illustrated introduction to the sport and its equipment, hosted by the Tasmanian association.",
+      "versionDate": null,
+      "checkedAt": "2026-10-02",
+      "verification": "opened",
+      "rights": "No reusable-content license verified. Link and summarize; do not copy diagrams, photographs, videos, or full text.",
+      "notes": "Document metadata says Manual v5_plain; publication date not established. Cross-check rules and safety guidance."
+    },
+    {
+      "id": "tuha-training",
+      "title": "Tasmania training and rule videos",
+      "url": "https://www.underwaterhockey.com.au/training.html",
+      "country": "Australia",
+      "languages": [
+        "en"
+      ],
+      "type": "association learning page",
+      "authority": "Association",
+      "access": "Free",
+      "summary": "Rule explanations and video learning links for players and referees.",
+      "versionDate": null,
+      "checkedAt": "2026-10-02",
+      "verification": "opened",
+      "rights": "No reusable-content license verified. Link and summarize; do not copy diagrams, photographs, videos, or full text.",
+      "notes": "Explicitly references a 2019 video series. Current rulebook must take priority over old video interpretation."
+    },
+    {
+      "id": "wa-junior-coaches",
+      "title": "Western Australia junior team coaching guidelines",
+      "url": "https://www.waunderwaterhockey.com/resources/Committee_Member_documents/uwhWA%20Coach%20Guidelines%20Junior%20Teams%20V2.3.pdf",
+      "country": "Australia",
+      "languages": [
+        "en"
+      ],
+      "type": "association coaching governance",
+      "authority": "Association",
+      "access": "Free PDF; 12 pages",
+      "summary": "Sets responsibilities for coaches, communication, fair selection, team management, and player development.",
+      "versionDate": "2024-01-14 / version 2.3",
+      "checkedAt": "2026-10-02",
+      "verification": "opened",
+      "rights": "No reusable-content license verified. Link and summarize; do not copy diagrams, photographs, videos, or full text.",
+      "notes": "Use for organizing a healthy team environment; it is not a technical drill manual."
+    },
+    {
+      "id": "boa-coaching",
+      "title": "British Octopush Association coaching scheme",
+      "url": "https://www.gbuwh.co.uk/page/coaching",
+      "country": "United Kingdom",
+      "languages": [
+        "en"
+      ],
+      "type": "federation training",
+      "authority": "Federation",
+      "access": "Public overview; BOA membership required for qualification",
+      "summary": "Club Coaching Level 1 combines online teaching with written and pool assessment. A junior awards scheme supports learning.",
+      "versionDate": "2024-06-09",
+      "checkedAt": "2026-10-02",
+      "verification": "opened",
+      "rights": "No reusable-content license verified. Link and summarize; do not copy diagrams, photographs, videos, or full text.",
+      "notes": "Page updated 9 June 2024. Modules cover coaching, welfare, fitness, technique, planning, and practical delivery; verify next-course availability."
+    },
+    {
+      "id": "boa-intro",
+      "title": "BOA introductory training course",
+      "url": "https://www.gbuwh.co.uk/page/introductory-training-course",
+      "country": "United Kingdom",
+      "languages": [
+        "en"
+      ],
+      "type": "federation training",
+      "authority": "Federation",
+      "access": "Login required",
+      "summary": "Official introductory-course entry point.",
+      "versionDate": null,
+      "checkedAt": "2026-10-02",
+      "verification": "verified login gate",
+      "rights": "No reusable-content license verified. Link and summarize; do not copy diagrams, photographs, videos, or full text.",
+      "notes": "Direct request redirects to BOA login; content not inspected."
+    },
+    {
+      "id": "quebec-instructors",
+      "title": "Québec Subaquatique underwater hockey instruction",
+      "url": "https://quebecsubaquatique.ca/en/diving-resources-and-regulations/underwater-activities/underwater-hockey/",
+      "country": "Canada",
+      "languages": [
+        "en",
+        "fr"
+      ],
+      "type": "association training",
+      "authority": "Association",
+      "access": "Public overview; training enrollment separate",
+      "summary": "Recreational instructor program combines online learning, quizzes, training plans, and a pool practicum.",
+      "versionDate": null,
+      "checkedAt": "2026-10-02",
+      "verification": "opened",
+      "rights": "No reusable-content license verified. Link and summarize; do not copy diagrams, photographs, videos, or full text.",
+      "notes": "Recognition is stated by Québec Subaquatique. Do not present it as universal or automatically equivalent to CMAS/other-country qualifications."
+    },
+    {
+      "id": "fpas-coaches",
+      "title": "FPAS coach education",
+      "url": "https://fpas.pt/federacao/treinadores/",
+      "country": "Portugal",
+      "languages": [
+        "pt"
+      ],
+      "type": "federation training",
+      "authority": "Federation",
+      "access": "Public overview; enrolled courses separate",
+      "summary": "Describes Portugal's coach-training structure: general, underwater-sport-specific, and practical placement components.",
+      "versionDate": null,
+      "checkedAt": "2026-10-02",
+      "verification": "opened",
+      "rights": "No reusable-content license verified. Link and summarize; do not copy diagrams, photographs, videos, or full text.",
+      "notes": "Useful Portuguese-language qualification route; current legal and admission requirements belong to the federation."
+    },
+    {
+      "id": "fpas-course",
+      "title": "FPAS Grade I underwater activities course",
+      "url": "https://formacao.fpas.pt/courses/grau-i-atividades-subaquaticas/",
+      "country": "Portugal",
+      "languages": [
+        "pt"
+      ],
+      "type": "federation training",
+      "authority": "Federation",
+      "access": "Course platform; access challenge in retrieval",
+      "summary": "Course listing includes underwater hockey within foundational underwater-sport education.",
+      "versionDate": null,
+      "checkedAt": "2026-10-02",
+      "verification": "indexed listing; direct challenge",
+      "rights": "No reusable-content license verified. Link and summarize; do not copy diagrams, photographs, videos, or full text.",
+      "notes": "Search-indexed syllabus; direct page returned a browser check. Do not claim the course materials were inspected."
+    },
+    {
+      "id": "fvas-course",
+      "title": "FVAS / Sportsub introduction to underwater hockey 2026–2027",
+      "url": "https://www.fvas.com.ve/curso-intro-hockeysub-2026-2027/",
+      "country": "Venezuela",
+      "languages": [
+        "es"
+      ],
+      "type": "federation partnered course",
+      "authority": "Federation",
+      "access": "Online course; price not verified",
+      "summary": "Spanish-language introductory distance course advertised by FVAS with Sportsub and Sportalsub.",
+      "versionDate": "2026–2027",
+      "checkedAt": "2026-10-02",
+      "verification": "indexed listing; direct error",
+      "rights": "No reusable-content license verified. Link and summarize; do not copy diagrams, photographs, videos, or full text.",
+      "notes": "Search result announces 2026–2027 season and individual technique; direct fetch failed. Do not claim enrollment availability or cost."
+    },
+    {
+      "id": "italian-manual",
+      "title": "Hockey Subacqueo for Dummies",
+      "url": "https://www.circoloinzani.it/wp/wp-content/uploads/2020/02/LEONE-TAROZZI-UWH-FOR-DUMMIES.pdf",
+      "country": "Italy",
+      "languages": [
+        "it"
+      ],
+      "type": "club coaching manual",
+      "authority": "Club",
+      "access": "Free PDF; 84 pages",
+      "summary": "Italian manual covers equipment, puck skills, team structure, substitutions, and the sport's history.",
+      "versionDate": "2015-03-16 / edition 1.0",
+      "checkedAt": "2026-10-02",
+      "verification": "opened",
+      "rights": "No reusable-content license verified. Link and summarize; do not copy diagrams, photographs, videos, or full text.",
+      "notes": "Edition 1.0, 16 March 2015. Treat rules and training-health sections as historical. Includes DIY glove discussion, not a product certification."
+    },
+    {
+      "id": "tssf-coaching",
+      "title": "TSSF assistant-coach program example",
+      "url": "https://www.tssf.gov.tr/sualti-hokeyi-paletli-yuzme-serbest-dalis-antreno%CC%88r-eg%CC%86itim-programlari-ve-kursiyer-listesi/",
+      "country": "Türkiye",
+      "languages": [
+        "tr"
+      ],
+      "type": "federation training",
+      "authority": "Federation",
+      "access": "Public historical course announcement",
+      "summary": "Turkish federation's 2024 assistant-coach schedule combines technical/tactical learning, rules, sport-specific training, water rescue, and assessment.",
+      "versionDate": "2024-07-19",
+      "checkedAt": "2026-10-02",
+      "verification": "opened; text inspected",
+      "rights": "No reusable-content license verified. Link and summarize; do not copy diagrams, photographs, videos, or full text.",
+      "notes": "Historical program evidence only; do not display a past course as open enrollment."
+    },
+    {
+      "id": "berlin-technique",
+      "title": "Sporttaucher Berlin underwater hockey",
+      "url": "https://sporttaucher-berlin.de/unterwasser-hockey/",
+      "country": "Germany",
+      "languages": [
+        "de"
+      ],
+      "type": "club introduction",
+      "authority": "Club",
+      "access": "Free",
+      "summary": "German club introduction identifies puck carrying, receiving, shooting, protection, tackling, and evasion as technique themes.",
+      "versionDate": null,
+      "checkedAt": "2026-10-02",
+      "verification": "opened; text inspected",
+      "rights": "No reusable-content license verified. Link and summarize; do not copy diagrams, photographs, videos, or full text.",
+      "notes": "Retain only descriptive technique categories; legacy apnea training language is not adopted by this atlas."
+    },
+    {
+      "id": "chicago-drills",
+      "title": "Chicago underwater hockey drill library",
+      "url": "https://www.chicagounderwaterhockey.us/drills/",
+      "country": "USA",
+      "languages": [
+        "en"
+      ],
+      "type": "club video library",
+      "authority": "Club",
+      "access": "Free page; YouTube availability varies",
+      "summary": "Curated tutorials cover curls, push-pull, star, V and figure patterns, flicks, and dryland puckwork.",
+      "versionDate": null,
+      "checkedAt": "2026-10-02",
+      "verification": "opened",
+      "rights": "No reusable-content license verified. Link and summarize; do not copy diagrams, photographs, videos, or full text.",
+      "notes": "Excellent visual entry point. Videos are embedded third-party works; link rather than download or rehost."
+    },
+    {
+      "id": "sfuwh-formations",
+      "title": "San Francisco underwater hockey formations",
+      "url": "https://sfuwh.org/about-uwh/formations/",
+      "country": "USA",
+      "languages": [
+        "en"
+      ],
+      "type": "club tactics",
+      "authority": "Club",
+      "access": "Free",
+      "summary": "Explains front-to-back formation notation and the club's interpretation of 3-3 and 2-3-1 roles.",
+      "versionDate": null,
+      "checkedAt": "2026-10-02",
+      "verification": "opened",
+      "rights": "No reusable-content license verified. Link and summarize; do not copy diagrams, photographs, videos, or full text.",
+      "notes": "Clearly label club-specific conventions. Do not reproduce its figures or endorse forceful language literally; current non-contact rules govern."
+    },
+    {
+      "id": "hydro-resources",
+      "title": "Hydro coaching resources",
+      "url": "https://hydrouwh.com/collections/resources",
+      "country": "New Zealand",
+      "languages": [
+        "en"
+      ],
+      "type": "retailer coaching library",
+      "authority": "Commercial vendor",
+      "access": "Paid; NZD 5 each for three short booklets; NZD 25 school guide observed",
+      "summary": "Commercial PDFs cover fundamentals, skills, drills, and school coaching; collection also offers video analysis.",
+      "versionDate": null,
+      "checkedAt": "2026-10-02",
+      "verification": "opened",
+      "rights": "No reusable-content license verified. Link and summarize; do not copy diagrams, photographs, videos, or full text.",
+      "notes": "Prices observed 2 October 2026; taxes, region, and pricing may change. Purchase grants no republication rights."
+    },
+    {
+      "id": "hydro-school-guide",
+      "title": "Hydro Foundation Coaching for Schools",
+      "url": "https://hydrouwh.com/collections/resources/products/foundation-coaching-for-schools-pdf-download",
+      "country": "New Zealand",
+      "languages": [
+        "en"
+      ],
+      "type": "retailer coaching manual",
+      "authority": "Commercial vendor",
+      "access": "Paid PDF; NZD 25 observed",
+      "summary": "46-page school-coaching guide listed for New Zealand coaches.",
+      "versionDate": null,
+      "checkedAt": "2026-10-02",
+      "verification": "opened",
+      "rights": "No reusable-content license verified. Link and summarize; do not copy diagrams, photographs, videos, or full text.",
+      "notes": "Only product description inspected; full paid content was not accessed."
+    },
+    {
+      "id": "hydro-analysis",
+      "title": "Hydro coaching and video-analysis service",
+      "url": "https://hydrouwh.com/collections/resources/products/video-analysis-service",
+      "country": "New Zealand",
+      "languages": [
+        "en"
+      ],
+      "type": "retailer coaching service",
+      "authority": "Commercial vendor",
+      "access": "Paid; NZD 60–120 range in collection",
+      "summary": "Service analyzes footage supplied by a player or team.",
+      "versionDate": null,
+      "checkedAt": "2026-10-02",
+      "verification": "collection verified; direct cache miss",
+      "rights": "No reusable-content license verified. Link and summarize; do not copy diagrams, photographs, videos, or full text.",
+      "notes": "Collection listing verified, direct product fetch failed. Upload only footage the team may share and respect youth/privacy consent."
+    },
+    {
+      "id": "ffessm-video",
+      "title": "FFESSM direct-video hub",
+      "url": "https://hockeysub.ffessm.fr/direct-video",
+      "country": "France",
+      "languages": [
+        "fr"
+      ],
+      "type": "federation video directory",
+      "authority": "Federation",
+      "access": "Free public links; destination conditions vary",
+      "summary": "Official federation page points viewers to UWH NEWS streams for French competition footage.",
+      "versionDate": "2025-03-28",
+      "checkedAt": "2026-10-02",
+      "verification": "opened",
+      "rights": "No reusable-content license verified. Link and summarize; do not copy diagrams, photographs, videos, or full text.",
+      "notes": "The highlighted event is dated March 2025; use as a media-library route, not a claim of a current live broadcast."
+    },
+    {
+      "id": "uwhnews",
+      "title": "UWH NEWS streams",
+      "url": "https://www.youtube.com/@UWHNEWS/streams",
+      "country": "France",
+      "languages": [
+        "fr"
+      ],
+      "type": "video publisher",
+      "authority": "Community / publisher",
+      "access": "Public YouTube; availability varies",
+      "summary": "Competition-video channel linked by FFESSM.",
+      "versionDate": null,
+      "checkedAt": "2026-10-02",
+      "verification": "official outgoing link",
+      "rights": "No reusable-content license verified. Link and summarize; do not copy diagrams, photographs, videos, or full text.",
+      "notes": "Verified as FFESSM outbound link. Specific videos, geoblocking, and embed availability were not individually audited."
+    },
+    {
+      "id": "flick-research",
+      "title": "Flick biomechanics study",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39117311/",
+      "country": "Türkiye",
+      "languages": [
+        "en"
+      ],
+      "type": "primary research",
+      "authority": "Primary research",
+      "access": "Free abstract; full article access may differ",
+      "summary": "2024 laboratory study describes flick kinematics and an exercise intervention in 17 underwater hockey players.",
+      "versionDate": "2024",
+      "checkedAt": "2026-10-02",
+      "verification": "opened via search",
+      "rights": "No reusable-content license verified. Link and summarize; do not copy diagrams, photographs, videos, or full text.",
+      "notes": "Small preliminary study; unsuitable for prescribing rehabilitation or claiming a universal best technique."
+    },
+    {
+      "id": "cmas-regulations",
+      "title": "CMAS underwater hockey regulations hub",
+      "url": "https://www.cmas.org/hockey/how-to-regulations.html",
+      "country": "International",
+      "languages": [
+        "en"
+      ],
+      "type": "federation official rules",
+      "authority": "Federation",
+      "access": "Public hub; some downloads require login",
+      "summary": "Current entry point for international rules, equipment guidance, officiating standards, and concussion policy.",
+      "versionDate": "2025-02 rules listing",
+      "checkedAt": "2026-10-02",
+      "verification": "opened",
+      "rights": "No reusable-content license verified. Link and summarize; do not copy diagrams, photographs, videos, or full text.",
+      "notes": "Hub lists Rules of Play February 2025. The equipment guide and rule download redirected to login when checked."
+    },
+    {
+      "id": "cmas-equipment",
+      "title": "CMAS equipment guide",
+      "url": "https://www.cmas.org/document/cmas-uwh-equipment-guide/download.html",
+      "country": "International",
+      "languages": [
+        "en"
+      ],
+      "type": "federation equipment standard",
+      "authority": "Federation",
+      "access": "Login required in this check",
+      "summary": "Official equipment-guide link from CMAS's current regulations hub.",
+      "versionDate": null,
+      "checkedAt": "2026-10-02",
+      "verification": "verified login gate",
+      "rights": "No reusable-content license verified. Link and summarize; do not copy diagrams, photographs, videos, or full text.",
+      "notes": "File contents/version not inspected. Equipment advice in the atlas must defer to applicable rules and event inspection."
+    },
+    {
+      "id": "tuha-equipment",
+      "title": "Tasmania equipment and suppliers",
+      "url": "https://www.underwaterhockey.com.au/shop.html",
+      "country": "Australia",
+      "languages": [
+        "en"
+      ],
+      "type": "association equipment directory",
+      "authority": "Association",
+      "access": "Free information; products paid",
+      "summary": "Association equipment desk plus outbound links to specialist stores in several regions.",
+      "versionDate": null,
+      "checkedAt": "2026-10-02",
+      "verification": "opened",
+      "rights": "No reusable-content license verified. Link and summarize; do not copy diagrams, photographs, videos, or full text.",
+      "notes": "Useful independent evidence of vendors. Do not reuse the page's shipping claims without checking the vendor."
+    },
+    {
+      "id": "canam",
+      "title": "CanAm Underwater Hockey Gear",
+      "url": "https://www.canamuwhgear.com/",
+      "country": "North America",
+      "languages": [
+        "en"
+      ],
+      "type": "retailer equipment",
+      "authority": "Commercial vendor",
+      "access": "Paid products",
+      "summary": "Specialist catalog includes masks, sticks, snorkels, mouthguards, fins, gloves, caps, starter kits, and training materials.",
+      "versionDate": null,
+      "checkedAt": "2026-10-02",
+      "verification": "opened",
+      "rights": "No reusable-content license verified. Link and summarize; do not copy diagrams, photographs, videos, or full text.",
+      "notes": "Primary storefront loaded. Confirm current shipping destination, stock, taxes, currency, and return terms before buying."
+    },
+    {
+      "id": "trueblue",
+      "title": "True Blue Underwater Hockey Supplies",
+      "url": "https://true-blue.com.au/",
+      "country": "Australia",
+      "languages": [
+        "en"
+      ],
+      "type": "retailer equipment",
+      "authority": "Commercial vendor",
+      "access": "Paid products",
+      "summary": "Australian specialist store for pucks, sticks, gloves, masks, caps, and accessories.",
+      "versionDate": null,
+      "checkedAt": "2026-10-02",
+      "verification": "opened",
+      "rights": "No reusable-content license verified. Link and summarize; do not copy diagrams, photographs, videos, or full text.",
+      "notes": "Primary storefront loaded. Prices, inventory, and shipping change."
+    },
+    {
+      "id": "hydro-gear",
+      "title": "Hydro Underwater Hockey",
+      "url": "https://hydrouwh.com/",
+      "country": "New Zealand",
+      "languages": [
+        "en"
+      ],
+      "type": "retailer equipment",
+      "authority": "Commercial vendor",
+      "access": "Paid products",
+      "summary": "New Zealand equipment maker with sticks, gloves, headgear, fins, pucks, and starter packs.",
+      "versionDate": null,
+      "checkedAt": "2026-10-02",
+      "verification": "opened; text inspected",
+      "rights": "No reusable-content license verified. Link and summarize; do not copy diagrams, photographs, videos, or full text.",
+      "notes": "Primary home page and catalog navigation opened. Resources page displayed a four-week manufacture notice for sticks/gloves; verify at time of ordering."
+    },
+    {
+      "id": "uwhshop",
+      "title": "UWHSHOP / VMcoaching",
+      "url": "https://www.uwhshop.com/",
+      "country": "Belgium",
+      "languages": [
+        "en"
+      ],
+      "type": "retailer equipment",
+      "authority": "Commercial vendor",
+      "access": "Paid products",
+      "summary": "Specialist water-sport store linked by the Tasmanian association.",
+      "versionDate": null,
+      "checkedAt": "2026-10-02",
+      "verification": "opened",
+      "rights": "No reusable-content license verified. Link and summarize; do not copy diagrams, photographs, videos, or full text.",
+      "notes": "Primary storefront opened; merchandise and delivery availability require a fresh check."
+    },
+    {
+      "id": "breier",
+      "title": "Breier underwater-hockey fins",
+      "url": "https://www.breier-sports.com/en/12-underwater-hockey-uwh-fins",
+      "country": "France",
+      "languages": [
+        "en",
+        "fr"
+      ],
+      "type": "retailer equipment manufacturer",
+      "authority": "Commercial vendor",
+      "access": "Paid products",
+      "summary": "Manufacturer's dedicated underwater-hockey fin range with differing lengths, stiffnesses, and foot-pocket options.",
+      "versionDate": null,
+      "checkedAt": "2026-10-02",
+      "verification": "opened",
+      "rights": "No reusable-content license verified. Link and summarize; do not copy diagrams, photographs, videos, or full text.",
+      "notes": "Treat performance claims as commercial claims. Fit and comfort matter; an expensive or stiffer fin is not automatically right for a beginner."
+    },
+    {
+      "id": "moresport",
+      "title": "More-Sport underwater hockey",
+      "url": "https://uwhstore.more-sport.com/en/articles/11-glove-for-underwater-hockey.html",
+      "country": "France",
+      "languages": [
+        "en",
+        "fr"
+      ],
+      "type": "retailer equipment",
+      "authority": "Commercial vendor",
+      "access": "Paid products",
+      "summary": "Glove product page with links to player equipment, club pucks, goals, and protective gear.",
+      "versionDate": null,
+      "checkedAt": "2026-10-02",
+      "verification": "opened",
+      "rights": "No reusable-content license verified. Link and summarize; do not copy diagrams, photographs, videos, or full text.",
+      "notes": "Vendor gives glove-care advice. Product photographs and descriptions remain vendor-owned."
+    },
+    {
+      "id": "boa-shop",
+      "title": "BOA shop",
+      "url": "https://shop.gbuwh.co.uk/",
+      "country": "United Kingdom",
+      "languages": [
+        "en"
+      ],
+      "type": "association retailer equipment",
+      "authority": "Association",
+      "access": "Paid products",
+      "summary": "Official British Octopush Association shop linked from its coaching and club pages.",
+      "versionDate": null,
+      "checkedAt": "2026-10-02",
+      "verification": "official outgoing link; direct timeout",
+      "rights": "No reusable-content license verified. Link and summarize; do not copy diagrams, photographs, videos, or full text.",
+      "notes": "Primary link verified but direct fetch timed out; do not assert stock or prices."
+    },
+    {
+      "id": "bentfish",
+      "title": "Bentfish Design",
+      "url": "https://www.bentfishdesign.com/",
+      "country": "United Kingdom",
+      "languages": [
+        "en"
+      ],
+      "type": "retailer equipment",
+      "authority": "Commercial vendor",
+      "access": "Paid products",
+      "summary": "Specialist equipment supplier listed by clubs and legacy supplier directories.",
+      "versionDate": null,
+      "checkedAt": "2026-10-02",
+      "verification": "club-linked; direct fetch error",
+      "rights": "No reusable-content license verified. Link and summarize; do not copy diagrams, photographs, videos, or full text.",
+      "notes": "Storefront fetch failed. Keep as a secondary directory lead until storefront rechecked; do not state prices or current trading status."
+    },
+    {
+      "id": "sa-gear",
+      "title": "South Australia gear guide",
+      "url": "https://sauwh.com.au/article-what-gear",
+      "country": "Australia",
+      "languages": [
+        "en"
+      ],
+      "type": "association equipment advice",
+      "authority": "Association",
+      "access": "Free",
+      "summary": "Player-facing overview of loan equipment, buying priorities, and community glove making.",
+      "versionDate": null,
+      "checkedAt": "2026-10-02",
+      "verification": "opened",
+      "rights": "No reusable-content license verified. Link and summarize; do not copy diagrams, photographs, videos, or full text.",
+      "notes": "Some safety equipment is labeled optional here; current official competition requirements take priority. Historical dollar estimates are not quotes."
+    },
+    {
+      "id": "stirling-diy",
+      "title": "Stirling UWH equipment FAQ",
+      "url": "https://suhc.wordpress.com/stirling-underwater-hockey-club-faq/",
+      "country": "United Kingdom",
+      "languages": [
+        "en"
+      ],
+      "type": "club equipment / DIY",
+      "authority": "Club",
+      "access": "Free",
+      "summary": "Club FAQ links specialist equipment sources and discusses the tradition of making protective gloves.",
+      "versionDate": null,
+      "checkedAt": "2026-10-02",
+      "verification": "opened",
+      "rights": "No reusable-content license verified. Link and summarize; do not copy diagrams, photographs, videos, or full text.",
+      "notes": "DIY does not guarantee protection or competition compliance. Refer makers to manufacturer chemical instructions and club equipment inspection."
+    },
+    {
+      "id": "legacy-suppliers",
+      "title": "Octopush Central supplier directory",
+      "url": "https://www.reedconsulting.com/octopush/central/index-zsuppliers.html",
+      "country": "International",
+      "languages": [
+        "en"
+      ],
+      "type": "community legacy directory",
+      "authority": "Community / publisher",
+      "access": "Free",
+      "summary": "Wide historical supplier index useful for discovering brands and old resources.",
+      "versionDate": "2019-04-07",
+      "checkedAt": "2026-10-02",
+      "verification": "indexed text; direct fetch error",
+      "rights": "No reusable-content license verified. Link and summarize; do not copy diagrams, photographs, videos, or full text.",
+      "notes": "Page explicitly updated 7 April 2019 and disclaims affiliation. Discovery aid only; each vendor needs independent verification."
+    }
+  ],
+  "chapters": [
+    {
+      "id": "start-with-a-club",
+      "title": "Your first session",
+      "audience": [
+        "new player",
+        "parent",
+        "coach"
+      ],
+      "level": "Beginner",
+      "category": "Getting started",
+      "sourceIds": [
+        "atlantis-beginners",
+        "quebec-instructors",
+        "tuha-beginners"
+      ],
+      "summary": "Begin with a supervised club session and borrowed kit. The first goal is to feel comfortable following the puck and returning to the surface, not to stay down longer.",
+      "sections": [
+        {
+          "heading": "Before the pool",
+          "text": "Ask the club what it lends, what swim confidence it expects, and how its beginner group is supervised. Explain equipment fit or accessibility needs early. Learn how to stop, get help, and leave the play."
+        },
+        {
+          "heading": "A simple learning loop",
+          "text": "Watch one short demonstration, try one task, surface freely, and talk with the coach. Start with controlling and sharing the puck. Add rules and decisions in manageable pieces."
+        },
+        {
+          "heading": "Signs of progress",
+          "text": "You can identify your team, follow the puck, use your equipment comfortably, make a controlled pass, and find another player after releasing it. These are more useful early milestones than distance or breath-hold scores."
+        }
+      ],
+      "diagramIds": [
+        "learning-path"
+      ],
+      "related": [
+        "equipment-fit",
+        "puck-control",
+        "team-support"
+      ],
+      "editorialStatus": "Original editorial synthesis for educational use; technical review by a qualified UWH coach recommended before public release."
+    },
+    {
+      "id": "puck-control",
+      "title": "Control the puck while seeing the game",
+      "audience": [
+        "player",
+        "coach"
+      ],
+      "level": "Beginner–Intermediate",
+      "category": "Skills",
+      "sourceIds": [
+        "atlantis-star",
+        "chicago-drills",
+        "italian-manual"
+      ],
+      "summary": "Control gives you time to choose. Build a comfortable range of puck movement, then gradually move attention from the puck toward teammates and space.",
+      "sections": [
+        {
+          "heading": "Practice priorities",
+          "text": "Begin with a movement you can repeat smoothly. Work in both directions and use an appropriate left- or right-handed stick. Add speed only after control is reliable."
+        },
+        {
+          "heading": "Useful families",
+          "text": "Push-pull, figure patterns, direction changes, and curls train different parts of the same problem: keeping the puck available while your body and view change."
+        },
+        {
+          "heading": "What a coach can observe",
+          "text": "Does the puck remain within usable reach? Can the player look up? Is the next movement controlled? Is the free hand staying clear of opponents? Observe quality before increasing pressure."
+        }
+      ],
+      "diagramIds": [
+        "control-envelope"
+      ],
+      "related": [
+        "passing-receiving",
+        "equipment-fit",
+        "small-sided-games"
+      ],
+      "editorialStatus": "Original editorial synthesis for educational use; technical review by a qualified UWH coach recommended before public release."
+    },
+    {
+      "id": "passing-receiving",
+      "title": "Passing and receiving as one action",
+      "audience": [
+        "player",
+        "coach"
+      ],
+      "level": "Beginner–Intermediate",
+      "category": "Skills",
+      "sourceIds": [
+        "atlantis-flick",
+        "atlantis-support"
+      ],
+      "summary": "A pass succeeds when a teammate can use it. Choose the route, receiver, and next support position together.",
+      "sections": [
+        {
+          "heading": "Choose the useful pass",
+          "text": "A flat pass and a lifted flick solve different spatial problems. Begin with accuracy in a clear lane. More distance or height is not automatically better, and an unsafe trajectory is never the objective."
+        },
+        {
+          "heading": "Receiver and passer",
+          "text": "The receiver offers a visible target and prepares for the next action. The passer follows the release by moving into useful space. A completed pass should improve the team's options."
+        },
+        {
+          "heading": "Coaching questions",
+          "text": "Was the lane open? Was the receiver ready? Could a shorter or sideways pass have preserved possession? For flick mechanics, use a qualified coach and the linked demonstrations rather than copying a still picture."
+        }
+      ],
+      "diagramIds": [
+        "pass-and-move"
+      ],
+      "related": [
+        "team-support",
+        "read-the-strike",
+        "video-review"
+      ],
+      "editorialStatus": "Original editorial synthesis for educational use; technical review by a qualified UWH coach recommended before public release."
+    },
+    {
+      "id": "read-the-strike",
+      "title": "The strike is a decision point",
+      "audience": [
+        "player",
+        "coach"
+      ],
+      "level": "Intermediate",
+      "category": "Tactics",
+      "sourceIds": [
+        "atlantis-strike",
+        "tuha-training"
+      ],
+      "summary": "Reaching the puck first creates an opportunity. What happens next depends on support, opponent shape, and available space.",
+      "sections": [
+        {
+          "heading": "Look beyond the puck",
+          "text": "A supporting teammate may be beside or behind the first player. The first touch should connect with that support rather than blindly sending the puck forward."
+        },
+        {
+          "heading": "Two pictures to review",
+          "text": "Freeze video before the first touch to identify the support options. Then freeze after the first exchange to see which team has a playable next action."
+        },
+        {
+          "heading": "Rule boundary",
+          "text": "This is a tactical discussion. Starting positions, permitted entry, and restart procedure come from the applicable current rules, not an old coaching clip."
+        }
+      ],
+      "diagramIds": [
+        "strike-options"
+      ],
+      "related": [
+        "passing-receiving",
+        "team-support",
+        "video-review"
+      ],
+      "editorialStatus": "Original editorial synthesis for educational use; technical review by a qualified UWH coach recommended before public release."
+    },
+    {
+      "id": "team-support",
+      "title": "Width, depth, and a playable next option",
+      "audience": [
+        "player",
+        "coach"
+      ],
+      "level": "Intermediate",
+      "category": "Teamplay",
+      "sourceIds": [
+        "atlantis-support",
+        "ffessm-guide"
+      ],
+      "summary": "Support means being reachable and useful. A teammate directly beside the puck may still be unavailable if the passing lane is crowded.",
+      "sections": [
+        {
+          "heading": "The support picture",
+          "text": "Think of the puck carrier, a reachable teammate, and space for the next action. Change the shape as the puck moves. Spacing should create options without disconnecting the team."
+        },
+        {
+          "heading": "After releasing the puck",
+          "text": "Reposition rather than admiring the pass. The next useful position could be behind, beside, or ahead of play. The correct choice changes with possession and pressure."
+        },
+        {
+          "heading": "Availability is dynamic",
+          "text": "Players surface whenever needed. Teammates can read who is available and fill a useful role; tactical structure must never pressure someone to extend a breath hold."
+        }
+      ],
+      "diagramIds": [
+        "support-triangle"
+      ],
+      "related": [
+        "formations",
+        "transition",
+        "small-sided-games"
+      ],
+      "editorialStatus": "Original editorial synthesis for educational use; technical review by a qualified UWH coach recommended before public release."
+    },
+    {
+      "id": "formations",
+      "title": "Formation shapes are shared reference points",
+      "audience": [
+        "player",
+        "coach",
+        "spectator"
+      ],
+      "level": "Intermediate",
+      "category": "Tactics",
+      "sourceIds": [
+        "cmas-regulations",
+        "sfuwh-formations",
+        "atlantis-132"
+      ],
+      "summary": "Read underwater-hockey formation numbers from the attacking line toward the defensive line. The same shape can use different role names and play differently in different clubs.",
+      "sections": [
+        {
+          "heading": "Choose a common language",
+          "text": "Agree which end is being attacked and what words the team uses for forward, wing, center, back, and stopper. A formation label alone does not explain responsibilities."
+        },
+        {
+          "heading": "Use shapes to ask questions",
+          "text": "Who offers the first pass? Who covers behind an engagement? Who protects the opposite side? What changes when possession turns over? Ask these questions for each shape."
+        },
+        {
+          "heading": "Avoid false certainty",
+          "text": "No diagram guarantees success. Actual positions change with the puck, wall, available players, and opposition. The examples below are original schematic layouts, not mandatory or optimal positions."
+        }
+      ],
+      "diagramIds": [
+        "formation-33",
+        "formation-321",
+        "formation-231",
+        "formation-132",
+        "formation-222"
+      ],
+      "related": [
+        "team-support",
+        "transition",
+        "video-review"
+      ],
+      "editorialStatus": "Original editorial synthesis for educational use; technical review by a qualified UWH coach recommended before public release."
+    },
+    {
+      "id": "transition",
+      "title": "React together when possession changes",
+      "audience": [
+        "player",
+        "coach"
+      ],
+      "level": "Intermediate–Advanced",
+      "category": "Teamplay",
+      "sourceIds": [
+        "atlantis-132",
+        "sfuwh-formations",
+        "italian-manual"
+      ],
+      "summary": "A turnover changes which spaces are useful. The nearest player and the covering players have different jobs.",
+      "sections": [
+        {
+          "heading": "Three observations",
+          "text": "Locate the puck, identify immediate pressure, and look for uncovered space. Avoid having every player pursue the same contest."
+        },
+        {
+          "heading": "Cover behind pressure",
+          "text": "When one player engages, another can remain available behind the play. On regaining possession, look for a controlled exit that teammates can support."
+        },
+        {
+          "heading": "Training question",
+          "text": "Pause a small-sided game at a turnover. Ask each player to name their next job and show one alternative. Replay the same starting picture with a different response."
+        }
+      ],
+      "diagramIds": [
+        "pressure-and-cover"
+      ],
+      "related": [
+        "formations",
+        "small-sided-games",
+        "video-review"
+      ],
+      "editorialStatus": "Original editorial synthesis for educational use; technical review by a qualified UWH coach recommended before public release."
+    },
+    {
+      "id": "small-sided-games",
+      "title": "Use small games to connect technique and decisions",
+      "audience": [
+        "coach",
+        "player"
+      ],
+      "level": "All levels, adapted by coach",
+      "category": "Practice design",
+      "sourceIds": [
+        "atlantis-overloads",
+        "ffessm-guide"
+      ],
+      "summary": "An isolated movement becomes useful when a player recognizes when to use it. Small-sided games connect that movement to a teammate, opponent, and purpose.",
+      "sections": [
+        {
+          "heading": "Change one constraint",
+          "text": "A coach can change playing space, available teammates, the scoring target, or defender pressure. Change one variable at a time so players can understand what helped."
+        },
+        {
+          "heading": "Choose an observable",
+          "text": "Look for a behavior such as offering a passing option, receiving under control, or supporting after release. Avoid judging the entire exercise only by goals."
+        },
+        {
+          "heading": "Keep the task playable",
+          "text": "If the challenge overwhelms the skill, simplify it. If the task is easy, add one decision. Rest, surface access, and supervision are prerequisites, not rewards for success."
+        }
+      ],
+      "diagramIds": [
+        "two-versus-one"
+      ],
+      "related": [
+        "puck-control",
+        "passing-receiving",
+        "coaching-pathways"
+      ],
+      "editorialStatus": "Original editorial synthesis for educational use; technical review by a qualified UWH coach recommended before public release."
+    },
+    {
+      "id": "video-review",
+      "title": "Watch one question at a time",
+      "audience": [
+        "coach",
+        "player",
+        "spectator"
+      ],
+      "level": "All levels",
+      "category": "Match analysis",
+      "sourceIds": [
+        "ffessm-theses",
+        "hydro-analysis",
+        "ffessm-video"
+      ],
+      "summary": "A useful review starts with a question. For example: after we pass, do we still have a reachable support player?",
+      "sections": [
+        {
+          "heading": "An original review workflow",
+          "text": "Choose a short sequence. Watch once at normal speed, then pause before the key decision. Record what was visible, the option taken, and the outcome. Look for another comparable sequence before drawing conclusions."
+        },
+        {
+          "heading": "A compact tagging sheet",
+          "text": "Timestamp; phase; possession; pool zone; number of visible support options; chosen action; outcome; one question for training. Mark unclear views as unknown rather than assigning blame."
+        },
+        {
+          "heading": "From footage to practice",
+          "text": "Pick one team behavior to test next session. Review both successful and unsuccessful examples. Camera angle and missing off-screen players can change the interpretation."
+        },
+        {
+          "heading": "Rights and consent",
+          "text": "Link public broadcasts at their original publisher. Use team footage only with appropriate permission, particularly where children are involved. Do not rehost or publish identifiable coaching clips by default."
+        }
+      ],
+      "diagramIds": [
+        "review-timeline"
+      ],
+      "related": [
+        "read-the-strike",
+        "formations",
+        "small-sided-games"
+      ],
+      "editorialStatus": "Original editorial synthesis for educational use; technical review by a qualified UWH coach recommended before public release."
+    },
+    {
+      "id": "equipment-fit",
+      "title": "Choose kit by fit, function, and the current rules",
+      "audience": [
+        "new player",
+        "player",
+        "club"
+      ],
+      "level": "All levels",
+      "category": "Equipment",
+      "sourceIds": [
+        "tuha-equipment",
+        "breier",
+        "canam",
+        "cmas-equipment"
+      ],
+      "summary": "Borrow and compare before buying. A comfortable legal setup that works together is more useful than selecting each item from a brand ranking.",
+      "sections": [
+        {
+          "heading": "Personal fit",
+          "text": "Check mask seal and field of view, snorkel and mouthguard compatibility, cap and ear protection, fin-pocket comfort, and a glove that lets you grip the stick securely."
+        },
+        {
+          "heading": "Playing preference",
+          "text": "Stick shape and handedness affect feel. Fin stiffness and length affect comfort and maneuvering; test with a coach rather than assuming harder or more expensive means better."
+        },
+        {
+          "heading": "Before a competition",
+          "text": "Check the actual tournament rules and equipment inspection. Product marketing and a club's old gear page do not establish legal compliance."
+        },
+        {
+          "heading": "Buying across borders",
+          "text": "Compare the full landed cost, available sizes, return policy, lead time, and replacement parts. Ask whether a club order can reduce shipping; never assume a directory's old shipping offer still applies."
+        }
+      ],
+      "diagramIds": [
+        "gear-system"
+      ],
+      "related": [
+        "equipment-care",
+        "diy-boundaries",
+        "start-with-a-club"
+      ],
+      "editorialStatus": "Original editorial synthesis for educational use; technical review by a qualified UWH coach recommended before public release."
+    },
+    {
+      "id": "equipment-care",
+      "title": "Inspect, rinse, dry, and replace",
+      "audience": [
+        "player",
+        "club"
+      ],
+      "level": "All levels",
+      "category": "Equipment",
+      "sourceIds": [
+        "moresport",
+        "trueblue",
+        "stirling-diy"
+      ],
+      "summary": "A simple gear check prevents avoidable session interruptions. Follow the maker's care instructions for each material.",
+      "sections": [
+        {
+          "heading": "Before play",
+          "text": "Inspect straps, mask lenses, cap ear guards, fin edges, glove padding, and stick surfaces. Remove damaged or sharp equipment from use and have a knowledgeable club member assess it."
+        },
+        {
+          "heading": "After play",
+          "text": "Rinse and dry gear as its manufacturer recommends. Keep personal and club-loan equipment identifiable. For shared mouth-contact equipment, follow the club's hygiene procedure."
+        },
+        {
+          "heading": "Keep a repair log",
+          "text": "For club equipment, record defects and who checked them. Separate serviceable items from those awaiting repair. Replacement decisions should prioritize safe function."
+        }
+      ],
+      "diagramIds": [
+        "gear-inspection-loop"
+      ],
+      "related": [
+        "equipment-fit",
+        "diy-boundaries"
+      ],
+      "editorialStatus": "Original editorial synthesis for educational use; technical review by a qualified UWH coach recommended before public release."
+    },
+    {
+      "id": "diy-boundaries",
+      "title": "DIY belongs inside a safety and compliance check",
+      "audience": [
+        "club",
+        "experienced player"
+      ],
+      "level": "Advanced / club-managed",
+      "category": "Equipment",
+      "sourceIds": [
+        "stirling-diy",
+        "italian-manual",
+        "cmas-equipment"
+      ],
+      "summary": "Homemade gloves and sticks are part of the sport's history. A homemade item still needs to protect people, avoid damage, and satisfy current competition requirements.",
+      "sections": [
+        {
+          "heading": "Reasonable scope",
+          "text": "Start with non-safety-critical organizational aids such as equipment labels, storage dividers, and dryland tactics boards. Discuss any playing-equipment project with an experienced club maker."
+        },
+        {
+          "heading": "Gloves and sticks",
+          "text": "Use appropriate materials, maker instructions, curing conditions, and a post-build inspection. Do not infer that a material is safe on skin simply because a historical tutorial used it."
+        },
+        {
+          "heading": "Leave high-risk systems to specialists",
+          "text": "This atlas does not provide lead-smelting, underwater electrical-buzzer, or load-bearing goal-construction instructions. Pool operators and qualified specialists should approve systems used in the pool."
+        }
+      ],
+      "diagramIds": [
+        "diy-decision-tree"
+      ],
+      "related": [
+        "equipment-fit",
+        "equipment-care"
+      ],
+      "editorialStatus": "Original editorial synthesis for educational use; technical review by a qualified UWH coach recommended before public release."
+    },
+    {
+      "id": "coaching-pathways",
+      "title": "Coaching qualifications and learning are different layers",
+      "audience": [
+        "coach",
+        "club"
+      ],
+      "level": "Coach development",
+      "category": "Coaching",
+      "sourceIds": [
+        "boa-coaching",
+        "ffessm-training",
+        "ffessm-ie",
+        "quebec-instructors",
+        "fpas-coaches",
+        "tssf-coaching",
+        "wa-junior-coaches"
+      ],
+      "summary": "Technical knowledge is one part of coaching. Qualification systems also address safe delivery, welfare, planning, assessment, and responsibilities.",
+      "sections": [
+        {
+          "heading": "Start with your federation",
+          "text": "Use the pathway that applies in your country and club. Confirm admission criteria, safeguarding checks, first-aid expectations, and how the practical assessment works."
+        },
+        {
+          "heading": "Learn from other countries",
+          "text": "Foreign manuals can offer useful perspectives on technique or pedagogy. They do not automatically authorize coaching locally or establish equivalent qualifications."
+        },
+        {
+          "heading": "Make the next session better",
+          "text": "Choose one learning objective, explain the task clearly, observe a behavior, and adapt. Invite player feedback and keep selection and playing-time decisions transparent."
+        }
+      ],
+      "diagramIds": [
+        "coach-learning-loop"
+      ],
+      "related": [
+        "small-sided-games",
+        "video-review",
+        "library-navigation"
+      ],
+      "editorialStatus": "Original editorial synthesis for educational use; technical review by a qualified UWH coach recommended before public release."
+    },
+    {
+      "id": "library-navigation",
+      "title": "Read the source labels before using a resource",
+      "audience": [
+        "everyone"
+      ],
+      "level": "All levels",
+      "category": "Research literacy",
+      "sourceIds": [
+        "wuha-manual",
+        "italian-manual",
+        "hydro-resources",
+        "legacy-suppliers"
+      ],
+      "summary": "A page being online today does not mean its contents are current. A free download is not necessarily free to republish.",
+      "sections": [
+        {
+          "heading": "Four useful distinctions",
+          "text": "Official rule; federation education; club/coaching opinion; commercial material. Each can help, but they answer different questions."
+        },
+        {
+          "heading": "Check the document itself",
+          "text": "Read its edition and publication date. Search-engine crawl dates describe indexing, not authorship. Mark an older source as historical when rule or safety guidance may have changed."
+        },
+        {
+          "heading": "Respect the author's work",
+          "text": "Use short original summaries with direct links. Keep photographs, diagrams, paid manuals, and videos at their original publisher unless a clear license or permission allows reuse."
+        }
+      ],
+      "diagramIds": [
+        "source-confidence"
+      ],
+      "related": [
+        "coaching-pathways",
+        "video-review",
+        "equipment-fit"
+      ],
+      "editorialStatus": "Original editorial synthesis for educational use; technical review by a qualified UWH coach recommended before public release."
+    }
+  ],
+  "practiceCards": [
+    {
+      "id": "observe-control",
+      "title": "Control and look up",
+      "level": "Beginner",
+      "purpose": "Preserve control while gathering information",
+      "format": "Coach-supervised technique task",
+      "players": "One active player per safe station, with required supervision",
+      "equipment": [
+        "Stick",
+        "Puck",
+        "Protective playing equipment"
+      ],
+      "concept": "Move the puck between a few comfortable target areas. A coach presents a simple visual cue to encourage looking ahead. Simplify the movement when control breaks down.",
+      "observe": [
+        "Puck remains reachable",
+        "Head lifts without loss of control",
+        "Movement stays comfortable"
+      ],
+      "adapt": "Begin with fewer target areas; add a choice only when ready.",
+      "sourceIds": [
+        "atlantis-star",
+        "chicago-drills"
+      ],
+      "diagramId": "control-envelope",
+      "safety": "In-water tasks require appropriate qualified supervision, safe spacing, unrestricted surfacing, and adaptation to the group. This card sets no breath-hold target."
+    },
+    {
+      "id": "pass-and-offer",
+      "title": "Pass and offer support",
+      "level": "Beginner–Intermediate",
+      "purpose": "Make support the action after a pass",
+      "format": "Cooperative pair task",
+      "players": "Two active players in a supervised club session",
+      "equipment": [
+        "Stick per player",
+        "Puck",
+        "Protective playing equipment"
+      ],
+      "concept": "A pair exchanges a controlled pass. The passer changes position and offers a visible next option. Stop and discuss whether the lane was clear and the receiver was ready.",
+      "observe": [
+        "Receiver can use the pass",
+        "Passer repositions",
+        "Spacing remains useful"
+      ],
+      "adapt": "Reduce movement first; later let the receiver choose the next target.",
+      "sourceIds": [
+        "atlantis-support"
+      ],
+      "diagramId": "pass-and-move",
+      "safety": "In-water tasks require appropriate qualified supervision, safe spacing, unrestricted surfacing, and adaptation to the group. This card sets no breath-hold target."
+    },
+    {
+      "id": "choose-in-2v1",
+      "title": "Read a two-versus-one",
+      "level": "Intermediate",
+      "purpose": "Choose between carrying and sharing the puck",
+      "format": "Small-sided decision game",
+      "players": "Two attackers, one defender, qualified supervision",
+      "equipment": [
+        "Puck",
+        "Sticks",
+        "Safe agreed target zone"
+      ],
+      "concept": "Begin from a coach-selected open picture. The attackers try to reach a target area through legal play. Reset to compare a passing option with a carrying option.",
+      "observe": [
+        "Support stays reachable",
+        "Carrier responds to defender",
+        "Team preserves a next action"
+      ],
+      "adapt": "Use passive defensive pressure first, or more space; increase difficulty only when appropriate.",
+      "sourceIds": [
+        "atlantis-overloads"
+      ],
+      "diagramId": "two-versus-one",
+      "safety": "In-water tasks require appropriate qualified supervision, safe spacing, unrestricted surfacing, and adaptation to the group. This card sets no breath-hold target."
+    },
+    {
+      "id": "freeze-turnover",
+      "title": "Pause at the turnover",
+      "level": "Intermediate",
+      "purpose": "Separate pressure from cover responsibilities",
+      "format": "Coached small-sided game",
+      "players": "Group chosen by coach",
+      "equipment": [
+        "Normal playing equipment"
+      ],
+      "concept": "After a change of possession, stop safely on the agreed signal. Ask each player to identify the puck, the immediate threat, and their next useful role. Replay the starting picture.",
+      "observe": [
+        "Roles differ rather than duplicate",
+        "Uncovered space is noticed",
+        "Players can explain alternatives"
+      ],
+      "adapt": "Start with fewer players and a clear possession change.",
+      "sourceIds": [
+        "atlantis-132",
+        "sfuwh-formations"
+      ],
+      "diagramId": "pressure-and-cover",
+      "safety": "In-water tasks require appropriate qualified supervision, safe spacing, unrestricted surfacing, and adaptation to the group. This card sets no breath-hold target."
+    },
+    {
+      "id": "video-three-frames",
+      "title": "Three-frame video review",
+      "level": "All levels",
+      "purpose": "Connect observation to a practice question",
+      "format": "Dryland analysis",
+      "players": "Individual or team discussion",
+      "equipment": [
+        "Authorized match video",
+        "Timestamp notes"
+      ],
+      "concept": "Select before-decision, action, and outcome frames. Each viewer names one visible option before hearing the result. Record unknowns caused by the camera angle.",
+      "observe": [
+        "Claims match visible evidence",
+        "Alternatives are plausible",
+        "One actionable question emerges"
+      ],
+      "adapt": "Choose a simple pass first; later compare several similar possessions.",
+      "sourceIds": [
+        "ffessm-theses",
+        "ffessm-video"
+      ],
+      "diagramId": "review-timeline",
+      "safety": "In-water tasks require appropriate qualified supervision, safe spacing, unrestricted surfacing, and adaptation to the group. This card sets no breath-hold target."
+    },
+    {
+      "id": "formation-walkthrough",
+      "title": "Move a formation on a tactics board",
+      "level": "Intermediate",
+      "purpose": "Agree role vocabulary without breath-hold pressure",
+      "format": "Dryland team exercise",
+      "players": "Team",
+      "equipment": [
+        "Tactics board or original interactive pool diagram"
+      ],
+      "concept": "Place six markers in a chosen reference shape. Move the puck to a side, then reverse possession. Ask who supports, who covers, and which positions change.",
+      "observe": [
+        "Everyone agrees attack direction",
+        "Players use the same role names",
+        "Cover and support are explicit"
+      ],
+      "adapt": "Compare two shapes without declaring either universally better.",
+      "sourceIds": [
+        "cmas-regulations",
+        "sfuwh-formations"
+      ],
+      "diagramId": "formation-33",
+      "safety": "In-water tasks require appropriate qualified supervision, safe spacing, unrestricted surfacing, and adaptation to the group. This card sets no breath-hold target."
+    },
+    {
+      "id": "gear-fit-review",
+      "title": "Compare borrowed kit",
+      "level": "Beginner",
+      "purpose": "Find a comfortable starting setup before spending",
+      "format": "Club-assisted equipment review",
+      "players": "Player and knowledgeable club helper",
+      "equipment": [
+        "Club loan kit"
+      ],
+      "concept": "Check one item's fit and compatibility at a time. Record which setup was comfortable and which caused leaks, rubbing, or insecure grip. Confirm rules before purchase.",
+      "observe": [
+        "Fit is comfortable",
+        "Components work together",
+        "Equipment is undamaged"
+      ],
+      "adapt": "Prioritize available loan equipment and budget before specialized upgrades.",
+      "sourceIds": [
+        "tuha-equipment",
+        "breier",
+        "canam"
+      ],
+      "diagramId": "gear-system",
+      "safety": "In-water tasks require appropriate qualified supervision, safe spacing, unrestricted surfacing, and adaptation to the group. This card sets no breath-hold target."
+    },
+    {
+      "id": "coach-one-variable",
+      "title": "Change one constraint",
+      "level": "Coach development",
+      "purpose": "Make practice adaptation interpretable",
+      "format": "Session-planning exercise",
+      "players": "Coach or coaching group",
+      "equipment": [
+        "Practice card"
+      ],
+      "concept": "Write one observable behavior. Choose a task, then plan one easier and one harder version by changing only space, pressure, or available support. Ask players what they noticed.",
+      "observe": [
+        "Goal is observable",
+        "Adjustment matches the challenge",
+        "Players can explain the lesson"
+      ],
+      "adapt": "Seek a mentor's review when using unfamiliar tasks.",
+      "sourceIds": [
+        "ffessm-guide",
+        "boa-coaching"
+      ],
+      "diagramId": "coach-learning-loop",
+      "safety": "In-water tasks require appropriate qualified supervision, safe spacing, unrestricted surfacing, and adaptation to the group. This card sets no breath-hold target."
+    }
+  ],
+  "diagramSpecs": [
+    {
+      "id": "learning-path",
+      "title": "From first touch to team decisions",
+      "kind": "path",
+      "original": true,
+      "nodes": [
+        "Equipment confidence",
+        "Puck control",
+        "A useful pass",
+        "Supporting a teammate",
+        "Reading a game"
+      ],
+      "sourceIds": [
+        "atlantis-level2"
+      ],
+      "caption": "An original learning map. Progress is demonstrated through safe, comfortable play, not breath-hold targets.",
+      "alt": "Five connected learning stages, with a coach-supported feedback loop."
+    },
+    {
+      "id": "control-envelope",
+      "title": "The reachable puck-control space",
+      "kind": "top-down-skill",
+      "original": true,
+      "shapes": [
+        {
+          "shape": "player-oval",
+          "center": [
+            0.5,
+            0.55
+          ]
+        },
+        {
+          "shape": "puck",
+          "center": [
+            0.4,
+            0.5
+          ]
+        },
+        {
+          "shape": "dashed-envelope",
+          "bounds": [
+            0.2,
+            0.25,
+            0.8,
+            0.85
+          ]
+        }
+      ],
+      "annotations": [
+        "Comfortable reach",
+        "Controlled direction change",
+        "View ahead"
+      ],
+      "sourceIds": [
+        "atlantis-star",
+        "chicago-drills"
+      ],
+      "caption": "Original conceptual reach envelope; individual range differs. It is not a traced source illustration.",
+      "alt": "A player silhouette, a puck, and a dashed area showing controllable space."
+    },
+    {
+      "id": "pass-and-move",
+      "title": "Pass, then offer another option",
+      "kind": "pool-plan-sequence",
+      "original": true,
+      "frames": [
+        {
+          "players": [
+            [
+              0.3,
+              0.6
+            ],
+            [
+              0.65,
+              0.4
+            ]
+          ],
+          "puck": [
+            0.33,
+            0.58
+          ]
+        },
+        {
+          "players": [
+            [
+              0.3,
+              0.6
+            ],
+            [
+              0.65,
+              0.4
+            ]
+          ],
+          "puck": [
+            0.62,
+            0.42
+          ],
+          "puckPath": [
+            [
+              0.33,
+              0.58
+            ],
+            [
+              0.62,
+              0.42
+            ]
+          ]
+        },
+        {
+          "players": [
+            [
+              0.45,
+              0.7
+            ],
+            [
+              0.65,
+              0.4
+            ]
+          ],
+          "puck": [
+            0.62,
+            0.42
+          ],
+          "playerPath": [
+            [
+              0.3,
+              0.6
+            ],
+            [
+              0.45,
+              0.7
+            ]
+          ]
+        }
+      ],
+      "sourceIds": [
+        "atlantis-support"
+      ],
+      "caption": "Original example only: puck route uses a solid line and player movement a dashed line.",
+      "alt": "Three frames show a pass and the passer moving to a fresh support position."
+    },
+    {
+      "id": "support-triangle",
+      "title": "Support has width and depth",
+      "kind": "pool-plan",
+      "original": true,
+      "players": [
+        {
+          "id": "carrier",
+          "x": 0.5,
+          "y": 0.45
+        },
+        {
+          "id": "side",
+          "x": 0.72,
+          "y": 0.5
+        },
+        {
+          "id": "behind",
+          "x": 0.4,
+          "y": 0.72
+        }
+      ],
+      "puck": [
+        0.5,
+        0.42
+      ],
+      "lines": [
+        [
+          "carrier",
+          "side"
+        ],
+        [
+          "carrier",
+          "behind"
+        ]
+      ],
+      "sourceIds": [
+        "atlantis-support",
+        "ffessm-guide"
+      ],
+      "caption": "Original coaching concept; reachable support changes with the opponents and the puck.",
+      "alt": "A puck carrier with one side option and one deeper support option."
+    },
+    {
+      "id": "strike-options",
+      "title": "First touch, next connection",
+      "kind": "decision-map",
+      "original": true,
+      "nodes": [
+        "Reach puck",
+        "Observe support",
+        "Beside option",
+        "Behind option",
+        "Space to carry"
+      ],
+      "sourceIds": [
+        "atlantis-strike"
+      ],
+      "caption": "Original options map. It describes choices, not required restart positions.",
+      "alt": "A first-touch node branches to three possible team connections."
+    },
+    {
+      "id": "pressure-and-cover",
+      "title": "Different jobs at the same moment",
+      "kind": "pool-plan",
+      "original": true,
+      "players": [
+        {
+          "id": "pressure",
+          "x": 0.4,
+          "y": 0.42
+        },
+        {
+          "id": "cover",
+          "x": 0.58,
+          "y": 0.68
+        },
+        {
+          "id": "opponent",
+          "x": 0.45,
+          "y": 0.33
+        }
+      ],
+      "puck": [
+        0.44,
+        0.38
+      ],
+      "annotations": [
+        "Nearest player contests legally",
+        "Cover remains available behind"
+      ],
+      "sourceIds": [
+        "atlantis-132",
+        "sfuwh-formations"
+      ],
+      "caption": "Original schematic showing distinct pressure and cover responsibilities. Contact and obstruction rules still apply.",
+      "alt": "One player near a puck contest and a teammate in deeper cover."
+    },
+    {
+      "id": "two-versus-one",
+      "title": "An extra teammate creates a choice",
+      "kind": "pool-plan-sequence",
+      "original": true,
+      "players": [
+        {
+          "id": "A",
+          "team": "attack",
+          "x": 0.3,
+          "y": 0.7
+        },
+        {
+          "id": "B",
+          "team": "attack",
+          "x": 0.7,
+          "y": 0.6
+        },
+        {
+          "id": "D",
+          "team": "defend",
+          "x": 0.5,
+          "y": 0.35
+        }
+      ],
+      "puck": [
+        0.3,
+        0.66
+      ],
+      "annotations": [
+        "Look for an open route",
+        "Support remains reachable",
+        "Choose pass or carry"
+      ],
+      "sourceIds": [
+        "atlantis-overloads"
+      ],
+      "caption": "Original small-game concept. Coach adapts space and pressure to the group.",
+      "alt": "Two attackers face one defender with possible passing and carrying routes."
+    },
+    {
+      "id": "review-timeline",
+      "title": "A match sequence becomes a coaching question",
+      "kind": "timeline",
+      "original": true,
+      "nodes": [
+        "Timestamp",
+        "Before decision",
+        "Action",
+        "Outcome",
+        "Training question"
+      ],
+      "sourceIds": [
+        "ffessm-theses"
+      ],
+      "caption": "Original review worksheet, not an automated performance score.",
+      "alt": "Five labeled points turn a video moment into a focused practice question."
+    },
+    {
+      "id": "gear-system",
+      "title": "The kit works as a system",
+      "kind": "exploded-equipment-map",
+      "original": true,
+      "nodes": [
+        {
+          "label": "Mask",
+          "group": "vision"
+        },
+        {
+          "label": "Snorkel + mouthguard",
+          "group": "breathing / protection"
+        },
+        {
+          "label": "Cap + ear guards",
+          "group": "protection"
+        },
+        {
+          "label": "Glove + stick",
+          "group": "control / protection"
+        },
+        {
+          "label": "Fins",
+          "group": "movement"
+        },
+        {
+          "label": "Swimwear",
+          "group": "fit"
+        }
+      ],
+      "sourceIds": [
+        "cmas-regulations",
+        "canam"
+      ],
+      "caption": "Original item silhouettes only. Check current event rules for specific requirements.",
+      "alt": "Six equipment groups around a simplified swimmer silhouette."
+    },
+    {
+      "id": "gear-inspection-loop",
+      "title": "An equipment-care loop",
+      "kind": "cycle",
+      "original": true,
+      "nodes": [
+        "Inspect",
+        "Use safely",
+        "Rinse / clean as directed",
+        "Dry / store",
+        "Repair or replace"
+      ],
+      "sourceIds": [
+        "moresport",
+        "stirling-diy"
+      ],
+      "caption": "Original checklist design; follow each manufacturer's instructions.",
+      "alt": "A circular checklist of inspection, use, cleaning, storage, and replacement."
+    },
+    {
+      "id": "diy-decision-tree",
+      "title": "Should this be a DIY project?",
+      "kind": "decision-tree",
+      "original": true,
+      "nodes": [
+        "Does it affect in-water safety?",
+        "Does it involve lead or electricity?",
+        "Does it need event compliance?",
+        "Consult qualified club / pool specialist",
+        "Consider a simple organizational aid"
+      ],
+      "sourceIds": [
+        "stirling-diy",
+        "cmas-equipment"
+      ],
+      "caption": "Original editorial risk-screening tool. It is not a construction guide or certification.",
+      "alt": "A decision tree routes safety-critical projects to qualified review."
+    },
+    {
+      "id": "coach-learning-loop",
+      "title": "Plan, observe, adapt",
+      "kind": "cycle",
+      "original": true,
+      "nodes": [
+        "One objective",
+        "Explain and demonstrate",
+        "Observe a behavior",
+        "Listen to players",
+        "Adapt one variable"
+      ],
+      "sourceIds": [
+        "ffessm-guide",
+        "boa-coaching"
+      ],
+      "caption": "Original planning aid for qualified or supervised coaches.",
+      "alt": "A five-stage feedback loop connects session planning to adaptation."
+    },
+    {
+      "id": "source-confidence",
+      "title": "What kind of claim is this?",
+      "kind": "source-badges",
+      "original": true,
+      "nodes": [
+        "Official rules",
+        "Federation education",
+        "Coaching viewpoint",
+        "Research study",
+        "Vendor information",
+        "Historical source"
+      ],
+      "sourceIds": [
+        "cmas-regulations",
+        "ffessm-training",
+        "hydro-resources"
+      ],
+      "caption": "Different badges describe different uses; they are not a universal ranking of authors.",
+      "alt": "Six distinct source-type badges with date and access labels."
+    },
+    {
+      "id": "formation-33",
+      "title": "3–3",
+      "lines": [
+        3,
+        3
+      ],
+      "roles": [
+        "Forward",
+        "Forward",
+        "Forward",
+        "Back",
+        "Back",
+        "Back"
+      ],
+      "note": "Two lines of three; useful for comparing support across the width.",
+      "kind": "pool-plan",
+      "original": true,
+      "sourceIds": [
+        "cmas-regulations",
+        "sfuwh-formations"
+      ],
+      "coordinates": "Normalized unit square. Own end at y=1, attack toward y=0. Distances illustrative, not scale.",
+      "players": [
+        {
+          "id": 1,
+          "label": "Forward",
+          "x": 0.25,
+          "y": 0.25
+        },
+        {
+          "id": 2,
+          "label": "Forward",
+          "x": 0.5,
+          "y": 0.25
+        },
+        {
+          "id": 3,
+          "label": "Forward",
+          "x": 0.75,
+          "y": 0.25
+        },
+        {
+          "id": 4,
+          "label": "Back",
+          "x": 0.25,
+          "y": 0.75
+        },
+        {
+          "id": 5,
+          "label": "Back",
+          "x": 0.5,
+          "y": 0.75
+        },
+        {
+          "id": 6,
+          "label": "Back",
+          "x": 0.75,
+          "y": 0.75
+        }
+      ],
+      "interaction": "Let reader move puck and toggle labels; do not animate a supposedly optimal play.",
+      "caption": "Original schematic. Shape and role vocabulary vary by team. No official position prescription.",
+      "alt": "Six player markers arranged in 3, 3 positions from attacking end to defending end."
+    },
+    {
+      "id": "formation-321",
+      "title": "3–2–1",
+      "lines": [
+        3,
+        2,
+        1
+      ],
+      "roles": [
+        "Forward",
+        "Forward",
+        "Forward",
+        "Mid",
+        "Mid",
+        "Back"
+      ],
+      "note": "Three attacking reference positions with two connecting roles and a deeper role.",
+      "kind": "pool-plan",
+      "original": true,
+      "sourceIds": [
+        "cmas-regulations",
+        "sfuwh-formations"
+      ],
+      "coordinates": "Normalized unit square. Own end at y=1, attack toward y=0. Distances illustrative, not scale.",
+      "players": [
+        {
+          "id": 1,
+          "label": "Forward",
+          "x": 0.25,
+          "y": 0.25
+        },
+        {
+          "id": 2,
+          "label": "Forward",
+          "x": 0.5,
+          "y": 0.25
+        },
+        {
+          "id": 3,
+          "label": "Forward",
+          "x": 0.75,
+          "y": 0.25
+        },
+        {
+          "id": 4,
+          "label": "Mid",
+          "x": 0.3333333333333333,
+          "y": 0.5
+        },
+        {
+          "id": 5,
+          "label": "Mid",
+          "x": 0.6666666666666666,
+          "y": 0.5
+        },
+        {
+          "id": 6,
+          "label": "Back",
+          "x": 0.5,
+          "y": 0.75
+        }
+      ],
+      "interaction": "Let reader move puck and toggle labels; do not animate a supposedly optimal play.",
+      "caption": "Original schematic. Shape and role vocabulary vary by team. No official position prescription.",
+      "alt": "Six player markers arranged in 3, 2, 1 positions from attacking end to defending end."
+    },
+    {
+      "id": "formation-231",
+      "title": "2–3–1",
+      "lines": [
+        2,
+        3,
+        1
+      ],
+      "roles": [
+        "Forward",
+        "Forward",
+        "Mid",
+        "Mid",
+        "Mid",
+        "Back"
+      ],
+      "note": "A paired attacking line, three midfield reference positions, and one deeper role.",
+      "kind": "pool-plan",
+      "original": true,
+      "sourceIds": [
+        "cmas-regulations",
+        "sfuwh-formations"
+      ],
+      "coordinates": "Normalized unit square. Own end at y=1, attack toward y=0. Distances illustrative, not scale.",
+      "players": [
+        {
+          "id": 1,
+          "label": "Forward",
+          "x": 0.3333333333333333,
+          "y": 0.25
+        },
+        {
+          "id": 2,
+          "label": "Forward",
+          "x": 0.6666666666666666,
+          "y": 0.25
+        },
+        {
+          "id": 3,
+          "label": "Mid",
+          "x": 0.25,
+          "y": 0.5
+        },
+        {
+          "id": 4,
+          "label": "Mid",
+          "x": 0.5,
+          "y": 0.5
+        },
+        {
+          "id": 5,
+          "label": "Mid",
+          "x": 0.75,
+          "y": 0.5
+        },
+        {
+          "id": 6,
+          "label": "Back",
+          "x": 0.5,
+          "y": 0.75
+        }
+      ],
+      "interaction": "Let reader move puck and toggle labels; do not animate a supposedly optimal play.",
+      "caption": "Original schematic. Shape and role vocabulary vary by team. No official position prescription.",
+      "alt": "Six player markers arranged in 2, 3, 1 positions from attacking end to defending end."
+    },
+    {
+      "id": "formation-132",
+      "title": "1–3–2",
+      "lines": [
+        1,
+        3,
+        2
+      ],
+      "roles": [
+        "Forward",
+        "Mid",
+        "Mid",
+        "Mid",
+        "Back",
+        "Back"
+      ],
+      "note": "One attacking reference position, three midfield roles, and a back pair.",
+      "kind": "pool-plan",
+      "original": true,
+      "sourceIds": [
+        "atlantis-132"
+      ],
+      "coordinates": "Normalized unit square. Own end at y=1, attack toward y=0. Distances illustrative, not scale.",
+      "players": [
+        {
+          "id": 1,
+          "label": "Forward",
+          "x": 0.5,
+          "y": 0.25
+        },
+        {
+          "id": 2,
+          "label": "Mid",
+          "x": 0.25,
+          "y": 0.5
+        },
+        {
+          "id": 3,
+          "label": "Mid",
+          "x": 0.5,
+          "y": 0.5
+        },
+        {
+          "id": 4,
+          "label": "Mid",
+          "x": 0.75,
+          "y": 0.5
+        },
+        {
+          "id": 5,
+          "label": "Back",
+          "x": 0.3333333333333333,
+          "y": 0.75
+        },
+        {
+          "id": 6,
+          "label": "Back",
+          "x": 0.6666666666666666,
+          "y": 0.75
+        }
+      ],
+      "interaction": "Let reader move puck and toggle labels; do not animate a supposedly optimal play.",
+      "caption": "Original schematic. Shape and role vocabulary vary by team. No official position prescription.",
+      "alt": "Six player markers arranged in 1, 3, 2 positions from attacking end to defending end."
+    },
+    {
+      "id": "formation-222",
+      "title": "2–2–2",
+      "lines": [
+        2,
+        2,
+        2
+      ],
+      "roles": [
+        "Forward",
+        "Forward",
+        "Mid",
+        "Mid",
+        "Back",
+        "Back"
+      ],
+      "note": "Three paired lines; the drawing is a starting reference, not a fixed pattern.",
+      "kind": "pool-plan",
+      "original": true,
+      "sourceIds": [
+        "cmas-regulations",
+        "sfuwh-formations"
+      ],
+      "coordinates": "Normalized unit square. Own end at y=1, attack toward y=0. Distances illustrative, not scale.",
+      "players": [
+        {
+          "id": 1,
+          "label": "Forward",
+          "x": 0.3333333333333333,
+          "y": 0.25
+        },
+        {
+          "id": 2,
+          "label": "Forward",
+          "x": 0.6666666666666666,
+          "y": 0.25
+        },
+        {
+          "id": 3,
+          "label": "Mid",
+          "x": 0.3333333333333333,
+          "y": 0.5
+        },
+        {
+          "id": 4,
+          "label": "Mid",
+          "x": 0.6666666666666666,
+          "y": 0.5
+        },
+        {
+          "id": 5,
+          "label": "Back",
+          "x": 0.3333333333333333,
+          "y": 0.75
+        },
+        {
+          "id": 6,
+          "label": "Back",
+          "x": 0.6666666666666666,
+          "y": 0.75
+        }
+      ],
+      "interaction": "Let reader move puck and toggle labels; do not animate a supposedly optimal play.",
+      "caption": "Original schematic. Shape and role vocabulary vary by team. No official position prescription.",
+      "alt": "Six player markers arranged in 2, 2, 2 positions from attacking end to defending end."
+    }
+  ],
+  "mediaLinks": [
+    {
+      "title": "Chicago curated technique videos",
+      "url": "https://www.chicagounderwaterhockey.us/drills/",
+      "sourceId": "chicago-drills",
+      "verified": "Source page opened and embedded URLs resolved; video playback not verified",
+      "items": [
+        {
+          "title": "Standard curl",
+          "url": "https://www.youtube.com/embed/41rIT8VbG_U?feature=oembed"
+        },
+        {
+          "title": "Reverse curl",
+          "url": "https://www.youtube.com/embed/9loYrH5YTYw?feature=oembed"
+        },
+        {
+          "title": "Flick introduction",
+          "url": "https://www.youtube.com/embed/B1sn26T6ZQc?feature=oembed"
+        },
+        {
+          "title": "Dryland puckwork",
+          "url": "https://www.youtube.com/embed/K7Uu7SPvLps?feature=oembed"
+        }
+      ]
+    },
+    {
+      "title": "UWH NEWS streams",
+      "url": "https://www.youtube.com/@UWHNEWS/streams",
+      "sourceId": "ffessm-video",
+      "verified": "Linked by official FFESSM video page; individual streams not audited"
+    },
+    {
+      "title": "Atlantis flick demonstration and examples",
+      "url": "https://wiki.atlantissports.org/players/individual_fundamentals/puck_handling/passes/flicks_full_motion",
+      "sourceId": "atlantis-flick",
+      "verified": "Indexed page reports embedded videos; direct YouTube IDs not extracted"
+    }
+  ],
+  "equipmentChecklist": [
+    {
+      "item": "Mask",
+      "function": "Vision and fit",
+      "compare": [
+        "Comfortable seal",
+        "Usable field of view",
+        "Secure strap",
+        "Applicable equipment rules"
+      ],
+      "sourceIds": [
+        "canam",
+        "cmas-equipment"
+      ]
+    },
+    {
+      "item": "Snorkel and mouthguard",
+      "function": "Surface breathing and oral protection",
+      "compare": [
+        "Comfort",
+        "Compatibility",
+        "Secure attachment",
+        "No damaged components"
+      ],
+      "sourceIds": [
+        "canam",
+        "cmas-regulations"
+      ]
+    },
+    {
+      "item": "Fins",
+      "function": "Movement and maneuvering",
+      "compare": [
+        "Foot-pocket fit",
+        "Comfort with chosen socks",
+        "Stiffness suited to player",
+        "Safe undamaged edges",
+        "Event compliance"
+      ],
+      "sourceIds": [
+        "breier",
+        "cmas-equipment"
+      ]
+    },
+    {
+      "item": "Stick pair",
+      "function": "Puck control and team identification",
+      "compare": [
+        "Handedness",
+        "Comfortable grip",
+        "Shape preference",
+        "Black/white requirement under applicable rules",
+        "No sharp or damaged surface"
+      ],
+      "sourceIds": [
+        "canam",
+        "trueblue"
+      ]
+    },
+    {
+      "item": "Protective glove",
+      "function": "Protect the playing hand while retaining grip",
+      "compare": [
+        "Fit",
+        "Padding condition",
+        "Handedness",
+        "Legal color and construction under applicable rules"
+      ],
+      "sourceIds": [
+        "moresport",
+        "cmas-equipment"
+      ]
+    },
+    {
+      "item": "Cap and ear protection",
+      "function": "Protection and identification",
+      "compare": [
+        "Secure fit",
+        "Undamaged ear guards",
+        "Visible appropriate identifiers"
+      ],
+      "sourceIds": [
+        "cmas-regulations",
+        "canam"
+      ]
+    },
+    {
+      "item": "Club pucks",
+      "function": "Consistent playing behavior on the pool floor",
+      "compare": [
+        "Pool compatibility",
+        "Cover condition",
+        "Applicable competition specification"
+      ],
+      "sourceIds": [
+        "trueblue",
+        "tuha-equipment"
+      ]
+    },
+    {
+      "item": "Goals and buzzer system",
+      "function": "Club / competition infrastructure",
+      "compare": [
+        "Pool-operator approval",
+        "Current competition requirements",
+        "Specialist installation and maintenance"
+      ],
+      "sourceIds": [
+        "moresport",
+        "cmas-regulations"
+      ]
+    },
+    {
+      "item": "Loan-kit system",
+      "function": "Lower the barrier to trying the sport",
+      "compare": [
+        "Range of sizes",
+        "Left-handed options",
+        "Hygiene process",
+        "Defect and repair log"
+      ],
+      "sourceIds": [
+        "tuha-equipment",
+        "atlantis-beginners"
+      ]
+    }
+  ],
+  "recommendedVisualSections": [
+    {
+      "title": "Learn the game",
+      "components": [
+        "Original equipment explorer",
+        "Five-step learning path",
+        "Glossary chips linked to wiki entries"
+      ]
+    },
+    {
+      "title": "Skills laboratory",
+      "components": [
+        "Control-envelope animation",
+        "Technique-library link cards",
+        "Left/right-handed mirrored schematic toggle",
+        "Short coach-observable criteria"
+      ]
+    },
+    {
+      "title": "Tactics board",
+      "components": [
+        "Five formation layouts",
+        "Puck draggable within a conceptual pool",
+        "Pressure / cover layer",
+        "Clear attack-direction arrow",
+        "Screen-reader text alternative"
+      ]
+    },
+    {
+      "title": "Practice finder",
+      "components": [
+        "Level / objective / group-size filters",
+        "Eight original practice cards",
+        "Supervision notice",
+        "No apnea stopwatch, leaderboard, or underwater-duration targets"
+      ]
+    },
+    {
+      "title": "Watch with purpose",
+      "components": [
+        "Broadcast and technique link collections",
+        "Original timestamp tagging worksheet",
+        "Three-frame review guide",
+        "Rights/consent notes"
+      ]
+    },
+    {
+      "title": "Equipment atlas",
+      "components": [
+        "Supplier map by region",
+        "Product-category chips",
+        "Loan / buy / repair decision flow",
+        "Checked date and stock-unverified labels"
+      ]
+    },
+    {
+      "title": "Global coaching shelf",
+      "components": [
+        "Language filters",
+        "Federation / club / paid / historical badges",
+        "Document dates distinct from verification date",
+        "Login-gated and unavailable labels"
+      ]
+    }
+  ],
+  "qualityFlags": [
+    {
+      "severity": "high",
+      "topic": "Atlantis changing or conflicting snapshots",
+      "detail": "The same Level-2 Block-5 URL is indexed as Support & Connection but directly opens as Formation Under Pressure (2-3-1). Exact current revision is unresolved. Publish original independently reviewed concepts, link the source with a snapshot warning, and avoid implying the wiki has one stable curriculum."
+    },
+    {
+      "severity": "high",
+      "topic": "Legacy apnea advice",
+      "detail": "German community training PDF at https://uwsport.de/files/0904%20-%20uwh_training.pdf explicitly encourages approaching breath-hold limits and suppressing the breathing stimulus. Exclude as training guidance. It is not included in the public source catalog."
+    },
+    {
+      "severity": "high",
+      "topic": "Do not treat old manuals as current rulebooks",
+      "detail": "WUHA manual is June 1999 rev 2. Italian manual is 16 March 2015 ed 1.0. Fresh indexing does not update either document."
+    },
+    {
+      "severity": "high",
+      "topic": "Equipment guidance conflicts",
+      "detail": "Some club pages call mouthguards optional or give old mask/glove restrictions. Current official/event equipment rules override these pages; do not copy their compliance claims."
+    },
+    {
+      "severity": "medium",
+      "topic": "Atlantis access and unfinished media",
+      "detail": "Root URL timed out, although multiple deep pages are indexed. 1-3-2 page explicitly has video placeholders. Distinguish indexed text from tested media."
+    },
+    {
+      "severity": "medium",
+      "topic": "CMAS download access",
+      "detail": "Equipment-guide and February 2025 rule download links redirect to login. Link hub and disclose access; do not claim the download was inspected."
+    },
+    {
+      "severity": "medium",
+      "topic": "Vendor geography",
+      "detail": "TUHA calls CanAm Canadian; another club calls it US. Use North America until legal storefront location is independently verified."
+    },
+    {
+      "severity": "medium",
+      "topic": "Commercial claims",
+      "detail": "Do not repeat 'best performance', universal fin recommendations, old shipping offers, or directory price estimates as independent conclusions."
+    },
+    {
+      "severity": "medium",
+      "topic": "Geographic coverage",
+      "detail": "This coaching-specific library covers English, French, Spanish, Italian, Portuguese, Turkish, and German resources. Asia/Africa technical material remains less well represented; do not mistake that retrieval gap for absence of local coaching."
+    },
+    {
+      "severity": "low",
+      "topic": "Training-platform access",
+      "detail": "FPAS course platform returned a browser challenge, FVAS course failed direct fetch, BOA intro page requires login. Public overviews may still be useful."
+    }
+  ],
+  "nextResearchTargets": [
+    "Recheck Atlantis root in a rendered browser and discover its official navigation and license statement without bulk copying.",
+    "Ask a qualified UWH coach to review original teaching pages and distinguish regional terminology.",
+    "Independently verify the remaining supplier leads before marking them active.",
+    "Find more first-party technical training resources in Spanish-speaking countries, South Africa, and Asian federations.",
+    "Verify individual videos, ownership, and allowed embeds; annotate language, subtitles, and useful timestamps.",
+    "Use the current official equipment rulebook supplied by the rules researcher to complete legal equipment dimensions and color restrictions."
+  ],
+  "validation": {
+    "jsonParsed": true,
+    "sourceIdsUnique": true,
+    "allSourceReferencesResolved": true,
+    "allChapterDiagramReferencesResolved": true,
+    "reviewedAt": "2026-10-02T21:28:00Z",
+    "sourceLanguages": [
+      "de",
+      "en",
+      "es",
+      "fr",
+      "it",
+      "pt",
+      "tr"
+    ],
+    "caution": "Verification records distinguish opened text, indexed-only text, login gates, errors, and outbound links. A loaded URL does not validate every claim on the page."
+  }
+}

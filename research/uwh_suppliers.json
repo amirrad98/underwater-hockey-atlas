@@ -1,0 +1,1217 @@
+{
+  "schemaVersion": "1.0",
+  "title": "Underwater hockey equipment suppliers: curated starter directory",
+  "checkedAt": "2026-10-02",
+  "scope": "A focused, non-exhaustive directory of 12 supplier websites across ten countries. Primary-source product presence is verified to the access level recorded; no supplier is endorsed or independently audited.",
+  "methodology": {
+    "seedReuse": "Reused and rechecked supplier leads from the existing coaching/equipment research, then resolved geography and added selected manufacturers and regional suppliers.",
+    "activeMeaning": "A supplier site or primary indexed catalog presents relevant products or a buying route. This is not proof of current legal trading status, order acceptance, inventory or fulfilment.",
+    "verification": "Opened public primary sources where possible. Separately label indexed-only evidence, failed pages, and challenges. Access date is not publication or product-update date.",
+    "canadaPriority": "Canadian supplier first, then suppliers with relevant official regional or international delivery evidence. Country selection or currency display does not prove delivery.",
+    "noTransactions": "No messages, accounts, carts, purchases, uploads or publishing were performed."
+  },
+  "publicNotice": "Supplier listings are a starting point, not endorsements. Confirm fit, current rules, stock, final delivered cost, taxes, production times and return terms before ordering. Ask your club about loan gear and try-on opportunities.",
+  "editorialRules": [
+    "Use original directory descriptions only; no copied product photos, logos, reviews or vendor marketing paragraphs.",
+    "Do not publish prices or stock from this research. No live-stock or checkout claim is authorized by this dataset.",
+    "Do not turn a worldwide statement into a guaranteed Canadian delivery badge; retain the recorded qualifier.",
+    "Equipment categories mean products were listed, not that all are in stock, appropriate for every player, or legal in every event.",
+    "Keep custom orders distinct from standard size, colour or handedness selections.",
+    "For goal and club orders, obtain product-specific freight and pool-operator approval. Vendor claims do not replace current equipment rules.",
+    "Do not show a map pin more precise than verified country without new location verification."
+  ],
+  "categoryVocabulary": {
+    "sticks": "UWH sticks / pushers",
+    "gloves": "Protective playing gloves",
+    "fins": "Fins, hockey blades or foot-pocket systems; see description",
+    "masks": "Masks or UWH-specific mask products",
+    "snorkels": "Snorkels",
+    "caps": "Ear-protecting caps/headgear",
+    "mouthguards": "UWH mouth protection",
+    "pucks": "UWH pucks",
+    "goals": "UWH goal systems",
+    "club_equipment": "Explicit school, club or quantity equipment offers"
+  },
+  "canadaStatusVocabulary": {
+    "canada_explicit": "Canada expressly named by the supplier",
+    "region_including_canada_stated": "A named delivery region includes Canada; no Canadian checkout tested",
+    "worldwide_stated": "Supplier states worldwide delivery or ordering; product/destination quote still needed",
+    "international_stated_canada_unconfirmed": "International service advertised without sufficient Canada-specific detail",
+    "international_by_inquiry_canada_unconfirmed": "Supplier requests destination inquiry; Canada remains unconfirmed",
+    "unknown": "No reliable applicable shipping statement verified"
+  },
+  "suppliers": [
+    {
+      "id": "asap-uwh",
+      "name": "ASAP Underwater Hockey / Bentfish Armoury",
+      "url": "https://asapmotorsport.com/uwh-about-us",
+      "country": {
+        "name": "Canada",
+        "status": "verified_primary_source",
+        "sourceIds": [
+          "asap-about"
+        ]
+      },
+      "region": "North America",
+      "businessModel": "manufacturer_and_reseller",
+      "specialization": "underwater_hockey",
+      "categories": [
+        "sticks",
+        "gloves",
+        "masks",
+        "snorkels"
+      ],
+      "description": "Canadian maker and supplier carrying the Bentfish Armoury designs alongside a player-equipment catalog.",
+      "checkedAt": "2026-10-02",
+      "verification": {
+        "status": "official_presence_and_category_navigation_observed",
+        "meaning": "Public supplier/product presence was observed. Fulfilment, business quality, live stock and checkout were not tested."
+      },
+      "canadaShipping": {
+        "status": "canada_explicit",
+        "label": "Canada shipping stated",
+        "evidence": "The UWH about page explicitly advertises shipping anywhere in Canada. Eligibility, charges and item availability must be confirmed with the supplier.",
+        "sourceIds": [
+          "asap-about"
+        ],
+        "checkoutVerified": false,
+        "costVerified": false
+      },
+      "customOrders": {
+        "status": "not_verified",
+        "description": "No formal custom-order service verified.",
+        "sourceIds": [
+          "asap-about"
+        ]
+      },
+      "clubOrders": {
+        "status": "stated",
+        "description": "About page explicitly describes supplying clubs and players; no current bulk-order terms verified.",
+        "sourceIds": [
+          "asap-about"
+        ]
+      },
+      "sourceIds": [
+        "asap-about"
+      ],
+      "notes": [
+        "Supplier says it acquired Bentfish Armoury designs in 2025 and now manufactures them in Canada; do not list the old UK Bentfish shop as independently verified active.",
+        "Categories are supported by current site navigation; linked item-level pages could not be read."
+      ]
+    },
+    {
+      "id": "canam",
+      "name": "CanAm Underwater Hockey Gear",
+      "url": "https://www.canamuwhgear.com/",
+      "country": {
+        "name": "United States",
+        "status": "verified_primary_source",
+        "sourceIds": [
+          "canam-contact"
+        ]
+      },
+      "region": "North America",
+      "businessModel": "specialist_retailer_with_own_brand",
+      "specialization": "underwater_hockey",
+      "categories": [
+        "sticks",
+        "gloves",
+        "fins",
+        "masks",
+        "snorkels",
+        "caps",
+        "mouthguards",
+        "pucks",
+        "club_equipment"
+      ],
+      "description": "Virginia-based specialist storefront with individual player gear, pucks and school or club starter kits.",
+      "checkedAt": "2026-10-02",
+      "verification": {
+        "status": "catalog_observed",
+        "meaning": "Public supplier/product presence was observed. Fulfilment, business quality, live stock and checkout were not tested."
+      },
+      "canadaShipping": {
+        "status": "region_including_canada_stated",
+        "label": "North America shipping stated",
+        "evidence": "Official policy includes North America and also uses worldwide wording; Canada falls within the stated region, but a Canadian order was not tested.",
+        "sourceIds": [
+          "canam-shipping"
+        ],
+        "checkoutVerified": false,
+        "costVerified": false
+      },
+      "customOrders": {
+        "status": "not_verified",
+        "description": "No current custom-order program verified.",
+        "sourceIds": [
+          "canam-home"
+        ]
+      },
+      "clubOrders": {
+        "status": "stated",
+        "description": "Dedicated school/club starter-kit category.",
+        "sourceIds": [
+          "canam-club"
+        ]
+      },
+      "sourceIds": [
+        "canam-home",
+        "canam-contact",
+        "canam-shipping",
+        "canam-club"
+      ],
+      "notes": [
+        "Official contact information resolves conflicting third-party listings: the business address is in the USA.",
+        "Own-branded products are visible; do not infer that every item is made by CanAm."
+      ]
+    },
+    {
+      "id": "hydro",
+      "name": "Hydro Underwater Hockey",
+      "url": "https://hydrouwh.com/",
+      "country": {
+        "name": "New Zealand",
+        "status": "verified_primary_source",
+        "sourceIds": [
+          "hydro-school"
+        ]
+      },
+      "region": "Oceania",
+      "businessModel": "manufacturer_and_reseller",
+      "specialization": "underwater_hockey",
+      "categories": [
+        "sticks",
+        "gloves",
+        "fins",
+        "masks",
+        "caps",
+        "pucks",
+        "club_equipment"
+      ],
+      "description": "New Zealand stick and glove maker with additional player gear, starter packs and club-oriented bundles.",
+      "checkedAt": "2026-10-02",
+      "verification": {
+        "status": "catalog_observed",
+        "meaning": "Public supplier/product presence was observed. Fulfilment, business quality, live stock and checkout were not tested."
+      },
+      "canadaShipping": {
+        "status": "international_stated_canada_unconfirmed",
+        "label": "International shipping stated; confirm Canada",
+        "evidence": "Shipping policy describes international delivery. Canada appears in the storefront country selector, which alone is not proof that an order can be delivered.",
+        "sourceIds": [
+          "hydro-shipping",
+          "hydro-home"
+        ],
+        "checkoutVerified": false,
+        "costVerified": false
+      },
+      "customOrders": {
+        "status": "stated",
+        "description": "Naming, custom colours and made-to-order equipment are described.",
+        "sourceIds": [
+          "hydro-home",
+          "hydro-shipping"
+        ]
+      },
+      "clubOrders": {
+        "status": "stated",
+        "description": "Club glove bundles and school starter packs are listed.",
+        "sourceIds": [
+          "hydro-home",
+          "hydro-school"
+        ]
+      },
+      "sourceIds": [
+        "hydro-home",
+        "hydro-about",
+        "hydro-shipping",
+        "hydro-school"
+      ],
+      "notes": [
+        "Manufacturing and shipping take separate time; obtain a current estimate for customized equipment.",
+        "No current city is asserted because different source snapshots show different locations within New Zealand."
+      ]
+    },
+    {
+      "id": "true-blue",
+      "name": "True Blue Underwater Hockey Supplies",
+      "url": "https://true-blue.com.au/",
+      "country": {
+        "name": "Australia",
+        "status": "verified_primary_source",
+        "sourceIds": [
+          "trueblue-home"
+        ]
+      },
+      "region": "Oceania",
+      "businessModel": "specialist_retailer",
+      "specialization": "underwater_hockey",
+      "categories": [
+        "sticks",
+        "gloves",
+        "fins",
+        "masks",
+        "snorkels",
+        "caps",
+        "mouthguards",
+        "pucks"
+      ],
+      "description": "Australian specialist catalog with pucks, player protection, sticks and other personal equipment.",
+      "checkedAt": "2026-10-02",
+      "verification": {
+        "status": "catalog_observed",
+        "meaning": "Public supplier/product presence was observed. Fulfilment, business quality, live stock and checkout were not tested."
+      },
+      "canadaShipping": {
+        "status": "unknown",
+        "label": "Canada shipping not verified",
+        "evidence": "The inspected product delivery notice names Australia Post; it does not establish Canadian delivery.",
+        "sourceIds": [
+          "trueblue-fin"
+        ],
+        "checkoutVerified": false,
+        "costVerified": false
+      },
+      "customOrders": {
+        "status": "not_verified",
+        "description": "Custom manufacture or personalization not verified.",
+        "sourceIds": [
+          "trueblue-home"
+        ]
+      },
+      "clubOrders": {
+        "status": "limited_evidence",
+        "description": "School sticks are listed; a formal club-order or wholesale program was not verified.",
+        "sourceIds": [
+          "trueblue-home"
+        ]
+      },
+      "sourceIds": [
+        "trueblue-home",
+        "trueblue-fin"
+      ],
+      "notes": [
+        "Product categories describe the catalog, not current stock.",
+        "Manufacturing role was not established in inspected official material."
+      ]
+    },
+    {
+      "id": "breier",
+      "name": "Breier",
+      "url": "https://www.breier-sports.com/en/12-underwater-hockey-uwh-fins",
+      "country": {
+        "name": "France",
+        "status": "verified_primary_source",
+        "sourceIds": [
+          "breier-contact"
+        ]
+      },
+      "region": "Europe",
+      "businessModel": "manufacturer_and_reseller",
+      "specialization": "aquatic_fins_with_uwh_range",
+      "categories": [
+        "fins",
+        "sticks",
+        "mouthguards",
+        "snorkels"
+      ],
+      "description": "French fin manufacturer with a dedicated underwater-hockey range, configurable foot pockets and selected accessories.",
+      "checkedAt": "2026-10-02",
+      "verification": {
+        "status": "catalog_observed",
+        "meaning": "Public supplier/product presence was observed. Fulfilment, business quality, live stock and checkout were not tested."
+      },
+      "canadaShipping": {
+        "status": "worldwide_stated",
+        "label": "Worldwide shipping stated",
+        "evidence": "Sales terms state shipping to all countries. Canadian cost, taxes, timing and product eligibility remain unverified.",
+        "sourceIds": [
+          "breier-terms"
+        ],
+        "checkoutVerified": false,
+        "costVerified": false
+      },
+      "customOrders": {
+        "status": "stated",
+        "description": "Made-to-measure fins and custom foot-pocket options are documented.",
+        "sourceIds": [
+          "breier-uwh",
+          "breier-home"
+        ]
+      },
+      "clubOrders": {
+        "status": "not_verified",
+        "description": "No specific club purchasing program verified.",
+        "sourceIds": [
+          "breier-uwh"
+        ]
+      },
+      "sourceIds": [
+        "breier-uwh",
+        "breier-home",
+        "breier-contact",
+        "breier-terms"
+      ],
+      "notes": [
+        "Own manufacture is established for fins; accessories may be other brands.",
+        "Supplier claims about performance or competition compliance are not independent certification."
+      ]
+    },
+    {
+      "id": "uwhshop",
+      "name": "UWHSHOP / VMcoaching",
+      "url": "https://www.uwhshop.com/",
+      "country": {
+        "name": "Belgium",
+        "status": "verified_primary_source",
+        "sourceIds": [
+          "uwhshop-contact"
+        ]
+      },
+      "region": "Europe",
+      "businessModel": "multi_brand_retailer",
+      "specialization": "water_sports_with_dedicated_uwh_catalog",
+      "categories": [
+        "sticks",
+        "gloves",
+        "fins",
+        "masks",
+        "snorkels",
+        "caps"
+      ],
+      "description": "Belgian multi-brand water-sport shop with dedicated underwater-hockey categories and a Breier fin configuration route.",
+      "checkedAt": "2026-10-02",
+      "verification": {
+        "status": "catalog_observed",
+        "meaning": "Public supplier/product presence was observed. Fulfilment, business quality, live stock and checkout were not tested."
+      },
+      "canadaShipping": {
+        "status": "international_stated_canada_unconfirmed",
+        "label": "Worldwide distribution advertised; confirm Canada",
+        "evidence": "Homepage describes worldwide distribution; no destination-specific Canadian shipping policy or quote was verified.",
+        "sourceIds": [
+          "uwhshop-home"
+        ],
+        "checkoutVerified": false,
+        "costVerified": false
+      },
+      "customOrders": {
+        "status": "stated",
+        "description": "Homepage links a Breier fin customization route; service details and lead times require checking.",
+        "sourceIds": [
+          "uwhshop-home"
+        ]
+      },
+      "clubOrders": {
+        "status": "not_verified",
+        "description": "UWH-specific team or club order terms not verified.",
+        "sourceIds": [
+          "uwhshop-home"
+        ]
+      },
+      "sourceIds": [
+        "uwhshop-home",
+        "uwhshop-contact"
+      ],
+      "notes": [
+        "Keep UWH categories separate from the site’s rugby, diving, swimming and other products; do not classify rugby goals as hockey goals."
+      ]
+    },
+    {
+      "id": "more-sport",
+      "name": "UWH Store / More-Sport",
+      "url": "https://uwhstore.more-sport.com/en/",
+      "country": {
+        "name": "France",
+        "status": "verified_primary_source",
+        "sourceIds": [
+          "more-home",
+          "more-shipping"
+        ]
+      },
+      "region": "Europe",
+      "businessModel": "product_developer_and_reseller",
+      "specialization": "underwater_hockey",
+      "categories": [
+        "sticks",
+        "gloves",
+        "fins",
+        "snorkels",
+        "caps",
+        "mouthguards",
+        "pucks",
+        "goals",
+        "club_equipment"
+      ],
+      "description": "French UWH shop offering player equipment, club bundles and modular goals with purchase or leasing options.",
+      "checkedAt": "2026-10-02",
+      "verification": {
+        "status": "catalog_observed",
+        "meaning": "Public supplier/product presence was observed. Fulfilment, business quality, live stock and checkout were not tested."
+      },
+      "canadaShipping": {
+        "status": "worldwide_stated",
+        "label": "Worldwide shipping stated",
+        "evidence": "Delivery policy explicitly includes worldwide destinations. Confirm a Canadian quote, especially for goals and other heavy equipment.",
+        "sourceIds": [
+          "more-shipping"
+        ],
+        "checkoutVerified": false,
+        "costVerified": false
+      },
+      "customOrders": {
+        "status": "limited_evidence",
+        "description": "Some club packs request glove specifications; a general bespoke manufacturing service is not verified.",
+        "sourceIds": [
+          "more-clubs"
+        ]
+      },
+      "clubOrders": {
+        "status": "stated",
+        "description": "Dedicated club catalog includes combined equipment packs, multi-puck offers and goals.",
+        "sourceIds": [
+          "more-clubs",
+          "more-goals"
+        ]
+      },
+      "sourceIds": [
+        "more-home",
+        "more-shipping",
+        "more-clubs",
+        "more-goals"
+      ],
+      "notes": [
+        "A goals listing has leasing and purchase variants: never publish its base amount as the complete purchase price.",
+        "Fins are listed through a rental offering; availability and geographic eligibility of rental arrangements were not tested.",
+        "Goal product detail was available in the search index while direct retrieval failed."
+      ]
+    },
+    {
+      "id": "boa-shop",
+      "name": "British Octopush Association Shop",
+      "url": "https://shop.gbuwh.co.uk/about/",
+      "country": {
+        "name": "United Kingdom",
+        "status": "verified_primary_source",
+        "sourceIds": [
+          "boa-about"
+        ]
+      },
+      "region": "Europe",
+      "businessModel": "association_operated_retailer",
+      "specialization": "underwater_hockey",
+      "categories": [
+        "sticks",
+        "gloves",
+        "fins",
+        "masks",
+        "snorkels",
+        "caps",
+        "mouthguards",
+        "pucks",
+        "club_equipment"
+      ],
+      "description": "Association-operated UWH store with a broad personal-equipment catalog and selected quantity packs.",
+      "checkedAt": "2026-10-02",
+      "verification": {
+        "status": "catalog_observed",
+        "meaning": "Public supplier/product presence was observed. Fulfilment, business quality, live stock and checkout were not tested."
+      },
+      "canadaShipping": {
+        "status": "worldwide_stated",
+        "label": "Worldwide ordering stated; country quote may be needed",
+        "evidence": "FAQ welcomes worldwide orders and asks customers to inquire when their country has no delivery estimate. No Canadian quote was checked.",
+        "sourceIds": [
+          "boa-faq",
+          "boa-shipping"
+        ],
+        "checkoutVerified": false,
+        "costVerified": false
+      },
+      "customOrders": {
+        "status": "not_verified",
+        "description": "Bespoke equipment or team personalization not verified.",
+        "sourceIds": [
+          "boa-about"
+        ]
+      },
+      "clubOrders": {
+        "status": "stated",
+        "description": "A mouthguard ten-pack is documented; broader club procurement terms were not verified.",
+        "sourceIds": [
+          "boa-about"
+        ]
+      },
+      "sourceIds": [
+        "boa-about",
+        "boa-faq",
+        "boa-shipping"
+      ],
+      "notes": [
+        "Shop is volunteer operated; recheck dispatch timing before time-sensitive orders.",
+        "Use the working about/catalog entry point; homepage extraction failed in this check."
+      ]
+    },
+    {
+      "id": "dorsal",
+      "name": "Dorsal Gear",
+      "url": "https://www.dorsalgear.co.nz/",
+      "country": {
+        "name": "New Zealand",
+        "status": "verified_primary_source",
+        "sourceIds": [
+          "dorsal-contact"
+        ]
+      },
+      "region": "Oceania",
+      "businessModel": "manufacturer_with_reseller_network",
+      "specialization": "underwater_hockey",
+      "categories": [
+        "sticks"
+      ],
+      "description": "New Zealand maker of moulded UWH sticks, with product information and a regional reseller directory.",
+      "checkedAt": "2026-10-02",
+      "verification": {
+        "status": "manufacturer_catalog_and_resellers_observed",
+        "meaning": "Public supplier/product presence was observed. Fulfilment, business quality, live stock and checkout were not tested."
+      },
+      "canadaShipping": {
+        "status": "unknown",
+        "label": "Canada shipping not verified",
+        "evidence": "Site mentions Canadian users and a North America reseller, but neither establishes a current direct-shipping policy to Canada.",
+        "sourceIds": [
+          "dorsal-contact",
+          "dorsal-dealers"
+        ],
+        "checkoutVerified": false,
+        "costVerified": false
+      },
+      "customOrders": {
+        "status": "not_verified",
+        "description": "User modification is discussed, but a made-to-order custom service was not verified.",
+        "sourceIds": [
+          "dorsal-sticks"
+        ]
+      },
+      "clubOrders": {
+        "status": "not_verified",
+        "description": "No current bulk club-order program verified.",
+        "sourceIds": [
+          "dorsal-dealers"
+        ]
+      },
+      "sourceIds": [
+        "dorsal-sticks",
+        "dorsal-contact",
+        "dorsal-dealers"
+      ],
+      "notes": [
+        "Treat the where-to-buy page as a lead list; its individual resellers were not audited.",
+        "Do not repeat historical sales totals or universal performance claims."
+      ]
+    },
+    {
+      "id": "core-uwh",
+      "name": "Core UWH Gear",
+      "url": "https://coreuwhgear.com/en/",
+      "country": {
+        "name": "Slovenia",
+        "status": "verified_primary_source",
+        "sourceIds": [
+          "core-home"
+        ]
+      },
+      "region": "Europe",
+      "businessModel": "manufacturer_and_reseller",
+      "specialization": "underwater_hockey",
+      "categories": [
+        "sticks",
+        "gloves",
+        "masks",
+        "snorkels",
+        "mouthguards",
+        "pucks",
+        "goals",
+        "club_equipment"
+      ],
+      "description": "Slovenian UWH maker and shop covering sticks, gloves, pucks and club goals, with selected additional player accessories.",
+      "checkedAt": "2026-10-02",
+      "verification": {
+        "status": "catalog_observed",
+        "meaning": "Public supplier/product presence was observed. Fulfilment, business quality, live stock and checkout were not tested."
+      },
+      "canadaShipping": {
+        "status": "worldwide_stated",
+        "label": "Worldwide shipping advertised; goals need quote",
+        "evidence": "Catalog advertises worldwide shipping. Goal listing specifically requires a shipping inquiry. Detailed shipping-policy page returned a verification challenge.",
+        "sourceIds": [
+          "core-home",
+          "core-goals",
+          "core-shipping"
+        ],
+        "checkoutVerified": false,
+        "costVerified": false
+      },
+      "customOrders": {
+        "status": "stated",
+        "description": "The multi-puck listing says other puck colours can be requested.",
+        "sourceIds": [
+          "core-pucks"
+        ]
+      },
+      "clubOrders": {
+        "status": "stated",
+        "description": "Multi-puck purchasing and goal pairs are listed.",
+        "sourceIds": [
+          "core-home",
+          "core-pucks",
+          "core-goals"
+        ]
+      },
+      "sourceIds": [
+        "core-home",
+        "core-goals",
+        "core-pucks",
+        "core-shipping"
+      ],
+      "notes": [
+        "Do not treat a CAD currency selector as shipping confirmation.",
+        "Current rule compliance should be checked against current governing rules, not solely supplier claims."
+      ]
+    },
+    {
+      "id": "spearmaster",
+      "name": "Spearmaster",
+      "url": "https://spearmaster.co.za/",
+      "country": {
+        "name": "South Africa",
+        "status": "verified_primary_source",
+        "sourceIds": [
+          "spearmaster-home",
+          "spearmaster-uwh"
+        ]
+      },
+      "region": "Africa",
+      "businessModel": "general_dive_manufacturer_and_supplier",
+      "specialization": "dive_equipment_with_uwh_range",
+      "categories": [
+        "fins",
+        "pucks"
+      ],
+      "description": "South African dive-equipment supplier whose UWH range includes pucks, hockey fin blades, foot pockets and retainers.",
+      "checkedAt": "2026-10-02",
+      "verification": {
+        "status": "uwh_catalog_observed_homepage_indexed",
+        "meaning": "Public supplier/product presence was observed. Fulfilment, business quality, live stock and checkout were not tested."
+      },
+      "canadaShipping": {
+        "status": "unknown",
+        "label": "Canada shipping not verified",
+        "evidence": "No Canada-specific or general UWH shipping policy was verified.",
+        "sourceIds": [
+          "spearmaster-home",
+          "spearmaster-uwh"
+        ],
+        "checkoutVerified": false,
+        "costVerified": false
+      },
+      "customOrders": {
+        "status": "not_verified",
+        "description": "No UWH-specific customization service verified.",
+        "sourceIds": [
+          "spearmaster-uwh"
+        ]
+      },
+      "clubOrders": {
+        "status": "not_verified",
+        "description": "No UWH club-order terms verified.",
+        "sourceIds": [
+          "spearmaster-uwh"
+        ]
+      },
+      "sourceIds": [
+        "spearmaster-home",
+        "spearmaster-uwh"
+      ],
+      "notes": [
+        "The company manufactures dive equipment; manufacturing of every UWH item was not independently established.",
+        "Use homepage-only public links in keeping with the site’s stated linking conditions.",
+        "Catalog page opened; homepage was readable only through its indexed text."
+      ]
+    },
+    {
+      "id": "uwr-colombia",
+      "name": "UWR Colombia",
+      "url": "https://uwrcolombia.com/",
+      "country": {
+        "name": "Colombia",
+        "status": "verified_primary_source",
+        "sourceIds": [
+          "uwrco-home",
+          "uwrco-about"
+        ]
+      },
+      "region": "South America",
+      "businessModel": "cap_manufacturer_and_underwater_sports_retailer",
+      "specialization": "uwh_caps_with_broader_uwr_catalog",
+      "categories": [
+        "caps",
+        "club_equipment"
+      ],
+      "description": "Medellín-based underwater-sport supplier explicitly offering customized UWH caps and numbered club sets.",
+      "checkedAt": "2026-10-02",
+      "verification": {
+        "status": "homepage_observed_uwh_details_indexed",
+        "meaning": "Public supplier/product presence was observed. Fulfilment, business quality, live stock and checkout were not tested."
+      },
+      "canadaShipping": {
+        "status": "international_by_inquiry_canada_unconfirmed",
+        "label": "International orders by inquiry; Canada unconfirmed",
+        "evidence": "Custom-cap page invites country-specific international shipping inquiries. Canadian delivery has not been verified.",
+        "sourceIds": [
+          "uwrco-caps"
+        ],
+        "checkoutVerified": false,
+        "costVerified": false
+      },
+      "customOrders": {
+        "status": "stated",
+        "description": "Customized cap colours, numbers and club designs are offered.",
+        "sourceIds": [
+          "uwrco-caps",
+          "uwrco-about"
+        ]
+      },
+      "clubOrders": {
+        "status": "stated",
+        "description": "Full numbered cap sets for clubs are explicitly described.",
+        "sourceIds": [
+          "uwrco-caps",
+          "uwrco-about"
+        ]
+      },
+      "sourceIds": [
+        "uwrco-home",
+        "uwrco-about",
+        "uwrco-caps"
+      ],
+      "notes": [
+        "Listed for explicitly documented UWH caps. Do not assume its wider rugby catalog is competition-legal UWH gear.",
+        "Homepage opened; custom-cap and workshop details were verified from indexed primary text, not a tested configurator or fulfilled order."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "asap-about",
+      "title": "ASAP Underwater Hockey: about and category navigation",
+      "url": "https://asapmotorsport.com/uwh-about-us",
+      "publisherType": "supplier_primary_source",
+      "checkedAt": "2026-10-02",
+      "access": "opened_text",
+      "evidenceSummary": "Identifies a Canadian supplier, says Bentfish Armoury designs were acquired in 2025 and are now made in Canada, lists player-equipment categories, and explicitly advertises delivery within Canada.",
+      "accessNote": "About page opened; linked catalog/category pages failed extraction. No stock or checkout verification."
+    },
+    {
+      "id": "canam-home",
+      "title": "CanAm: equipment catalog",
+      "url": "https://www.canamuwhgear.com/",
+      "publisherType": "supplier_primary_source",
+      "checkedAt": "2026-10-02",
+      "access": "opened_text",
+      "evidenceSummary": "Lists sticks, gloves, fins, masks, snorkels, mouthguards, caps, pucks, and school/club starter kits."
+    },
+    {
+      "id": "canam-contact",
+      "title": "CanAm: contact",
+      "url": "https://www.canamuwhgear.com/Articles.php?ID=250",
+      "publisherType": "supplier_primary_source",
+      "checkedAt": "2026-10-02",
+      "access": "opened_text",
+      "evidenceSummary": "Lists the business as CanAm Underwater Hockey Gear, LLC with a Remington, Virginia, USA address."
+    },
+    {
+      "id": "canam-shipping",
+      "title": "CanAm: shipping policies",
+      "url": "https://www.canamuwhgear.com/articles.php?ID=57",
+      "publisherType": "supplier_primary_source",
+      "checkedAt": "2026-10-02",
+      "access": "opened_text",
+      "evidenceSummary": "Shipping page refers to worldwide shipping and specifically North America. No Canadian checkout tested."
+    },
+    {
+      "id": "canam-club",
+      "title": "CanAm: school/club starter kits",
+      "url": "https://www.canamuwhgear.com/category-s/1826.htm",
+      "publisherType": "supplier_primary_source",
+      "checkedAt": "2026-10-02",
+      "access": "opened_text",
+      "evidenceSummary": "Public category specifically offers school/club starter kits."
+    },
+    {
+      "id": "trueblue-home",
+      "title": "True Blue Underwater Hockey Supplies: catalog",
+      "url": "https://true-blue.com.au/",
+      "publisherType": "supplier_primary_source",
+      "checkedAt": "2026-10-02",
+      "access": "opened_text",
+      "evidenceSummary": "Store identifies Australia and lists sticks, gloves, masks, fins, caps, snorkels, mouthguards, pucks and school sticks."
+    },
+    {
+      "id": "trueblue-fin",
+      "title": "True Blue: F01 fins and delivery notice",
+      "url": "https://true-blue.com.au/home/13-f01-fins.html",
+      "publisherType": "supplier_primary_source",
+      "checkedAt": "2026-10-02",
+      "access": "indexed_primary_text",
+      "evidenceSummary": "Product page names Australia Post but does not establish delivery to Canada.",
+      "accessNote": "Product text inspected in search results; destination-specific shipping remains unresolved."
+    },
+    {
+      "id": "hydro-home",
+      "title": "Hydro Underwater Hockey: catalog",
+      "url": "https://hydrouwh.com/",
+      "publisherType": "supplier_primary_source",
+      "checkedAt": "2026-10-02",
+      "access": "opened_text",
+      "evidenceSummary": "Player equipment, pucks, headgear, fins, starter packs, a club glove bundle, and name/colour customization are visible. Country selector includes Canada."
+    },
+    {
+      "id": "hydro-about",
+      "title": "Hydro: about",
+      "url": "https://hydrouwh.com/pages/about-us",
+      "publisherType": "supplier_primary_source",
+      "checkedAt": "2026-10-02",
+      "access": "opened_text",
+      "evidenceSummary": "Describes manufacturing gloves and sticks and adapting equipment designs."
+    },
+    {
+      "id": "hydro-shipping",
+      "title": "Hydro: shipping, taxes and returns",
+      "url": "https://hydrouwh.com/pages/shipping",
+      "publisherType": "supplier_primary_source",
+      "checkedAt": "2026-10-02",
+      "access": "opened_text",
+      "evidenceSummary": "Describes manufacture-to-order/custom gear and international shipment by NZ Post or DHL. No Canada-specific shipping promise is stated in the inspected policy."
+    },
+    {
+      "id": "hydro-school",
+      "title": "Hydro: schools starter packs",
+      "url": "https://hydrouwh.com/collections/schools-starter-packs",
+      "publisherType": "supplier_primary_source",
+      "checkedAt": "2026-10-02",
+      "access": "opened_text",
+      "evidenceSummary": "Lists starter packs and identifies Hydro Underwater Hockey Ltd in New Zealand.",
+      "accessNote": "Older rendered snapshot than homepage; use for country and category, not current stock, prices, city or lead times."
+    },
+    {
+      "id": "uwhshop-home",
+      "title": "UWHSHOP: water-sport catalog",
+      "url": "https://www.uwhshop.com/",
+      "publisherType": "supplier_primary_source",
+      "checkedAt": "2026-10-02",
+      "access": "opened_text",
+      "evidenceSummary": "Dedicated UWH sections include fins, gloves, sticks, caps, masks and snorkels. Offers a Breier fin configurator and describes worldwide distribution."
+    },
+    {
+      "id": "uwhshop-contact",
+      "title": "UWHSHOP / VMcoaching: contact",
+      "url": "https://www.uwhshop.com/contact-2/",
+      "publisherType": "supplier_primary_source",
+      "checkedAt": "2026-10-02",
+      "access": "opened_text",
+      "evidenceSummary": "Identifies UWHSHOP by VMcoaching in Kraainem, Belgium."
+    },
+    {
+      "id": "breier-uwh",
+      "title": "Breier: underwater-hockey range",
+      "url": "https://www.breier-sports.com/en/12-underwater-hockey-uwh-fins",
+      "publisherType": "supplier_primary_source",
+      "checkedAt": "2026-10-02",
+      "access": "opened_text",
+      "evidenceSummary": "Lists hockey fins and custom foot-pocket options, plus sticks, mouthguards, snorkels and fin accessories."
+    },
+    {
+      "id": "breier-home",
+      "title": "Breier: manufacture and customization",
+      "url": "https://www.breier-sports.com/en/",
+      "publisherType": "supplier_primary_source",
+      "checkedAt": "2026-10-02",
+      "access": "indexed_primary_text",
+      "evidenceSummary": "Describes fins designed and manufactured in France, with made-to-measure options."
+    },
+    {
+      "id": "breier-contact",
+      "title": "Breier: contact",
+      "url": "https://www.breier-sports.com/en/contact-us",
+      "publisherType": "supplier_primary_source",
+      "checkedAt": "2026-10-02",
+      "access": "indexed_primary_text",
+      "evidenceSummary": "Gives the company office in Saint Avé, France."
+    },
+    {
+      "id": "breier-terms",
+      "title": "Breier: delivery zones in sales terms",
+      "url": "https://www.breier-sports.com/en/p/3-general-terms-conditions-",
+      "publisherType": "supplier_primary_source",
+      "checkedAt": "2026-10-02",
+      "access": "opened_text",
+      "evidenceSummary": "Article 5.1 states international shipping to all countries. This is a general policy, not a Canadian quote or confirmation for a particular item."
+    },
+    {
+      "id": "more-home",
+      "title": "UWH Store / More-Sport: catalog",
+      "url": "https://uwhstore.more-sport.com/en/",
+      "publisherType": "supplier_primary_source",
+      "checkedAt": "2026-10-02",
+      "access": "opened_text",
+      "evidenceSummary": "Offers own-brand and other-brand player equipment, pucks, goals and club packs; identifies an office in France."
+    },
+    {
+      "id": "more-shipping",
+      "title": "More-Sport: delivery and shipment",
+      "url": "https://uwhstore.more-sport.com/en/content/1-delivery",
+      "publisherType": "supplier_primary_source",
+      "checkedAt": "2026-10-02",
+      "access": "opened_text",
+      "evidenceSummary": "States home delivery in France, Europe and worldwide, with shipment costs dependent on destination."
+    },
+    {
+      "id": "more-clubs",
+      "title": "More-Sport: club equipment",
+      "url": "https://uwhstore.more-sport.com/en/20-clubs",
+      "publisherType": "supplier_primary_source",
+      "checkedAt": "2026-10-02",
+      "access": "indexed_primary_text",
+      "evidenceSummary": "Lists multi-puck and combined glove/cap/puck club packs and goals."
+    },
+    {
+      "id": "more-goals",
+      "title": "More-Sport: underwater-hockey goals",
+      "url": "https://uwhstore.more-sport.com/en/home/196-pair-of-goals-for-underwater-hockey.html",
+      "publisherType": "supplier_primary_source",
+      "checkedAt": "2026-10-02",
+      "access": "indexed_primary_text",
+      "evidenceSummary": "Goals listing includes purchase and leasing choices, units or pairs, and different assembly arrangements.",
+      "accessNote": "Direct fetch timed out; indexed product description inspected. Do not mistake the base listing amount for the price of buying a complete goal pair."
+    },
+    {
+      "id": "boa-about",
+      "title": "BOA Shop: about and equipment categories",
+      "url": "https://shop.gbuwh.co.uk/about/",
+      "publisherType": "supplier_primary_source",
+      "checkedAt": "2026-10-02",
+      "access": "opened_text",
+      "evidenceSummary": "Association-operated shop lists player equipment and pucks, a UK postal address, and a mouthguard multi-pack."
+    },
+    {
+      "id": "boa-faq",
+      "title": "BOA Shop: international ordering FAQ",
+      "url": "https://shop.gbuwh.co.uk/faq/",
+      "publisherType": "supplier_primary_source",
+      "checkedAt": "2026-10-02",
+      "access": "indexed_primary_text",
+      "evidenceSummary": "Says it serves players worldwide and asks overseas buyers to contact the shop if their country has no delivery estimate."
+    },
+    {
+      "id": "boa-shipping",
+      "title": "BOA Shop: delivery and shipping",
+      "url": "https://shop.gbuwh.co.uk/delivery-shipping/",
+      "publisherType": "supplier_primary_source",
+      "checkedAt": "2026-10-02",
+      "access": "opened_text",
+      "evidenceSummary": "Describes international courier arrangements and buyer responsibility for applicable import charges."
+    },
+    {
+      "id": "dorsal-sticks",
+      "title": "Dorsal Gear: stick range",
+      "url": "https://www.dorsalgear.co.nz/sticks.html",
+      "publisherType": "supplier_primary_source",
+      "checkedAt": "2026-10-02",
+      "access": "opened_text",
+      "evidenceSummary": "Manufacturer describes Original and Elite moulded sticks; Elite has right- and left-handed options."
+    },
+    {
+      "id": "dorsal-contact",
+      "title": "Dorsal Gear: location and company background",
+      "url": "https://www.dorsalgear.co.nz/contact.html",
+      "publisherType": "supplier_primary_source",
+      "checkedAt": "2026-10-02",
+      "access": "opened_text",
+      "evidenceSummary": "States that Dorsal Gear is based in Auckland, New Zealand. Mentions use of its sticks in Canada, which is not a shipping policy."
+    },
+    {
+      "id": "dorsal-dealers",
+      "title": "Dorsal Gear: where to buy",
+      "url": "https://www.dorsalgear.co.nz/where-to-buy.html",
+      "publisherType": "supplier_primary_source",
+      "checkedAt": "2026-10-02",
+      "access": "opened_text",
+      "evidenceSummary": "Directs customers to regional resellers, including North America. Individual reseller availability not checked."
+    },
+    {
+      "id": "core-home",
+      "title": "Core UWH Gear: English catalog",
+      "url": "https://coreuwhgear.com/en/",
+      "publisherType": "supplier_primary_source",
+      "checkedAt": "2026-10-02",
+      "access": "opened_text",
+      "evidenceSummary": "Describes Slovenia-made UWH equipment and worldwide shipping; lists sticks, gloves, masks, mouthguards, snorkels, pucks, multi-puck offers and goals."
+    },
+    {
+      "id": "core-goals",
+      "title": "Core UWH Gear: two-part stainless goals",
+      "url": "https://coreuwhgear.com/en/product/uwh-goals-stainless-two-parts/",
+      "publisherType": "supplier_primary_source",
+      "checkedAt": "2026-10-02",
+      "access": "opened_text",
+      "evidenceSummary": "Lists a goal pair and expressly asks customers to obtain shipping costs before ordering because of dimensions and weight."
+    },
+    {
+      "id": "core-pucks",
+      "title": "Core UWH Gear: multi-puck order listing",
+      "url": "https://coreuwhgear.com/en/product/6x-underwater-hockey-puck/",
+      "publisherType": "supplier_primary_source",
+      "checkedAt": "2026-10-02",
+      "access": "opened_text",
+      "evidenceSummary": "Describes quantity purchasing for six or more pucks and other puck colours on request."
+    },
+    {
+      "id": "core-shipping",
+      "title": "Core UWH Gear: shipping page",
+      "url": "https://coreuwhgear.com/en/shipping/",
+      "publisherType": "supplier_primary_source",
+      "checkedAt": "2026-10-02",
+      "access": "challenge",
+      "evidenceSummary": "No shipping policy text retrieved.",
+      "accessNote": "Page returned a request-verification challenge; not bypassed. Worldwide statement comes only from the catalog."
+    },
+    {
+      "id": "spearmaster-home",
+      "title": "Spearmaster: manufacturer and product navigation",
+      "url": "https://spearmaster.co.za/",
+      "publisherType": "supplier_primary_source",
+      "checkedAt": "2026-10-02",
+      "access": "indexed_primary_text",
+      "evidenceSummary": "South African dive-equipment business with an underwater-hockey product section.",
+      "accessNote": "Root fetch failed but primary homepage text was indexed. Public links should use the homepage only."
+    },
+    {
+      "id": "spearmaster-uwh",
+      "title": "Spearmaster: underwater-hockey catalog",
+      "url": "https://www.spearmaster.co.za/pg/108149/underwater-hockey",
+      "publisherType": "supplier_primary_source",
+      "checkedAt": "2026-10-02",
+      "access": "opened_text",
+      "evidenceSummary": "Lists underwater-hockey pucks, fibreglass hockey fin blades, foot pockets and fin retainers.",
+      "accessNote": "Site terms restrict deep links; expose only the homepage link on the public directory. Do not mirror source assets or text.",
+      "publicCitationUrl": "https://spearmaster.co.za/"
+    },
+    {
+      "id": "uwrco-home",
+      "title": "UWR Colombia: store",
+      "url": "https://uwrcolombia.com/",
+      "publisherType": "supplier_primary_source",
+      "checkedAt": "2026-10-02",
+      "access": "opened_text",
+      "evidenceSummary": "Identifies Medellín, Colombia and includes a custom-cap category alongside its broader underwater-rugby equipment."
+    },
+    {
+      "id": "uwrco-about",
+      "title": "UWR Colombia: about its cap workshop",
+      "url": "https://uwrcolombia.com/acerca-de.html",
+      "publisherType": "supplier_primary_source",
+      "checkedAt": "2026-10-02",
+      "access": "indexed_primary_text",
+      "evidenceSummary": "States local Colombian cap manufacture and numbered sets for underwater-hockey clubs.",
+      "accessNote": "Direct page retrieval failed; primary indexed text inspected."
+    },
+    {
+      "id": "uwrco-caps",
+      "title": "UWR Colombia: customized UWH/UWR/waterpolo caps",
+      "url": "https://uwrcolombia.com/gorros-personalizados",
+      "publisherType": "supplier_primary_source",
+      "checkedAt": "2026-10-02",
+      "access": "indexed_primary_text",
+      "evidenceSummary": "Explicitly offers UWH caps and full numbered team sets. International delivery is arranged by country through inquiry.",
+      "accessNote": "Direct configurator retrieval failed. No account, design, messaging or order created."
+    }
+  ],
+  "notIncluded": [
+    {
+      "name": "Bentfish Design UK",
+      "url": "https://www.bentfishdesign.com/",
+      "reason": "Direct fetch failed. ASAP says it acquired Bentfish Armoury and its designs in 2025. Preserve the legacy reference rather than claiming this is a separately active UK supplier.",
+      "sourceIds": [
+        "asap-about"
+      ]
+    },
+    {
+      "name": "My Octopush",
+      "url": "https://myoctopush.com/",
+      "reason": "Manufacturer dealer directory provided a lead, but direct storefront fetch failed; not independently verified in this pass."
+    },
+    {
+      "name": "Bentfish USA",
+      "url": "https://www.bentfishusa.com/",
+      "reason": "Direct storefront fetch failed; no assumption that the Canadian Bentfish acquisition explains this separate site."
+    },
+    {
+      "name": "Hockeysub",
+      "url": "https://www.hockeysub.com/",
+      "reason": "Direct fetch failed because robots information was unreachable; not independently verified in this pass."
+    },
+    {
+      "name": "Enlace Tienda",
+      "url": "https://www.enlacetienda.com/en/collections/uwh/hockey-subacuatico",
+      "reason": "Colombian UWH category indexed, but direct category access failed; hold as a regional lead."
+    },
+    {
+      "name": "SA Underwater Sports Gear",
+      "url": "https://sausgear.com/",
+      "reason": "Indexed catalog showed UWH products, but direct page returned no readable content; hold pending verification."
+    },
+    {
+      "name": "Anchor Sports / Anchorage Trading",
+      "url": "https://www.anchoragetrading.co.uk/",
+      "reason": "General dive store and UWH category navigation verified; item-level UWH catalog failed. Omitted to keep this starter directory focused."
+    }
+  ],
+  "importantCorrections": [
+    {
+      "supplierId": "canam",
+      "detail": "Country is United States based on the official business contact address, superseding conflicting third-party labels.",
+      "sourceIds": [
+        "canam-contact"
+      ]
+    },
+    {
+      "supplierId": "asap-uwh",
+      "detail": "ASAP reports Canadian manufacture of acquired Bentfish Armoury designs from 2025. This does not establish the status of every former Bentfish reseller.",
+      "sourceIds": [
+        "asap-about"
+      ]
+    },
+    {
+      "supplierId": "more-sport",
+      "detail": "Goal product listing offers both leasing and purchase; its base displayed amount must not be represented as a completed purchase quote.",
+      "sourceIds": [
+        "more-goals"
+      ]
+    }
+  ],
+  "coverageGaps": [
+    "No Asia-based supplier was sufficiently verified in this focused pass.",
+    "Canadian destination-specific evidence is strongest for ASAP; several others make broader regional or worldwide statements only.",
+    "Most suppliers have no verified formal bespoke or club-order program; unknown is not a refusal to supply."
+  ],
+  "validation": {
+    "jsonParsed": true,
+    "supplierCount": 12,
+    "sourceCount": 36,
+    "countryCount": 10,
+    "allSourceReferencesResolved": true,
+    "allRequestedCategoriesCovered": true,
+    "reviewedAt": "2026-10-02T21:50:05.041305+00:00"
+  }
+}

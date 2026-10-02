@@ -1,0 +1,2185 @@
+{
+  "title": "Underwater Hockey Atlas & Wiki: Rules, Refereeing, Equipment and Safety Library",
+  "scope": "Curated foundational international and national resources, with medical/safety context and version control. Not an exhaustive global catalogue.",
+  "as_of": "2026-10-02",
+  "verified_at": "2026-10-02",
+  "record_count": 62,
+  "methodology": "Primary federation and committee sources were preferred. PDF title pages were checked where retrievable. Records distinguish content inspection, authoritative listings, search-index verification, login restrictions and failed retrieval. A public listing does not establish document currency or permission to reproduce it.",
+  "editorial_rules": [
+    "Keep international CMAS rules, domestic amendments, event-specific bulletins, training aids, research and commercial commentary visibly distinct.",
+    "Use current-listed only for a document actually linked by an active authority on the verification date. Do not infer an internal PDF revision from webpage last-updated metadata.",
+    "Show date/version, jurisdiction, verification status, checked date, language, access and licence on each resource card.",
+    "Link to canonical authority records and offer an identified federation mirror when available. Never silently substitute an older translation.",
+    "Use expired/archival labels for old courses, past events and old rule editions. Keep dated referee opportunities separate from evergreen learning resources.",
+    "Public accessibility is not an open licence. Link or embed only when permitted; do not mass-copy or rehost rulebooks, lesson slides, illustrations or videos.",
+    "Medical resources support education, not individual clearance or treatment. Event protocols, qualified clinicians and trained supervision govern return-to-play and emergency actions.",
+    "Do not publish solo underwater breath-hold workouts, hyperventilation routines, maximum-hold challenges or claims of a universally safe submersion duration."
+  ],
+  "resources": [
+    {
+      "id": "cmas-regulations",
+      "title": "CMAS Underwater Hockey regulations hub",
+      "url": "https://www.cmas.org/hockey/how-to-regulations.html",
+      "description": "Canonical index for international rules, determinations, equipment and referee documents.",
+      "language": [
+        "en"
+      ],
+      "region": "global",
+      "category": "rules",
+      "authority": "CMAS international federation",
+      "date_or_version": "Page checked 2026-10-02",
+      "verified_at": "2026-10-02",
+      "verification_status": "verified_content",
+      "access": "Public webpage or download; no payment observed",
+      "cost": "Free to read unless noted",
+      "audience": [
+        "players",
+        "coaches",
+        "referees"
+      ],
+      "tags": [
+        "rules",
+        "global",
+        "en"
+      ],
+      "usage_license_constraints": "No open licence verified; link to source and paraphrase. Do not rehost PDFs, images or video without permission.",
+      "caveats": "Several downloads require login. Use versioned documents over the quick-start prose."
+    },
+    {
+      "id": "cmas-rules-v13",
+      "title": "International Rules for Underwater Hockey: Rules of Play",
+      "url": "https://underwaterhockeyaustralia.org.au/assets/documents/rules/CMAS-UWH-Rules_of_Play_v13-Feb2025.pdf",
+      "description": "Current listed international rulebook; combines previous volumes 1 and 2.",
+      "language": [
+        "en"
+      ],
+      "region": "global",
+      "category": "rules",
+      "authority": "CMAS; public mirror on UWH Australia",
+      "date_or_version": "v 13.0, February 2025; approved 8 February 2025",
+      "verified_at": "2026-10-02",
+      "verification_status": "verified_content",
+      "access": "Public webpage or download; no payment observed",
+      "cost": "Free to read unless noted",
+      "audience": [
+        "all players",
+        "referees",
+        "tournament organisers"
+      ],
+      "tags": [
+        "rules",
+        "current-listed",
+        "equipment",
+        "signals",
+        "pool-specification",
+        "penalties"
+      ],
+      "usage_license_constraints": "No open licence verified; link to source and paraphrase. Do not rehost PDFs, images or video without permission.",
+      "caveats": "53-page PDF. Retain canonical CMAS record alongside mirror.",
+      "canonical_url": "https://www.cmas.org/document/cmas-underwater-hockey-rules-of-play-feb-2025-02.html",
+      "source_url": "https://www.cmas.org/hockey/how-to-regulations.html"
+    },
+    {
+      "id": "cmas-tournament-v1",
+      "title": "CMAS Underwater Hockey Tournament Regulations",
+      "url": "https://www.cmas.org/document/cmas-underwater-hockey-tournament-regulations-feb-2025-02/download.html",
+      "description": "International tournament organisation and participation requirements.",
+      "language": [
+        "en"
+      ],
+      "region": "global",
+      "category": "tournament-regulations",
+      "authority": "CMAS",
+      "date_or_version": "v 1, February 2025; published 24 February 2025",
+      "verified_at": "2026-10-02",
+      "verification_status": "verified_listing_download_login",
+      "access": "Canonical download requires login in this check",
+      "cost": "Free to read unless noted",
+      "audience": [
+        "players",
+        "coaches",
+        "referees"
+      ],
+      "tags": [
+        "tournament-regulations",
+        "global",
+        "en"
+      ],
+      "usage_license_constraints": "No open licence verified; link to source and paraphrase. Do not rehost PDFs, images or video without permission.",
+      "caveats": "Version confirmed by CMAS metadata, UWHNZ and 2027 event host. Download redirected to CMAS login.",
+      "source_url": "https://www.cmas.org/hockey/how-to-regulations.html",
+      "alternate_url": "https://www.underwaterhockeynz.com/REFEREE-1/REFEREE-RESOURCES"
+    },
+    {
+      "id": "cmas-tiebreak-2023",
+      "title": "Rules Determination: Teams Tied on Points Table",
+      "url": "https://www.cmas.org/document/rules-determination-teams-tied-on-points-table-jan-2023/download.html",
+      "description": "Tie-breaking determination.",
+      "language": [
+        "en"
+      ],
+      "region": "global",
+      "category": "rules",
+      "authority": "CMAS",
+      "date_or_version": "January 2023",
+      "verified_at": "2026-10-02",
+      "verification_status": "verified_listing_download_login",
+      "access": "Login requested by canonical download",
+      "cost": "Free to read unless noted",
+      "audience": [
+        "players",
+        "coaches",
+        "referees"
+      ],
+      "tags": [
+        "rules",
+        "global",
+        "en"
+      ],
+      "usage_license_constraints": "No open licence verified; link to source and paraphrase. Do not rehost PDFs, images or video without permission.",
+      "caveats": "Title and link verified; document body inaccessible without login. Applicability must be checked for each event.",
+      "source_url": "https://www.cmas.org/hockey/how-to-regulations.html"
+    },
+    {
+      "id": "cmas-internal-2024",
+      "title": "CMAS Internal Regulations of UWH",
+      "url": "https://www.cmas.org/document/cmas-internal-regulations-of-uwh-2024-01/download.html",
+      "description": "Commission governance and internal procedures.",
+      "language": [
+        "en"
+      ],
+      "region": "global",
+      "category": "rules",
+      "authority": "CMAS",
+      "date_or_version": "2024/01",
+      "verified_at": "2026-10-02",
+      "verification_status": "verified_listing_download_login",
+      "access": "Login requested by canonical download",
+      "cost": "Free to read unless noted",
+      "audience": [
+        "players",
+        "coaches",
+        "referees"
+      ],
+      "tags": [
+        "rules",
+        "global",
+        "en"
+      ],
+      "usage_license_constraints": "No open licence verified; link to source and paraphrase. Do not rehost PDFs, images or video without permission.",
+      "caveats": "Title and link verified; document body inaccessible without login. Applicability must be checked for each event.",
+      "source_url": "https://www.cmas.org/hockey/how-to-regulations.html"
+    },
+    {
+      "id": "cmas-corner",
+      "title": "Rules Determination: Delay of Game (The Corner Rule)",
+      "url": "https://www.cmas.org/document/rules-determination-delay-of-game-the-corner-rule/download.html",
+      "description": "Official interpretation of corner delay.",
+      "language": [
+        "en"
+      ],
+      "region": "global",
+      "category": "rules",
+      "authority": "CMAS",
+      "date_or_version": "Undated listing",
+      "verified_at": "2026-10-02",
+      "verification_status": "verified_listing_download_login",
+      "access": "Login requested by canonical download",
+      "cost": "Free to read unless noted",
+      "audience": [
+        "players",
+        "coaches",
+        "referees"
+      ],
+      "tags": [
+        "rules",
+        "global",
+        "en"
+      ],
+      "usage_license_constraints": "No open licence verified; link to source and paraphrase. Do not rehost PDFs, images or video without permission.",
+      "caveats": "Title and link verified; document body inaccessible without login. Applicability must be checked for each event.",
+      "source_url": "https://www.cmas.org/hockey/how-to-regulations.html"
+    },
+    {
+      "id": "cmas-eligibility",
+      "title": "Rule Determination: Player Eligibility",
+      "url": "https://www.cmas.org/document/rule-determination-player-eligibility/download.html",
+      "description": "Player eligibility determination.",
+      "language": [
+        "en"
+      ],
+      "region": "global",
+      "category": "rules",
+      "authority": "CMAS",
+      "date_or_version": "Undated listing",
+      "verified_at": "2026-10-02",
+      "verification_status": "verified_listing_download_login",
+      "access": "Login requested by canonical download",
+      "cost": "Free to read unless noted",
+      "audience": [
+        "players",
+        "coaches",
+        "referees"
+      ],
+      "tags": [
+        "rules",
+        "global",
+        "en"
+      ],
+      "usage_license_constraints": "No open licence verified; link to source and paraphrase. Do not rehost PDFs, images or video without permission.",
+      "caveats": "Title and link verified; document body inaccessible without login. Applicability must be checked for each event.",
+      "source_url": "https://www.cmas.org/hockey/how-to-regulations.html"
+    },
+    {
+      "id": "cmas-citizenship-2025",
+      "title": "Rules Determination: Player Eligibility, Citizenship, Residency",
+      "url": "https://www.cmas.org/document/rules-determination-player-eligibility-citizenship-residency-march-2025/download.html",
+      "description": "Nationality and residency eligibility determination.",
+      "language": [
+        "en"
+      ],
+      "region": "global",
+      "category": "rules",
+      "authority": "CMAS",
+      "date_or_version": "March 2025",
+      "verified_at": "2026-10-02",
+      "verification_status": "verified_listing_download_login",
+      "access": "Login requested by canonical download",
+      "cost": "Free to read unless noted",
+      "audience": [
+        "players",
+        "coaches",
+        "referees"
+      ],
+      "tags": [
+        "rules",
+        "global",
+        "en"
+      ],
+      "usage_license_constraints": "No open licence verified; link to source and paraphrase. Do not rehost PDFs, images or video without permission.",
+      "caveats": "Title and link verified; document body inaccessible without login. Applicability must be checked for each event.",
+      "source_url": "https://www.cmas.org/hockey/how-to-regulations.html"
+    },
+    {
+      "id": "cmas-ref-code-2025",
+      "title": "CMAS UWH 2025 Worlds Referee Code of Conduct",
+      "url": "https://www.cmas.org/document/cmas-uwh-2025-worlds-referee-code-of-conduct/download.html",
+      "description": "Event-specific referee conduct document.",
+      "language": [
+        "en"
+      ],
+      "region": "global",
+      "category": "rules",
+      "authority": "CMAS",
+      "date_or_version": "2025 Worlds",
+      "verified_at": "2026-10-02",
+      "verification_status": "verified_listing_download_login",
+      "access": "Login requested by canonical download",
+      "cost": "Free to read unless noted",
+      "audience": [
+        "players",
+        "coaches",
+        "referees"
+      ],
+      "tags": [
+        "rules",
+        "global",
+        "en"
+      ],
+      "usage_license_constraints": "No open licence verified; link to source and paraphrase. Do not rehost PDFs, images or video without permission.",
+      "caveats": "Title and link verified; document body inaccessible without login. Applicability must be checked for each event.",
+      "source_url": "https://www.cmas.org/hockey/how-to-regulations.html"
+    },
+    {
+      "id": "cmas-ref-course",
+      "title": "CMAS UWH Referee Course Standards",
+      "url": "https://www.cmas.org/document/cmas-uwh-referee-course-standards/download.html",
+      "description": "Framework for national referee training programmes.",
+      "language": [
+        "en"
+      ],
+      "region": "global",
+      "category": "refereeing",
+      "authority": "CMAS College of Referees",
+      "date_or_version": "11 June 2024 metadata; launch 26 April 2024",
+      "verified_at": "2026-10-02",
+      "verification_status": "verified_listing_download_failed",
+      "access": "Public listing; download access unverified",
+      "cost": "Free to read unless noted",
+      "audience": [
+        "players",
+        "coaches",
+        "referees"
+      ],
+      "tags": [
+        "refereeing",
+        "global",
+        "en"
+      ],
+      "usage_license_constraints": "No open licence verified; link to source and paraphrase. Do not rehost PDFs, images or video without permission.",
+      "caveats": "Download timed out; publication article describes scope, not proof of current PDF contents.",
+      "source_url": "https://www.cmas.org/news/uwh-referee-standards-published-1.html",
+      "alternate_url": "https://drive.google.com/file/d/1tpEaRWKf_qZNZjYg6E1zvWngpBcn4DKF/view?usp=drive_link"
+    },
+    {
+      "id": "cmas-ref-overview",
+      "title": "CMAS UWH Referee Standards Overview",
+      "url": "https://www.cmas.org/document/cmas-uwh-referee-standards-overview/download.html",
+      "description": "Referee levels, expectations and maintaining status.",
+      "language": [
+        "en"
+      ],
+      "region": "global",
+      "category": "refereeing",
+      "authority": "CMAS College of Referees",
+      "date_or_version": "Launch 26 April 2024; PDF version not verified",
+      "verified_at": "2026-10-02",
+      "verification_status": "verified_listing_download_failed",
+      "access": "Public listing; download access unverified",
+      "cost": "Free to read unless noted",
+      "audience": [
+        "players",
+        "coaches",
+        "referees"
+      ],
+      "tags": [
+        "refereeing",
+        "global",
+        "en"
+      ],
+      "usage_license_constraints": "No open licence verified; link to source and paraphrase. Do not rehost PDFs, images or video without permission.",
+      "caveats": "Download timed out; publication article describes scope, not proof of current PDF contents.",
+      "source_url": "https://www.cmas.org/news/uwh-referee-standards-published-1.html",
+      "alternate_url": "https://drive.google.com/file/d/1OER4lWyf8rLTMUP54u0vYR4sehHZJrTM/view?usp=drive_link"
+    },
+    {
+      "id": "cmas-ref-standards",
+      "title": "CMAS UWH Referee Standards",
+      "url": "https://www.cmas.org/document/cmas-uwh-referee-standards/download.html",
+      "description": "Detailed referee competency standards.",
+      "language": [
+        "en"
+      ],
+      "region": "global",
+      "category": "refereeing",
+      "authority": "CMAS College of Referees",
+      "date_or_version": "11 June 2024 metadata; PDF revision not verified",
+      "verified_at": "2026-10-02",
+      "verification_status": "verified_listing_download_failed",
+      "access": "Public listing; download access unverified",
+      "cost": "Free to read unless noted",
+      "audience": [
+        "players",
+        "coaches",
+        "referees"
+      ],
+      "tags": [
+        "refereeing",
+        "global",
+        "en"
+      ],
+      "usage_license_constraints": "No open licence verified; link to source and paraphrase. Do not rehost PDFs, images or video without permission.",
+      "caveats": "Download timed out; publication article describes scope, not proof of current PDF contents.",
+      "source_url": "https://www.cmas.org/news/uwh-referee-standards-published-1.html",
+      "alternate_url": "https://drive.google.com/file/d/16SlxK_MKRxmKVz6dnsgt5y2nzugcUbmJ/view?usp=drive_link"
+    },
+    {
+      "id": "cmas-concussion",
+      "title": "CMAS UWH Concussion Policy",
+      "url": "https://www.cmas.org/document/cmas-uwh-concussion-policy/download.html",
+      "description": "International sport-specific concussion policy.",
+      "language": [
+        "en"
+      ],
+      "region": "global",
+      "category": "safety",
+      "authority": "CMAS",
+      "date_or_version": "PDF date/version unverified",
+      "verified_at": "2026-10-02",
+      "verification_status": "verified_listing_download_failed",
+      "access": "Public listing; document body not retrieved",
+      "cost": "Free to read unless noted",
+      "audience": [
+        "players",
+        "coaches",
+        "referees"
+      ],
+      "tags": [
+        "safety",
+        "global",
+        "en"
+      ],
+      "usage_license_constraints": "No open licence verified; link to source and paraphrase. Do not rehost PDFs, images or video without permission.",
+      "caveats": "Download timed out. Do not invent return-to-play intervals.",
+      "source_url": "https://www.cmas.org/hockey/how-to-regulations.html",
+      "alternate_url": "https://drive.google.com/file/d/1j9-vLZrx6vymbeOCS8Z75K9q8Y_XZJ3f/view?usp=drive_link"
+    },
+    {
+      "id": "cmas-equipment",
+      "title": "CMAS UWH Equipment Guide",
+      "url": "https://www.cmas.org/document/cmas-uwh-equipment-guide.html",
+      "description": "Equipment-compliance companion to the rulebook.",
+      "language": [
+        "en"
+      ],
+      "region": "global",
+      "category": "equipment",
+      "authority": "CMAS",
+      "date_or_version": "Published 4 July 2024; internal revision unverified",
+      "verified_at": "2026-10-02",
+      "verification_status": "verified_listing_download_login",
+      "access": "Public metadata; download redirected to login",
+      "cost": "Free to read unless noted",
+      "audience": [
+        "players",
+        "coaches",
+        "referees"
+      ],
+      "tags": [
+        "equipment",
+        "global",
+        "en"
+      ],
+      "usage_license_constraints": "No open licence verified; link to source and paraphrase. Do not rehost PDFs, images or video without permission.",
+      "caveats": "Metadata last-updated dates varied between URLs; do not interpret them as revised content.",
+      "source_url": "https://www.cmas.org/hockey/how-to-regulations.html",
+      "download_url": "https://www.cmas.org/document/cmas-uwh-equipment-guide/download.html"
+    },
+    {
+      "id": "uwhreferees-hub",
+      "title": "UWHReferees.org",
+      "url": "https://uwhreferees.org/",
+      "description": "Referee committee hub: rules, assessment, conduct, management and international opportunities.",
+      "language": [
+        "en"
+      ],
+      "region": "global",
+      "category": "refereeing",
+      "authority": "CMAS UWH Referee Committee / College of Referees resource hub",
+      "date_or_version": "Live hub checked 2026-10-02",
+      "verified_at": "2026-10-02",
+      "verification_status": "verified_content",
+      "access": "Public webpage or download; no payment observed",
+      "cost": "Free to read unless noted",
+      "audience": [
+        "players",
+        "coaches",
+        "referees"
+      ],
+      "tags": [
+        "refereeing",
+        "advanced",
+        "assessment",
+        "opportunities"
+      ],
+      "usage_license_constraints": "No open licence verified; link to source and paraphrase. Do not rehost PDFs, images or video without permission.",
+      "caveats": "Management plan labeled Draft #4; fitness test marked coming soon. 2026 ITO recordings explicitly expired 13 July 2026.",
+      "dated_opportunity": {
+        "title": "2027 Elite World Championship referee selection",
+        "expression_of_interest": "2026-10-01",
+        "application_deadline": "2026-10-31",
+        "selection_notification": "2026-11-14",
+        "event_dates": "2027-04-14/2027-04-24",
+        "location": "Clermont-Ferrand, France",
+        "caveat": "Page also says 'Not Available Yet'; verify application availability before advertising as open."
+      }
+    },
+    {
+      "id": "uwhref-l3-assessment",
+      "title": "L 3 Assessment Form (5 Languages)",
+      "url": "https://docs.google.com/spreadsheets/d/1uuFyTbr_cJpySXvrMBwop2FbC3ImNRc8/edit?ouid=104895291579976525334&rtpof=true&sd=true&usp=drive_link",
+      "description": "Multilingual assessment worksheet linked by international referee hub.",
+      "language": [
+        "multilingual-unspecified"
+      ],
+      "region": "global",
+      "category": "refereeing",
+      "authority": "CMAS UWH referee resource hub",
+      "date_or_version": "Undated; languages not individually verified",
+      "verified_at": "2026-10-02",
+      "verification_status": "verified_listing_download_failed",
+      "access": "Publicly linked; access unverified",
+      "cost": "Free to read unless noted",
+      "audience": [
+        "Level 3 candidates",
+        "assessors"
+      ],
+      "tags": [
+        "refereeing",
+        "global",
+        "multilingual-unspecified"
+      ],
+      "usage_license_constraints": "No open licence verified; link to source and paraphrase. Do not rehost PDFs, images or video without permission.",
+      "caveats": "Google document content was not retrieved.",
+      "source_url": "https://uwhreferees.org/"
+    },
+    {
+      "id": "treatise-fouls-en",
+      "title": "Treatise of Underwater Hockey Fouls",
+      "url": "https://www.amazon.com/Treatise-Underwater-Hockey-Fouls-understanding/dp/B08VYR2B8T",
+      "description": "Supplementary explanation of foul interpretation by Don Mathews.",
+      "language": [
+        "en"
+      ],
+      "region": "global",
+      "category": "refereeing",
+      "authority": "Don Mathews; linked by CMAS referee committee",
+      "date_or_version": "Edition/date not verified",
+      "verified_at": "2026-10-02",
+      "verification_status": "verified_listing_store_failed",
+      "access": "Commercial book; retailer not retrievable",
+      "cost": "Paid; price unverified",
+      "audience": [
+        "players",
+        "coaches",
+        "referees"
+      ],
+      "tags": [
+        "refereeing",
+        "global",
+        "en"
+      ],
+      "usage_license_constraints": "Commercial copyrighted book. Link only; do not reproduce chapters.",
+      "caveats": "Commentary, not binding rules. Check edition against current rules.",
+      "source_url": "https://uwhreferees.org/"
+    },
+    {
+      "id": "treatise-fouls-fr",
+      "title": "Treatise of Underwater Hockey Fouls",
+      "url": "https://www.amazon.com/dp/B096TTTYPH",
+      "description": "Supplementary explanation of foul interpretation by Don Mathews.",
+      "language": [
+        "fr"
+      ],
+      "region": "global",
+      "category": "refereeing",
+      "authority": "Don Mathews; linked by CMAS referee committee",
+      "date_or_version": "Edition/date not verified",
+      "verified_at": "2026-10-02",
+      "verification_status": "verified_listing_store_failed",
+      "access": "Commercial book; retailer not retrievable",
+      "cost": "Paid; price unverified",
+      "audience": [
+        "players",
+        "coaches",
+        "referees"
+      ],
+      "tags": [
+        "refereeing",
+        "global",
+        "fr"
+      ],
+      "usage_license_constraints": "Commercial copyrighted book. Link only; do not reproduce chapters.",
+      "caveats": "Commentary, not binding rules. Check edition against current rules.",
+      "source_url": "https://uwhreferees.org/"
+    },
+    {
+      "id": "treatise-fouls-es",
+      "title": "Treatise of Underwater Hockey Fouls",
+      "url": "https://www.amazon.com/dp/B09NR5R2MP",
+      "description": "Supplementary explanation of foul interpretation by Don Mathews.",
+      "language": [
+        "es"
+      ],
+      "region": "global",
+      "category": "refereeing",
+      "authority": "Don Mathews; linked by CMAS referee committee",
+      "date_or_version": "Edition/date not verified",
+      "verified_at": "2026-10-02",
+      "verification_status": "verified_listing_store_failed",
+      "access": "Commercial book; retailer not retrievable",
+      "cost": "Paid; price unverified",
+      "audience": [
+        "players",
+        "coaches",
+        "referees"
+      ],
+      "tags": [
+        "refereeing",
+        "global",
+        "es"
+      ],
+      "usage_license_constraints": "Commercial copyrighted book. Link only; do not reproduce chapters.",
+      "caveats": "Commentary, not binding rules. Check edition against current rules.",
+      "source_url": "https://uwhreferees.org/"
+    },
+    {
+      "id": "wuha-l1-course",
+      "title": "Referee L 1 Course Videos and Documents",
+      "url": "https://www.wuha.org.nz/referee-l1-course-videos-and-documents.html",
+      "description": "Organised lessons on procedures, positioning, signals, equipment and foul recognition.",
+      "language": [
+        "en"
+      ],
+      "region": "NZ",
+      "category": "refereeing",
+      "authority": "Wellington Underwater Hockey Association",
+      "date_or_version": "Mixed: videos credited to 2019 Worlds team; course PDFs 2021; rulebook link 2025",
+      "verified_at": "2026-10-02",
+      "verification_status": "verified_content",
+      "access": "Public webpage or download; no payment observed",
+      "cost": "Free to read unless noted",
+      "audience": [
+        "players",
+        "coaches",
+        "referees"
+      ],
+      "tags": [
+        "refereeing",
+        "level-1",
+        "video",
+        "signals",
+        "positioning"
+      ],
+      "usage_license_constraints": "No open licence verified; link to source and paraphrase. Do not rehost PDFs, images or video without permission.",
+      "caveats": "Historical instructional media must be cross-checked against current rules; watching does not confer certification.",
+      "format": [
+        "video",
+        "PDF",
+        "DOCX"
+      ]
+    },
+    {
+      "id": "wuha-l1-quickref",
+      "title": "UWH Referee Level 1 Quick Reference Guide",
+      "url": "https://www.wuha.org.nz/uploads/6/1/4/5/6145499/210316_cmas_level_1_referee_-_quick_reference_guide_v5.pdf",
+      "description": "Compact illustrated officiating reference.",
+      "language": [
+        "en"
+      ],
+      "region": "global",
+      "category": "refereeing",
+      "authority": "CMAS Underwater Hockey Referee Committee; hosted by WUHA",
+      "date_or_version": "v 1.0 / 2021 (document cover)",
+      "verified_at": "2026-10-02",
+      "verification_status": "verified_content",
+      "access": "Public webpage or download; no payment observed",
+      "cost": "Free to read unless noted",
+      "audience": [
+        "players",
+        "coaches",
+        "referees"
+      ],
+      "tags": [
+        "refereeing",
+        "global",
+        "en"
+      ],
+      "usage_license_constraints": "No open licence verified; link to source and paraphrase. Do not rehost PDFs, images or video without permission.",
+      "caveats": "10 pages; older guide, not a substitute for v 13 rules. Filename v 5 is not cover version."
+    },
+    {
+      "id": "wuha-l1-standard",
+      "title": "Underwater Hockey Referee Level 1 Standard",
+      "url": "https://www.wuha.org.nz/uploads/6/1/4/5/6145499/210316_standard_uwh-referee-level-1.pdf",
+      "description": "Entry-level training, practice and assessment framework.",
+      "language": [
+        "en"
+      ],
+      "region": "global",
+      "category": "refereeing",
+      "authority": "CMAS; hosted by WUHA",
+      "date_or_version": "2021 file; current status not verified",
+      "verified_at": "2026-10-02",
+      "verification_status": "verified_content",
+      "access": "Public webpage or download; no payment observed",
+      "cost": "Free to read unless noted",
+      "audience": [
+        "players",
+        "coaches",
+        "referees"
+      ],
+      "tags": [
+        "refereeing",
+        "global",
+        "en"
+      ],
+      "usage_license_constraints": "No open licence verified; link to source and paraphrase. Do not rehost PDFs, images or video without permission.",
+      "caveats": "Historical standard. Prefer current CMAS framework for qualification decisions."
+    },
+    {
+      "id": "wuha-signals-course",
+      "title": "Level 1 Course Section 5: Rules and Signals",
+      "url": "https://www.wuha.org.nz/uploads/6/1/4/5/6145499/210316_cmas_level_1_ref_training_course_section5_rules_and_signals.pdf",
+      "description": "Illustrated referee classroom module.",
+      "language": [
+        "en"
+      ],
+      "region": "global",
+      "category": "refereeing",
+      "authority": "CMAS Level 1 training; hosted by WUHA",
+      "date_or_version": "2021 file",
+      "verified_at": "2026-10-02",
+      "verification_status": "verified_content",
+      "access": "Public webpage or download; no payment observed",
+      "cost": "Free to read unless noted",
+      "audience": [
+        "players",
+        "coaches",
+        "referees"
+      ],
+      "tags": [
+        "refereeing",
+        "global",
+        "en"
+      ],
+      "usage_license_constraints": "No open licence verified; link to source and paraphrase. Do not rehost PDFs, images or video without permission.",
+      "caveats": "50 pages; compare with current rules.",
+      "format": [
+        "PDF",
+        "slides"
+      ]
+    },
+    {
+      "id": "usoa-referees",
+      "title": "USOA UWH Referees",
+      "url": "https://www.underwater-society.org/uwhreferees",
+      "description": "United States referee entry point.",
+      "language": [
+        "en"
+      ],
+      "region": "US",
+      "category": "refereeing",
+      "authority": "Underwater Society of America",
+      "date_or_version": "Date/version unverified",
+      "verified_at": "2026-10-02",
+      "verification_status": "blocked_403",
+      "access": "Site blocked automated retrieval; human accessibility unverified",
+      "cost": "Free to read unless noted",
+      "audience": [
+        "players",
+        "coaches",
+        "referees"
+      ],
+      "tags": [
+        "refereeing",
+        "US",
+        "en"
+      ],
+      "usage_license_constraints": "No open licence verified; link to source and paraphrase. Do not rehost PDFs, images or video without permission.",
+      "caveats": "User-requested source; direct retrieval denied (403). Linked by other verified UWH resources."
+    },
+    {
+      "id": "usoa-training",
+      "title": "USOA UWH Referee Training",
+      "url": "https://www.underwater-society.org/uwhreftraining",
+      "description": "Basic rules course, training plan and referee programme overview.",
+      "language": [
+        "en"
+      ],
+      "region": "US",
+      "category": "refereeing",
+      "authority": "Underwater Society of America",
+      "date_or_version": "Training plan revision 27 May 2022",
+      "verified_at": "2026-10-02",
+      "verification_status": "search_index_verified",
+      "access": "Search index readable; full page retrieval not established",
+      "cost": "Free to read unless noted",
+      "audience": [
+        "players",
+        "coaches",
+        "referees"
+      ],
+      "tags": [
+        "refereeing",
+        "US",
+        "en"
+      ],
+      "usage_license_constraints": "No open licence verified; link to source and paraphrase. Do not rehost PDFs, images or video without permission.",
+      "caveats": "Search index lists course materials and tests; deck course marked coming soon."
+    },
+    {
+      "id": "usoa-documents",
+      "title": "USOA UWH Documents",
+      "url": "https://www.underwater-society.org/page/show/4633795-documents",
+      "description": "Domestic rule amendments, protest forms and tournament policy.",
+      "language": [
+        "en"
+      ],
+      "region": "US",
+      "category": "rules",
+      "authority": "Underwater Society of America",
+      "date_or_version": "UWH v 1.1 March 2020; competitive rules 2023; Nationals team policy Feb 2024",
+      "verified_at": "2026-10-02",
+      "verification_status": "search_index_verified",
+      "access": "Search index readable; document bodies not retrieved",
+      "cost": "Free to read unless noted",
+      "audience": [
+        "players",
+        "coaches",
+        "referees"
+      ],
+      "tags": [
+        "rules",
+        "US",
+        "en"
+      ],
+      "usage_license_constraints": "No open licence verified; link to source and paraphrase. Do not rehost PDFs, images or video without permission.",
+      "caveats": "Separate USOA domestic rules from current CMAS documents; some linked CMAS volumes are old."
+    },
+    {
+      "id": "boa-rules",
+      "title": "BOA Rules for Underwater Hockey (Octopush)",
+      "url": "https://www.gbuwh.co.uk/page/uwh-rules",
+      "description": "Current-rule links plus referee signals and time-penalty references.",
+      "language": [
+        "en"
+      ],
+      "region": "GB",
+      "category": "rules",
+      "authority": "British Octopush Association",
+      "date_or_version": "Page updated 27 February 2025; Rules v 13 and Tournament v 1",
+      "verified_at": "2026-10-02",
+      "verification_status": "verified_content",
+      "access": "Public webpage or download; no payment observed",
+      "cost": "Free to read unless noted",
+      "audience": [
+        "players",
+        "coaches",
+        "referees"
+      ],
+      "tags": [
+        "rules",
+        "GB",
+        "en"
+      ],
+      "usage_license_constraints": "No open licence verified; link to source and paraphrase. Do not rehost PDFs, images or video without permission.",
+      "caveats": "Google linked documents failed retrieval; versions of standalone reference tables not confirmed.",
+      "linked_resources": [
+        {
+          "title": "Referees Signals Table",
+          "url": "https://docs.google.com/document/d/1jhamAmAap_p0W3NVBoV1Pn3TyAqL3HXzHPp8FUla-kM/edit?usp=sharing"
+        },
+        {
+          "title": "Referee Time Penalty Table",
+          "url": "https://drive.google.com/open?id=17a2lUVDRd6OUPrIXwu_lzXz8ohH9QK81K_z9fhJvT6w"
+        },
+        {
+          "title": "Tournament Regulations v 1",
+          "url": "https://drive.google.com/file/d/1SbLAjpOetiH5M3Q9qLc076QXJebOKwei/view?usp=sharing"
+        }
+      ]
+    },
+    {
+      "id": "boa-welfare",
+      "title": "BOA Safeguarding and Welfare",
+      "url": "https://www.gbuwh.co.uk/page/safeguarding-welfare",
+      "description": "Club and controlled risk assessments, safeguarding, concussion and conduct links.",
+      "language": [
+        "en"
+      ],
+      "region": "GB",
+      "category": "safety",
+      "authority": "British Octopush Association",
+      "date_or_version": "Page updated 19 May 2026",
+      "verified_at": "2026-10-02",
+      "verification_status": "verified_content",
+      "access": "Public webpage or download; no payment observed",
+      "cost": "Free to read unless noted",
+      "audience": [
+        "players",
+        "coaches",
+        "referees"
+      ],
+      "tags": [
+        "safety",
+        "risk-assessment",
+        "safeguarding",
+        "concussion",
+        "club-management"
+      ],
+      "usage_license_constraints": "No open licence verified; link to source and paraphrase. Do not rehost PDFs, images or video without permission.",
+      "caveats": "Jurisdiction-specific membership/medical requirements; seek professional assessment for individual medical questions."
+    },
+    {
+      "id": "nz-ref-resources",
+      "title": "UWHNZ Referee Resources",
+      "url": "https://www.underwaterhockeynz.com/REFEREE-1/REFEREE-RESOURCES",
+      "description": "Rule-change explanation and current CMAS play/tournament links.",
+      "language": [
+        "en"
+      ],
+      "region": "NZ",
+      "category": "refereeing",
+      "authority": "Underwater Hockey New Zealand",
+      "date_or_version": "v 13 adopted for UWHNZ tournaments from 2025",
+      "verified_at": "2026-10-02",
+      "verification_status": "verified_content",
+      "access": "Public webpage or download; no payment observed",
+      "cost": "Free to read unless noted",
+      "audience": [
+        "players",
+        "coaches",
+        "referees"
+      ],
+      "tags": [
+        "rules",
+        "version-history",
+        "refereeing"
+      ],
+      "usage_license_constraints": "No open licence verified; link to source and paraphrase. Do not rehost PDFs, images or video without permission.",
+      "caveats": "Download links through Sporty were not retrievable."
+    },
+    {
+      "id": "nz-policies",
+      "title": "UWHNZ Policies and Reports",
+      "url": "https://www.underwaterhockeynz.com/ABOUT-1/POLICIESREPORTS",
+      "description": "Concussion, puck, competition, safeguarding and conduct policy index.",
+      "language": [
+        "en"
+      ],
+      "region": "NZ",
+      "category": "safety",
+      "authority": "Underwater Hockey New Zealand",
+      "date_or_version": "Live index; individual revisions vary",
+      "verified_at": "2026-10-02",
+      "verification_status": "verified_content",
+      "access": "Public webpage or download; no payment observed",
+      "cost": "Free to read unless noted",
+      "audience": [
+        "players",
+        "coaches",
+        "referees"
+      ],
+      "tags": [
+        "safety",
+        "NZ",
+        "en"
+      ],
+      "usage_license_constraints": "No open licence verified; link to source and paraphrase. Do not rehost PDFs, images or video without permission.",
+      "caveats": "Use index to seek current replacement for archived copies."
+    },
+    {
+      "id": "nz-concussion-2019",
+      "title": "UWHNZ Concussion Policy",
+      "url": "https://www.wuha.org.nz/uploads/6/1/4/5/6145499/uwhnz_concussion_protocols.pdf",
+      "description": "Hockey-specific concussion recognition and management policy.",
+      "language": [
+        "en"
+      ],
+      "region": "NZ",
+      "category": "safety",
+      "authority": "Underwater Hockey New Zealand; WUHA mirror",
+      "date_or_version": "v 1.0, 11 March 2019",
+      "verified_at": "2026-10-02",
+      "verification_status": "search_index_verified",
+      "access": "Public webpage or download; no payment observed",
+      "cost": "Free to read unless noted",
+      "audience": [
+        "players",
+        "coaches",
+        "referees"
+      ],
+      "tags": [
+        "safety",
+        "concussion",
+        "historical"
+      ],
+      "usage_license_constraints": "No open licence verified; link to source and paraphrase. Do not rehost PDFs, images or video without permission.",
+      "caveats": "Historical policy; current NZ index points to a separate asset whose content was not retrieved.",
+      "source_url": "https://www.underwaterhockeynz.com/ABOUT-1/POLICIESREPORTS"
+    },
+    {
+      "id": "ffessm-rules",
+      "title": "Règles du jeu",
+      "url": "https://hockeysub.ffessm.fr/regle-du-jeu",
+      "description": "French domestic rules index and interpretation notes.",
+      "language": [
+        "fr"
+      ],
+      "region": "FR",
+      "category": "rules",
+      "authority": "FFESSM Commission Nationale de Hockey Subaquatique",
+      "date_or_version": "Page dated 2 March 2025; linked procedures updated September 2025",
+      "verified_at": "2026-10-02",
+      "verification_status": "verified_content",
+      "access": "Public webpage or download; no payment observed",
+      "cost": "Free to read unless noted",
+      "audience": [
+        "players",
+        "coaches",
+        "referees"
+      ],
+      "tags": [
+        "rules",
+        "FR",
+        "fr"
+      ],
+      "usage_license_constraints": "No open licence verified; link to source and paraphrase. Do not rehost PDFs, images or video without permission.",
+      "caveats": "France-specific regulations; versions and domestic deviations are explicit."
+    },
+    {
+      "id": "ffessm-vol0",
+      "title": "Règles françaises: Procédures et obligations",
+      "url": "https://hockeysub.ffessm.fr/uploads/media/docs/0001/13/1c0f8ab0b7c6c3f25bc2a04cd7e2956f71d047b8.pdf",
+      "description": "French competition organisation, categories, eligibility and oversight.",
+      "language": [
+        "fr"
+      ],
+      "region": "FR",
+      "category": "tournament-regulations",
+      "authority": "FFESSM CNHS",
+      "date_or_version": "Fr v 13, September 2025",
+      "verified_at": "2026-10-02",
+      "verification_status": "verified_content",
+      "access": "Public webpage or download; no payment observed",
+      "cost": "Free to read unless noted",
+      "audience": [
+        "players",
+        "coaches",
+        "referees"
+      ],
+      "tags": [
+        "tournament-regulations",
+        "FR",
+        "fr"
+      ],
+      "usage_license_constraints": "No open licence verified; link to source and paraphrase. Do not rehost PDFs, images or video without permission.",
+      "caveats": "46 pages. Not an international v 13 translation.",
+      "source_url": "https://hockeysub.ffessm.fr/regle-du-jeu"
+    },
+    {
+      "id": "ffessm-vol1",
+      "title": "Règles françaises: Volume 1, terrain de jeu et matériels",
+      "url": "https://hockeysub.ffessm.fr/uploads/media/docs/0001/10/e74b8c7b6d5c0a2bb308584969a5227b6f6dd344.pdf",
+      "description": "French equipment, playing-area and officials requirements.",
+      "language": [
+        "fr"
+      ],
+      "region": "FR",
+      "category": "equipment",
+      "authority": "FFESSM CNHS",
+      "date_or_version": "Fr v 12.1 February 2025; international basis Wi 12.0 November 2022",
+      "verified_at": "2026-10-02",
+      "verification_status": "verified_content",
+      "access": "Public webpage or download; no payment observed",
+      "cost": "Free to read unless noted",
+      "audience": [
+        "players",
+        "coaches",
+        "referees"
+      ],
+      "tags": [
+        "equipment",
+        "FR",
+        "fr"
+      ],
+      "usage_license_constraints": "No open licence verified; link to source and paraphrase. Do not rehost PDFs, images or video without permission.",
+      "caveats": "27 pages. Wi./Fr. prefixes distinguish international/domestic clauses; not equivalent to international v 13.",
+      "source_url": "https://hockeysub.ffessm.fr/regle-du-jeu"
+    },
+    {
+      "id": "ffessm-vol2",
+      "title": "Règles françaises: Volume 2, Règles du jeu",
+      "url": "https://hockeysub.ffessm.fr/uploads/media/docs/0001/10/f7fcfa07d81409556a03ef34a97888a678a6c6b6.pdf",
+      "description": "French play, signals, fouls, substitution and penalty rules.",
+      "language": [
+        "fr"
+      ],
+      "region": "FR",
+      "category": "rules",
+      "authority": "FFESSM CNHS",
+      "date_or_version": "Fr v 12.1 February 2025; international basis Wi 12.0 November 2022",
+      "verified_at": "2026-10-02",
+      "verification_status": "verified_content",
+      "access": "Public webpage or download; no payment observed",
+      "cost": "Free to read unless noted",
+      "audience": [
+        "players",
+        "coaches",
+        "referees"
+      ],
+      "tags": [
+        "rules",
+        "FR",
+        "fr"
+      ],
+      "usage_license_constraints": "No open licence verified; link to source and paraphrase. Do not rehost PDFs, images or video without permission.",
+      "caveats": "55 pages. Domestic rulebook, not current international translation.",
+      "source_url": "https://hockeysub.ffessm.fr/regle-du-jeu"
+    },
+    {
+      "id": "ffessm-advantage",
+      "title": "La règle de l’avantage",
+      "url": "https://hockeysub.ffessm.fr/uploads/media/docs/0001/07/d63774fae1620598cb93a4e8b87bcd2a309cee94.pdf",
+      "description": "One-page French explanation of advantage.",
+      "language": [
+        "fr"
+      ],
+      "region": "FR",
+      "category": "refereeing",
+      "authority": "FFESSM CNHS",
+      "date_or_version": "Undated explanatory sheet",
+      "verified_at": "2026-10-02",
+      "verification_status": "verified_content",
+      "access": "Public webpage or download; no payment observed",
+      "cost": "Free to read unless noted",
+      "audience": [
+        "players",
+        "coaches",
+        "referees"
+      ],
+      "tags": [
+        "refereeing",
+        "FR",
+        "fr"
+      ],
+      "usage_license_constraints": "No open licence verified; link to source and paraphrase. Do not rehost PDFs, images or video without permission.",
+      "caveats": "Check against latest applicable regulation.",
+      "source_url": "https://hockeysub.ffessm.fr/regle-du-jeu"
+    },
+    {
+      "id": "ffessm-ref-training",
+      "title": "Formations des arbitres",
+      "url": "https://hockeysub.ffessm.fr/formations-des-arbitres",
+      "description": "French referee pathway, prerequisites and assessment structure.",
+      "language": [
+        "fr"
+      ],
+      "region": "FR",
+      "category": "refereeing",
+      "authority": "FFESSM",
+      "date_or_version": "Page dated 2 March 2025",
+      "verified_at": "2026-10-02",
+      "verification_status": "verified_content",
+      "access": "Public webpage or download; no payment observed",
+      "cost": "Free to read unless noted",
+      "audience": [
+        "referee candidates",
+        "instructors"
+      ],
+      "tags": [
+        "refereeing",
+        "qualification",
+        "training-pathway"
+      ],
+      "usage_license_constraints": "No open licence verified; link to source and paraphrase. Do not rehost PDFs, images or video without permission.",
+      "caveats": "National certification requires the relevant training and assessment; online reading alone is insufficient."
+    },
+    {
+      "id": "ffessm-rifahs",
+      "title": "RIFA - Hockey Subaquatique (RIFAHS)",
+      "url": "https://hockeysub.ffessm.fr/rifahs",
+      "description": "Sport-specific accident-response qualification and downloadable syllabus.",
+      "language": [
+        "fr"
+      ],
+      "region": "FR",
+      "category": "safety",
+      "authority": "FFESSM",
+      "date_or_version": "Page dated 6 January 2019; syllabus version unverified",
+      "verified_at": "2026-10-02",
+      "verification_status": "verified_content",
+      "access": "Public webpage or download; no payment observed",
+      "cost": "Free to read unless noted",
+      "audience": [
+        "players",
+        "coaches",
+        "referees"
+      ],
+      "tags": [
+        "safety",
+        "first-aid",
+        "rescue",
+        "coach-qualification"
+      ],
+      "usage_license_constraints": "No open licence verified; link to source and paraphrase. Do not rehost PDFs, images or video without permission.",
+      "caveats": "Practical first-aid training is required; a webpage is not rescue certification."
+    },
+    {
+      "id": "ffessm-medical",
+      "title": "Médical (CNM)",
+      "url": "https://hockeysub.ffessm.fr/medical-cnm",
+      "description": "Medical commission hub: screening, contraindications and anti-doping links.",
+      "language": [
+        "fr"
+      ],
+      "region": "FR",
+      "category": "safety",
+      "authority": "FFESSM Collège National des Médecins",
+      "date_or_version": "Mixed dates, including 2023/24 certificate guidance",
+      "verified_at": "2026-10-02",
+      "verification_status": "verified_content",
+      "access": "Public webpage or download; no payment observed",
+      "cost": "Free to read unless noted",
+      "audience": [
+        "players",
+        "coaches",
+        "referees"
+      ],
+      "tags": [
+        "safety",
+        "FR",
+        "fr"
+      ],
+      "usage_license_constraints": "No open licence verified; link to source and paraphrase. Do not rehost PDFs, images or video without permission.",
+      "caveats": "Medical and legal requirements can change. Cross-check current federation medical policy rather than self-diagnosing from lists."
+    },
+    {
+      "id": "fpas-rules",
+      "title": "Hóquei Subaquático: Regulamentos & Documentos",
+      "url": "https://fpas.pt/modalidades-desportivas/hoquei-subaquatico/",
+      "description": "Portuguese national event and referee regulations with equipment introduction.",
+      "language": [
+        "pt"
+      ],
+      "region": "PT",
+      "category": "rules",
+      "authority": "Federação Portuguesa de Actividades Subaquáticas",
+      "date_or_version": "Event rules 2.0/2025; referee regulations 2018",
+      "verified_at": "2026-10-02",
+      "verification_status": "verified_content",
+      "access": "Public webpage or download; no payment observed",
+      "cost": "Free to read unless noted",
+      "audience": [
+        "players",
+        "coaches",
+        "referees"
+      ],
+      "tags": [
+        "rules",
+        "PT",
+        "pt"
+      ],
+      "usage_license_constraints": "No open licence verified; link to source and paraphrase. Do not rehost PDFs, images or video without permission.",
+      "caveats": "Quick-summary dimensions differ from current CMAS rules; use applicable PDF for competition.",
+      "linked_resources": [
+        {
+          "title": "Regulamento Geral de Eventos Desportivos de Hóquei Subaquático",
+          "version": "2.0/2025",
+          "url": "https://fpas.pt/wp-content/uploads/2025/06/Regulamento_Geral_de_Eventos_de_Hoquei-Subaquatico_2025.pdf",
+          "verification": "Link verified; PDF cache miss"
+        },
+        {
+          "title": "Regulamento de Arbitragem de Hóquei Subaquático",
+          "version": "2018 (page label)",
+          "url": "https://fpas.pt/wp-content/uploads/2025/03/Regulamento_Arbitragem_HoqueiSubaquatico.pdf",
+          "verification": "Link verified; PDF cache miss"
+        }
+      ]
+    },
+    {
+      "id": "nob-regulations",
+      "title": "Reglementen",
+      "url": "https://onderwaterhockey.nl/competitie/reglement/",
+      "description": "Dutch rule translations, match forms and older competition regulations.",
+      "language": [
+        "nl",
+        "en"
+      ],
+      "region": "NL",
+      "category": "rules",
+      "authority": "Onderwaterhockey.nl; supported by NOB",
+      "date_or_version": "Dutch v 10.05 August 2012; English v 11 July 2018; competition 2017/18 v 6",
+      "verified_at": "2026-10-02",
+      "verification_status": "verified_content",
+      "access": "Public webpage or download; no payment observed",
+      "cost": "Free to read unless noted",
+      "audience": [
+        "players",
+        "coaches",
+        "referees"
+      ],
+      "tags": [
+        "rules",
+        "NL",
+        "nl",
+        "en"
+      ],
+      "usage_license_constraints": "No open licence verified; link to source and paraphrase. Do not rehost PDFs, images or video without permission.",
+      "caveats": "Archive/translation reference. Page calls these most recent, but they predate international v 13; prominently label as historical."
+    },
+    {
+      "id": "nob-ref-course",
+      "title": "Scheidsrechterscursus",
+      "url": "https://onderwaterhockey.nl/verder-met-owh/opleidingen/scheidsrechterscursus/",
+      "description": "Dutch Level 1 referee course structure and exam pathway.",
+      "language": [
+        "nl"
+      ],
+      "region": "NL",
+      "category": "refereeing",
+      "authority": "NOB underwater hockey programme",
+      "date_or_version": "Undated live page",
+      "verified_at": "2026-10-02",
+      "verification_status": "verified_content",
+      "access": "Public webpage or download; no payment observed",
+      "cost": "Page lists €20 per participant; reading is free",
+      "audience": [
+        "referee candidates"
+      ],
+      "tags": [
+        "refereeing",
+        "NL",
+        "nl"
+      ],
+      "usage_license_constraints": "No open licence verified; link to source and paraphrase. Do not rehost PDFs, images or video without permission.",
+      "caveats": "Course timing and fee need reconfirmation before booking."
+    },
+    {
+      "id": "fedas-spanish-historical",
+      "title": "Reglamento Hockey Subacuático",
+      "url": "https://fedas.es/wp-content/uploads/2015/05/Hockeysub-Reglas-Internacionales-II.pdf",
+      "description": "Spanish-language historical international rulebook.",
+      "language": [
+        "es"
+      ],
+      "region": "ES",
+      "category": "rules",
+      "authority": "FEDAS-hosted CMAS translation",
+      "date_or_version": "10th edition; historical 2010-era rules",
+      "verified_at": "2026-10-02",
+      "verification_status": "search_index_verified",
+      "access": "Public webpage or download; no payment observed",
+      "cost": "Free to read unless noted",
+      "audience": [
+        "players",
+        "coaches",
+        "referees"
+      ],
+      "tags": [
+        "rules",
+        "translation",
+        "historical",
+        "Spanish"
+      ],
+      "usage_license_constraints": "No open licence verified; link to source and paraphrase. Do not rehost PDFs, images or video without permission.",
+      "caveats": "Useful terminology/archive only; not current international rules."
+    },
+    {
+      "id": "fipsas-hockey",
+      "title": "Hockey Subacqueo: national regulations and documents",
+      "url": "https://fipsas.it/agonismo-subacqueo/hockey-subacqueo/",
+      "description": "Italian federation entry point for national hockey regulations.",
+      "language": [
+        "it"
+      ],
+      "region": "IT",
+      "category": "rules",
+      "authority": "FIPSAS",
+      "date_or_version": "Live listing includes 2026 news; rule PDF version unverified",
+      "verified_at": "2026-10-02",
+      "verification_status": "search_index_verified_open_403",
+      "access": "Search listing available; direct open blocked",
+      "cost": "Free to read unless noted",
+      "audience": [
+        "players",
+        "coaches",
+        "referees"
+      ],
+      "tags": [
+        "rules",
+        "IT",
+        "it"
+      ],
+      "usage_license_constraints": "No open licence verified; link to source and paraphrase. Do not rehost PDFs, images or video without permission.",
+      "caveats": "Full webpage returned 403; search listing verified. Introductory dimensions should not be used as international specifications."
+    },
+    {
+      "id": "fipsas-circular-2025-26",
+      "title": "Circolare Normativa Attività Subacquee 2025–26",
+      "url": "https://fipsas.it/wp-content/uploads/2026/04/Circolare-Normativa-Attivita-Subacquee-2025-26-FIPSAS.pdf",
+      "description": "Italian seasonal competition circular; hockey section begins at page 85.",
+      "language": [
+        "it"
+      ],
+      "region": "IT",
+      "category": "tournament-regulations",
+      "authority": "FIPSAS",
+      "date_or_version": "2025–26 season; April 2026 file path",
+      "verified_at": "2026-10-02",
+      "verification_status": "search_index_verified",
+      "access": "Public webpage or download; no payment observed",
+      "cost": "Free to read unless noted",
+      "audience": [
+        "players",
+        "coaches",
+        "referees"
+      ],
+      "tags": [
+        "tournament-regulations",
+        "IT",
+        "it"
+      ],
+      "usage_license_constraints": "No open licence verified; link to source and paraphrase. Do not rehost PDFs, images or video without permission.",
+      "caveats": "Season-specific, not an evergreen international rulebook."
+    },
+    {
+      "id": "czech-library",
+      "title": "Dokumenty a odkazy",
+      "url": "https://www.uwh.cz/dokumenty-a-odkazy/",
+      "description": "Czech rules, safety, equipment and coaching-study collection.",
+      "language": [
+        "cs",
+        "en"
+      ],
+      "region": "CZ",
+      "category": "rules",
+      "authority": "Czech underwater hockey community / national sport resource",
+      "date_or_version": "Search index lists 2025 Czech rules v 2; opened cache showed 2022 files",
+      "verified_at": "2026-10-02",
+      "verification_status": "conflicting_cached_versions",
+      "access": "Public webpage or download; no payment observed",
+      "cost": "Free to read unless noted",
+      "audience": [
+        "players",
+        "coaches",
+        "referees"
+      ],
+      "tags": [
+        "rules",
+        "translation",
+        "safety",
+        "equipment",
+        "source-gap"
+      ],
+      "usage_license_constraints": "No open licence verified; link to source and paraphrase. Do not rehost PDFs, images or video without permission.",
+      "caveats": "Resolve live-version mismatch before naming a particular translation current. The library itself is useful."
+    },
+    {
+      "id": "czech-safety-2026",
+      "title": "Pravidla bezpečného chování UWH 2026",
+      "url": "https://www.uwh.cz/wp-content/uploads/2026/01/Pravidla-bezpecneho-chovani-UWH-2026.pdf",
+      "description": "Czech underwater hockey safe-conduct document.",
+      "language": [
+        "cs"
+      ],
+      "region": "CZ",
+      "category": "safety",
+      "authority": "Czech underwater hockey resource site",
+      "date_or_version": "2026 (title/file path)",
+      "verified_at": "2026-10-02",
+      "verification_status": "verified_listing_download_failed",
+      "access": "Listed public PDF; retrieval failed",
+      "cost": "Free to read unless noted",
+      "audience": [
+        "players",
+        "coaches",
+        "referees"
+      ],
+      "tags": [
+        "safety",
+        "CZ",
+        "cs"
+      ],
+      "usage_license_constraints": "No open licence verified; link to source and paraphrase. Do not rehost PDFs, images or video without permission.",
+      "caveats": "Link verified on source index; PDF body not retrieved.",
+      "source_url": "https://www.uwh.cz/dokumenty-a-odkazy/"
+    },
+    {
+      "id": "sauwhf-refereeing",
+      "title": "SAUWHF Refereeing",
+      "url": "https://sauwhf.co.za/refereeing/",
+      "description": "South African national referee training and progression information.",
+      "language": [
+        "en"
+      ],
+      "region": "ZA",
+      "category": "refereeing",
+      "authority": "South African Underwater Hockey Federation",
+      "date_or_version": "Undated live page",
+      "verified_at": "2026-10-02",
+      "verification_status": "search_index_verified",
+      "access": "Public webpage or download; no payment observed",
+      "cost": "Free to read unless noted",
+      "audience": [
+        "players",
+        "coaches",
+        "referees"
+      ],
+      "tags": [
+        "refereeing",
+        "ZA",
+        "en"
+      ],
+      "usage_license_constraints": "No open licence verified; link to source and paraphrase. Do not rehost PDFs, images or video without permission.",
+      "caveats": "Some rulebook links use old two-volume labels; verify qualification requirements with federation."
+    },
+    {
+      "id": "sauwhf-documentation",
+      "title": "SAUWHF Documentation",
+      "url": "https://sauwhf.co.za/documentation/",
+      "description": "Safeguarding, behaviour and tournament governance documents.",
+      "language": [
+        "en"
+      ],
+      "region": "ZA",
+      "category": "safety",
+      "authority": "South African Underwater Hockey Federation",
+      "date_or_version": "Undated live index",
+      "verified_at": "2026-10-02",
+      "verification_status": "search_index_verified",
+      "access": "Public webpage or download; no payment observed",
+      "cost": "Free to read unless noted",
+      "audience": [
+        "players",
+        "coaches",
+        "referees"
+      ],
+      "tags": [
+        "safety",
+        "ZA",
+        "en"
+      ],
+      "usage_license_constraints": "No open licence verified; link to source and paraphrase. Do not rehost PDFs, images or video without permission.",
+      "caveats": "Individual document dates require checking."
+    },
+    {
+      "id": "sauwhf-concussion-2024",
+      "title": "SAUWHF Concussion Protocol",
+      "url": "https://sauwhf.co.za/wp-content/uploads/2025/01/Concussion-protocol-final.pdf",
+      "description": "Sport-specific recognition, management and governance protocol.",
+      "language": [
+        "en"
+      ],
+      "region": "ZA",
+      "category": "safety",
+      "authority": "South African Underwater Hockey Federation",
+      "date_or_version": "POLCONC-01, revision 0, effective November 2024",
+      "verified_at": "2026-10-02",
+      "verification_status": "verified_content",
+      "access": "Public webpage or download; no payment observed",
+      "cost": "Free to read unless noted",
+      "audience": [
+        "players",
+        "coaches",
+        "referees"
+      ],
+      "tags": [
+        "safety",
+        "concussion",
+        "club-management"
+      ],
+      "usage_license_constraints": "No open licence verified; link to source and paraphrase. Do not rehost PDFs, images or video without permission.",
+      "caveats": "11 pages. Apply current event policy and professional clinical advice, not a universal self-managed return schedule."
+    },
+    {
+      "id": "uha-documents",
+      "title": "UWH Australia Documents & Resources",
+      "url": "https://underwaterhockeyaustralia.org.au/documents.html",
+      "description": "Rules, integrity, medical and policy library.",
+      "language": [
+        "en"
+      ],
+      "region": "AU",
+      "category": "safety",
+      "authority": "Underwater Hockey Australia",
+      "date_or_version": "Live index; includes 2025/26 resources",
+      "verified_at": "2026-10-02",
+      "verification_status": "verified_content",
+      "access": "Public webpage or download; no payment observed",
+      "cost": "Free to read unless noted",
+      "audience": [
+        "players",
+        "coaches",
+        "referees"
+      ],
+      "tags": [
+        "safety",
+        "AU",
+        "en"
+      ],
+      "usage_license_constraints": "No open licence verified; link to source and paraphrase. Do not rehost PDFs, images or video without permission.",
+      "caveats": "Document-specific dates control; webpage prose labels some research as policy, so inspect PDFs."
+    },
+    {
+      "id": "ais-breathhold",
+      "title": "Breath Hold Training: Position Statement",
+      "url": "https://underwaterhockeyaustralia.org.au/assets/documents/policies/Breath-Hold-Training-Position-Statement.pdf",
+      "description": "AIS/VIS guidance on breath-hold risks, supervision and athlete welfare.",
+      "language": [
+        "en"
+      ],
+      "region": "global",
+      "category": "safety",
+      "authority": "Australian Institute of Sport / Victorian Institute of Sport; UHA mirror",
+      "date_or_version": "October 2020 version also hosted by AUF",
+      "verified_at": "2026-10-02",
+      "verification_status": "verified_content",
+      "access": "Public webpage or download; no payment observed",
+      "cost": "Free to read unless noted",
+      "audience": [
+        "coaches",
+        "medical staff",
+        "club safety officers",
+        "players"
+      ],
+      "tags": [
+        "safety",
+        "breath-hold",
+        "blackout",
+        "hyperventilation",
+        "training"
+      ],
+      "usage_license_constraints": "No open licence verified; link to source and paraphrase. Do not rehost PDFs, images or video without permission.",
+      "caveats": "Explicitly addresses UWH. Do not convert into solo breath-hold challenges or prescribed apnea tables.",
+      "alternate_url": "https://auf.com.au/wp-content/uploads/2024/12/AIS-Breath-Hold-Training-Position-Statement-October-2020.pdf"
+    },
+    {
+      "id": "uwh-submersion-study-2023",
+      "title": "Measured Submersion Times in Underwater Hockey Are Inconsistent With Its Classification as an Extreme Apneic Sport",
+      "url": "https://underwaterhockeyaustralia.org.au/assets/documents/policies/Measured-Submersion-Times-in-Underwater.pdf",
+      "description": "Observational study of 2,000 game submersions; distinguishes measured play from perception.",
+      "language": [
+        "en"
+      ],
+      "region": "global",
+      "category": "research",
+      "authority": "Meisenheimer et al., Cureus; UHA mirror",
+      "date_or_version": "13 July 2023; Cureus 15(7):e 41816",
+      "verified_at": "2026-10-02",
+      "verification_status": "verified_content",
+      "access": "Public webpage or download; no payment observed",
+      "cost": "Free to read unless noted",
+      "audience": [
+        "players",
+        "coaches",
+        "referees"
+      ],
+      "tags": [
+        "research",
+        "safety",
+        "submersion",
+        "open-access"
+      ],
+      "usage_license_constraints": "CC BY 4.0 stated in PDF. Credit authors/source, link licence, mark changes; check third-party materials separately.",
+      "caveats": "Does not establish zero blackout risk or define a safe breath-hold duration. Study findings are not training instructions."
+    },
+    {
+      "id": "uwh-spums-2022",
+      "title": "Underwater Hockey: SPUMS ASM 2022 talk",
+      "url": "https://underwaterhockeyaustralia.org.au/assets/documents/policies/Underwater_hockey_talk_SPUMS_ASM_2022.pdf",
+      "description": "Medical-meeting presentation about underwater hockey.",
+      "language": [
+        "en"
+      ],
+      "region": "global",
+      "category": "research",
+      "authority": "South Pacific Underwater Medicine Society meeting presentation; UHA host",
+      "date_or_version": "2022;21-slide PDF",
+      "verified_at": "2026-10-02",
+      "verification_status": "verified_content",
+      "access": "Public webpage or download; no payment observed",
+      "cost": "Free to read unless noted",
+      "audience": [
+        "players",
+        "coaches",
+        "referees"
+      ],
+      "tags": [
+        "research",
+        "global",
+        "en"
+      ],
+      "usage_license_constraints": "No open licence verified; link to source and paraphrase. Do not rehost PDFs, images or video without permission.",
+      "caveats": "Presentation, not a formal guideline. Source-specific medical observations require context.",
+      "format": [
+        "PDF",
+        "slides"
+      ]
+    },
+    {
+      "id": "uha-faq-safety",
+      "title": "UWH Australia FAQ: Safety",
+      "url": "https://underwaterhockeyaustralia.org.au/faq.html",
+      "description": "Accessible sport-specific safety, supervision and safeguarding overview.",
+      "language": [
+        "en"
+      ],
+      "region": "AU",
+      "category": "safety",
+      "authority": "Underwater Hockey Australia",
+      "date_or_version": "Undated live page",
+      "verified_at": "2026-10-02",
+      "verification_status": "search_index_verified",
+      "access": "Public webpage or download; no payment observed",
+      "cost": "Free to read unless noted",
+      "audience": [
+        "players",
+        "coaches",
+        "referees"
+      ],
+      "tags": [
+        "safety",
+        "AU",
+        "en"
+      ],
+      "usage_license_constraints": "No open licence verified; link to source and paraphrase. Do not rehost PDFs, images or video without permission.",
+      "caveats": "Links to full policies; do not use FAQ reassurance as proof of no risk."
+    },
+    {
+      "id": "aufq-concussion-2024",
+      "title": "AUF Queensland Concussion Policy",
+      "url": "https://aufq.auf.com.au/wp-content/uploads/sites/6/2024/05/AUFQ-Concussion-Policy.pdf",
+      "description": "Regional underwater-sport concussion guidance with UWH context.",
+      "language": [
+        "en"
+      ],
+      "region": "AU-QLD",
+      "category": "safety",
+      "authority": "Australian Underwater Federation Queensland",
+      "date_or_version": "March 2024",
+      "verified_at": "2026-10-02",
+      "verification_status": "search_index_verified_open_failed",
+      "access": "Public webpage or download; no payment observed",
+      "cost": "Free to read unless noted",
+      "audience": [
+        "players",
+        "coaches",
+        "referees"
+      ],
+      "tags": [
+        "safety",
+        "AU-QLD",
+        "en"
+      ],
+      "usage_license_constraints": "No open licence verified; link to source and paraphrase. Do not rehost PDFs, images or video without permission.",
+      "caveats": "Document refers to Australian concussion/brain-health guidance; verify current local policy."
+    },
+    {
+      "id": "dan-freediving-risk",
+      "title": "Freediving Risk Assessments",
+      "url": "https://world.dan.org/alert-diver/article/freediving-risk-assessments/",
+      "description": "Medical-authored framework for emergency planning, supervision and breath-hold risk.",
+      "language": [
+        "en"
+      ],
+      "region": "global",
+      "category": "safety",
+      "authority": "Divers Alert Network; Jim Chimiak MD and Juan Valdivia-Valdivia MD",
+      "date_or_version": "11 December 2023",
+      "verified_at": "2026-10-02",
+      "verification_status": "verified_content",
+      "access": "Public webpage or download; no payment observed",
+      "cost": "Free to read unless noted",
+      "audience": [
+        "coaches",
+        "safety officers",
+        "players"
+      ],
+      "tags": [
+        "safety",
+        "emergency-action-plan",
+        "blackout",
+        "adjacent-sport"
+      ],
+      "usage_license_constraints": "No open licence verified; link to source and paraphrase. Do not rehost PDFs, images or video without permission.",
+      "caveats": "Adjacent freediving guidance, not UWH rules. Apply general principles with hockey-specific supervision and emergency plans."
+    },
+    {
+      "id": "uwh-injury-study-2024",
+      "title": "Injury Incidence and Injury Period Prevalence in Underwater Hockey: A Retrospective Study",
+      "url": "https://link.springer.com/article/10.1007/s42978-024-00280-1",
+      "description": "Open-access injury study of 441 adult players across playing levels.",
+      "language": [
+        "en"
+      ],
+      "region": "global",
+      "category": "research",
+      "authority": "Adams, Jones, Partner & Partner; Journal of Science in Sport and Exercise",
+      "date_or_version": "29 April 2024; DOI 10.1007/s 42978-024-00280-1",
+      "verified_at": "2026-10-02",
+      "verification_status": "verified_content",
+      "access": "Public webpage or download; no payment observed",
+      "cost": "Free to read unless noted",
+      "audience": [
+        "players",
+        "coaches",
+        "referees"
+      ],
+      "tags": [
+        "research",
+        "injury",
+        "fitness",
+        "open-access"
+      ],
+      "usage_license_constraints": "CC BY 4.0. Attribution, licence link and indication of changes required; inspect third-party credit lines.",
+      "caveats": "Convenience sample and 12-month self-report limit causal claims and comparisons; not a validated prevention programme."
+    },
+    {
+      "id": "cmas-clean-sport",
+      "title": "CMAS Clean Sport / Antidoping Fight",
+      "url": "https://www.cmas.org/clean-sport/antidoping-fight.html",
+      "description": "Current CMAS anti-doping rules, education, TUE and WADA references.",
+      "language": [
+        "en"
+      ],
+      "region": "global",
+      "category": "clean-sport",
+      "authority": "CMAS",
+      "date_or_version": "Page contains 2026 rules and list; initial article date 2023",
+      "verified_at": "2026-10-02",
+      "verification_status": "verified_content",
+      "access": "Public webpage or download; no payment observed",
+      "cost": "Free to read unless noted",
+      "audience": [
+        "competitive athletes",
+        "coaches",
+        "team managers",
+        "organisers"
+      ],
+      "tags": [
+        "clean-sport",
+        "global",
+        "en"
+      ],
+      "usage_license_constraints": "No open licence verified; link to source and paraphrase. Do not rehost PDFs, images or video without permission.",
+      "caveats": "ADEL certificate requirement stated from 1 January 2025. Past webinar listings are not upcoming events."
+    },
+    {
+      "id": "cmas-antidoping-2026",
+      "title": "CMAS Anti-Doping Rules 2026",
+      "url": "https://www.cmas.org/images/cmas_articles/84/CMAS-Anti-doping-Rules-2026.pdf",
+      "description": "International anti-doping requirements applying to CMAS sport.",
+      "language": [
+        "en"
+      ],
+      "region": "global",
+      "category": "clean-sport",
+      "authority": "CMAS",
+      "date_or_version": "2026",
+      "verified_at": "2026-10-02",
+      "verification_status": "verified_content",
+      "access": "Public webpage or download; no payment observed",
+      "cost": "Free to read unless noted",
+      "audience": [
+        "players",
+        "coaches",
+        "referees"
+      ],
+      "tags": [
+        "clean-sport",
+        "global",
+        "en"
+      ],
+      "usage_license_constraints": "No open licence verified; link to source and paraphrase. Do not rehost PDFs, images or video without permission.",
+      "caveats": "66-page PDF; eligibility/legal decisions require current official interpretation."
+    },
+    {
+      "id": "cmas-clean-education",
+      "title": "Clean Sport Education Requirements for National Federations",
+      "url": "https://www.cmas.org/media/pdf/Clean%20Sport%20Education%20requirements%20for%20National%20Federations.pdf",
+      "description": "CMAS competition education requirements and certification guidance.",
+      "language": [
+        "en"
+      ],
+      "region": "global",
+      "category": "clean-sport",
+      "authority": "CMAS",
+      "date_or_version": "V 2025 listing",
+      "verified_at": "2026-10-02",
+      "verification_status": "verified_content",
+      "access": "Public webpage or download; no payment observed",
+      "cost": "Free to read unless noted",
+      "audience": [
+        "players",
+        "coaches",
+        "referees"
+      ],
+      "tags": [
+        "clean-sport",
+        "global",
+        "en"
+      ],
+      "usage_license_constraints": "No open licence verified; link to source and paraphrase. Do not rehost PDFs, images or video without permission.",
+      "caveats": "Read with current event bulletin and 2026 anti-doping rules."
+    },
+    {
+      "id": "wada-list",
+      "title": "WADA Prohibited List",
+      "url": "https://www.wada-ama.org/en/prohibited-list",
+      "description": "Canonical annually updated prohibited substances/methods reference.",
+      "language": [
+        "en"
+      ],
+      "region": "global",
+      "category": "clean-sport",
+      "authority": "World Anti-Doping Agency",
+      "date_or_version": "Live annual-list hub",
+      "verified_at": "2026-10-02",
+      "verification_status": "verified_content",
+      "access": "Public webpage or download; no payment observed",
+      "cost": "Free to read unless noted",
+      "audience": [
+        "players",
+        "coaches",
+        "referees"
+      ],
+      "tags": [
+        "clean-sport",
+        "medication",
+        "supplements",
+        "annual-update"
+      ],
+      "usage_license_constraints": "No open licence verified; link to source and paraphrase. Do not rehost PDFs, images or video without permission.",
+      "caveats": "Use the edition effective on competition date. A newly published future list may not yet be in force."
+    }
+  ],
+  "wiki_sections": [
+    {
+      "slug": "rules-and-version-guide",
+      "title": "Which rules apply?",
+      "intro": "Start with the event's governing authority and published rule edition. The CMAS index currently lists February 2025 rules, and the public v 13.0 PDF combines playing-area and play rules. Domestic rulebooks and event bulletins can add different requirements. Keep the edition and jurisdiction beside every explanation.",
+      "subtopics": [
+        "CMAS rules versus national rules",
+        "Tournament regulations and event bulletins",
+        "Official rule determinations",
+        "Edition history and amendment tracking",
+        "Translation currency"
+      ],
+      "source_ids": [
+        "cmas-regulations",
+        "cmas-rules-v13",
+        "cmas-tournament-v1",
+        "nz-ref-resources",
+        "ffessm-rules",
+        "nob-regulations"
+      ],
+      "caveat": "Never let an old translated PDF appear to supersede the current applicable official text."
+    },
+    {
+      "slug": "referee-pathway",
+      "title": "Become and develop as a referee",
+      "intro": "Refereeing combines rule knowledge, positioning, communication, practical experience and assessment. Begin with the national pathway, then use the CMAS standards to understand international expectations. Video lessons and quick references are study aids; they do not award a qualification.",
+      "subtopics": [
+        "National entry routes",
+        "CMAS levels and maintaining active status",
+        "Water, chief, timekeeping and scoring roles",
+        "Mentored practical assessment",
+        "Signals and positioning",
+        "International applications"
+      ],
+      "source_ids": [
+        "cmas-ref-course",
+        "cmas-ref-overview",
+        "cmas-ref-standards",
+        "wuha-l1-course",
+        "ffessm-ref-training",
+        "nob-ref-course",
+        "sauwhf-refereeing",
+        "usoa-training",
+        "uwhreferees-hub"
+      ]
+    },
+    {
+      "slug": "fouls-signals-and-interpretations",
+      "title": "Fouls, signals and game management",
+      "intro": "Learn signals together with the actual decisions they communicate. Use current rules for sanctions and restarts, and identify the rule edition attached to every clip or diagram. Older lessons remain useful for observation practice but need an instructor's review before being used as current exam material.",
+      "subtopics": [
+        "Advantage",
+        "Obstruction and illegal puck movement",
+        "Substitutions and starts",
+        "Dangerous play",
+        "Corner delay",
+        "Penalty selection",
+        "Protests and communication"
+      ],
+      "source_ids": [
+        "cmas-rules-v13",
+        "cmas-corner",
+        "wuha-signals-course",
+        "wuha-l1-quickref",
+        "boa-rules",
+        "ffessm-advantage",
+        "treatise-fouls-en"
+      ],
+      "caveat": "Books explaining fouls are commentary; they do not override official determinations."
+    },
+    {
+      "slug": "equipment-and-pool-compliance",
+      "title": "Equipment and playing-area standards",
+      "intro": "Separate personal fit and comfort from legal equipment compliance. Inspect the current rulebook and equipment guide before competitions, and check whether local or event requirements differ. Pool geometry, barriers, goals, pucks, protective equipment and team identification each deserve their own checklist.",
+      "subtopics": [
+        "Mask, snorkel and mouth protection",
+        "Gloves and ear protection",
+        "Fins and safe edges",
+        "Stick dimensions and colour",
+        "Puck and goal specifications",
+        "Pool dimensions and barriers",
+        "Kit approval and identification"
+      ],
+      "source_ids": [
+        "cmas-rules-v13",
+        "cmas-equipment",
+        "ffessm-vol1",
+        "fpas-rules",
+        "nz-policies"
+      ],
+      "caveat": "Do not copy quick-start dimensions from federation marketing pages when the rulebook differs."
+    },
+    {
+      "slug": "safe-practice-and-emergency-plans",
+      "title": "Safe practice and emergency readiness",
+      "intro": "Train and play under competent supervision with a session-specific emergency plan. Never practise underwater breath holding alone or hyperventilate before an underwater effort. Breath-hold contests and ignoring the urge to breathe create avoidable danger. Safety education and hands-on rescue training belong beside skill development.",
+      "subtopics": [
+        "Supervision and rescue roles",
+        "Emergency action plans",
+        "Blackout risk and warning limitations",
+        "Safe progressive skill sessions",
+        "Incident reporting",
+        "Medical screening",
+        "First-aid qualification"
+      ],
+      "source_ids": [
+        "ais-breathhold",
+        "dan-freediving-risk",
+        "ffessm-rifahs",
+        "boa-welfare",
+        "uha-faq-safety",
+        "czech-safety-2026"
+      ],
+      "caveat": "Adjacent freediving material needs hockey context; do not import deep-dive procedures as hockey rules."
+    },
+    {
+      "slug": "concussion-and-return-to-play",
+      "title": "Concussion and return to play",
+      "intro": "Suspected concussion during an underwater sport warrants prompt removal from play and medical assessment. In-water injury also creates a drowning hazard, so clubs need trained responders and a rehearsed emergency plan. Use the current federation/event protocol and clinician-led return decisions rather than a generic countdown.",
+      "subtopics": [
+        "Recognition and immediate response",
+        "Pool rescue and escalation",
+        "Recording and notifying incidents",
+        "Medical assessment",
+        "Graduated return under applicable guidance",
+        "Additional youth safeguards"
+      ],
+      "source_ids": [
+        "cmas-concussion",
+        "sauwhf-concussion-2024",
+        "aufq-concussion-2024",
+        "nz-concussion-2019",
+        "boa-welfare"
+      ],
+      "caveat": "Some linked national documents are older; version and jurisdiction must be displayed. CMAS policy body could not be retrieved in this pass."
+    },
+    {
+      "slug": "fitness-and-evidence",
+      "title": "Fitness, injury prevention and reading research",
+      "intro": "Conditioning should support movement quality, repeat-effort capacity and recovery without making maximum breath holds the goal. The evidence library separates research findings from tested training programmes. An injury survey can identify priorities, while an observed average submersion time does not establish an individual safe limit.",
+      "subtopics": [
+        "Aerobic and repeat-effort conditioning",
+        "Technique and workload progression",
+        "Upper-limb injury considerations",
+        "Recovery and signs to stop",
+        "Research design and limitations",
+        "What evidence does not establish"
+      ],
+      "source_ids": [
+        "ais-breathhold",
+        "uwh-injury-study-2024",
+        "uwh-submersion-study-2023",
+        "uwh-spums-2022"
+      ],
+      "caveat": "No validated comprehensive UWH-specific conditioning or injury-prevention programme was established in this pass."
+    },
+    {
+      "slug": "safeguarding-and-clean-sport",
+      "title": "Safeguarding, integrity and clean sport",
+      "intro": "A complete club resource library includes the responsibilities around play: safeguarding, conduct, risk assessment, anti-doping education and medication checks. These obligations are jurisdiction- and competition-specific. Link current official documents and identify their effective dates instead of rewriting sensitive eligibility rules from memory.",
+      "subtopics": [
+        "Child and vulnerable-adult protection",
+        "Codes of conduct",
+        "Reporting routes",
+        "Club risk assessment",
+        "ADEL education",
+        "Prohibited-list effective dates",
+        "Therapeutic-use exemptions and supplement risk"
+      ],
+      "source_ids": [
+        "boa-welfare",
+        "nz-policies",
+        "sauwhf-documentation",
+        "uha-documents",
+        "cmas-clean-sport",
+        "cmas-clean-education",
+        "cmas-antidoping-2026",
+        "wada-list"
+      ]
+    }
+  ],
+  "quality_findings": [
+    {
+      "issue": "CMAS quick-summary pool dimensions conflict with rulebook",
+      "evidence": "CMAS landing page says width 15–18m; v 13.0 rule 1.1.2 specifies 12–15m. Cite the rulebook for specifications.",
+      "source_ids": [
+        "cmas-regulations",
+        "cmas-rules-v13"
+      ],
+      "severity": "high"
+    },
+    {
+      "issue": "French edition numbers are jurisdiction-specific",
+      "evidence": "Procedures are Fr 13 September 2025; equipment/play PDFs are Fr 12.1 February 2025 with Wi 12.0 November 2022 basis. They are not translations of international v 13.",
+      "source_ids": [
+        "ffessm-vol0",
+        "ffessm-vol1",
+        "ffessm-vol2"
+      ],
+      "severity": "high"
+    },
+    {
+      "issue": "Old translations remain prominent",
+      "evidence": "Dutch index offers 2012 translation and 2018 English rules; FEDAS Spanish PDF is 10th edition. Use archive labels.",
+      "source_ids": [
+        "nob-regulations",
+        "fedas-spanish-historical"
+      ],
+      "severity": "high"
+    },
+    {
+      "issue": "WUHA training materials have mixed dates",
+      "evidence": "2025 rule links coexist with 2021 PDFs and 2019 video credit; preserve individual dates.",
+      "source_ids": [
+        "wuha-l1-course",
+        "wuha-l1-quickref"
+      ],
+      "severity": "medium"
+    },
+    {
+      "issue": "Referee hub has time-sensitive/unfinished resources",
+      "evidence": "2026 ITO recordings expired 13 July 2026; fitness test is coming soon; management plan is Draft#4.2027 application dates are published but a Not Available Yet label remains.",
+      "source_ids": [
+        "uwhreferees-hub"
+      ],
+      "severity": "medium"
+    },
+    {
+      "issue": "Public document access is incomplete",
+      "evidence": "CMAS download login redirects/timeouts, USOA 403, Google/Sporty cache misses and some national PDFs blocked full inspection. Do not mark their body content verified.",
+      "source_ids": [
+        "cmas-regulations",
+        "usoa-referees",
+        "uwhref-l3-assessment",
+        "nz-policies"
+      ],
+      "severity": "medium"
+    },
+    {
+      "issue": "Czech cached versions disagree",
+      "evidence": "Search index shows 2025 rules v 2 while opened page cache shows 2022 files. Live source needs rechecking before a current-version badge.",
+      "source_ids": [
+        "czech-library"
+      ],
+      "severity": "medium"
+    },
+    {
+      "issue": "Research is not policy",
+      "evidence": "UHA's library lists the Meisenheimer submersion article under policies, but it is an observational research article. Label by the PDF's actual type.",
+      "source_ids": [
+        "uha-documents",
+        "uwh-submersion-study-2023"
+      ],
+      "severity": "medium"
+    }
+  ],
+  "gaps_and_next_checks": [
+    "Retrieve and inspect current CMAS Equipment Guide, Concussion Policy, referee standards, tournament regulations and eligibility determinations through an authorised human-accessible path or a verified federation mirror.",
+    "Resolve the live Czech 2025 translation links and confirm translator/authority and exact version.",
+    "Find current authorised Spanish, Portuguese, Italian, German, Dutch and Asian-language translations; do not fabricate translations or current-version equivalence.",
+    "Verify USOA pages and domestic-course/testing requirements after the 403 retrieval issue is resolved.",
+    "Confirm exact five languages and revision of the Level 3 assessment workbook.",
+    "Obtain a federation-approved, medically reviewed UWH conditioning/injury-prevention resource; none was established by this pass.",
+    "Confirm current concussion/return-to-play policies per jurisdiction; do not assume older mirrors remain controlling.",
+    "Before promoting any course, confirm next date, availability, qualification prerequisites and current price.",
+    "Review rights before hosting illustrations, videos, training slides or rulebooks; most resources carry no verified open licence."
+  ]
+}

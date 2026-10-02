@@ -1,0 +1,3760 @@
+{
+  "schema_version": "1.0",
+  "title": "Underwater Hockey World Directory and Atlas Content Blueprint",
+  "researched_on": "2026-10-02",
+  "scope": "Curated global source backbone and representative public club/venue sample. Not exhaustive and not a live session service. Timberwhales omitted because separately researched.",
+  "sources": [
+    {
+      "id": "cmas-hockey",
+      "title": "CMAS Underwater Hockey",
+      "url": "https://www.cmas.org/hockey/",
+      "description": "International federation hub for regulations, calendar, championship results and footage.",
+      "languages": [
+        "en"
+      ],
+      "geography": "global",
+      "authority": "international_federation",
+      "audience": [
+        "players",
+        "club-organizers",
+        "spectators"
+      ],
+      "access": {
+        "read": "public",
+        "cost": "free to read; participation, membership and purchase costs are separate"
+      },
+      "checked_on": "2026-10-02",
+      "verification_method": "web page or indexed source inspected",
+      "source_date_or_version": null,
+      "freshness": "publication date unspecified; checked_on is not an update date",
+      "licence": "CMAS footer: All Rights Reserved",
+      "copy_limitations": "Link and write an original short summary. Do not mirror photos, videos, full documents, logos or database wholesale without licence/permission.",
+      "tags": [
+        "governance",
+        "competitions",
+        "video"
+      ]
+    },
+    {
+      "id": "cmas-rules",
+      "title": "CMAS UWH regulations library",
+      "url": "https://www.cmas.org/hockey/how-to-regulations.html",
+      "description": "Canonical rule and tournament document index; includes referee standards, equipment guidance, concussion policy and eligibility determinations.",
+      "languages": [
+        "en"
+      ],
+      "geography": "global",
+      "authority": "international_federation",
+      "audience": [
+        "players",
+        "club-organizers",
+        "spectators"
+      ],
+      "access": {
+        "read": "public",
+        "cost": "free to read; participation, membership and purchase costs are separate"
+      },
+      "checked_on": "2026-10-02",
+      "verification_method": "web page or indexed source inspected",
+      "source_date_or_version": "Rules of Play and Tournament Regulations: Feb 2025/02; other determinations have separate dates",
+      "freshness": "publication date unspecified; checked_on is not an update date",
+      "licence": "CMAS footer: All Rights Reserved",
+      "copy_limitations": "Link and write an original short summary. Do not mirror photos, videos, full documents, logos or database wholesale without licence/permission.",
+      "tags": [
+        "rules",
+        "refereeing",
+        "equipment",
+        "safety"
+      ]
+    },
+    {
+      "id": "cmas-results",
+      "title": "CMAS UWH results",
+      "url": "https://www.cmas.org/hockey/results.html",
+      "description": "Official championship results and final rankings, including 2026 age-group and Asian events and 2025 intercontinental events.",
+      "languages": [
+        "en"
+      ],
+      "geography": "global",
+      "authority": "international_federation",
+      "audience": [
+        "players",
+        "club-organizers",
+        "spectators"
+      ],
+      "access": {
+        "read": "public",
+        "cost": "free to read; participation, membership and purchase costs are separate"
+      },
+      "checked_on": "2026-10-02",
+      "verification_method": "web page or indexed source inspected",
+      "source_date_or_version": null,
+      "freshness": "publication date unspecified; checked_on is not an update date",
+      "licence": "CMAS footer: All Rights Reserved",
+      "copy_limitations": "Link and write an original short summary. Do not mirror photos, videos, full documents, logos or database wholesale without licence/permission.",
+      "tags": [
+        "results",
+        "championships"
+      ]
+    },
+    {
+      "id": "cmas-calendar",
+      "title": "CMAS UWH calendar",
+      "url": "https://www.cmas.org/hockey/calendar.html",
+      "description": "Official event listings; distinguish announcement dates from competition dates.",
+      "languages": [
+        "en"
+      ],
+      "geography": "global",
+      "authority": "international_federation",
+      "audience": [
+        "players",
+        "club-organizers",
+        "spectators"
+      ],
+      "access": {
+        "read": "public",
+        "cost": "free to read; participation, membership and purchase costs are separate"
+      },
+      "checked_on": "2026-10-02",
+      "verification_method": "web page or indexed source inspected",
+      "source_date_or_version": null,
+      "freshness": "publication date unspecified; checked_on is not an update date",
+      "licence": "CMAS footer: All Rights Reserved",
+      "copy_limitations": "Link and write an original short summary. Do not mirror photos, videos, full documents, logos or database wholesale without licence/permission.",
+      "tags": [
+        "events",
+        "calendar"
+      ]
+    },
+    {
+      "id": "cmas-footage-2026",
+      "title": "2026 Asian Championship, Day 4 Court 2",
+      "url": "https://www.cmas.org/livestream/video/2026-cmas-asian-championship-underwater-hockey-day-4-court-2.html",
+      "description": "Official video landing page suitable for a watch-library link; playback and embedding rights require separate checking.",
+      "languages": [
+        "en"
+      ],
+      "geography": "Indonesia",
+      "authority": "international_federation",
+      "audience": [
+        "players",
+        "club-organizers",
+        "spectators"
+      ],
+      "access": {
+        "read": "public",
+        "cost": "free to read; participation, membership and purchase costs are separate"
+      },
+      "checked_on": "2026-10-02",
+      "verification_method": "web page or indexed source inspected",
+      "source_date_or_version": null,
+      "freshness": "publication date unspecified; checked_on is not an update date",
+      "licence": "CMAS footer: All Rights Reserved",
+      "copy_limitations": "Link and write an original short summary. Do not mirror photos, videos, full documents, logos or database wholesale without licence/permission.",
+      "tags": [
+        "video",
+        "match-footage",
+        "2026"
+      ]
+    },
+    {
+      "id": "cmas-tv",
+      "title": "CMAS TV",
+      "url": "https://tv.cmas.org/",
+      "description": "Official streaming destination linked by the 2026 Asian championship bulletin.",
+      "languages": [
+        "en"
+      ],
+      "geography": "global",
+      "authority": "international_federation",
+      "audience": [
+        "players",
+        "club-organizers",
+        "spectators"
+      ],
+      "access": {
+        "read": "public",
+        "cost": "May vary by event; playback/paywall not verified"
+      },
+      "checked_on": "2026-10-02",
+      "verification_method": "Verified outbound link in official CMAS navigation and event bulletin; playback not tested",
+      "source_date_or_version": null,
+      "freshness": "publication date unspecified; checked_on is not an update date",
+      "licence": "No open licence verified",
+      "copy_limitations": "Link and write an original short summary. Do not mirror photos, videos, full documents, logos or database wholesale without licence/permission.",
+      "tags": [
+        "video",
+        "streaming"
+      ]
+    },
+    {
+      "id": "cmas-africa",
+      "title": "CMAS national federations: Africa",
+      "url": "https://www.cmas.org/national-federations/africa.html",
+      "description": "Federation affiliation register; federation presence does not prove a local hockey club exists.",
+      "languages": [
+        "en"
+      ],
+      "geography": "Africa",
+      "authority": "international_federation",
+      "audience": [
+        "players",
+        "club-organizers",
+        "spectators"
+      ],
+      "access": {
+        "read": "public",
+        "cost": "free to read; participation, membership and purchase costs are separate"
+      },
+      "checked_on": "2026-10-02",
+      "verification_method": "web page or indexed source inspected",
+      "source_date_or_version": null,
+      "freshness": "publication date unspecified; checked_on is not an update date",
+      "licence": "CMAS footer: All Rights Reserved",
+      "copy_limitations": "Link and write an original short summary. Do not mirror photos, videos, full documents, logos or database wholesale without licence/permission.",
+      "tags": [
+        "directory",
+        "federations"
+      ]
+    },
+    {
+      "id": "cmas-america",
+      "title": "CMAS national federations: America",
+      "url": "https://www.cmas.org/national-federations/america.html",
+      "description": "Affiliation and sport-commission register; lists Brazil CBES for hockey and CBPDS as suspended.",
+      "languages": [
+        "en"
+      ],
+      "geography": "Americas",
+      "authority": "international_federation",
+      "audience": [
+        "players",
+        "club-organizers",
+        "spectators"
+      ],
+      "access": {
+        "read": "public",
+        "cost": "free to read; participation, membership and purchase costs are separate"
+      },
+      "checked_on": "2026-10-02",
+      "verification_method": "web page or indexed source inspected",
+      "source_date_or_version": null,
+      "freshness": "publication date unspecified; checked_on is not an update date",
+      "licence": "CMAS footer: All Rights Reserved",
+      "copy_limitations": "Link and write an original short summary. Do not mirror photos, videos, full documents, logos or database wholesale without licence/permission.",
+      "tags": [
+        "directory",
+        "federations",
+        "status"
+      ]
+    },
+    {
+      "id": "cmas-asia",
+      "title": "CMAS national federations: Asia",
+      "url": "https://www.cmas.org/national-federations/asia.html",
+      "description": "Affiliation register distinguishing organizations and their actual sport commissions.",
+      "languages": [
+        "en"
+      ],
+      "geography": "Asia",
+      "authority": "international_federation",
+      "audience": [
+        "players",
+        "club-organizers",
+        "spectators"
+      ],
+      "access": {
+        "read": "public",
+        "cost": "free to read; participation, membership and purchase costs are separate"
+      },
+      "checked_on": "2026-10-02",
+      "verification_method": "web page or indexed source inspected",
+      "source_date_or_version": null,
+      "freshness": "publication date unspecified; checked_on is not an update date",
+      "licence": "CMAS footer: All Rights Reserved",
+      "copy_limitations": "Link and write an original short summary. Do not mirror photos, videos, full documents, logos or database wholesale without licence/permission.",
+      "tags": [
+        "directory",
+        "federations"
+      ]
+    },
+    {
+      "id": "cmas-europe",
+      "title": "CMAS national federations: Europe",
+      "url": "https://www.cmas.org/national-federations/europe.html",
+      "description": "Affiliation register; hockey commission status must be checked rather than assumed for every diving federation.",
+      "languages": [
+        "en"
+      ],
+      "geography": "Europe",
+      "authority": "international_federation",
+      "audience": [
+        "players",
+        "club-organizers",
+        "spectators"
+      ],
+      "access": {
+        "read": "public",
+        "cost": "free to read; participation, membership and purchase costs are separate"
+      },
+      "checked_on": "2026-10-02",
+      "verification_method": "web page or indexed source inspected",
+      "source_date_or_version": null,
+      "freshness": "publication date unspecified; checked_on is not an update date",
+      "licence": "CMAS footer: All Rights Reserved",
+      "copy_limitations": "Link and write an original short summary. Do not mirror photos, videos, full documents, logos or database wholesale without licence/permission.",
+      "tags": [
+        "directory",
+        "federations"
+      ]
+    },
+    {
+      "id": "cmas-oceania",
+      "title": "CMAS national federations: Oceania",
+      "url": "https://www.cmas.org/national-federations/oceania.html",
+      "description": "Affiliation register for national umbrella organizations.",
+      "languages": [
+        "en"
+      ],
+      "geography": "Oceania",
+      "authority": "international_federation",
+      "audience": [
+        "players",
+        "club-organizers",
+        "spectators"
+      ],
+      "access": {
+        "read": "public",
+        "cost": "free to read; participation, membership and purchase costs are separate"
+      },
+      "checked_on": "2026-10-02",
+      "verification_method": "web page or indexed source inspected",
+      "source_date_or_version": null,
+      "freshness": "publication date unspecified; checked_on is not an update date",
+      "licence": "CMAS footer: All Rights Reserved",
+      "copy_limitations": "Link and write an original short summary. Do not mirror photos, videos, full documents, logos or database wholesale without licence/permission.",
+      "tags": [
+        "directory",
+        "federations"
+      ]
+    },
+    {
+      "id": "cmas-development-2022",
+      "title": "CMAS UWH development committee 2022–2024",
+      "url": "https://www.cmas.org/media/pdf/CMAS%20UWH%20Development%20Committee%202022%20-%202024.pdf",
+      "description": "Historical crosswalk of 30 countries, umbrella federations and hockey organizations; do not treat contacts or affiliations as current.",
+      "languages": [
+        "en"
+      ],
+      "geography": "global",
+      "authority": "international_federation",
+      "audience": [
+        "players",
+        "club-organizers",
+        "spectators"
+      ],
+      "access": {
+        "read": "public",
+        "cost": "free to read; participation, membership and purchase costs are separate"
+      },
+      "checked_on": "2026-10-02",
+      "verification_method": "web page or indexed source inspected",
+      "source_date_or_version": "2022–2024 in document title",
+      "freshness": "historical; do not propagate current contacts",
+      "licence": "No open licence verified",
+      "copy_limitations": "Link and write an original short summary. Do not mirror photos, videos, full documents, logos or database wholesale without licence/permission.",
+      "tags": [
+        "directory",
+        "archive",
+        "governance"
+      ]
+    },
+    {
+      "id": "uwh-map",
+      "title": "Underwater Hockey World Map",
+      "url": "https://www.uwhmap.com/",
+      "description": "Crowdsourced world directory with edits, club status and events; discovery source requiring local corroboration.",
+      "languages": [
+        "en"
+      ],
+      "geography": "global",
+      "authority": "community_directory",
+      "audience": [
+        "players",
+        "club-organizers",
+        "spectators"
+      ],
+      "access": {
+        "read": "public",
+        "cost": "free to read; participation, membership and purchase costs are separate"
+      },
+      "checked_on": "2026-10-02",
+      "verification_method": "web page or indexed source inspected",
+      "source_date_or_version": null,
+      "freshness": "publication date unspecified; checked_on is not an update date",
+      "licence": "No open licence verified",
+      "copy_limitations": "Link and write an original short summary. Do not mirror photos, videos, full documents, logos or database wholesale without licence/permission.",
+      "tags": [
+        "directory",
+        "map",
+        "clubs"
+      ]
+    },
+    {
+      "id": "uwh-map-all",
+      "title": "UWH Map all clubs",
+      "url": "https://www.uwhmap.com/clubs/all",
+      "description": "Browsable country/continent index; observed headline 414 clubs, 45 countries, six continents is a directory snapshot, not a verified participation census.",
+      "languages": [
+        "en"
+      ],
+      "geography": "global",
+      "authority": "community_directory",
+      "audience": [
+        "players",
+        "club-organizers",
+        "spectators"
+      ],
+      "access": {
+        "read": "public",
+        "cost": "free to read; participation, membership and purchase costs are separate"
+      },
+      "checked_on": "2026-10-02",
+      "verification_method": "web page or indexed source inspected",
+      "source_date_or_version": null,
+      "freshness": "publication date unspecified; checked_on is not an update date",
+      "licence": "No open licence verified",
+      "copy_limitations": "Link and write an original short summary. Do not mirror photos, videos, full documents, logos or database wholesale without licence/permission.",
+      "tags": [
+        "directory",
+        "map",
+        "clubs"
+      ]
+    },
+    {
+      "id": "pucku-tourist",
+      "title": "Underwater Hockey Tourist",
+      "url": "https://pucku.org/tourist/list",
+      "description": "Additional legacy worldwide club directory for discovery and historical cross-checking.",
+      "languages": [
+        "en"
+      ],
+      "geography": "global",
+      "authority": "community_directory",
+      "audience": [
+        "players",
+        "club-organizers",
+        "spectators"
+      ],
+      "access": {
+        "read": "public",
+        "cost": "free to read; participation, membership and purchase costs are separate"
+      },
+      "checked_on": "2026-10-02",
+      "verification_method": "web page or indexed source inspected",
+      "source_date_or_version": null,
+      "freshness": "publication date unspecified; checked_on is not an update date",
+      "licence": "No open licence verified",
+      "copy_limitations": "Link and write an original short summary. Do not mirror photos, videos, full documents, logos or database wholesale without licence/permission.",
+      "tags": [
+        "directory",
+        "archive"
+      ]
+    },
+    {
+      "id": "cuga-home",
+      "title": "Canadian Underwater Games Association",
+      "url": "https://cuga.ca/",
+      "description": "Bilingual Canadian underwater-sports introduction and entry points.",
+      "languages": [
+        "en",
+        "fr"
+      ],
+      "geography": "Canada",
+      "authority": "national_organization",
+      "audience": [
+        "players",
+        "club-organizers",
+        "spectators"
+      ],
+      "access": {
+        "read": "public",
+        "cost": "free to read; participation, membership and purchase costs are separate"
+      },
+      "checked_on": "2026-10-02",
+      "verification_method": "web page or indexed source inspected",
+      "source_date_or_version": null,
+      "freshness": "publication date unspecified; checked_on is not an update date",
+      "licence": "No open licence verified",
+      "copy_limitations": "Link and write an original short summary. Do not mirror photos, videos, full documents, logos or database wholesale without licence/permission.",
+      "tags": [
+        "federation",
+        "beginner"
+      ]
+    },
+    {
+      "id": "cuga-clubs",
+      "title": "CUGA where to play hockey",
+      "url": "https://cuga.org/where-to-play-hockey/",
+      "description": "Canadian city, club and pool directory; schedules are undated and must be confirmed with each club.",
+      "languages": [
+        "en"
+      ],
+      "geography": "Canada",
+      "authority": "national_organization",
+      "audience": [
+        "players",
+        "club-organizers",
+        "spectators"
+      ],
+      "access": {
+        "read": "public",
+        "cost": "free to read; participation, membership and purchase costs are separate"
+      },
+      "checked_on": "2026-10-02",
+      "verification_method": "web page or indexed source inspected",
+      "source_date_or_version": null,
+      "freshness": "publication date unspecified; checked_on is not an update date",
+      "licence": "No open licence verified",
+      "copy_limitations": "Link and write an original short summary. Do not mirror photos, videos, full documents, logos or database wholesale without licence/permission.",
+      "tags": [
+        "directory",
+        "clubs",
+        "canada"
+      ]
+    },
+    {
+      "id": "boa-clubs",
+      "title": "British Octopush Association club directory",
+      "url": "https://www.gbuwh.co.uk/clubs",
+      "description": "Registered club list and session finder links; official list describes clubs as active.",
+      "languages": [
+        "en"
+      ],
+      "geography": "United Kingdom",
+      "authority": "national_organization",
+      "audience": [
+        "players",
+        "club-organizers",
+        "spectators"
+      ],
+      "access": {
+        "read": "public",
+        "cost": "free to read; participation, membership and purchase costs are separate"
+      },
+      "checked_on": "2026-10-02",
+      "verification_method": "web page or indexed source inspected",
+      "source_date_or_version": null,
+      "freshness": "publication date unspecified; checked_on is not an update date",
+      "licence": "No open licence verified",
+      "copy_limitations": "Link and write an original short summary. Do not mirror photos, videos, full documents, logos or database wholesale without licence/permission.",
+      "tags": [
+        "directory",
+        "clubs"
+      ]
+    },
+    {
+      "id": "boa-sessions",
+      "title": "BOA session and event finder",
+      "url": "https://www.gbuwh.co.uk/sessions-and-events?clubid=33",
+      "description": "Interactive geographic finder with session and event filters; selected example is Southsea.",
+      "languages": [
+        "en"
+      ],
+      "geography": "United Kingdom",
+      "authority": "national_organization",
+      "audience": [
+        "players",
+        "club-organizers",
+        "spectators"
+      ],
+      "access": {
+        "read": "public",
+        "cost": "free to read; participation, membership and purchase costs are separate"
+      },
+      "checked_on": "2026-10-02",
+      "verification_method": "web page or indexed source inspected",
+      "source_date_or_version": null,
+      "freshness": "publication date unspecified; checked_on is not an update date",
+      "licence": "No open licence verified",
+      "copy_limitations": "Link and write an original short summary. Do not mirror photos, videos, full documents, logos or database wholesale without licence/permission.",
+      "tags": [
+        "map",
+        "club-sessions",
+        "events"
+      ]
+    },
+    {
+      "id": "boa-results",
+      "title": "BOA competition results",
+      "url": "https://www.gbuwh.co.uk/page/competition-results",
+      "description": "Domestic competition results library.",
+      "languages": [
+        "en"
+      ],
+      "geography": "United Kingdom",
+      "authority": "national_organization",
+      "audience": [
+        "players",
+        "club-organizers",
+        "spectators"
+      ],
+      "access": {
+        "read": "public",
+        "cost": "free to read; participation, membership and purchase costs are separate"
+      },
+      "checked_on": "2026-10-02",
+      "verification_method": "web page or indexed source inspected",
+      "source_date_or_version": null,
+      "freshness": "publication date unspecified; checked_on is not an update date",
+      "licence": "No open licence verified",
+      "copy_limitations": "Link and write an original short summary. Do not mirror photos, videos, full documents, logos or database wholesale without licence/permission.",
+      "tags": [
+        "results",
+        "competitions"
+      ]
+    },
+    {
+      "id": "boa-posters",
+      "title": "BOA leaflets, posters and graphics",
+      "url": "https://www.gbuwh.co.uk/page/leaflets-posters-graphics",
+      "description": "Recruitment assets with explicit BOA-member usage wording; not a general open-licence media source.",
+      "languages": [
+        "en"
+      ],
+      "geography": "United Kingdom",
+      "authority": "national_organization",
+      "audience": [
+        "players",
+        "club-organizers",
+        "spectators"
+      ],
+      "access": {
+        "read": "public",
+        "cost": "free to read; participation, membership and purchase costs are separate"
+      },
+      "checked_on": "2026-10-02",
+      "verification_method": "web page or indexed source inspected",
+      "source_date_or_version": "Updated 2024-08-30",
+      "freshness": "publication date unspecified; checked_on is not an update date",
+      "licence": "All Rights Reserved; specified graphics downloadable for BOA members",
+      "copy_limitations": "Do not treat member-use permission as authorization to relicense or bundle assets in a public GitHub repository.",
+      "tags": [
+        "recruitment",
+        "club-admin",
+        "media"
+      ]
+    },
+    {
+      "id": "boa-safeguarding",
+      "title": "BOA safeguarding and welfare",
+      "url": "https://www.gbuwh.co.uk/page/safeguarding-welfare",
+      "description": "Jurisdiction-specific safeguarding resource for clubs, volunteers and families.",
+      "languages": [
+        "en"
+      ],
+      "geography": "United Kingdom",
+      "authority": "national_organization",
+      "audience": [
+        "players",
+        "club-organizers",
+        "spectators"
+      ],
+      "access": {
+        "read": "public",
+        "cost": "free to read; participation, membership and purchase costs are separate"
+      },
+      "checked_on": "2026-10-02",
+      "verification_method": "web page or indexed source inspected",
+      "source_date_or_version": null,
+      "freshness": "publication date unspecified; checked_on is not an update date",
+      "licence": "No open licence verified",
+      "copy_limitations": "Link and write an original short summary. Do not mirror photos, videos, full documents, logos or database wholesale without licence/permission.",
+      "tags": [
+        "safeguarding",
+        "club-admin"
+      ]
+    },
+    {
+      "id": "boa-history",
+      "title": "BOA history collection",
+      "url": "https://www.gbuwh.co.uk/page/history-uwh-boa",
+      "description": "Historical articles and links, including Alan Blake’s first-person account.",
+      "languages": [
+        "en"
+      ],
+      "geography": "United Kingdom",
+      "authority": "national_organization",
+      "audience": [
+        "players",
+        "club-organizers",
+        "spectators"
+      ],
+      "access": {
+        "read": "public",
+        "cost": "free to read; participation, membership and purchase costs are separate"
+      },
+      "checked_on": "2026-10-02",
+      "verification_method": "web page or indexed source inspected",
+      "source_date_or_version": null,
+      "freshness": "publication date unspecified; checked_on is not an update date",
+      "licence": "No open licence verified",
+      "copy_limitations": "Link and write an original short summary. Do not mirror photos, videos, full documents, logos or database wholesale without licence/permission.",
+      "tags": [
+        "history",
+        "archive"
+      ]
+    },
+    {
+      "id": "blake-evolution",
+      "title": "The evolution of underwater hockey",
+      "url": "https://www.gbuwh.co.uk/page/evolution-of-underwater-hockey",
+      "description": "Alan Blake’s first-person history hosted by the BOA; useful primary historical account.",
+      "languages": [
+        "en"
+      ],
+      "geography": "United Kingdom",
+      "authority": "primary_historical_account",
+      "audience": [
+        "players",
+        "club-organizers",
+        "spectators"
+      ],
+      "access": {
+        "read": "public",
+        "cost": "free to read; participation, membership and purchase costs are separate"
+      },
+      "checked_on": "2026-10-02",
+      "verification_method": "web page or indexed source inspected",
+      "source_date_or_version": null,
+      "freshness": "publication date unspecified; checked_on is not an update date",
+      "licence": "No open licence verified",
+      "copy_limitations": "Link and write an original short summary. Do not mirror photos, videos, full documents, logos or database wholesale without licence/permission.",
+      "tags": [
+        "history",
+        "origins"
+      ]
+    },
+    {
+      "id": "uha-states",
+      "title": "Underwater Hockey Australia state branches",
+      "url": "https://underwaterhockeyaustralia.org.au/about-uha/state-branches/",
+      "description": "National directory routes players to seven state/territory organizations rather than pretending to list all clubs.",
+      "languages": [
+        "en"
+      ],
+      "geography": "Australia",
+      "authority": "national_organization",
+      "audience": [
+        "players",
+        "club-organizers",
+        "spectators"
+      ],
+      "access": {
+        "read": "public",
+        "cost": "free to read; participation, membership and purchase costs are separate"
+      },
+      "checked_on": "2026-10-02",
+      "verification_method": "web page or indexed source inspected",
+      "source_date_or_version": null,
+      "freshness": "publication date unspecified; checked_on is not an update date",
+      "licence": "No open licence verified",
+      "copy_limitations": "Link and write an original short summary. Do not mirror photos, videos, full documents, logos or database wholesale without licence/permission.",
+      "tags": [
+        "directory",
+        "clubs"
+      ]
+    },
+    {
+      "id": "uha-results",
+      "title": "Australian Nationals results archive",
+      "url": "https://underwaterhockeyaustralia.org.au/records/nationals-results/",
+      "description": "Domestic championship results index; archived editions should retain year and division.",
+      "languages": [
+        "en"
+      ],
+      "geography": "Australia",
+      "authority": "national_organization",
+      "audience": [
+        "players",
+        "club-organizers",
+        "spectators"
+      ],
+      "access": {
+        "read": "public",
+        "cost": "free to read; participation, membership and purchase costs are separate"
+      },
+      "checked_on": "2026-10-02",
+      "verification_method": "web page or indexed source inspected",
+      "source_date_or_version": null,
+      "freshness": "publication date unspecified; checked_on is not an update date",
+      "licence": "No open licence verified",
+      "copy_limitations": "Link and write an original short summary. Do not mirror photos, videos, full documents, logos or database wholesale without licence/permission.",
+      "tags": [
+        "results",
+        "archive"
+      ]
+    },
+    {
+      "id": "uha-videos",
+      "title": "Underwater Hockey Australia videos",
+      "url": "https://underwaterhockeyaustralia.org.au/playing/videos-of-underwater-hockey/",
+      "description": "National video entry point; verify embedded items before individual indexing.",
+      "languages": [
+        "en"
+      ],
+      "geography": "Australia",
+      "authority": "national_organization",
+      "audience": [
+        "players",
+        "club-organizers",
+        "spectators"
+      ],
+      "access": {
+        "read": "public",
+        "cost": "free to read; participation, membership and purchase costs are separate"
+      },
+      "checked_on": "2026-10-02",
+      "verification_method": "web page or indexed source inspected",
+      "source_date_or_version": null,
+      "freshness": "publication date unspecified; checked_on is not an update date",
+      "licence": "No open licence verified",
+      "copy_limitations": "Link and write an original short summary. Do not mirror photos, videos, full documents, logos or database wholesale without licence/permission.",
+      "tags": [
+        "video"
+      ]
+    },
+    {
+      "id": "uha-docs",
+      "title": "Underwater Hockey Australia documents",
+      "url": "https://underwaterhockeyaustralia.org.au/documents.html",
+      "description": "Governance, rules, forms, policies and guides library, including breath-hold position statement.",
+      "languages": [
+        "en"
+      ],
+      "geography": "Australia",
+      "authority": "national_organization",
+      "audience": [
+        "players",
+        "club-organizers",
+        "spectators"
+      ],
+      "access": {
+        "read": "public",
+        "cost": "free to read; participation, membership and purchase costs are separate"
+      },
+      "checked_on": "2026-10-02",
+      "verification_method": "Indexed page inspected; individual documents not downloaded",
+      "source_date_or_version": null,
+      "freshness": "publication date unspecified; checked_on is not an update date",
+      "licence": "No open licence verified",
+      "copy_limitations": "Link and write an original short summary. Do not mirror photos, videos, full documents, logos or database wholesale without licence/permission.",
+      "tags": [
+        "club-admin",
+        "governance",
+        "safety"
+      ]
+    },
+    {
+      "id": "act-club",
+      "title": "ACT Underwater Hockey",
+      "url": "https://www.actunderwaterhockey.com/",
+      "description": "Club page identifies Lakeside Leisure Centre and introductory gear loans/free first session.",
+      "languages": [
+        "en"
+      ],
+      "geography": "Australia",
+      "authority": "club_primary",
+      "audience": [
+        "players",
+        "club-organizers",
+        "spectators"
+      ],
+      "access": {
+        "read": "public",
+        "cost": "free to read; participation, membership and purchase costs are separate"
+      },
+      "checked_on": "2026-10-02",
+      "verification_method": "web page or indexed source inspected",
+      "source_date_or_version": null,
+      "freshness": "publication date unspecified; checked_on is not an update date",
+      "licence": "No open licence verified",
+      "copy_limitations": "Link and write an original short summary. Do not mirror photos, videos, full documents, logos or database wholesale without licence/permission.",
+      "tags": [
+        "clubs",
+        "recruitment"
+      ]
+    },
+    {
+      "id": "tasmania",
+      "title": "Tasmanian Underwater Hockey Association",
+      "url": "https://www.underwaterhockey.com.au/",
+      "description": "Regional competition, training, equipment and governance hub with 2026 activity.",
+      "languages": [
+        "en"
+      ],
+      "geography": "Australia",
+      "authority": "regional_organization",
+      "audience": [
+        "players",
+        "club-organizers",
+        "spectators"
+      ],
+      "access": {
+        "read": "public",
+        "cost": "free to read; participation, membership and purchase costs are separate"
+      },
+      "checked_on": "2026-10-02",
+      "verification_method": "web page or indexed source inspected",
+      "source_date_or_version": null,
+      "freshness": "publication date unspecified; checked_on is not an update date",
+      "licence": "No open licence verified",
+      "copy_limitations": "Link and write an original short summary. Do not mirror photos, videos, full documents, logos or database wholesale without licence/permission.",
+      "tags": [
+        "clubs",
+        "competition",
+        "club-admin"
+      ]
+    },
+    {
+      "id": "tasmania-history",
+      "title": "History of UWH in Tasmania",
+      "url": "https://www.underwaterhockey.com.au/history---honour-board.html",
+      "description": "Developing local history and competition honour board.",
+      "languages": [
+        "en"
+      ],
+      "geography": "Australia",
+      "authority": "regional_organization",
+      "audience": [
+        "players",
+        "club-organizers",
+        "spectators"
+      ],
+      "access": {
+        "read": "public",
+        "cost": "free to read; participation, membership and purchase costs are separate"
+      },
+      "checked_on": "2026-10-02",
+      "verification_method": "web page or indexed source inspected",
+      "source_date_or_version": null,
+      "freshness": "publication date unspecified; checked_on is not an update date",
+      "licence": "No open licence verified",
+      "copy_limitations": "Link and write an original short summary. Do not mirror photos, videos, full documents, logos or database wholesale without licence/permission.",
+      "tags": [
+        "history",
+        "archive"
+      ]
+    },
+    {
+      "id": "uwhnz-clubs",
+      "title": "Underwater Hockey New Zealand clubs",
+      "url": "https://www.underwaterhockeynz.com/PLAY-UWH/UWH-CLUBS",
+      "description": "National regional club gateway; embedded detail is not fully exposed by text extraction.",
+      "languages": [
+        "en"
+      ],
+      "geography": "New Zealand",
+      "authority": "national_organization",
+      "audience": [
+        "players",
+        "club-organizers",
+        "spectators"
+      ],
+      "access": {
+        "read": "public",
+        "cost": "free to read; participation, membership and purchase costs are separate"
+      },
+      "checked_on": "2026-10-02",
+      "verification_method": "web page or indexed source inspected",
+      "source_date_or_version": null,
+      "freshness": "publication date unspecified; checked_on is not an update date",
+      "licence": "No open licence verified",
+      "copy_limitations": "Link and write an original short summary. Do not mirror photos, videos, full documents, logos or database wholesale without licence/permission.",
+      "tags": [
+        "directory",
+        "clubs"
+      ]
+    },
+    {
+      "id": "uwhnz-schools",
+      "title": "UWHNZ schools",
+      "url": "https://www.underwaterhockeynz.com/PLAY-UWH/UWH-IN-SCHOOLS-1",
+      "description": "School pathway overview; index programs without personal junior rosters.",
+      "languages": [
+        "en"
+      ],
+      "geography": "New Zealand",
+      "authority": "national_organization",
+      "audience": [
+        "players",
+        "club-organizers",
+        "spectators"
+      ],
+      "access": {
+        "read": "public",
+        "cost": "free to read; participation, membership and purchase costs are separate"
+      },
+      "checked_on": "2026-10-02",
+      "verification_method": "web page or indexed source inspected",
+      "source_date_or_version": null,
+      "freshness": "publication date unspecified; checked_on is not an update date",
+      "licence": "No open licence verified",
+      "copy_limitations": "Link and write an original short summary. Do not mirror photos, videos, full documents, logos or database wholesale without licence/permission.",
+      "tags": [
+        "schools",
+        "recruitment",
+        "youth"
+      ]
+    },
+    {
+      "id": "uwhnz-policy",
+      "title": "UWHNZ policies and reports",
+      "url": "https://www.underwaterhockeynz.com/ABOUT-1/POLICIESREPORTS",
+      "description": "Policy and organizational reporting library.",
+      "languages": [
+        "en"
+      ],
+      "geography": "New Zealand",
+      "authority": "national_organization",
+      "audience": [
+        "players",
+        "club-organizers",
+        "spectators"
+      ],
+      "access": {
+        "read": "public",
+        "cost": "free to read; participation, membership and purchase costs are separate"
+      },
+      "checked_on": "2026-10-02",
+      "verification_method": "web page or indexed source inspected",
+      "source_date_or_version": null,
+      "freshness": "publication date unspecified; checked_on is not an update date",
+      "licence": "No open licence verified",
+      "copy_limitations": "Link and write an original short summary. Do not mirror photos, videos, full documents, logos or database wholesale without licence/permission.",
+      "tags": [
+        "club-admin",
+        "governance"
+      ]
+    },
+    {
+      "id": "uwhnz-referee",
+      "title": "UWHNZ referee resources",
+      "url": "https://www.underwaterhockeynz.com/REFEREE-1/REFEREE-RESOURCES",
+      "description": "National refereeing reference library.",
+      "languages": [
+        "en"
+      ],
+      "geography": "New Zealand",
+      "authority": "national_organization",
+      "audience": [
+        "players",
+        "club-organizers",
+        "spectators"
+      ],
+      "access": {
+        "read": "public",
+        "cost": "free to read; participation, membership and purchase costs are separate"
+      },
+      "checked_on": "2026-10-02",
+      "verification_method": "web page or indexed source inspected",
+      "source_date_or_version": null,
+      "freshness": "publication date unspecified; checked_on is not an update date",
+      "licence": "No open licence verified",
+      "copy_limitations": "Link and write an original short summary. Do not mirror photos, videos, full documents, logos or database wholesale without licence/permission.",
+      "tags": [
+        "refereeing",
+        "education"
+      ]
+    },
+    {
+      "id": "france-hockey",
+      "title": "FFESSM hockey subaquatique",
+      "url": "https://hockeysub.ffessm.fr/",
+      "description": "French federation commission portal and links to club search, competitions and training.",
+      "languages": [
+        "fr"
+      ],
+      "geography": "France",
+      "authority": "national_federation",
+      "audience": [
+        "players",
+        "club-organizers",
+        "spectators"
+      ],
+      "access": {
+        "read": "public",
+        "cost": "free to read; participation, membership and purchase costs are separate"
+      },
+      "checked_on": "2026-10-02",
+      "verification_method": "web page or indexed source inspected",
+      "source_date_or_version": null,
+      "freshness": "publication date unspecified; checked_on is not an update date",
+      "licence": "No open licence verified",
+      "copy_limitations": "Link and write an original short summary. Do not mirror photos, videos, full documents, logos or database wholesale without licence/permission.",
+      "tags": [
+        "federation",
+        "training",
+        "competitions"
+      ]
+    },
+    {
+      "id": "france-directory-2023",
+      "title": "Annuaire CNHS 2022–2023",
+      "url": "https://hockeysub.ffessm.fr/uploads/media/docs/0001/10/9a458d31c19a64c2fff8d6735eeaa529ce5de92c.pdf",
+      "description": "18-page historical club/pool directory; valuable location and local-history leads, stale for sessions.",
+      "languages": [
+        "fr"
+      ],
+      "geography": "France",
+      "authority": "national_federation",
+      "audience": [
+        "players",
+        "club-organizers",
+        "spectators"
+      ],
+      "access": {
+        "read": "public",
+        "cost": "free to read; participation, membership and purchase costs are separate"
+      },
+      "checked_on": "2026-10-02",
+      "verification_method": "web page or indexed source inspected",
+      "source_date_or_version": "Annuaire 2022–2023; footer 02/06/2023",
+      "freshness": "stale for current training sessions and club officers",
+      "licence": "No open licence verified",
+      "copy_limitations": "Link and write an original short summary. Do not mirror photos, videos, full documents, logos or database wholesale without licence/permission.",
+      "tags": [
+        "directory",
+        "archive",
+        "clubs"
+      ]
+    },
+    {
+      "id": "netherlands-clubs",
+      "title": "Onderwaterhockey.nl verenigingen",
+      "url": "https://onderwaterhockey.nl/owh/verenigingen/",
+      "description": "NOB-supported club map with links to associations; dynamic markers need separate verification.",
+      "languages": [
+        "nl"
+      ],
+      "geography": "Netherlands",
+      "authority": "national_organization",
+      "audience": [
+        "players",
+        "club-organizers",
+        "spectators"
+      ],
+      "access": {
+        "read": "public",
+        "cost": "free to read; participation, membership and purchase costs are separate"
+      },
+      "checked_on": "2026-10-02",
+      "verification_method": "web page or indexed source inspected",
+      "source_date_or_version": null,
+      "freshness": "publication date unspecified; checked_on is not an update date",
+      "licence": "No open licence verified",
+      "copy_limitations": "Link and write an original short summary. Do not mirror photos, videos, full documents, logos or database wholesale without licence/permission.",
+      "tags": [
+        "directory",
+        "map",
+        "clubs"
+      ]
+    },
+    {
+      "id": "belgium-clubs",
+      "title": "Belgium UWH clubs",
+      "url": "https://www.belgiumuwh.be/clubs-in-belgium/",
+      "description": "Belgian hockey community/national sport directory linked by UWH Map.",
+      "languages": [
+        "en"
+      ],
+      "geography": "Belgium",
+      "authority": "sport_organization",
+      "audience": [
+        "players",
+        "club-organizers",
+        "spectators"
+      ],
+      "access": {
+        "read": "public",
+        "cost": "free to read; participation, membership and purchase costs are separate"
+      },
+      "checked_on": "2026-10-02",
+      "verification_method": "web page or indexed source inspected",
+      "source_date_or_version": null,
+      "freshness": "publication date unspecified; checked_on is not an update date",
+      "licence": "No open licence verified",
+      "copy_limitations": "Link and write an original short summary. Do not mirror photos, videos, full documents, logos or database wholesale without licence/permission.",
+      "tags": [
+        "directory",
+        "clubs"
+      ]
+    },
+    {
+      "id": "sauwh-clubs",
+      "title": "South African UWH Federation clubs",
+      "url": "https://sauwhf.co.za/local-clubs/",
+      "description": "Province-by-province club and venue directory; some venue fields are explicitly unavailable.",
+      "languages": [
+        "en"
+      ],
+      "geography": "South Africa",
+      "authority": "national_organization",
+      "audience": [
+        "players",
+        "club-organizers",
+        "spectators"
+      ],
+      "access": {
+        "read": "public",
+        "cost": "free to read; participation, membership and purchase costs are separate"
+      },
+      "checked_on": "2026-10-02",
+      "verification_method": "web page or indexed source inspected",
+      "source_date_or_version": null,
+      "freshness": "publication date unspecified; checked_on is not an update date",
+      "licence": "No open licence verified",
+      "copy_limitations": "Link and write an original short summary. Do not mirror photos, videos, full documents, logos or database wholesale without licence/permission.",
+      "tags": [
+        "directory",
+        "clubs"
+      ]
+    },
+    {
+      "id": "usoa-home",
+      "title": "Underwater Society of America",
+      "url": "https://www.underwater-society.org/home",
+      "description": "US national underwater-sports governing organization and hockey entry point.",
+      "languages": [
+        "en"
+      ],
+      "geography": "United States",
+      "authority": "national_organization",
+      "audience": [
+        "players",
+        "club-organizers",
+        "spectators"
+      ],
+      "access": {
+        "read": "public",
+        "cost": "free to read; participation, membership and purchase costs are separate"
+      },
+      "checked_on": "2026-10-02",
+      "verification_method": "web page or indexed source inspected",
+      "source_date_or_version": null,
+      "freshness": "publication date unspecified; checked_on is not an update date",
+      "licence": "No open licence verified",
+      "copy_limitations": "Link and write an original short summary. Do not mirror photos, videos, full documents, logos or database wholesale without licence/permission.",
+      "tags": [
+        "federation",
+        "clubs"
+      ]
+    },
+    {
+      "id": "usoa-development",
+      "title": "USOA UWH committee",
+      "url": "https://www.underwater-society.org/page/show/4567140-usoa-uwh-committee",
+      "description": "Hockey committee and development-fund entry point; direct fetch returned 403, indexed text was available.",
+      "languages": [
+        "en"
+      ],
+      "geography": "United States",
+      "authority": "national_organization",
+      "audience": [
+        "players",
+        "club-organizers",
+        "spectators"
+      ],
+      "access": {
+        "read": "public",
+        "cost": "free to read; participation, membership and purchase costs are separate"
+      },
+      "checked_on": "2026-10-02",
+      "verification_method": "Search-index text inspected; direct fetch 403",
+      "source_date_or_version": null,
+      "freshness": "publication date unspecified; checked_on is not an update date",
+      "licence": "No open licence verified",
+      "copy_limitations": "Link and write an original short summary. Do not mirror photos, videos, full documents, logos or database wholesale without licence/permission.",
+      "tags": [
+        "development",
+        "club-admin"
+      ]
+    },
+    {
+      "id": "usoa-club-box",
+      "title": "USOA club-development resources",
+      "url": "https://www.underwater-society.org/layout_container/show_layout_tab?layout_container_id=110521051&page_node_id=4633795&tab_element_id=318754",
+      "description": "Club-in-a-box guidelines, recruitment and facility-support examples.",
+      "languages": [
+        "en"
+      ],
+      "geography": "United States",
+      "authority": "national_organization",
+      "audience": [
+        "players",
+        "club-organizers",
+        "spectators"
+      ],
+      "access": {
+        "read": "public",
+        "cost": "free to read; participation, membership and purchase costs are separate"
+      },
+      "checked_on": "2026-10-02",
+      "verification_method": "web page or indexed source inspected",
+      "source_date_or_version": null,
+      "freshness": "publication date unspecified; checked_on is not an update date",
+      "licence": "No open licence verified",
+      "copy_limitations": "Link and write an original short summary. Do not mirror photos, videos, full documents, logos or database wholesale without licence/permission.",
+      "tags": [
+        "club-admin",
+        "recruitment",
+        "facilities"
+      ]
+    },
+    {
+      "id": "usoa-insurance",
+      "title": "USOA insurance",
+      "url": "https://www.underwater-society.org/page/show/8358677-insurance",
+      "description": "US club liability insurance requirements and fee schedule; jurisdiction-specific, not legal advice or individual accident coverage.",
+      "languages": [
+        "en"
+      ],
+      "geography": "United States",
+      "authority": "national_organization",
+      "audience": [
+        "players",
+        "club-organizers",
+        "spectators"
+      ],
+      "access": {
+        "read": "public",
+        "cost": "free to read; participation, membership and purchase costs are separate"
+      },
+      "checked_on": "2026-10-02",
+      "verification_method": "web page or indexed source inspected",
+      "source_date_or_version": null,
+      "freshness": "publication date unspecified; checked_on is not an update date",
+      "licence": "No open licence verified",
+      "copy_limitations": "Link and write an original short summary. Do not mirror photos, videos, full documents, logos or database wholesale without licence/permission.",
+      "tags": [
+        "club-admin",
+        "insurance",
+        "facilities"
+      ]
+    },
+    {
+      "id": "usoa-faq",
+      "title": "USOA FAQ",
+      "url": "https://www.underwater-society.org/page/show/4633834-frequently-asked-questions",
+      "description": "Membership and starting-a-club guidance.",
+      "languages": [
+        "en"
+      ],
+      "geography": "United States",
+      "authority": "national_organization",
+      "audience": [
+        "players",
+        "club-organizers",
+        "spectators"
+      ],
+      "access": {
+        "read": "public",
+        "cost": "free to read; participation, membership and purchase costs are separate"
+      },
+      "checked_on": "2026-10-02",
+      "verification_method": "web page or indexed source inspected",
+      "source_date_or_version": null,
+      "freshness": "publication date unspecified; checked_on is not an update date",
+      "licence": "No open licence verified",
+      "copy_limitations": "Link and write an original short summary. Do not mirror photos, videos, full documents, logos or database wholesale without licence/permission.",
+      "tags": [
+        "club-admin",
+        "recruitment"
+      ]
+    },
+    {
+      "id": "chicago",
+      "title": "Chicago Underwater Hockey",
+      "url": "https://www.chicagounderwaterhockey.us/",
+      "description": "Club-managed beginner, practice, drill and equipment gateway.",
+      "languages": [
+        "en"
+      ],
+      "geography": "United States",
+      "authority": "club_primary",
+      "audience": [
+        "players",
+        "club-organizers",
+        "spectators"
+      ],
+      "access": {
+        "read": "public",
+        "cost": "free to read; participation, membership and purchase costs are separate"
+      },
+      "checked_on": "2026-10-02",
+      "verification_method": "web page or indexed source inspected",
+      "source_date_or_version": null,
+      "freshness": "publication date unspecified; checked_on is not an update date",
+      "licence": "No open licence verified",
+      "copy_limitations": "Link and write an original short summary. Do not mirror photos, videos, full documents, logos or database wholesale without licence/permission.",
+      "tags": [
+        "clubs",
+        "recruitment",
+        "training"
+      ]
+    },
+    {
+      "id": "sf-new",
+      "title": "San Francisco UWH new joiners",
+      "url": "https://sfuwh.org/practices/new-joiners/",
+      "description": "Practical onboarding example with registration, loaner gear and practice preparation.",
+      "languages": [
+        "en"
+      ],
+      "geography": "United States",
+      "authority": "club_primary",
+      "audience": [
+        "players",
+        "club-organizers",
+        "spectators"
+      ],
+      "access": {
+        "read": "public",
+        "cost": "free to read; participation, membership and purchase costs are separate"
+      },
+      "checked_on": "2026-10-02",
+      "verification_method": "web page or indexed source inspected",
+      "source_date_or_version": null,
+      "freshness": "publication date unspecified; checked_on is not an update date",
+      "licence": "No open licence verified",
+      "copy_limitations": "Link and write an original short summary. Do not mirror photos, videos, full documents, logos or database wholesale without licence/permission.",
+      "tags": [
+        "recruitment",
+        "club-admin"
+      ]
+    },
+    {
+      "id": "atlantis-admin",
+      "title": "Atlantis Sports administration projects",
+      "url": "https://www.atlantissports.org/projects/administration",
+      "description": "Club-startup, facility and tournament-support projects; listed projects are not necessarily completed downloadable products.",
+      "languages": [
+        "en"
+      ],
+      "geography": "United States/global",
+      "authority": "sport_nonprofit",
+      "audience": [
+        "players",
+        "club-organizers",
+        "spectators"
+      ],
+      "access": {
+        "read": "public",
+        "cost": "free to read; participation, membership and purchase costs are separate"
+      },
+      "checked_on": "2026-10-02",
+      "verification_method": "web page or indexed source inspected",
+      "source_date_or_version": null,
+      "freshness": "publication date unspecified; checked_on is not an update date",
+      "licence": "No open licence verified",
+      "copy_limitations": "Link and write an original short summary. Do not mirror photos, videos, full documents, logos or database wholesale without licence/permission.",
+      "tags": [
+        "club-admin",
+        "tournaments",
+        "facilities"
+      ]
+    },
+    {
+      "id": "uwhportal",
+      "title": "Underwater Hockey Portal",
+      "url": "https://uwhportal.com/",
+      "description": "Event organization, schedules and scores platform used by tournament organizers.",
+      "languages": [
+        "en"
+      ],
+      "geography": "global",
+      "authority": "event_platform",
+      "audience": [
+        "players",
+        "club-organizers",
+        "spectators"
+      ],
+      "access": {
+        "read": "public event discovery; account may be needed for registration and administration",
+        "cost": "public browsing; organization/registration charges not verified"
+      },
+      "checked_on": "2026-10-02",
+      "verification_method": "web page or indexed source inspected",
+      "source_date_or_version": null,
+      "freshness": "publication date unspecified; checked_on is not an update date",
+      "licence": "No open licence verified",
+      "copy_limitations": "Link and write an original short summary. Do not mirror photos, videos, full documents, logos or database wholesale without licence/permission.",
+      "tags": [
+        "events",
+        "results",
+        "club-admin"
+      ]
+    },
+    {
+      "id": "canada-nationals-2026",
+      "title": "2026 Canadian UWH Nationals",
+      "url": "https://uwhportal.com/events/ca-2026-canadian-underwater-hockey-nationals",
+      "description": "Event page records UBC Aquatic Centre, Vancouver, 16–17 May 2026; useful event-specific archive anchor.",
+      "languages": [
+        "en"
+      ],
+      "geography": "Canada",
+      "authority": "event_organizer_platform",
+      "audience": [
+        "players",
+        "club-organizers",
+        "spectators"
+      ],
+      "access": {
+        "read": "public",
+        "cost": "free to read; participation, membership and purchase costs are separate"
+      },
+      "checked_on": "2026-10-02",
+      "verification_method": "web page or indexed source inspected",
+      "source_date_or_version": null,
+      "freshness": "publication date unspecified; checked_on is not an update date",
+      "licence": "No open licence verified",
+      "copy_limitations": "Link and write an original short summary. Do not mirror photos, videos, full documents, logos or database wholesale without licence/permission.",
+      "tags": [
+        "events",
+        "results",
+        "2026"
+      ]
+    },
+    {
+      "id": "cmas-america-2024",
+      "title": "CMAS América club cup results 2024",
+      "url": "https://www.cmasamerica.org/i-copa-cmas-america-de-clubes-de-hockey-subacuatico-2024-medellin-colombia/",
+      "description": "Official regional record of the 19–22 September 2024 Medellín club competition.",
+      "languages": [
+        "es"
+      ],
+      "geography": "Colombia/Americas",
+      "authority": "continental_federation",
+      "audience": [
+        "players",
+        "club-organizers",
+        "spectators"
+      ],
+      "access": {
+        "read": "public",
+        "cost": "free to read; participation, membership and purchase costs are separate"
+      },
+      "checked_on": "2026-10-02",
+      "verification_method": "web page or indexed source inspected",
+      "source_date_or_version": null,
+      "freshness": "publication date unspecified; checked_on is not an update date",
+      "licence": "No open licence verified",
+      "copy_limitations": "Link and write an original short summary. Do not mirror photos, videos, full documents, logos or database wholesale without licence/permission.",
+      "tags": [
+        "results",
+        "competitions"
+      ]
+    },
+    {
+      "id": "fedecas",
+      "title": "FEDECAS",
+      "url": "https://www.fedecas.org/",
+      "description": "Colombian federation hub includes hockey, competition calendars, results and affiliated-organizations navigation.",
+      "languages": [
+        "es"
+      ],
+      "geography": "Colombia",
+      "authority": "national_federation",
+      "audience": [
+        "players",
+        "club-organizers",
+        "spectators"
+      ],
+      "access": {
+        "read": "public",
+        "cost": "free to read; participation, membership and purchase costs are separate"
+      },
+      "checked_on": "2026-10-02",
+      "verification_method": "web page or indexed source inspected",
+      "source_date_or_version": null,
+      "freshness": "publication date unspecified; checked_on is not an update date",
+      "licence": "No open licence verified",
+      "copy_limitations": "Link and write an original short summary. Do not mirror photos, videos, full documents, logos or database wholesale without licence/permission.",
+      "tags": [
+        "federation",
+        "competitions"
+      ]
+    },
+    {
+      "id": "faas-history",
+      "title": "FAAS history",
+      "url": "https://www.faas.org.ar/historia",
+      "description": "Argentine federation history and navigation to underwater-sport disciplines; not a live hockey club directory.",
+      "languages": [
+        "es"
+      ],
+      "geography": "Argentina",
+      "authority": "national_federation",
+      "audience": [
+        "players",
+        "club-organizers",
+        "spectators"
+      ],
+      "access": {
+        "read": "public",
+        "cost": "free to read; participation, membership and purchase costs are separate"
+      },
+      "checked_on": "2026-10-02",
+      "verification_method": "web page or indexed source inspected",
+      "source_date_or_version": null,
+      "freshness": "publication date unspecified; checked_on is not an update date",
+      "licence": "No open licence verified",
+      "copy_limitations": "Link and write an original short summary. Do not mirror photos, videos, full documents, logos or database wholesale without licence/permission.",
+      "tags": [
+        "federation",
+        "history"
+      ]
+    },
+    {
+      "id": "faas-podiums",
+      "title": "FAAS podiums",
+      "url": "https://www.faas.org.ar/podios",
+      "description": "Federation results-category entry point including underwater hockey.",
+      "languages": [
+        "es"
+      ],
+      "geography": "Argentina",
+      "authority": "national_federation",
+      "audience": [
+        "players",
+        "club-organizers",
+        "spectators"
+      ],
+      "access": {
+        "read": "public",
+        "cost": "free to read; participation, membership and purchase costs are separate"
+      },
+      "checked_on": "2026-10-02",
+      "verification_method": "web page or indexed source inspected",
+      "source_date_or_version": null,
+      "freshness": "publication date unspecified; checked_on is not an update date",
+      "licence": "No open licence verified",
+      "copy_limitations": "Link and write an original short summary. Do not mirror photos, videos, full documents, logos or database wholesale without licence/permission.",
+      "tags": [
+        "results"
+      ]
+    },
+    {
+      "id": "fedas-hockey",
+      "title": "FEDAS hockey",
+      "url": "https://fedas.es/hockey/",
+      "description": "Spanish federation hockey reference and championship-results links; introductory page is older.",
+      "languages": [
+        "es"
+      ],
+      "geography": "Spain",
+      "authority": "national_federation",
+      "audience": [
+        "players",
+        "club-organizers",
+        "spectators"
+      ],
+      "access": {
+        "read": "public",
+        "cost": "free to read; participation, membership and purchase costs are separate"
+      },
+      "checked_on": "2026-10-02",
+      "verification_method": "web page or indexed source inspected",
+      "source_date_or_version": null,
+      "freshness": "publication date unspecified; checked_on is not an update date",
+      "licence": "No open licence verified",
+      "copy_limitations": "Link and write an original short summary. Do not mirror photos, videos, full documents, logos or database wholesale without licence/permission.",
+      "tags": [
+        "federation",
+        "results"
+      ]
+    },
+    {
+      "id": "fpas",
+      "title": "FPAS",
+      "url": "https://fpas.pt/",
+      "description": "Portuguese national federation entry point including hóquei subaquático.",
+      "languages": [
+        "pt"
+      ],
+      "geography": "Portugal",
+      "authority": "national_federation",
+      "audience": [
+        "players",
+        "club-organizers",
+        "spectators"
+      ],
+      "access": {
+        "read": "public",
+        "cost": "free to read; participation, membership and purchase costs are separate"
+      },
+      "checked_on": "2026-10-02",
+      "verification_method": "web page or indexed source inspected",
+      "source_date_or_version": null,
+      "freshness": "publication date unspecified; checked_on is not an update date",
+      "licence": "No open licence verified",
+      "copy_limitations": "Link and write an original short summary. Do not mirror photos, videos, full documents, logos or database wholesale without licence/permission.",
+      "tags": [
+        "federation",
+        "competitions"
+      ]
+    },
+    {
+      "id": "fipsas-hockey",
+      "title": "FIPSAS hockey subacqueo",
+      "url": "https://fipsas.it/agonismo-subacqueo/hockey-subacqueo/",
+      "description": "Italian federation rules, domestic competitions and hockey news, including 2026 activity.",
+      "languages": [
+        "it"
+      ],
+      "geography": "Italy",
+      "authority": "national_federation",
+      "audience": [
+        "players",
+        "club-organizers",
+        "spectators"
+      ],
+      "access": {
+        "read": "public",
+        "cost": "free to read; participation, membership and purchase costs are separate"
+      },
+      "checked_on": "2026-10-02",
+      "verification_method": "web page or indexed source inspected",
+      "source_date_or_version": null,
+      "freshness": "publication date unspecified; checked_on is not an update date",
+      "licence": "No open licence verified",
+      "copy_limitations": "Link and write an original short summary. Do not mirror photos, videos, full documents, logos or database wholesale without licence/permission.",
+      "tags": [
+        "federation",
+        "competitions"
+      ]
+    },
+    {
+      "id": "tssf-hockey",
+      "title": "TSSF sualtı hokeyi",
+      "url": "https://www.tssf.gov.tr/sualti-hokeyi/",
+      "description": "Turkish federation sport page and competition-regulation gateway.",
+      "languages": [
+        "tr"
+      ],
+      "geography": "Türkiye",
+      "authority": "national_federation",
+      "audience": [
+        "players",
+        "club-organizers",
+        "spectators"
+      ],
+      "access": {
+        "read": "public",
+        "cost": "free to read; participation, membership and purchase costs are separate"
+      },
+      "checked_on": "2026-10-02",
+      "verification_method": "web page or indexed source inspected",
+      "source_date_or_version": null,
+      "freshness": "publication date unspecified; checked_on is not an update date",
+      "licence": "No open licence verified",
+      "copy_limitations": "Link and write an original short summary. Do not mirror photos, videos, full documents, logos or database wholesale without licence/permission.",
+      "tags": [
+        "federation",
+        "history",
+        "competitions"
+      ]
+    },
+    {
+      "id": "vdst-league",
+      "title": "VDST 2024–2025 hockey league report",
+      "url": "https://www.vdst.de/2024/12/15/hinrunde-unterwasser-hockey-liga-2024-2025/",
+      "description": "German federation league report useful for dated competition and club leads.",
+      "languages": [
+        "de"
+      ],
+      "geography": "Germany",
+      "authority": "national_federation",
+      "audience": [
+        "players",
+        "club-organizers",
+        "spectators"
+      ],
+      "access": {
+        "read": "public",
+        "cost": "free to read; participation, membership and purchase costs are separate"
+      },
+      "checked_on": "2026-10-02",
+      "verification_method": "web page or indexed source inspected",
+      "source_date_or_version": null,
+      "freshness": "publication date unspecified; checked_on is not an update date",
+      "licence": "No open licence verified",
+      "copy_limitations": "Link and write an original short summary. Do not mirror photos, videos, full documents, logos or database wholesale without licence/permission.",
+      "tags": [
+        "results",
+        "clubs",
+        "archive"
+      ]
+    },
+    {
+      "id": "singapore",
+      "title": "Underwater Hockey Singapore",
+      "url": "https://www.underwaterhockey.sg/",
+      "description": "Association trial, governance, anti-doping and safe-sport gateway.",
+      "languages": [
+        "en"
+      ],
+      "geography": "Singapore",
+      "authority": "national_organization",
+      "audience": [
+        "players",
+        "club-organizers",
+        "spectators"
+      ],
+      "access": {
+        "read": "public",
+        "cost": "free to read; participation, membership and purchase costs are separate"
+      },
+      "checked_on": "2026-10-02",
+      "verification_method": "web page or indexed source inspected",
+      "source_date_or_version": null,
+      "freshness": "publication date unspecified; checked_on is not an update date",
+      "licence": "No open licence verified",
+      "copy_limitations": "Link and write an original short summary. Do not mirror photos, videos, full documents, logos or database wholesale without licence/permission.",
+      "tags": [
+        "federation",
+        "recruitment",
+        "club-admin"
+      ]
+    },
+    {
+      "id": "singapore-constitution",
+      "title": "UWH Singapore constitution",
+      "url": "https://www.underwaterhockey.sg/about-us/constitution",
+      "description": "Association governance example; named officers and private-address details should not be copied into atlas data.",
+      "languages": [
+        "en"
+      ],
+      "geography": "Singapore",
+      "authority": "national_organization",
+      "audience": [
+        "players",
+        "club-organizers",
+        "spectators"
+      ],
+      "access": {
+        "read": "public",
+        "cost": "free to read; participation, membership and purchase costs are separate"
+      },
+      "checked_on": "2026-10-02",
+      "verification_method": "web page or indexed source inspected",
+      "source_date_or_version": null,
+      "freshness": "publication date unspecified; checked_on is not an update date",
+      "licence": "No open licence verified",
+      "copy_limitations": "Link and write an original short summary. Do not mirror photos, videos, full documents, logos or database wholesale without licence/permission.",
+      "tags": [
+        "governance",
+        "club-admin"
+      ]
+    },
+    {
+      "id": "singapore-suf",
+      "title": "Singapore Underwater Federation",
+      "url": "https://suf.org.sg/about/",
+      "description": "Umbrella federation role and sport coverage; distinguish from the hockey association.",
+      "languages": [
+        "en"
+      ],
+      "geography": "Singapore",
+      "authority": "national_federation",
+      "audience": [
+        "players",
+        "club-organizers",
+        "spectators"
+      ],
+      "access": {
+        "read": "public",
+        "cost": "free to read; participation, membership and purchase costs are separate"
+      },
+      "checked_on": "2026-10-02",
+      "verification_method": "web page or indexed source inspected",
+      "source_date_or_version": null,
+      "freshness": "publication date unspecified; checked_on is not an update date",
+      "licence": "No open licence verified",
+      "copy_limitations": "Link and write an original short summary. Do not mirror photos, videos, full documents, logos or database wholesale without licence/permission.",
+      "tags": [
+        "federation"
+      ]
+    },
+    {
+      "id": "philippines",
+      "title": "Pilipinas Underwater Hockey",
+      "url": "https://pilipinasuwh.com/",
+      "description": "Philippine hockey web presence; limited dated/cached content means current programs require corroboration.",
+      "languages": [
+        "en"
+      ],
+      "geography": "Philippines",
+      "authority": "national_sport_web_presence",
+      "audience": [
+        "players",
+        "club-organizers",
+        "spectators"
+      ],
+      "access": {
+        "read": "public",
+        "cost": "free to read; participation, membership and purchase costs are separate"
+      },
+      "checked_on": "2026-10-02",
+      "verification_method": "web page or indexed source inspected",
+      "source_date_or_version": null,
+      "freshness": "publication date unspecified; checked_on is not an update date",
+      "licence": "No open licence verified",
+      "copy_limitations": "Link and write an original short summary. Do not mirror photos, videos, full documents, logos or database wholesale without licence/permission.",
+      "tags": [
+        "federation",
+        "clubs"
+      ]
+    },
+    {
+      "id": "asia-2026",
+      "title": "2026 CMAS Asian championship",
+      "url": "https://www.cmas.org/underwater-hockey-events/2026-cmas-asian-championship-underwater-hockey.html",
+      "description": "Official event record distinguishes sanctioned elite/masters events from concurrent non-sanctioned age-group tournament.",
+      "languages": [
+        "en"
+      ],
+      "geography": "Indonesia/Asia",
+      "authority": "international_federation",
+      "audience": [
+        "players",
+        "club-organizers",
+        "spectators"
+      ],
+      "access": {
+        "read": "public",
+        "cost": "free to read; participation, membership and purchase costs are separate"
+      },
+      "checked_on": "2026-10-02",
+      "verification_method": "web page or indexed source inspected",
+      "source_date_or_version": null,
+      "freshness": "publication date unspecified; checked_on is not an update date",
+      "licence": "No open licence verified",
+      "copy_limitations": "Link and write an original short summary. Do not mirror photos, videos, full documents, logos or database wholesale without licence/permission.",
+      "tags": [
+        "events",
+        "governance",
+        "2026"
+      ]
+    },
+    {
+      "id": "brazil-cbpds",
+      "title": "CBPDS hockey page",
+      "url": "https://cbpds.org.br/hockey-subaquatico/",
+      "description": "Discovery-only page: CMAS currently marks CBPDS suspended and lists CBES. Page contains generic, weakly supported copy.",
+      "languages": [
+        "pt"
+      ],
+      "geography": "Brazil",
+      "authority": "suspended_organization",
+      "audience": [
+        "players",
+        "club-organizers",
+        "spectators"
+      ],
+      "access": {
+        "read": "public",
+        "cost": "free to read; participation, membership and purchase costs are separate"
+      },
+      "checked_on": "2026-10-02",
+      "verification_method": "web page or indexed source inspected",
+      "source_date_or_version": null,
+      "freshness": "publication date unspecified; checked_on is not an update date",
+      "licence": "No open licence verified",
+      "copy_limitations": "Link and write an original short summary. Do not mirror photos, videos, full documents, logos or database wholesale without licence/permission.",
+      "tags": [
+        "historical-lead",
+        "quality-warning"
+      ]
+    },
+    {
+      "id": "brazil-acre-study",
+      "title": "Hóquei subaquático no Acre: um relato de experiência",
+      "url": "https://teste-periodicos.ufac.br/index.php/SAJEBTT/article/view/2419",
+      "description": "University-published account of a 2017 introductory program; evidence of historical development, not current club availability.",
+      "languages": [
+        "pt"
+      ],
+      "geography": "Brazil",
+      "authority": "university_journal",
+      "audience": [
+        "players",
+        "coaches",
+        "club-organizers",
+        "researchers"
+      ],
+      "access": {
+        "read": "public",
+        "cost": "free to read; participation, membership and purchase costs are separate"
+      },
+      "checked_on": "2026-10-02",
+      "verification_method": "web page or indexed source inspected",
+      "source_date_or_version": "Program occurred 2017; publication date needs final article check",
+      "freshness": "publication date unspecified; checked_on is not an update date",
+      "licence": "No open licence verified",
+      "copy_limitations": "Link and write an original short summary. Do not mirror photos, videos, full documents, logos or database wholesale without licence/permission.",
+      "tags": [
+        "history",
+        "recruitment",
+        "research"
+      ]
+    },
+    {
+      "id": "brazil-fesarj",
+      "title": "FESARJ",
+      "url": "https://www.fesarj.org.br/",
+      "description": "Rio de Janeiro regional underwater-sport federation gateway; hockey initiatives mentioned without a verified current club list.",
+      "languages": [
+        "pt"
+      ],
+      "geography": "Brazil",
+      "authority": "regional_federation",
+      "audience": [
+        "players",
+        "club-organizers",
+        "spectators"
+      ],
+      "access": {
+        "read": "public",
+        "cost": "free to read; participation, membership and purchase costs are separate"
+      },
+      "checked_on": "2026-10-02",
+      "verification_method": "web page or indexed source inspected",
+      "source_date_or_version": null,
+      "freshness": "publication date unspecified; checked_on is not an update date",
+      "licence": "No open licence verified",
+      "copy_limitations": "Link and write an original short summary. Do not mirror photos, videos, full documents, logos or database wholesale without licence/permission.",
+      "tags": [
+        "federation",
+        "development"
+      ]
+    },
+    {
+      "id": "camo",
+      "title": "Club CAMO Subaquatique",
+      "url": "https://camosub.ca/",
+      "description": "Bilingual Montréal club site with 2026–2027 season and Joseph-Charbonneau pool information.",
+      "languages": [
+        "fr",
+        "en"
+      ],
+      "geography": "Canada",
+      "authority": "club_primary",
+      "audience": [
+        "players",
+        "club-organizers",
+        "spectators"
+      ],
+      "access": {
+        "read": "public",
+        "cost": "free to read; participation, membership and purchase costs are separate"
+      },
+      "checked_on": "2026-10-02",
+      "verification_method": "web page or indexed source inspected",
+      "source_date_or_version": null,
+      "freshness": "publication date unspecified; checked_on is not an update date",
+      "licence": "No open licence verified",
+      "copy_limitations": "Link and write an original short summary. Do not mirror photos, videos, full documents, logos or database wholesale without licence/permission.",
+      "tags": [
+        "clubs",
+        "recruitment"
+      ]
+    },
+    {
+      "id": "science-submersion",
+      "title": "Measured Submersion Times in Underwater Hockey",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37583744/",
+      "description": "2023 observational study of game submersion times; useful to correct exaggerated duration claims, not proof of zero blackout risk.",
+      "languages": [
+        "en"
+      ],
+      "geography": "global",
+      "authority": "peer_reviewed_research",
+      "audience": [
+        "players",
+        "coaches",
+        "club-organizers",
+        "researchers"
+      ],
+      "access": {
+        "read": "PubMed abstract public; full-text rights/access depend on linked publisher",
+        "cost": "free to read; participation, membership and purchase costs are separate"
+      },
+      "checked_on": "2026-10-02",
+      "verification_method": "web page or indexed source inspected",
+      "source_date_or_version": "2023",
+      "freshness": "Dated research; not a consensus practice guideline",
+      "licence": "No open licence verified",
+      "copy_limitations": "Link and write an original short summary. Do not mirror photos, videos, full documents, logos or database wholesale without licence/permission.",
+      "tags": [
+        "research",
+        "physiology",
+        "safety"
+      ]
+    },
+    {
+      "id": "science-apnea",
+      "title": "Physiological responses to repeated apneas in UWH players and controls",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/18251437/",
+      "description": "2007 laboratory comparison; ecological and study-design limitations belong alongside any summary.",
+      "languages": [
+        "en"
+      ],
+      "geography": "global",
+      "authority": "peer_reviewed_research",
+      "audience": [
+        "players",
+        "coaches",
+        "club-organizers",
+        "researchers"
+      ],
+      "access": {
+        "read": "PubMed abstract public; full-text rights/access depend on linked publisher",
+        "cost": "free to read; participation, membership and purchase costs are separate"
+      },
+      "checked_on": "2026-10-02",
+      "verification_method": "web page or indexed source inspected",
+      "source_date_or_version": "2007",
+      "freshness": "Dated research; not a consensus practice guideline",
+      "licence": "No open licence verified",
+      "copy_limitations": "Link and write an original short summary. Do not mirror photos, videos, full documents, logos or database wholesale without licence/permission.",
+      "tags": [
+        "research",
+        "physiology"
+      ]
+    },
+    {
+      "id": "science-co2",
+      "title": "Carbon dioxide response and breath-hold times in UWH players",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/3120387/",
+      "description": "1987 comparison study; historical physiology evidence rather than a training prescription.",
+      "languages": [
+        "en"
+      ],
+      "geography": "global",
+      "authority": "peer_reviewed_research",
+      "audience": [
+        "players",
+        "coaches",
+        "club-organizers",
+        "researchers"
+      ],
+      "access": {
+        "read": "PubMed abstract public; full-text rights/access depend on linked publisher",
+        "cost": "free to read; participation, membership and purchase costs are separate"
+      },
+      "checked_on": "2026-10-02",
+      "verification_method": "web page or indexed source inspected",
+      "source_date_or_version": "1987",
+      "freshness": "Dated research; not a consensus practice guideline",
+      "licence": "No open licence verified",
+      "copy_limitations": "Link and write an original short summary. Do not mirror photos, videos, full documents, logos or database wholesale without licence/permission.",
+      "tags": [
+        "research",
+        "physiology",
+        "history"
+      ]
+    },
+    {
+      "id": "science-flick",
+      "title": "Flick movement kinematics and Thrower’s Ten exercises",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39117311/",
+      "description": "2024 descriptive laboratory study with 17 players and six-week intervention; preliminary technique evidence.",
+      "languages": [
+        "en"
+      ],
+      "geography": "global",
+      "authority": "peer_reviewed_research",
+      "audience": [
+        "players",
+        "coaches",
+        "club-organizers",
+        "researchers"
+      ],
+      "access": {
+        "read": "PubMed abstract public; full-text rights/access depend on linked publisher",
+        "cost": "free to read; participation, membership and purchase costs are separate"
+      },
+      "checked_on": "2026-10-02",
+      "verification_method": "web page or indexed source inspected",
+      "source_date_or_version": "2024",
+      "freshness": "Dated research; not a consensus practice guideline",
+      "licence": "No open licence verified",
+      "copy_limitations": "Link and write an original short summary. Do not mirror photos, videos, full documents, logos or database wholesale without licence/permission.",
+      "tags": [
+        "research",
+        "biomechanics",
+        "technique"
+      ],
+      "doi": "10.1123/jsr.2024-0004"
+    },
+    {
+      "id": "science-hemoptysis",
+      "title": "Lung physiology at play: hemoptysis due to UWH",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26029522/",
+      "description": "2014 case report with open full-text link; signals a possible medical issue without establishing incidence or general risk.",
+      "languages": [
+        "en"
+      ],
+      "geography": "global",
+      "authority": "peer_reviewed_case_report",
+      "audience": [
+        "players",
+        "coaches",
+        "club-organizers",
+        "researchers"
+      ],
+      "access": {
+        "read": "PubMed abstract public; full-text rights/access depend on linked publisher",
+        "cost": "free to read; participation, membership and purchase costs are separate"
+      },
+      "checked_on": "2026-10-02",
+      "verification_method": "web page or indexed source inspected",
+      "source_date_or_version": "2014",
+      "freshness": "Dated research; not a consensus practice guideline",
+      "licence": "No open licence verified",
+      "copy_limitations": "Link and write an original short summary. Do not mirror photos, videos, full documents, logos or database wholesale without licence/permission.",
+      "tags": [
+        "research",
+        "medical",
+        "safety"
+      ],
+      "doi": "10.1016/j.rmcr.2013.12.002"
+    },
+    {
+      "id": "sportalsub",
+      "title": "Sportalsub underwater hockey coverage",
+      "url": "https://www.sportalsub.net/blog/category/modalidades/hockey-subacuatico/",
+      "description": "Spanish-language specialist coverage useful for Latin American discovery; verify results against organizers.",
+      "languages": [
+        "es"
+      ],
+      "geography": "Latin America/global",
+      "authority": "specialist_media",
+      "audience": [
+        "players",
+        "club-organizers",
+        "spectators"
+      ],
+      "access": {
+        "read": "public",
+        "cost": "free to read; participation, membership and purchase costs are separate"
+      },
+      "checked_on": "2026-10-02",
+      "verification_method": "web page or indexed source inspected",
+      "source_date_or_version": null,
+      "freshness": "publication date unspecified; checked_on is not an update date",
+      "licence": "No open licence verified",
+      "copy_limitations": "Link and write an original short summary. Do not mirror photos, videos, full documents, logos or database wholesale without licence/permission.",
+      "tags": [
+        "news",
+        "history",
+        "discovery"
+      ]
+    },
+    {
+      "id": "nova-club",
+      "title": "NOVA Vancouver club page",
+      "url": "https://www.novauwh.com/vancouver.html",
+      "description": "Club explicitly names UBC Aquatic Centre, 6080 Student Union Boulevard, with practices Tuesday/Thursday/Sunday and contact for current times.",
+      "languages": [
+        "en"
+      ],
+      "geography": "local",
+      "authority": "club_primary",
+      "audience": [
+        "players",
+        "atlas-editors"
+      ],
+      "access": {
+        "read": "public",
+        "cost": "free to read"
+      },
+      "checked_on": "2026-10-02",
+      "verification_method": "web page inspected",
+      "source_date_or_version": null,
+      "freshness": "undated source; checked_on is observation date",
+      "licence": "No open licence verified",
+      "copy_limitations": "Use factual location with attribution; do not reuse unrelated text, photography or map imagery.",
+      "tags": [
+        "geography",
+        "clubs",
+        "verification"
+      ]
+    },
+    {
+      "id": "ubc-facility",
+      "title": "UBC Aquatic Centre contact and directions",
+      "url": "https://recreation.ubc.ca/aquatics/contact/",
+      "description": "Facility-owned confirmation of UBC Aquatic Centre address.",
+      "languages": [
+        "en"
+      ],
+      "geography": "local",
+      "authority": "facility_primary",
+      "audience": [
+        "players",
+        "atlas-editors"
+      ],
+      "access": {
+        "read": "public",
+        "cost": "free to read"
+      },
+      "checked_on": "2026-10-02",
+      "verification_method": "web page inspected",
+      "source_date_or_version": null,
+      "freshness": "undated source; checked_on is observation date",
+      "licence": "No open licence verified",
+      "copy_limitations": "Use factual location with attribution; do not reuse unrelated text, photography or map imagery.",
+      "tags": [
+        "geography",
+        "clubs",
+        "verification"
+      ]
+    },
+    {
+      "id": "ubc-geocode",
+      "title": "UBC Aquatic Centre OSM-derived location",
+      "url": "https://mapcarta.com/W341691670",
+      "description": "Venue coordinate linked to OpenStreetMap way 341691670; geometric point does not validate session availability.",
+      "languages": [
+        "en"
+      ],
+      "geography": "local",
+      "authority": "open_geographic_data",
+      "audience": [
+        "players",
+        "atlas-editors"
+      ],
+      "access": {
+        "read": "public",
+        "cost": "free to read"
+      },
+      "checked_on": "2026-10-02",
+      "verification_method": "web page inspected",
+      "source_date_or_version": null,
+      "freshness": "undated source; checked_on is observation date",
+      "licence": "OpenStreetMap data under ODbL; Mapcarta text CC BY-SA 4.0; photos/maps have separate rights",
+      "copy_limitations": "Use factual location with attribution; do not reuse unrelated text, photography or map imagery.",
+      "tags": [
+        "geography",
+        "clubs",
+        "verification"
+      ]
+    },
+    {
+      "id": "act-facility",
+      "title": "Lakeside Leisure Centre ACT directions",
+      "url": "https://www.lakesideleisure.com.au/contact/getting-here/",
+      "description": "Facility-owned confirmation of Athllon Drive and Anketell Street, Greenway, ACT.",
+      "languages": [
+        "en"
+      ],
+      "geography": "local",
+      "authority": "facility_primary",
+      "audience": [
+        "players",
+        "atlas-editors"
+      ],
+      "access": {
+        "read": "public",
+        "cost": "free to read"
+      },
+      "checked_on": "2026-10-02",
+      "verification_method": "web page inspected",
+      "source_date_or_version": null,
+      "freshness": "undated source; checked_on is observation date",
+      "licence": "No open licence verified",
+      "copy_limitations": "Use factual location with attribution; do not reuse unrelated text, photography or map imagery.",
+      "tags": [
+        "geography",
+        "clubs",
+        "verification"
+      ]
+    },
+    {
+      "id": "greenway-geocode",
+      "title": "Greenway geographic point",
+      "url": "https://www.latlong.net/place/greenway-australia-1380.html",
+      "description": "Suburb-level point for a deliberately approximate ACT club marker; not the leisure-centre entrance.",
+      "languages": [
+        "en"
+      ],
+      "geography": "local",
+      "authority": "geographic_directory",
+      "audience": [
+        "players",
+        "atlas-editors"
+      ],
+      "access": {
+        "read": "public",
+        "cost": "free to read"
+      },
+      "checked_on": "2026-10-02",
+      "verification_method": "web page inspected",
+      "source_date_or_version": null,
+      "freshness": "undated source; checked_on is observation date",
+      "licence": "No open licence verified",
+      "copy_limitations": "Use factual location with attribution; do not reuse unrelated text, photography or map imagery.",
+      "tags": [
+        "geography",
+        "clubs",
+        "verification"
+      ]
+    },
+    {
+      "id": "stalbans-geocode",
+      "title": "Westminster Lodge OSM-derived location",
+      "url": "https://mapcarta.com/W165421069",
+      "description": "Venue coordinate linked to OpenStreetMap way 165421069; current club use still requires confirmation.",
+      "languages": [
+        "en"
+      ],
+      "geography": "local",
+      "authority": "open_geographic_data",
+      "audience": [
+        "players",
+        "atlas-editors"
+      ],
+      "access": {
+        "read": "public",
+        "cost": "free to read"
+      },
+      "checked_on": "2026-10-02",
+      "verification_method": "web page inspected",
+      "source_date_or_version": null,
+      "freshness": "undated source; checked_on is observation date",
+      "licence": "OpenStreetMap data under ODbL; map imagery and photos carry separate rights",
+      "copy_limitations": "Use factual location with attribution; do not reuse unrelated text, photography or map imagery.",
+      "tags": [
+        "geography",
+        "clubs",
+        "verification"
+      ]
+    }
+  ],
+  "national_organizations": [
+    {
+      "country": "Canada",
+      "country_code": "CA",
+      "umbrella_organization": "Canadian Underwater Games Association",
+      "hockey_organization": "CUGA",
+      "source_ids": [
+        "cmas-america",
+        "cuga-home",
+        "cuga-clubs"
+      ],
+      "status": "hockey listed in current CMAS directory",
+      "checked_on": "2026-10-02",
+      "note": "National-level evidence only; does not verify every local club or training schedule"
+    },
+    {
+      "country": "United States",
+      "country_code": "US",
+      "umbrella_organization": "Underwater Society of America",
+      "hockey_organization": "USOA UWH Committee",
+      "source_ids": [
+        "cmas-america",
+        "usoa-home"
+      ],
+      "status": "hockey listed in current CMAS directory",
+      "checked_on": "2026-10-02",
+      "note": "National-level evidence only; does not verify every local club or training schedule"
+    },
+    {
+      "country": "Argentina",
+      "country_code": "AR",
+      "umbrella_organization": "Federación Argentina de Actividades Subacuáticas",
+      "hockey_organization": "FAAS hockey commission",
+      "source_ids": [
+        "cmas-america",
+        "faas-history"
+      ],
+      "status": "hockey listed in current CMAS directory",
+      "checked_on": "2026-10-02",
+      "note": "National-level evidence only; does not verify every local club or training schedule"
+    },
+    {
+      "country": "Colombia",
+      "country_code": "CO",
+      "umbrella_organization": "Federación Colombiana de Actividades Subacuáticas",
+      "hockey_organization": "FEDECAS",
+      "source_ids": [
+        "cmas-america",
+        "fedecas"
+      ],
+      "status": "hockey listed in current CMAS directory",
+      "checked_on": "2026-10-02",
+      "note": "National-level evidence only; does not verify every local club or training schedule"
+    },
+    {
+      "country": "Brazil",
+      "country_code": "BR",
+      "umbrella_organization": "Confederação Brasileira de Esportes Subaquáticos (CBES)",
+      "hockey_organization": null,
+      "source_ids": [
+        "cmas-america"
+      ],
+      "status": "hockey listed in current CMAS directory",
+      "checked_on": "2026-10-02",
+      "note": "CMAS lists CBES for UWH and CBPDS suspended. No current verified club inventory assembled."
+    },
+    {
+      "country": "United Kingdom",
+      "country_code": "GB",
+      "umbrella_organization": "Sub-Aqua Association",
+      "hockey_organization": "British Octopush Association",
+      "source_ids": [
+        "cmas-europe",
+        "boa-clubs"
+      ],
+      "status": "hockey listed in current CMAS directory",
+      "checked_on": "2026-10-02",
+      "note": "National-level evidence only; does not verify every local club or training schedule"
+    },
+    {
+      "country": "France",
+      "country_code": "FR",
+      "umbrella_organization": "FFESSM",
+      "hockey_organization": "Commission nationale de hockey subaquatique",
+      "source_ids": [
+        "cmas-europe",
+        "france-hockey"
+      ],
+      "status": "hockey listed in current CMAS directory",
+      "checked_on": "2026-10-02",
+      "note": "National-level evidence only; does not verify every local club or training schedule"
+    },
+    {
+      "country": "Germany",
+      "country_code": "DE",
+      "umbrella_organization": "Verband Deutscher Sporttaucher e.V.",
+      "hockey_organization": "VDST hockey",
+      "source_ids": [
+        "cmas-europe",
+        "vdst-league"
+      ],
+      "status": "hockey listed in current CMAS directory",
+      "checked_on": "2026-10-02",
+      "note": "National-level evidence only; does not verify every local club or training schedule"
+    },
+    {
+      "country": "Netherlands",
+      "country_code": "NL",
+      "umbrella_organization": "Nederlandse Onderwatersport Bond",
+      "hockey_organization": "NOB OWH commissie",
+      "source_ids": [
+        "cmas-europe",
+        "netherlands-clubs"
+      ],
+      "status": "hockey listed in current CMAS directory",
+      "checked_on": "2026-10-02",
+      "note": "National-level evidence only; does not verify every local club or training schedule"
+    },
+    {
+      "country": "Belgium",
+      "country_code": "BE",
+      "umbrella_organization": "CMAS Belgium",
+      "hockey_organization": null,
+      "source_ids": [
+        "cmas-europe",
+        "belgium-clubs"
+      ],
+      "status": "hockey listed in current CMAS directory",
+      "checked_on": "2026-10-02",
+      "note": "National-level evidence only; does not verify every local club or training schedule"
+    },
+    {
+      "country": "Czechia",
+      "country_code": "CZ",
+      "umbrella_organization": "Divers Association of Czech Republic",
+      "hockey_organization": null,
+      "source_ids": [
+        "cmas-europe"
+      ],
+      "status": "hockey listed in current CMAS directory",
+      "checked_on": "2026-10-02",
+      "note": "National-level evidence only; does not verify every local club or training schedule"
+    },
+    {
+      "country": "Hungary",
+      "country_code": "HU",
+      "umbrella_organization": "Hungarian Divers Federation",
+      "hockey_organization": null,
+      "source_ids": [
+        "cmas-europe"
+      ],
+      "status": "hockey listed in current CMAS directory",
+      "checked_on": "2026-10-02",
+      "note": "National-level evidence only; does not verify every local club or training schedule"
+    },
+    {
+      "country": "Ireland",
+      "country_code": "IE",
+      "umbrella_organization": "Diving Ireland",
+      "hockey_organization": null,
+      "source_ids": [
+        "cmas-europe"
+      ],
+      "status": "hockey listed in current CMAS directory",
+      "checked_on": "2026-10-02",
+      "note": "National-level evidence only; does not verify every local club or training schedule"
+    },
+    {
+      "country": "Italy",
+      "country_code": "IT",
+      "umbrella_organization": "FIPSAS",
+      "hockey_organization": null,
+      "source_ids": [
+        "cmas-europe",
+        "fipsas-hockey"
+      ],
+      "status": "hockey listed in current CMAS directory",
+      "checked_on": "2026-10-02",
+      "note": "National-level evidence only; does not verify every local club or training schedule"
+    },
+    {
+      "country": "Poland",
+      "country_code": "PL",
+      "umbrella_organization": "Polish Underwater Hockey Association",
+      "hockey_organization": null,
+      "source_ids": [
+        "cmas-europe"
+      ],
+      "status": "hockey listed in current CMAS directory",
+      "checked_on": "2026-10-02",
+      "note": "National-level evidence only; does not verify every local club or training schedule"
+    },
+    {
+      "country": "Portugal",
+      "country_code": "PT",
+      "umbrella_organization": "FPAS",
+      "hockey_organization": null,
+      "source_ids": [
+        "cmas-europe",
+        "fpas"
+      ],
+      "status": "hockey listed in current CMAS directory",
+      "checked_on": "2026-10-02",
+      "note": "National-level evidence only; does not verify every local club or training schedule"
+    },
+    {
+      "country": "Serbia",
+      "country_code": "RS",
+      "umbrella_organization": "Serbian Underwater Association",
+      "hockey_organization": null,
+      "source_ids": [
+        "cmas-europe"
+      ],
+      "status": "hockey listed in current CMAS directory",
+      "checked_on": "2026-10-02",
+      "note": "National-level evidence only; does not verify every local club or training schedule"
+    },
+    {
+      "country": "Spain",
+      "country_code": "ES",
+      "umbrella_organization": "FEDAS",
+      "hockey_organization": null,
+      "source_ids": [
+        "cmas-europe",
+        "fedas-hockey"
+      ],
+      "status": "hockey listed in current CMAS directory",
+      "checked_on": "2026-10-02",
+      "note": "National-level evidence only; does not verify every local club or training schedule"
+    },
+    {
+      "country": "Switzerland",
+      "country_code": "CH",
+      "umbrella_organization": "Schweizer Unterwasser-Sport-Verband",
+      "hockey_organization": null,
+      "source_ids": [
+        "cmas-europe"
+      ],
+      "status": "hockey listed in current CMAS directory",
+      "checked_on": "2026-10-02",
+      "note": "National-level evidence only; does not verify every local club or training schedule"
+    },
+    {
+      "country": "Türkiye",
+      "country_code": "TR",
+      "umbrella_organization": "Turkish Underwater Sports Federation",
+      "hockey_organization": null,
+      "source_ids": [
+        "cmas-europe",
+        "tssf-hockey"
+      ],
+      "status": "hockey listed in current CMAS directory",
+      "checked_on": "2026-10-02",
+      "note": "National-level evidence only; does not verify every local club or training schedule"
+    },
+    {
+      "country": "Indonesia",
+      "country_code": "ID",
+      "umbrella_organization": "Indonesian Subaquatic Sport Association",
+      "hockey_organization": null,
+      "source_ids": [
+        "cmas-asia",
+        "asia-2026"
+      ],
+      "status": "hockey listed in current CMAS directory",
+      "checked_on": "2026-10-02",
+      "note": "National-level evidence only; does not verify every local club or training schedule"
+    },
+    {
+      "country": "Japan",
+      "country_code": "JP",
+      "umbrella_organization": "Japan Underwater Sports Federation",
+      "hockey_organization": null,
+      "source_ids": [
+        "cmas-asia"
+      ],
+      "status": "hockey listed in current CMAS directory",
+      "checked_on": "2026-10-02",
+      "note": "National-level evidence only; does not verify every local club or training schedule"
+    },
+    {
+      "country": "Hong Kong",
+      "country_code": "HK",
+      "umbrella_organization": "Hong Kong China Underwater Association Limited",
+      "hockey_organization": null,
+      "source_ids": [
+        "cmas-asia"
+      ],
+      "status": "hockey listed in current CMAS directory",
+      "checked_on": "2026-10-02",
+      "note": "National-level evidence only; does not verify every local club or training schedule"
+    },
+    {
+      "country": "Australia",
+      "country_code": "AU",
+      "umbrella_organization": "Australian Underwater Federation",
+      "hockey_organization": "Underwater Hockey Australia",
+      "source_ids": [
+        "cmas-development-2022",
+        "uha-states"
+      ],
+      "status": "current hockey organization verified; umbrella crosswalk from dated committee document",
+      "checked_on": "2026-10-02",
+      "note": "National-level evidence only; does not verify every local club or training schedule"
+    },
+    {
+      "country": "New Zealand",
+      "country_code": "NZ",
+      "umbrella_organization": "New Zealand Underwater Association",
+      "hockey_organization": "Underwater Hockey New Zealand",
+      "source_ids": [
+        "cmas-development-2022",
+        "uwhnz-clubs"
+      ],
+      "status": "current hockey organization verified; umbrella crosswalk from dated committee document",
+      "checked_on": "2026-10-02",
+      "note": "National-level evidence only; does not verify every local club or training schedule"
+    },
+    {
+      "country": "South Africa",
+      "country_code": "ZA",
+      "umbrella_organization": "South African Underwater Sport Federation",
+      "hockey_organization": "South African Underwater Hockey Federation",
+      "source_ids": [
+        "cmas-development-2022",
+        "sauwh-clubs"
+      ],
+      "status": "current hockey organization verified; umbrella crosswalk from dated committee document",
+      "checked_on": "2026-10-02",
+      "note": "National-level evidence only; does not verify every local club or training schedule"
+    },
+    {
+      "country": "Singapore",
+      "country_code": "SG",
+      "umbrella_organization": "Singapore Underwater Federation",
+      "hockey_organization": "Underwater Hockey Association Singapore",
+      "source_ids": [
+        "singapore-suf",
+        "singapore",
+        "cmas-development-2022"
+      ],
+      "status": "current organizations verified; affiliation specifics should follow current CMAS record",
+      "checked_on": "2026-10-02",
+      "note": "National-level evidence only; does not verify every local club or training schedule"
+    },
+    {
+      "country": "Philippines",
+      "country_code": "PH",
+      "umbrella_organization": "Philippine Association on Underwater Activities",
+      "hockey_organization": "Philippine Underwater Hockey Confederation",
+      "source_ids": [
+        "cmas-development-2022",
+        "philippines"
+      ],
+      "status": "dated CMAS crosswalk; current local details need verification",
+      "checked_on": "2026-10-02",
+      "note": "National-level evidence only; does not verify every local club or training schedule"
+    },
+    {
+      "country": "Malaysia",
+      "country_code": "MY",
+      "umbrella_organization": null,
+      "hockey_organization": "Malaysia Underwater Hockey Association",
+      "source_ids": [
+        "cmas-development-2022"
+      ],
+      "status": "dated CMAS crosswalk; current association detail needs verification",
+      "checked_on": "2026-10-02",
+      "note": "National-level evidence only; does not verify every local club or training schedule"
+    }
+  ],
+  "representative_locations": [
+    {
+      "id": "ca-camo",
+      "name": "Club CAMO Subaquatique",
+      "country": "Canada",
+      "country_code": "CA",
+      "continent": "North America",
+      "city": "Montréal",
+      "venue_or_area": "Piscine Joseph-Charbonneau",
+      "source_ids": [
+        "cuga-clubs",
+        "camo"
+      ],
+      "website": "https://camosub.ca/",
+      "coordinates": null,
+      "coordinate_precision": "venue named; not geocoded",
+      "coordinate_source_url": null,
+      "status": "2026–2027 season advertised by club",
+      "last_checked": "2026-10-02",
+      "notes": null,
+      "public_contact_policy": "Prefer club website or role-based contact; do not collect individual rosters, junior identities, private addresses or personal photos.",
+      "evidence_urls": [
+        "https://cuga.org/where-to-play-hockey/",
+        "https://camosub.ca/"
+      ]
+    },
+    {
+      "id": "ca-nova",
+      "name": "NOVA Underwater Hockey",
+      "country": "Canada",
+      "country_code": "CA",
+      "continent": "North America",
+      "city": "Vancouver",
+      "venue_or_area": "UBC Aquatic Centre",
+      "source_ids": [
+        "cuga-clubs",
+        "nova-club",
+        "ubc-facility",
+        "ubc-geocode"
+      ],
+      "website": "https://www.novauwh.com/vancouver.html",
+      "coordinates": {
+        "latitude": 49.26779,
+        "longitude": -123.24861
+      },
+      "coordinate_precision": "venue point from OSM-derived source; club and facility address independently corroborated",
+      "coordinate_source_url": "https://mapcarta.com/W341691670",
+      "status": "club-owned page confirms UBC practice venue; exact times require contact",
+      "last_checked": "2026-10-02",
+      "notes": "Incorrect crowd-map Vancouver Aquatic Centre pin rejected. Correct UBC venue corroborated by club and facility; schedule still undated.",
+      "public_contact_policy": "Prefer club website or role-based contact; do not collect individual rosters, junior identities, private addresses or personal photos.",
+      "evidence_urls": [
+        "https://cuga.org/where-to-play-hockey/",
+        "https://www.novauwh.com/vancouver.html",
+        "https://recreation.ubc.ca/aquatics/contact/",
+        "https://mapcarta.com/W341691670"
+      ]
+    },
+    {
+      "id": "ca-rumblefish",
+      "name": "Rumblefish Underwater Hockey",
+      "country": "Canada",
+      "country_code": "CA",
+      "continent": "North America",
+      "city": "New Westminster / Metro Vancouver",
+      "venue_or_area": "təməsew̓txʷ Aquatic and Community Centre",
+      "source_ids": [
+        "cuga-clubs"
+      ],
+      "website": "https://www.rumblefishclub.com/",
+      "coordinates": null,
+      "coordinate_precision": "venue named; not geocoded",
+      "coordinate_source_url": null,
+      "status": "listed; current session not independently confirmed",
+      "last_checked": "2026-10-02",
+      "notes": null,
+      "public_contact_policy": "Prefer club website or role-based contact; do not collect individual rosters, junior identities, private addresses or personal photos.",
+      "evidence_urls": [
+        "https://cuga.org/where-to-play-hockey/"
+      ]
+    },
+    {
+      "id": "ca-seals",
+      "name": "Saskatoon Seals",
+      "country": "Canada",
+      "country_code": "CA",
+      "continent": "North America",
+      "city": "Saskatoon",
+      "venue_or_area": "YMCA Saskatoon",
+      "source_ids": [
+        "cuga-clubs"
+      ],
+      "website": "https://www.sealsuws.ca/",
+      "coordinates": null,
+      "coordinate_precision": "venue named; not geocoded",
+      "coordinate_source_url": null,
+      "status": "listed; current session not independently confirmed",
+      "last_checked": "2026-10-02",
+      "notes": null,
+      "public_contact_policy": "Prefer club website or role-based contact; do not collect individual rosters, junior identities, private addresses or personal photos.",
+      "evidence_urls": [
+        "https://cuga.org/where-to-play-hockey/"
+      ]
+    },
+    {
+      "id": "ca-calgary",
+      "name": "Calgary Crocs",
+      "country": "Canada",
+      "country_code": "CA",
+      "continent": "North America",
+      "city": "Calgary",
+      "venue_or_area": "MNP Community and Sport Centre",
+      "source_ids": [
+        "cuga-clubs"
+      ],
+      "website": "https://www.calgaryuwh.com/",
+      "coordinates": null,
+      "coordinate_precision": "venue named; not geocoded",
+      "coordinate_source_url": null,
+      "status": "listed; current session not independently confirmed",
+      "last_checked": "2026-10-02",
+      "notes": null,
+      "public_contact_policy": "Prefer club website or role-based contact; do not collect individual rosters, junior identities, private addresses or personal photos.",
+      "evidence_urls": [
+        "https://cuga.org/where-to-play-hockey/"
+      ]
+    },
+    {
+      "id": "ca-edmonton",
+      "name": "Edmonton Underwater Hockey Association",
+      "country": "Canada",
+      "country_code": "CA",
+      "continent": "North America",
+      "city": "Edmonton region",
+      "venue_or_area": "Millennium Place",
+      "source_ids": [
+        "cuga-clubs"
+      ],
+      "website": "https://edmuwh.club/",
+      "coordinates": null,
+      "coordinate_precision": "venue named; not geocoded",
+      "coordinate_source_url": null,
+      "status": "listed; current session not independently confirmed",
+      "last_checked": "2026-10-02",
+      "notes": null,
+      "public_contact_policy": "Prefer club website or role-based contact; do not collect individual rosters, junior identities, private addresses or personal photos.",
+      "evidence_urls": [
+        "https://cuga.org/where-to-play-hockey/"
+      ]
+    },
+    {
+      "id": "ca-ottawa",
+      "name": "Gatineau-Ottawa Underwater Hockey",
+      "country": "Canada",
+      "country_code": "CA",
+      "continent": "North America",
+      "city": "Gatineau-Ottawa",
+      "venue_or_area": "Gatineau Centre Sportif",
+      "source_ids": [
+        "cuga-clubs"
+      ],
+      "website": "http://www.uwh.ca/",
+      "coordinates": null,
+      "coordinate_precision": "venue named; not geocoded",
+      "coordinate_source_url": null,
+      "status": "listed; current session not independently confirmed",
+      "last_checked": "2026-10-02",
+      "notes": null,
+      "public_contact_policy": "Prefer club website or role-based contact; do not collect individual rosters, junior identities, private addresses or personal photos.",
+      "evidence_urls": [
+        "https://cuga.org/where-to-play-hockey/"
+      ]
+    },
+    {
+      "id": "ca-waterloo",
+      "name": "University of Waterloo UWH Club",
+      "country": "Canada",
+      "country_code": "CA",
+      "continent": "North America",
+      "city": "Waterloo",
+      "venue_or_area": "University of Waterloo PAC Pool",
+      "source_ids": [
+        "cuga-clubs"
+      ],
+      "website": "https://athletics.uwaterloo.ca/sports/2024/3/1/underwater-hockey.aspx",
+      "coordinates": null,
+      "coordinate_precision": "venue named; not geocoded",
+      "coordinate_source_url": null,
+      "status": "listed; current session not independently confirmed",
+      "last_checked": "2026-10-02",
+      "notes": null,
+      "public_contact_policy": "Prefer club website or role-based contact; do not collect individual rosters, junior identities, private addresses or personal photos.",
+      "evidence_urls": [
+        "https://cuga.org/where-to-play-hockey/"
+      ]
+    },
+    {
+      "id": "us-chicago",
+      "name": "Chicago Underwater Hockey",
+      "country": "United States",
+      "country_code": "US",
+      "continent": "North America",
+      "city": "Bensenville, Illinois",
+      "venue_or_area": "Bensenville city-level location",
+      "source_ids": [
+        "chicago"
+      ],
+      "website": "https://www.chicagounderwaterhockey.us/",
+      "coordinates": {
+        "latitude": 41.9550296,
+        "longitude": -87.9400657
+      },
+      "coordinate_precision": "city-level crowd geocode",
+      "coordinate_source_url": "https://www.uwhmap.com/club/chicago",
+      "status": "club website exists; map city not exact venue",
+      "last_checked": "2026-10-02",
+      "notes": null,
+      "public_contact_policy": "Prefer club website or role-based contact; do not collect individual rosters, junior identities, private addresses or personal photos.",
+      "evidence_urls": [
+        "https://www.chicagounderwaterhockey.us/",
+        "https://www.uwhmap.com/club/chicago"
+      ]
+    },
+    {
+      "id": "gb-southsea",
+      "name": "Southsea Octopush Club",
+      "country": "United Kingdom",
+      "country_code": "GB",
+      "continent": "Europe",
+      "city": "Southsea/Portsmouth area",
+      "venue_or_area": null,
+      "source_ids": [
+        "boa-clubs",
+        "boa-sessions"
+      ],
+      "website": null,
+      "coordinates": null,
+      "coordinate_precision": "club region only; session finder must be checked",
+      "coordinate_source_url": null,
+      "status": "listed; current session not independently confirmed",
+      "last_checked": "2026-10-02",
+      "notes": "Do not substitute club-name city for a current practice pool.",
+      "public_contact_policy": "Prefer club website or role-based contact; do not collect individual rosters, junior identities, private addresses or personal photos.",
+      "evidence_urls": [
+        "https://www.gbuwh.co.uk/clubs",
+        "https://www.gbuwh.co.uk/sessions-and-events?clubid=33"
+      ]
+    },
+    {
+      "id": "gb-stalbans",
+      "name": "St Albans Underwater Hockey Club",
+      "country": "United Kingdom",
+      "country_code": "GB",
+      "continent": "Europe",
+      "city": "St Albans",
+      "venue_or_area": "Westminster Lodge Leisure Centre (crowd-directory venue; not independently confirmed)",
+      "source_ids": [
+        "boa-clubs",
+        "uwh-map-all",
+        "stalbans-geocode"
+      ],
+      "website": "https://www.stalbansunderwaterhockey.co.uk",
+      "coordinates": {
+        "latitude": 51.74562,
+        "longitude": -0.34422
+      },
+      "coordinate_precision": "OSM-derived venue point; club use only crowd-sourced",
+      "coordinate_source_url": "https://mapcarta.com/W165421069",
+      "status": "BOA registered club; current pool-use confirmation outstanding",
+      "last_checked": "2026-10-02",
+      "notes": null,
+      "public_contact_policy": "Prefer club website or role-based contact; do not collect individual rosters, junior identities, private addresses or personal photos.",
+      "evidence_urls": [
+        "https://www.gbuwh.co.uk/clubs",
+        "https://www.uwhmap.com/clubs/all",
+        "https://mapcarta.com/W165421069"
+      ]
+    },
+    {
+      "id": "fr-clermont",
+      "name": "Clermont Hockey Sub",
+      "country": "France",
+      "country_code": "FR",
+      "continent": "Europe",
+      "city": "Clermont-Ferrand",
+      "venue_or_area": "Stade Nautique Pierre de Coubertin, rue Pierre de Coubertin",
+      "source_ids": [
+        "france-directory-2023"
+      ],
+      "website": null,
+      "coordinates": null,
+      "coordinate_precision": "venue named; not geocoded",
+      "coordinate_source_url": null,
+      "status": "historical 2022–2023 directory; verify current operation",
+      "last_checked": "2026-10-02",
+      "notes": null,
+      "public_contact_policy": "Prefer club website or role-based contact; do not collect individual rosters, junior identities, private addresses or personal photos.",
+      "evidence_urls": [
+        "https://hockeysub.ffessm.fr/uploads/media/docs/0001/10/9a458d31c19a64c2fff8d6735eeaa529ce5de92c.pdf"
+      ]
+    },
+    {
+      "id": "fr-rennes",
+      "name": "Rennes Sport Sous Marin",
+      "country": "France",
+      "country_code": "FR",
+      "continent": "Europe",
+      "city": "Rennes",
+      "venue_or_area": "Piscine de Bréquigny, Boulevard Albert 1er",
+      "source_ids": [
+        "uwh-map"
+      ],
+      "website": "https://rssm.asso.fr/",
+      "coordinates": {
+        "latitude": 48.0888889,
+        "longitude": -1.6905556
+      },
+      "coordinate_precision": "venue-level crowd geocode",
+      "coordinate_source_url": "https://www.uwhmap.com/club/rennes-sport-sous-marin",
+      "status": "crowd-listed active; club page fetch not verified",
+      "last_checked": "2026-10-02",
+      "notes": null,
+      "public_contact_policy": "Prefer club website or role-based contact; do not collect individual rosters, junior identities, private addresses or personal photos.",
+      "evidence_urls": [
+        "https://www.uwhmap.com/",
+        "https://www.uwhmap.com/club/rennes-sport-sous-marin"
+      ]
+    },
+    {
+      "id": "de-marlins",
+      "name": "München Marlins",
+      "country": "Germany",
+      "country_code": "DE",
+      "continent": "Europe",
+      "city": "Munich",
+      "venue_or_area": "ZHS, Connollystraße",
+      "source_ids": [
+        "uwh-map"
+      ],
+      "website": "https://unterwasserhockey-muenchen.de/",
+      "coordinates": {
+        "latitude": 48.1793656,
+        "longitude": 11.5446229
+      },
+      "coordinate_precision": "venue-level crowd geocode",
+      "coordinate_source_url": "https://www.uwhmap.com/club/m%C3%BCnchen-marlins",
+      "status": "crowd-listed active; exact session not confirmed",
+      "last_checked": "2026-10-02",
+      "notes": null,
+      "public_contact_policy": "Prefer club website or role-based contact; do not collect individual rosters, junior identities, private addresses or personal photos.",
+      "evidence_urls": [
+        "https://www.uwhmap.com/",
+        "https://www.uwhmap.com/club/m%C3%BCnchen-marlins"
+      ]
+    },
+    {
+      "id": "be-brussels",
+      "name": "Brussels Underwater Hockey",
+      "country": "Belgium",
+      "country_code": "BE",
+      "continent": "Europe",
+      "city": "Schaerbeek/Brussels",
+      "venue_or_area": "Neptunium swimming pool",
+      "source_ids": [
+        "belgium-clubs"
+      ],
+      "website": "https://sites.google.com/view/brusselsuwh/en/join-us",
+      "coordinates": null,
+      "coordinate_precision": "venue named; not geocoded",
+      "coordinate_source_url": null,
+      "status": "club introductory session page indexed; confirm before travel",
+      "last_checked": "2026-10-02",
+      "notes": null,
+      "public_contact_policy": "Prefer club website or role-based contact; do not collect individual rosters, junior identities, private addresses or personal photos.",
+      "evidence_urls": [
+        "https://www.belgiumuwh.be/clubs-in-belgium/"
+      ]
+    },
+    {
+      "id": "au-act",
+      "name": "ACT Underwater Hockey",
+      "country": "Australia",
+      "country_code": "AU",
+      "continent": "Oceania",
+      "city": "Greenway, Canberra",
+      "venue_or_area": "Lakeside Leisure Centre, Athllon Drive and Anketell Street",
+      "source_ids": [
+        "act-club",
+        "act-facility",
+        "greenway-geocode"
+      ],
+      "website": "https://www.actunderwaterhockey.com/",
+      "coordinates": {
+        "latitude": -35.418491,
+        "longitude": 149.068253
+      },
+      "coordinate_precision": "suburb-level geographic point; NOT a pool pin",
+      "coordinate_source_url": "https://www.latlong.net/place/greenway-australia-1380.html",
+      "status": "venue and weekly session advertised by club; undated",
+      "last_checked": "2026-10-02",
+      "notes": null,
+      "public_contact_policy": "Prefer club website or role-based contact; do not collect individual rosters, junior identities, private addresses or personal photos.",
+      "evidence_urls": [
+        "https://www.actunderwaterhockey.com/",
+        "https://www.lakesideleisure.com.au/contact/getting-here/",
+        "https://www.latlong.net/place/greenway-australia-1380.html"
+      ]
+    },
+    {
+      "id": "nz-fins",
+      "name": "FINS",
+      "country": "New Zealand",
+      "country_code": "NZ",
+      "continent": "Oceania",
+      "city": "Henderson, Auckland",
+      "venue_or_area": "West Wave Pool and Leisure Centre, 20 Alderman Drive",
+      "source_ids": [
+        "uwh-map",
+        "uwhnz-clubs"
+      ],
+      "website": null,
+      "coordinates": {
+        "latitude": -36.876012,
+        "longitude": 174.6341445
+      },
+      "coordinate_precision": "venue-level crowd geocode",
+      "coordinate_source_url": "https://www.uwhmap.com/club/fins",
+      "status": "listed; current session not independently confirmed",
+      "last_checked": "2026-10-02",
+      "notes": "National directory is a gateway, not direct corroboration of this venue.",
+      "public_contact_policy": "Prefer club website or role-based contact; do not collect individual rosters, junior identities, private addresses or personal photos.",
+      "evidence_urls": [
+        "https://www.uwhmap.com/",
+        "https://www.underwaterhockeynz.com/PLAY-UWH/UWH-CLUBS",
+        "https://www.uwhmap.com/club/fins"
+      ]
+    },
+    {
+      "id": "za-durban",
+      "name": "Durban Underwater Club",
+      "country": "South Africa",
+      "country_code": "ZA",
+      "continent": "Africa",
+      "city": "Durban",
+      "venue_or_area": "Kings Park Swimming Pool, Masabalala Yengwa Avenue and Battery Beach Road",
+      "source_ids": [
+        "sauwh-clubs"
+      ],
+      "website": null,
+      "coordinates": {
+        "latitude": -29.8309637,
+        "longitude": 31.0324045
+      },
+      "coordinate_precision": "venue named by federation; crowd geocode",
+      "coordinate_source_url": "https://www.uwhmap.com/club/durban-underwater-club",
+      "status": "listed; current session not independently confirmed",
+      "last_checked": "2026-10-02",
+      "notes": null,
+      "public_contact_policy": "Prefer club website or role-based contact; do not collect individual rosters, junior identities, private addresses or personal photos.",
+      "evidence_urls": [
+        "https://sauwhf.co.za/local-clubs/",
+        "https://www.uwhmap.com/club/durban-underwater-club"
+      ]
+    },
+    {
+      "id": "za-pretoria",
+      "name": "Pretoria Underwater Club",
+      "country": "South Africa",
+      "country_code": "ZA",
+      "continent": "Africa",
+      "city": "Pretoria",
+      "venue_or_area": "Afrikaanse Hoër Meisieskool, 43 Bond St, Clydesdale",
+      "source_ids": [
+        "sauwh-clubs"
+      ],
+      "website": null,
+      "coordinates": null,
+      "coordinate_precision": "venue named; not geocoded",
+      "coordinate_source_url": null,
+      "status": "listed; current session not independently confirmed",
+      "last_checked": "2026-10-02",
+      "notes": null,
+      "public_contact_policy": "Prefer club website or role-based contact; do not collect individual rosters, junior identities, private addresses or personal photos.",
+      "evidence_urls": [
+        "https://sauwhf.co.za/local-clubs/"
+      ]
+    },
+    {
+      "id": "za-stellenbosch",
+      "name": "My Underwater Hockey Club",
+      "country": "South Africa",
+      "country_code": "ZA",
+      "continent": "Africa",
+      "city": "Stellenbosch",
+      "venue_or_area": "Rhenish Girls High School, Doornbosch Road",
+      "source_ids": [
+        "sauwh-clubs"
+      ],
+      "website": null,
+      "coordinates": null,
+      "coordinate_precision": "venue named; not geocoded",
+      "coordinate_source_url": null,
+      "status": "listed; current session not independently confirmed",
+      "last_checked": "2026-10-02",
+      "notes": null,
+      "public_contact_policy": "Prefer club website or role-based contact; do not collect individual rosters, junior identities, private addresses or personal photos.",
+      "evidence_urls": [
+        "https://sauwhf.co.za/local-clubs/"
+      ]
+    },
+    {
+      "id": "ph-pirates",
+      "name": "Polo Puck Pirates",
+      "country": "Philippines",
+      "country_code": "PH",
+      "continent": "Asia",
+      "city": "Pasig, Metro Manila",
+      "venue_or_area": "PhilSports Arena, Capt. Henry P. Javier",
+      "source_ids": [
+        "uwh-map"
+      ],
+      "website": null,
+      "coordinates": {
+        "latitude": 14.5776771,
+        "longitude": 121.0662593
+      },
+      "coordinate_precision": "venue-level crowd geocode",
+      "coordinate_source_url": "https://www.uwhmap.com/club/polo-puck-pirates-manila",
+      "status": "listed; current session not independently confirmed",
+      "last_checked": "2026-10-02",
+      "notes": null,
+      "public_contact_policy": "Prefer club website or role-based contact; do not collect individual rosters, junior identities, private addresses or personal photos.",
+      "evidence_urls": [
+        "https://www.uwhmap.com/",
+        "https://www.uwhmap.com/club/polo-puck-pirates-manila"
+      ]
+    },
+    {
+      "id": "hk-uwh",
+      "name": "Hong Kong Underwater Hockey Association 香港水底曲棍球協會",
+      "country": "Hong Kong",
+      "country_code": "HK",
+      "continent": "Asia",
+      "city": "Hong Kong Island",
+      "venue_or_area": "Hong Kong Island",
+      "source_ids": [
+        "uwh-map"
+      ],
+      "website": null,
+      "coordinates": {
+        "latitude": 22.2587586,
+        "longitude": 114.1910696
+      },
+      "coordinate_precision": "island-level crowd geocode; not a pool",
+      "coordinate_source_url": "https://www.uwhmap.com/club/hong-kong-underwater-hockey-association-%E9%A6%99%E6%B8%AF%E6%B0%B4%E5%BA%95%E6%9B%B2%E6%A3%8D%E7%90%83%E5%8D%94%E6%9C%83",
+      "status": "listed; current session not independently confirmed",
+      "last_checked": "2026-10-02",
+      "notes": null,
+      "public_contact_policy": "Prefer club website or role-based contact; do not collect individual rosters, junior identities, private addresses or personal photos.",
+      "evidence_urls": [
+        "https://www.uwhmap.com/",
+        "https://www.uwhmap.com/club/hong-kong-underwater-hockey-association-%E9%A6%99%E6%B8%AF%E6%B0%B4%E5%BA%95%E6%9B%B2%E6%A3%8D%E7%90%83%E5%8D%94%E6%9C%83"
+      ]
+    },
+    {
+      "id": "sg-uwh",
+      "name": "Underwater Hockey Association Singapore",
+      "country": "Singapore",
+      "country_code": "SG",
+      "continent": "Asia",
+      "city": "Singapore",
+      "venue_or_area": null,
+      "source_ids": [
+        "singapore"
+      ],
+      "website": "https://www.underwaterhockey.sg/",
+      "coordinates": null,
+      "coordinate_precision": "city/state only; use association trial route",
+      "coordinate_source_url": null,
+      "status": "listed; current session not independently confirmed",
+      "last_checked": "2026-10-02",
+      "notes": null,
+      "public_contact_policy": "Prefer club website or role-based contact; do not collect individual rosters, junior identities, private addresses or personal photos.",
+      "evidence_urls": [
+        "https://www.underwaterhockey.sg/"
+      ]
+    },
+    {
+      "id": "jp-otaru",
+      "name": "Hokkaido UWH – Otaru Fanfare",
+      "country": "Japan",
+      "country_code": "JP",
+      "continent": "Asia",
+      "city": "Otaru",
+      "venue_or_area": "小樽サンフィッシュスポーツクラブ, 1 Chome-4-14 Wakamatsu",
+      "source_ids": [
+        "uwh-map-all"
+      ],
+      "website": null,
+      "coordinates": null,
+      "coordinate_precision": "venue named; not geocoded",
+      "coordinate_source_url": null,
+      "status": "crowd-listed active; direct detail fetch failed",
+      "last_checked": "2026-10-02",
+      "notes": null,
+      "public_contact_policy": "Prefer club website or role-based contact; do not collect individual rosters, junior identities, private addresses or personal photos.",
+      "evidence_urls": [
+        "https://www.uwhmap.com/clubs/all"
+      ]
+    },
+    {
+      "id": "id-jakarta",
+      "name": "JUHC",
+      "country": "Indonesia",
+      "country_code": "ID",
+      "continent": "Asia",
+      "city": "Jakarta",
+      "venue_or_area": null,
+      "source_ids": [
+        "uwh-map-all"
+      ],
+      "website": null,
+      "coordinates": null,
+      "coordinate_precision": "city only; no pool verified",
+      "coordinate_source_url": null,
+      "status": "crowd-listed active; independent club confirmation outstanding",
+      "last_checked": "2026-10-02",
+      "notes": null,
+      "public_contact_policy": "Prefer club website or role-based contact; do not collect individual rosters, junior identities, private addresses or personal photos.",
+      "evidence_urls": [
+        "https://www.uwhmap.com/clubs/all"
+      ]
+    },
+    {
+      "id": "co-antioquia",
+      "name": "Antioquia Subaquática",
+      "country": "Colombia",
+      "country_code": "CO",
+      "continent": "South America",
+      "city": "Medellín",
+      "venue_or_area": "Piscina de actividades subacuáticas, Carrera 73, Laureles-Estadio",
+      "source_ids": [
+        "uwh-map"
+      ],
+      "website": null,
+      "coordinates": {
+        "latitude": 6.2557042,
+        "longitude": -75.5917666
+      },
+      "coordinate_precision": "venue-level crowd geocode",
+      "coordinate_source_url": "https://www.uwhmap.com/club/antioquia-subaqutica",
+      "status": "listed; current session not independently confirmed",
+      "last_checked": "2026-10-02",
+      "notes": null,
+      "public_contact_policy": "Prefer club website or role-based contact; do not collect individual rosters, junior identities, private addresses or personal photos.",
+      "evidence_urls": [
+        "https://www.uwhmap.com/",
+        "https://www.uwhmap.com/club/antioquia-subaqutica"
+      ]
+    },
+    {
+      "id": "ar-hellfish",
+      "name": "Hellfish Hockey Subacuático",
+      "country": "Argentina",
+      "country_code": "AR",
+      "continent": "South America",
+      "city": "Olivos, Buenos Aires Province",
+      "venue_or_area": "Sociedad Alemana de Gimnasia NDT, Juan Bautista Alberdi",
+      "source_ids": [
+        "uwh-map"
+      ],
+      "website": null,
+      "coordinates": {
+        "latitude": -34.5125796,
+        "longitude": -58.4951319
+      },
+      "coordinate_precision": "venue-level crowd geocode",
+      "coordinate_source_url": "https://www.uwhmap.com/club/hellfish-hockey-subacu%C3%A1tico",
+      "status": "listed; current session not independently confirmed",
+      "last_checked": "2026-10-02",
+      "notes": null,
+      "public_contact_policy": "Prefer club website or role-based contact; do not collect individual rosters, junior identities, private addresses or personal photos.",
+      "evidence_urls": [
+        "https://www.uwhmap.com/",
+        "https://www.uwhmap.com/club/hellfish-hockey-subacu%C3%A1tico"
+      ]
+    }
+  ],
+  "architecture": {
+    "positioning": "Independent visual atlas and evidence-linked deep wiki for underwater hockey; transparent about regional gaps and unverified club activity.",
+    "primary_navigation": [
+      "Explore the world",
+      "Learn the game",
+      "Train and coach",
+      "Rules and referees",
+      "Watch and compete",
+      "Run a club",
+      "History and science",
+      "Source library"
+    ],
+    "explore_the_world": {
+      "layers": [
+        "Federation/association country coverage",
+        "Current club or listed club",
+        "Pool venue",
+        "Tournament venue",
+        "Historical club or event"
+      ],
+      "filters": [
+        "country/territory",
+        "continent",
+        "language",
+        "organization type",
+        "verification status",
+        "beginner pathway",
+        "public source date"
+      ],
+      "marker_rules": [
+        "Never place a federation office as a playing venue",
+        "Use distinct city/region circles and exact-venue pins",
+        "Null coordinates stay in searchable list until geocoded",
+        "A precise numeric coordinate from a crowd map does not imply a verified pool",
+        "Cluster without counting duplicates as separate clubs",
+        "Historical and stopped clubs off by default"
+      ]
+    },
+    "wiki_article_template": [
+      "Plain-language overview",
+      "At a glance: audience, geography and edition",
+      "Original explanation and diagrams",
+      "Primary sources with date/version",
+      "What varies by jurisdiction, event or coaching school",
+      "Further viewing/reading",
+      "Known gaps and last checked"
+    ],
+    "country_page_template": [
+      "National federation vs hockey organization",
+      "Official find-a-club routes",
+      "Representative verified club/pool records",
+      "Local terminology and languages",
+      "Domestic competition structure",
+      "Introductory pathway",
+      "Links, provenance and unresolved conflicts"
+    ],
+    "club_page_template": [
+      "Public club name and city",
+      "Website/role contact",
+      "Venue evidence and precision",
+      "Beginner access and loan equipment if source-supported",
+      "Schedule as a dated source quote or outbound link, not guaranteed current",
+      "Parent federation links",
+      "Reported status vs independently verified status"
+    ],
+    "competition_template": [
+      "Organizer and sanctioning body",
+      "Event, edition, dates and timezone",
+      "Country/venue",
+      "Category definitions and rules edition",
+      "Results source",
+      "Match footage links and timestamps",
+      "Historical status and known gaps"
+    ],
+    "watch_library_schema": [
+      "event_id",
+      "source_title",
+      "publisher",
+      "url",
+      "language",
+      "date",
+      "category",
+      "teams_if_explicit",
+      "court",
+      "timestamp_start",
+      "duration_if_verified",
+      "camera_view",
+      "rights",
+      "embed_allowed_if_verified"
+    ],
+    "club_admin_topics": [
+      "Starting a club",
+      "Pool partnership and facility checklist",
+      "Loaner-gear inventory",
+      "Recruitment and first-session welcome",
+      "Volunteer roles and continuity",
+      "Budget and jurisdiction-specific insurance links",
+      "Safeguarding and incident-response source library",
+      "Tournament operations and timing/results tools",
+      "Accessibility and inclusive recruitment"
+    ],
+    "science_topics": [
+      "Physiology and repeated submersions",
+      "Biomechanics and the flick",
+      "Injury and medical case literature",
+      "Study-design and evidence-level primer",
+      "What research cannot establish",
+      "No unsupervised apnea prescription or medical clearance claims"
+    ],
+    "repository_data_design": {
+      "sources": "One canonical bibliographic resource record; original summaries only",
+      "organizations": "Stable IDs; umbrella, sport body, region, club and event organizer separated",
+      "locations": "Venue, geocode precision, active-status evidence and contact source separate",
+      "claims": "Claim-level source IDs and confidence; conflicts retained",
+      "events": "Versioned results and category data",
+      "articles": "MDX/Markdown articles with source IDs",
+      "assets": "Original or explicitly licensed assets with licence and attribution manifest",
+      "schema_validation": "Validate IDs, URLs, dates, ISO codes, coordinate ranges, orphan references and source completeness"
+    },
+    "proposed_article_backlog": [
+      "What is underwater hockey?",
+      "Your first pool session",
+      "The field, goals and puck",
+      "Equipment anatomy",
+      "Core movement and puck skills",
+      "Team shape and substitutions",
+      "Reading referee signals",
+      "How championship categories work",
+      "Global organizations explained",
+      "How to find a club responsibly",
+      "Starting and sustaining a club",
+      "Origins and global spread",
+      "How to read the UWH research literature",
+      "Watching a match: annotated viewing guide"
+    ],
+    "content_boundary": [
+      "Underwater hockey/octopush only; distinguish underwater rugby and underwater ice hockey",
+      "No personal player directory or junior rosters",
+      "Do not republish third-party photos, logo collections or full PDFs without rights",
+      "Do not translate rules as if translations were authoritative",
+      "Keep current rules separate from local variations and historical editions"
+    ]
+  },
+  "data_quality_flags": [
+    {
+      "id": "q-counts",
+      "finding": "The UWH Map all-clubs headline is a crowdsourced snapshot, not a census of operating clubs.",
+      "source_ids": [
+        "uwh-map-all"
+      ],
+      "action": "Label directory coverage; never state all clubs globally or infer player populations."
+    },
+    {
+      "id": "q-france",
+      "finding": "Widely linked French directory is 2022–2023 despite a recent crawl.",
+      "source_ids": [
+        "france-directory-2023"
+      ],
+      "action": "Mark historical; do not publish training times as current."
+    },
+    {
+      "id": "q-brazil",
+      "finding": "CMAS currently lists CBES for UWH; CBPDS is suspended. CBPDS hockey copy also contains obvious generic chatbot-like phrasing.",
+      "source_ids": [
+        "cmas-america",
+        "brazil-cbpds"
+      ],
+      "action": "Use CMAS affiliation evidence and do not promote CBPDS as current international authority or rely on its uncorroborated city claims."
+    },
+    {
+      "id": "q-nova",
+      "finding": "NOVA crowd record’s text says UBC pool while map field points at Vancouver Aquatic Centre. CUGA agrees with UBC.",
+      "source_ids": [
+        "cuga-clubs",
+        "nova-club",
+        "ubc-facility",
+        "ubc-geocode"
+      ],
+      "evidence_url": "https://www.uwhmap.com/club/nova-ninjas-of-vancouver-auckland",
+      "action": "Incorrect crowd pin rejected; replaced with UBC OSM-derived facility point corroborated against club-owned venue and official facility address. Contact for exact practice times."
+    },
+    {
+      "id": "q-canada-duplicates",
+      "finding": "CUGA repeats Gatineau-Ottawa and lists Guelph Instagram text matching Waterloo.",
+      "source_ids": [
+        "cuga-clubs"
+      ],
+      "action": "Deduplicate organization and do not copy potentially mismatched social handles."
+    },
+    {
+      "id": "q-national-local",
+      "finding": "National affiliation, event participation and local practice availability are different facts.",
+      "source_ids": [
+        "cmas-america",
+        "cmas-europe"
+      ],
+      "action": "Do not infer local hockey from generic diving federation presence; absence of a CMAS hockey label also does not prove no grassroots club exists."
+    },
+    {
+      "id": "q-rights",
+      "finding": "Publicly viewable does not mean freely redistributable. BOA graphics permission is member-limited; CMAS reserves rights.",
+      "source_ids": [
+        "boa-posters",
+        "cmas-hockey"
+      ],
+      "action": "Use original graphics, outbound links and verified embeddings; maintain licence manifest."
+    },
+    {
+      "id": "q-science",
+      "finding": "Small observational/laboratory studies and case reports answer different questions.",
+      "source_ids": [
+        "science-submersion",
+        "science-apnea",
+        "science-flick",
+        "science-hemoptysis"
+      ],
+      "action": "Label evidence type and limits; do not turn average submersion times into safety guarantees or prescribe apnea training."
+    },
+    {
+      "id": "q-web-failures",
+      "finding": "Some official sources and crowd-map details failed text fetch; JavaScript maps expose incomplete records.",
+      "source_ids": [
+        "usoa-development",
+        "netherlands-clubs",
+        "uwhnz-clubs"
+      ],
+      "action": "Treat unread content as unverified, not absent. Use permitted browser/manual review in later implementation."
+    }
+  ],
+  "coverage_gaps": [
+    "Many countries have discovery-only records rather than independently verified live clubs",
+    "Latin America outside Argentina and Colombia needs deeper local verification; Brazil evidence distinguishes historical programs from current activity",
+    "Africa sample is South Africa only; national and grassroots coverage elsewhere requires follow-up",
+    "Twelve sourced coordinates now available: nine UWH Map-derived, two OSM-derived venue points and one suburb-level point. All explicitly identify precision and evidence limitations; remaining official venues are not yet geocoded.",
+    "Source licences, video playback/embedding and individual document versions need item-level checks before redistribution",
+    "No exhaustive club scraping, personal roster collection, photo identification, GitHub publishing or app build performed"
+  ],
+  "research_followups": [
+    "Geocode official pool addresses with documented provider/licence and verify facilities",
+    "Check current club-owned session pages and date each assertion",
+    "Reconcile duplicates and historical clubs before total counts",
+    "Acquire open-licensed original illustrations and request any third-party media permissions",
+    "Expand country pages from official sources in local languages",
+    "Add item-level match archive links and timestamps without downloading copyrighted footage"
+  ],
+  "summary_counts": {
+    "sources": 80,
+    "national_organizations": 29,
+    "representative_locations": 27,
+    "geocoded_locations": 12,
+    "countries_or_territories_in_location_sample": 16,
+    "continents_in_location_sample": 6
+  }
+}

@@ -14,6 +14,7 @@ import {
   MapPin,
 } from "lucide-react";
 import { articles, resources, places, type Article } from "./data";
+import { WorldMap } from "./WorldMap";
 import "./style.css";
 import { suppliers, supplierSources, supplierNotice } from "./suppliers";
 import { equipment } from "./equipment";
@@ -758,56 +759,7 @@ function World() {
         </div>
       </div>
       {view === "Map" && (
-        <div className="map-panel">
-          <div className="map-caption">
-            <Globe2 size={20} />
-            <span>
-              COMMUNITY COORDINATES
-              <br />
-              <small>Schematic geographic grid · equirectangular</small>
-            </span>
-          </div>
-          <div className="world-map">
-            {[-60, -30, 0, 30, 60].map((lat) => (
-              <div
-                className="latitude"
-                style={{ top: `${((90 - lat) / 180) * 100}%` }}
-                key={lat}
-              >
-                <span>{lat}°</span>
-              </div>
-            ))}
-            {[-120, -60, 0, 60, 120].map((lon) => (
-              <div
-                className="longitude"
-                style={{ left: `${((lon + 180) / 360) * 100}%` }}
-                key={lon}
-              />
-            ))}
-            {shown
-              .filter((p) => p.lat !== null && p.lon !== null)
-              .map((p) => (
-                <button
-                  key={p.id}
-                  className={`map-pin ${/city|town|area/i.test(p.precision) ? "city" : "venue"} ${selected === p.id ? "selected" : ""}`}
-                  style={{
-                    left: `${((p.lon! + 180) / 360) * 100}%`,
-                    top: `${((90 - p.lat!) / 180) * 100}%`,
-                  }}
-                  onClick={() => setSelected(p.id)}
-                  aria-label={`${p.name}: ${p.precision}`}
-                  title={p.name}
-                >
-                  <span />
-                  <b>{p.name}</b>
-                </button>
-              ))}
-          </div>
-          <p>
-            Only records with known coordinates appear. All directory records
-            remain available below.
-          </p>
-        </div>
+        <WorldMap places={shown} selected={selected} onSelect={setSelected} />
       )}
       <div className="results-line">{shown.length} directory entries</div>
       <div className="article-grid">

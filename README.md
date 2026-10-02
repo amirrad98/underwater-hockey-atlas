@@ -33,6 +33,8 @@ Original catalogs live under `research/`. After editing reviewed catalog records
 
 Use public sources only. Record source URL, publisher, date, access restrictions, jurisdiction, language and rights where known. Distinguish verified claims, indexed links, historical records and unresolved conflicts. Paid manuals and third-party images must not be copied without permission. All illustrative diagrams in this prototype are original and conceptual, not official rule diagrams.
 
+The World map uses a locally hosted SVG derived from Natural Earth's public-domain 1:110 million land polygons. The [full source, license and reproducible generation notes](vendor/natural-earth/README.md) are checked in. Run `npm run map:build` after an intentional source or projection change; `npm test` checks the generated asset. See the [map verification and screenshots](docs/WORLD_MAP.md).
+
 ## Review and delivery
 
 The foundation was prepared and tested in PR #1. The owner subsequently authorized merging the tested work, making this repository public, and publishing GitHub Pages. No paid-plan upgrade, collaborator changes or new credentials are needed. CI checks production compilation and content integrity. Browser tests cover shared search, navigation, history and mobile layout.

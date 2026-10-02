@@ -9,3 +9,5 @@ Captured from the actual app with Chromium at desktop (1440px) and mobile (390px
 - [Suppliers · desktop](screenshots/suppliers-desktop.png)
 - [Suppliers · mobile](screenshots/suppliers-mobile.png)
 - [World directory · desktop](screenshots/world-desktop.png)
+- [Geographic world basemap · desktop](screenshots/world-basemap-desktop.png)
+- [Geographic world basemap · mobile](screenshots/world-basemap-mobile.png)

@@ -1,0 +1,23 @@
+UNBC TIMBERWHALES CLUB PHOTOGRAPHS — PROJECT REUSE PERMISSION
+
+The user explicitly authorized reusing the Timber Whales website photos in this
+atlas. The assistant asked: “Do you have permission to reuse the Timber Whales
+website photos on your site?” The user replied: “Oh yes, I do. I'm part of that.”
+
+Scope: photographs published on https://timberwhales.wixsite.com/unbc-timberwhales
+and that site's linked club gallery, reused locally for this project. This is not
+a claim that the photographs are public domain, Creative Commons, or licensed
+for unrestricted redistribution. Copyright remains with the respective holders.
+No unrelated third-party or social-media photographs fall within this permission.
+
+See manifest.json for each source page, source image URL, retrieval date, original
+file, display derivative, dimensions, byte counts and SHA-256 hashes. Downloaded
+originals are preserved without alteration. Display derivatives keep the complete
+composition and aspect ratio. Descriptive captions rely only on visible content
+or accompanying published text; no identities are inferred from faces.
+
+The factual club profile is an original synthesis of the cited public sources.
+It distinguishes the dated fall 2026 schedule from historical listings and marks
+undated fees and roster information. The earlier research file's recommendation
+to seek photo permission records the state before permission was supplied; the
+authorization above is the later, task-specific permission.

@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "club": "UNBC TimberWhales",
+  "retrievedAt": "2026-10-02",
+  "sourceWebsite": "https://timberwhales.wixsite.com/unbc-timberwhales",
+  "authorization": {
+    "basis": "Explicit user permission in this task",
+    "question": "Do you have permission to reuse the Timber Whales website photos on your site?",
+    "answer": "Oh yes, I do. I'm part of that.",
+    "scope": "Photographs published on the UNBC TimberWhales club website and its linked club gallery, for local reuse in this atlas. No unrelated third-party or social-media photographs are included.",
+    "license": "Permission for this project; no public or transferable copyright license claimed.",
+    "ownerIdentity": "Not recorded. No inference about the user’s identity or any face in a photograph."
+  },
+  "processing": {
+    "originals": "Downloaded bytes preserved unchanged.",
+    "display": "WebP derivatives preserve the complete image and aspect ratio; no crop, generated replacement or identity inference."
+  },
+  "photos": [],
+  "coverage": {
+    "status": "awaiting_authorized_browser_materialization",
+    "note": "Public site was inaccessible through the workspace network proxy. Awaiting source image URLs or files from the authorized browser session; no guessed CDN paths or substitute images."
+  }
+}

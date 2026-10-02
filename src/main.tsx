@@ -15,7 +15,7 @@ import {
 } from "lucide-react";
 import { articles, resources, places, type Article } from "./data";
 import "./style.css";
-import { suppliers } from "./suppliers";
+import { suppliers, supplierSources, supplierNotice } from "./suppliers";
 import { equipment } from "./equipment";
 const link = (id: string) => `#/wiki/${id}`;
 function Board({ compact = false }: { compact?: boolean }) {
@@ -508,7 +508,39 @@ function Wiki() {
     </div>
   );
 }
-function EquipmentGuide() { return <section className="equipment-guide"><div className="section-heading"><h2>The kit, piece by piece.</h2><a className="text-link" href="#/suppliers">Find suppliers <ArrowUpRight size={16}/></a></div><div className="equipment-grid">{equipment.map((e,i)=><details key={e.item}><summary><span>0{i+1}</span><strong>{e.item}</strong><small>{e.function}</small></summary><ul>{e.compare.map(c=><li key={c}>{c}</li>)}</ul><a href="#/resources">Compare with original sources</a></details>)}</div><p className="equipment-note">Original research checklist. Fit and preference do not establish competition compliance; consult the applicable rules and your club.</p></section>}
+function EquipmentGuide() {
+  return (
+    <section className="equipment-guide">
+      <div className="section-heading">
+        <h2>The kit, piece by piece.</h2>
+        <a className="text-link" href="#/suppliers">
+          Find suppliers <ArrowUpRight size={16} />
+        </a>
+      </div>
+      <div className="equipment-grid">
+        {equipment.map((e, i) => (
+          <details key={e.item}>
+            <summary>
+              <span>0{i + 1}</span>
+              <strong>{e.item}</strong>
+              <small>{e.function}</small>
+            </summary>
+            <ul>
+              {e.compare.map((c) => (
+                <li key={c}>{c}</li>
+              ))}
+            </ul>
+            <a href="#/resources">Compare with original sources</a>
+          </details>
+        ))}
+      </div>
+      <p className="equipment-note">
+        Original research checklist. Fit and preference do not establish
+        competition compliance; consult the applicable rules and your club.
+      </p>
+    </section>
+  );
+}
 function ArticlePage({ id }: { id: string }) {
   const a = articles.find((a) => a.id === id);
   if (!a)
@@ -534,7 +566,7 @@ function ArticlePage({ id }: { id: string }) {
             </div>
           )}
           {id === "equipment" && <EquipmentGuide />}
-              {a.sections.map((s) => (
+          {a.sections.map((s) => (
             <section key={s.heading}>
               <h2>{s.heading}</h2>
               <p>{s.body}</p>
@@ -588,8 +620,22 @@ function Source({ r }: { r: (typeof resources)[number] }) {
       <p>{r.note}</p>
       <small>
         {r.publisher} · {r.status} · {r.date}
+        {r.checkedAt && <> · Catalog review {r.checkedAt}</>}
       </small>
-      <details className="source-context"><summary>Version, geography & reuse</summary><dl><dt>Version / edition</dt><dd>{r.version || 'See source; no single edition asserted'}</dd><dt>Jurisdiction / geography</dt><dd>{r.jurisdiction || 'See source context'}</dd><dt>Rights</dt><dd>{r.rights || 'Link only. No permission to redistribute third-party media is assumed.'}</dd></dl></details>
+      <details className="source-context">
+        <summary>Version, geography & reuse</summary>
+        <dl>
+          <dt>Version / edition</dt>
+          <dd>{r.version || "See source; no single edition asserted"}</dd>
+          <dt>Jurisdiction / geography</dt>
+          <dd>{r.jurisdiction || "See source context"}</dd>
+          <dt>Rights</dt>
+          <dd>
+            {r.rights ||
+              "Link only. No permission to redistribute third-party media is assumed."}
+          </dd>
+        </dl>
+      </details>
     </div>
   );
 }
@@ -618,7 +664,9 @@ function Resources() {
         body="Read the original. Every resource carries an editorial note, an access label, and a clear indication of what was checked."
       />
       <div className="notice">
-        A curated foundation, not an exhaustive encyclopedia. Checked, indexed, historical and restricted sources retain their original review notes. Inclusion does not imply every linked page was directly inspected.
+        A curated foundation, not an exhaustive encyclopedia. Checked, indexed,
+        historical and restricted sources retain their original review notes.
+        Inclusion does not imply every linked page was directly inspected.
       </div>
       <div className="filters">
         <label className="resource-search">
@@ -777,7 +825,24 @@ function World() {
               <h3>{p.name}</h3>
               <p>{p.description}</p>
               <span className="precision">{p.precision}</span>
-              {p.sourceIds && <details className="place-evidence"><summary>Source evidence</summary>{p.sourceIds.map(id=>{const source=resources.find(r=>r.id===id); return source?<a href={source.url} key={id} target="_blank" rel="noreferrer">{source.title} · {source.status} · {source.date}</a>:null})}</details>}
+              {p.sourceIds && (
+                <details className="place-evidence">
+                  <summary>Source evidence</summary>
+                  {p.sourceIds.map((id) => {
+                    const source = resources.find((r) => r.id === id);
+                    return source ? (
+                      <a
+                        href={source.url}
+                        key={id}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        {source.title} · {source.status} · {source.date}
+                      </a>
+                    ) : null;
+                  })}
+                </details>
+              )}
               <a href={p.url} target="_blank" rel="noreferrer">
                 Visit organization <ExternalLink size={15} />
               </a>
@@ -809,6 +874,7 @@ function Suppliers() {
         title="Find the people behind the kit."
         body="An independent supplier directory. Compare gear categories and location, then confirm suitability and availability directly with the supplier."
       />
+      <div className="notice">{supplierNotice}</div>
       <div className="filters">
         <label className="resource-search">
           <Search size={18} />
@@ -878,12 +944,41 @@ function Suppliers() {
             </div>
             <dl>
               <dt>Canada shipping</dt>
-              <dd>{s.canadaShipping || "Unknown — confirm with supplier"}</dd>
+              <dd>
+                {s.canadaShipping || "Unknown — confirm with supplier"}
+                <p className="shipping-evidence">{s.shippingEvidence}</p>
+              </dd>
               <dt>Custom orders</dt>
               <dd>{s.customOrders || "Unknown"}</dd>
               <dt>Club orders</dt>
               <dd>{s.clubOrders || "Unknown"}</dd>
             </dl>
+            <details className="supplier-evidence">
+              <summary>Verification & source evidence</summary>
+              <p>{s.verification}</p>
+              {s.notes.map((note) => (
+                <p key={note}>{note}</p>
+              ))}
+              {s.sourceIds.map((id) => {
+                const source = supplierSources.find((item) => item.id === id);
+                return source ? (
+                  <div key={id}>
+                    <a
+                      href={source.publicCitationUrl || source.url}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      {source.title} <ExternalLink size={12} />
+                    </a>
+                    <p>{source.evidenceSummary}</p>
+                    <small>
+                      {source.access.replaceAll("_", " ")} · {source.checkedAt}
+                    </small>
+                    {source.accessNote && <p>{source.accessNote}</p>}
+                  </div>
+                ) : null;
+              })}
+            </details>
             <small>
               Checked {s.checked} ·{" "}
               <a href={s.sourceUrl} target="_blank" rel="noreferrer">
@@ -935,7 +1030,16 @@ function Club() {
             <small>FALL 2026 · CHECKED OCTOBER 2</small>
             <h2>Meet at Canfor Leisure Pool.</h2>
             <p>
-              Schedule from the <a href="https://www.instagram.com/p/DdNdRpuRzGU/" target="_blank" rel="noreferrer">September 12, 2026 club announcement</a>. Prince George local time. Confirm with the club before attending.
+              Schedule from the{" "}
+              <a
+                href="https://www.instagram.com/p/DdNdRpuRzGU/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                September 12, 2026 club announcement
+              </a>
+              . Prince George local time. Confirm with the club before
+              attending.
             </p>
           </div>
           <div>
@@ -1010,6 +1114,13 @@ function SearchPage({ query }: { query: string }) {
         (r.title + " " + r.note).toLowerCase().includes(needle),
       )
     : [];
+  const supplierMatches = needle
+    ? suppliers.filter((s) =>
+        (s.name + " " + s.country + " " + s.categories.join(" ") + " " + s.note)
+          .toLowerCase()
+          .includes(needle),
+      )
+    : [];
   return (
     <div className="page">
       <PageHeading
@@ -1017,7 +1128,7 @@ function SearchPage({ query }: { query: string }) {
         title={needle ? `Results for “${query}”` : "Search the atlas"}
         body={
           needle
-            ? `${found.length} articles and ${refs.length} resources`
+            ? `${found.length} articles, ${refs.length} resources and ${supplierMatches.length} suppliers`
             : "Enter a subject in the search field above."
         }
       />
@@ -1036,7 +1147,24 @@ function SearchPage({ query }: { query: string }) {
           </div>
         </>
       )}
-      {needle && !found.length && !refs.length && (
+      {supplierMatches.length > 0 && (
+        <>
+          <h2>Supplier matches</h2>
+          <div className="article-grid">
+            {supplierMatches.map((s) => (
+              <a className="article-card" href="#/suppliers" key={s.id}>
+                <small>
+                  {s.country} · {s.kind}
+                </small>
+                <h3>{s.name}</h3>
+                <p>{s.note}</p>
+                <span>Open supplier directory</span>
+              </a>
+            ))}
+          </div>
+        </>
+      )}
+      {needle && !found.length && !refs.length && !supplierMatches.length && (
         <div className="empty">
           <h2>No results yet</h2>
           <p>Try “equipment”, “rules”, “safety”, or “Timber Whales”.</p>

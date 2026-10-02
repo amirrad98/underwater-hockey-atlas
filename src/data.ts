@@ -1,4 +1,8 @@
-import { importedArticles, importedResources, importedPlaces } from "./research-data";
+import {
+  importedArticles,
+  importedResources,
+  importedPlaces,
+} from "./research-data";
 export interface Article {
   id: string;
   title: string;
@@ -8,7 +12,12 @@ export interface Article {
   sourceIds: string[];
   related: string[];
 }
-export interface Resource { version?: string; rights?: string; jurisdiction?: string; sourceRecords?: Record<string, unknown>[];
+export interface Resource {
+  version?: string;
+  checkedAt?: string;
+  rights?: string;
+  jurisdiction?: string;
+  sourceRecords?: Record<string, unknown>[];
   id: string;
   title: string;
   url: string;
@@ -22,7 +31,9 @@ export interface Resource { version?: string; rights?: string; jurisdiction?: st
   date: string;
   note: string;
 }
-export interface Place { sourceIds?: string[]; metadata?: Record<string, unknown>;
+export interface Place {
+  sourceIds?: string[];
+  metadata?: Record<string, unknown>;
   id: string;
   name: string;
   country: string;
@@ -532,22 +543,50 @@ const starterArticles: Article[] = [
   },
 ];
 
-
 /** Canonical URLs deduplicate registry records without losing source-specific evidence. */
 export function canonicalSourceUrl(value: string): string {
-  const url = new URL(value, 'https://atlas.local');
-  url.protocol = 'https:';
-  url.hostname = url.hostname.replace(/^www\./, '');
-  url.hash = '';
-  url.pathname = url.pathname.replace(/\/$/, '') || '/';
-  if (url.hostname === 'cmas.org' && ['/hockey', '/hockey.html'].includes(url.pathname)) url.pathname = '/hockey';
-  if (url.hostname === 'underwaterhockeynz.com') url.pathname = url.pathname.toLowerCase();
-  for (const key of [...url.searchParams.keys()]) if (key.startsWith('utm_') || ['fbclid', 'img_index'].includes(key)) url.searchParams.delete(key);
+  const url = new URL(value, "https://atlas.local");
+  url.protocol = "https:";
+  url.hostname = url.hostname.replace(/^www\./, "");
+  url.hash = "";
+  url.pathname = url.pathname.replace(/\/$/, "") || "/";
+  if (
+    url.hostname === "cmas.org" &&
+    ["/hockey", "/hockey.html"].includes(url.pathname)
+  )
+    url.pathname = "/hockey";
+  if (url.hostname === "underwaterhockeynz.com")
+    url.pathname = url.pathname.toLowerCase();
+  for (const key of [...url.searchParams.keys()])
+    if (key.startsWith("utm_") || ["fbclid", "img_index"].includes(key))
+      url.searchParams.delete(key);
   return url.href;
 }
-const importedByUrl = new Map(importedResources.map(source => [canonicalSourceUrl(source.url), source]));
-const starterAliases = new Map(starterResources.map(source => [source.id, importedByUrl.get(canonicalSourceUrl(source.url))?.id ?? source.id]));
-export const resources: Resource[] = [...importedResources, ...starterResources.filter(source => source.id !== 'timber-notes' && !importedByUrl.has(canonicalSourceUrl(source.url)))];
-const importedIds = new Set(importedArticles.map(article => article.id));
-export const articles: Article[] = [...starterArticles.filter(article => !importedIds.has(article.id)).map(article => ({ ...article, sourceIds: article.sourceIds.map(id => starterAliases.get(id) ?? id) })), ...importedArticles];
+const importedByUrl = new Map(
+  importedResources.map((source) => [canonicalSourceUrl(source.url), source]),
+);
+const starterAliases = new Map(
+  starterResources.map((source) => [
+    source.id,
+    importedByUrl.get(canonicalSourceUrl(source.url))?.id ?? source.id,
+  ]),
+);
+export const resources: Resource[] = [
+  ...importedResources,
+  ...starterResources.filter(
+    (source) =>
+      source.id !== "timber-notes" &&
+      !importedByUrl.has(canonicalSourceUrl(source.url)),
+  ),
+];
+const importedIds = new Set(importedArticles.map((article) => article.id));
+export const articles: Article[] = [
+  ...starterArticles
+    .filter((article) => !importedIds.has(article.id))
+    .map((article) => ({
+      ...article,
+      sourceIds: article.sourceIds.map((id) => starterAliases.get(id) ?? id),
+    })),
+  ...importedArticles,
+];
 export const places: Place[] = importedPlaces;

@@ -1,6 +1,7 @@
 import test from 'node:test'
 import assert from 'node:assert/strict'
 import { readFileSync } from 'node:fs'
+import { suppliers, supplierSources } from '../src/suppliers.ts'
 import { importedResources } from '../src/research-data.ts'
 import { articles, resources, places, canonicalSourceUrl } from '../src/data.ts'
 
@@ -34,6 +35,7 @@ test('source metadata and internal resource routes remain explicit', () => {
 
 test('geography never guesses unknown coordinates', () => {
   for (const place of places) {
+    for (const id of place.sourceIds ?? []) assert.ok(resources.some(resource => resource.id === id), `${place.id} missing source ${id}`)
     assert.equal(place.lat === null, place.lon === null, place.id)
     if (place.lat !== null && place.lon !== null) {
       assert.ok(Math.abs(place.lat) <= 90 && Math.abs(place.lon) <= 180, place.id)
@@ -54,4 +56,39 @@ test('all original source records survive the deduplicated import', () => {
   const preserved = importedResources.flatMap(resource => resource.sourceRecords ?? [])
   assert.equal(preserved.length, count)
   assert.ok(importedResources.every(resource => resource.sourceRecords?.length && resource.rights && resource.jurisdiction))
+})
+
+test('supplier research preserves categories, evidence, and qualified Canada claims', () => {
+  const catalog = JSON.parse(readFileSync(new URL('../research/uwh_suppliers.json', import.meta.url), 'utf8'))
+  assert.equal(catalog.suppliers.length, 12)
+  assert.equal(catalog.sources.length, 36)
+  const sourceIds = new Set(catalog.sources.map((source: { id: string }) => source.id))
+  assert.equal(sourceIds.size, catalog.sources.length)
+  for (const supplier of catalog.suppliers) {
+    assert.ok(supplier.categories.every((category: string) => category in catalog.categoryVocabulary), supplier.id)
+    assert.ok(supplier.canadaShipping.status in catalog.canadaStatusVocabulary, supplier.id)
+    assert.equal(supplier.canadaShipping.checkoutVerified, false)
+    assert.equal(supplier.canadaShipping.costVerified, false)
+    assert.ok(supplier.canadaShipping.evidence && supplier.verification.status && supplier.verification.meaning)
+    for (const group of [supplier, supplier.country, supplier.canadaShipping, supplier.customOrders, supplier.clubOrders]) {
+      for (const id of group.sourceIds) assert.ok(sourceIds.has(id), `${supplier.id} missing source ${id}`)
+    }
+  }
+  for (const source of catalog.sources) assert.ok(source.url && source.access && source.checkedAt && source.evidenceSummary)
+})
+
+
+test('rendered supplier records retain all original evidence without category invention', () => {
+  const catalog = JSON.parse(readFileSync(new URL('../research/uwh_suppliers.json', import.meta.url), 'utf8'))
+  assert.deepEqual(supplierSources, catalog.sources)
+  assert.equal(suppliers.length, catalog.suppliers.length)
+  for (const supplier of suppliers) {
+    const original = catalog.suppliers.find((entry: { id: string }) => entry.id === supplier.id)
+    assert.deepEqual(supplier.rawSupplier, original)
+    assert.deepEqual(supplier.categories.map(category => category.toLowerCase().replaceAll(' ', '_')), original.categories)
+    assert.equal(supplier.shippingEvidence, original.canadaShipping.evidence)
+    assert.equal(supplier.canadaShipping, original.canadaShipping.label)
+    assert.deepEqual(supplier.sourceIds, original.sourceIds)
+    assert.ok(supplier.verification.includes(original.verification.status) || supplier.verification.includes(original.verification.meaning))
+  }
 })

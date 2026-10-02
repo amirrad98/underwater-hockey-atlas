@@ -1,5 +1,7 @@
 name: Publish GitHub Pages
 on:
+  push:
+    branches: [pages-release]
   workflow_dispatch:
 permissions:
   contents: read
@@ -23,7 +25,7 @@ jobs:
       - run: npm test
       - run: npm run build
       - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v4
         with:
           path: dist
   deploy:

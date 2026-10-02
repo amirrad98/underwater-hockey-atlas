@@ -55,10 +55,8 @@ test('all sections support repeat navigation without overflow', async ({ page },
       expect(asideBox!.y + asideBox!.height).toBeLessThanOrEqual(footerBox!.y)
     }
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth + 1)).toBe(true)
+    await page.screenshot({ path: `test-results/${route}-${testInfo.project.name}.png`, fullPage: ['atlas', 'club', 'suppliers'].includes(route) })
   }
-  await page.screenshot({ path: `test-results/atlas-${testInfo.project.name}.png`, fullPage: true })
-  await page.goto('/underwater-hockey-atlas/#/club')
-  await page.screenshot({ path: `test-results/club-${testInfo.project.name}.png`, fullPage: true })
   expect(errors).toEqual([])
 })
 
@@ -107,6 +105,13 @@ test('supplier directory filters and resets verified records', async ({ page }) 
   test.skip(suppliers.length === 0, 'Verified supplier research has not been imported')
   await page.goto('/underwater-hockey-atlas/#/suppliers')
   const first = suppliers[0]
+  await expect(page.locator('.supplier').first().locator('.shipping-evidence')).toHaveText(first.shippingEvidence)
+  const spearmaster = page.locator('.supplier').filter({ hasText: 'Spearmaster' })
+  await spearmaster.locator('summary').click()
+  await expect(spearmaster.locator('details')).toHaveAttribute('open', '')
+  const publicLinks = await spearmaster.locator('a').evaluateAll(elements => elements.map(element => element.getAttribute('href')))
+  expect(publicLinks.length).toBeGreaterThan(0)
+  expect(publicLinks.every(href => href === 'https://spearmaster.co.za/')).toBe(true)
   await page.getByLabel('Gear category', { exact: true }).selectOption(first.categories[0])
   await expect(page.locator('.supplier')).toHaveCount(suppliers.filter(supplier => supplier.categories.includes(first.categories[0])).length)
   await page.getByLabel('Supplier country', { exact: true }).selectOption(first.country)

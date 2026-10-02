@@ -2,7 +2,7 @@
 
 ## Research foundation
 
-The original four JSON catalogs and architecture note are now readable under `research/`, received through the private project GitHub transfer. Retain those original files as provenance. Future imports should preserve original editorial text and field-level metadata, deduplicate by canonical URL, and compute counts from actual records. Reading or importing a source index does not independently check every linked document.
+The original four core JSON catalogs, architecture note, and supplier catalog are now readable under `research/`, received through the private project GitHub transfer. Retain those original files as provenance. Future imports should preserve original editorial text and field-level metadata, deduplicate by canonical URL, and compute counts from actual records. Reading or importing a source index does not independently check every linked document.
 
 ## Source review
 
@@ -30,3 +30,7 @@ The original four JSON catalogs and architecture note are now readable under `re
 ## Acceptance criteria for the next content release
 
 Any new release should retain reconciled URLs and source counts computed from actual data, preserve original metadata, keep restricted material as references only, link precise rules claims to clauses, assign honest geographic precision, and pass all article/source navigation tests. An expanded catalog should remain an integrated visual atlas and wiki rather than a collection of unannotated links.
+
+## Supplier maintenance
+
+The first supplier catalog contains 12 suppliers, 10 countries and 36 source records. Recheck category availability, shipping regions and business presence against dated primary evidence. Keep worldwide or inquiry-based shipping distinct from explicit Canada coverage. Standard sizes, colours and handedness do not prove custom-order capability. Do not turn a listing into an endorsement, live-stock claim or verified checkout/delivered-price claim.

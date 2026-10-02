@@ -1557,6 +1557,149 @@ main:focus {
     width: 80px;
   }
 }
-.equipment-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.equipment-grid details{background:#e8eee5;border:1px solid #cddcd0;border-radius:4px;padding:17px}.equipment-grid summary{cursor:pointer;list-style:none}.equipment-grid summary>span{font-size:10px;color:#5f8876;display:block;margin-bottom:12px}.equipment-grid strong{font-size:15px;display:block;line-height:1.3}.equipment-grid small{font-size:11px;display:block;line-height:1.5;margin-top:8px;color:#668271}.equipment-grid ul{padding-left:16px;font-size:12px;color:#486859}.equipment-grid a{font-size:11px;text-decoration:underline}.equipment-guide .equipment-note{font-size:12px}.equipment-grid details[open]{background:#dcebe0}.equipment-grid summary:after{content:'Explore +';font-size:10px;display:block;margin-top:15px;color:#356f5a}.equipment-grid details[open] summary:after{content:'Close −'}@media(max-width:600px){.equipment-grid{grid-template-columns:repeat(2,1fr)}.equipment-grid details{padding:14px}.equipment-guide .section-heading{display:block}.equipment-guide .section-heading a{margin-top:10px}}
-.source-context{margin-top:14px;border-top:1px solid #dce4d9;padding-top:10px;font-size:11px;color:#60786a}.source-context summary{cursor:pointer}.source-context dl{display:grid;grid-template-columns:100px 1fr;gap:7px;margin-bottom:0}.source-context dd{margin:0}.source-context dt{font-weight:600}.schedule p a{text-decoration:underline;text-underline-offset:3px}
-.map-pin.venue>span{border-radius:2px}.place-evidence{font-size:11px;color:#5f7c6b;margin-bottom:18px}.place-evidence summary{cursor:pointer}.place-evidence a{display:block;margin-top:8px;text-decoration:underline}.source-context dd{overflow-wrap:anywhere}
+.equipment-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+.equipment-grid details {
+  background: #e8eee5;
+  border: 1px solid #cddcd0;
+  border-radius: 4px;
+  padding: 17px;
+}
+.equipment-grid summary {
+  cursor: pointer;
+  list-style: none;
+}
+.equipment-grid summary > span {
+  font-size: 10px;
+  color: #5f8876;
+  display: block;
+  margin-bottom: 12px;
+}
+.equipment-grid strong {
+  font-size: 15px;
+  display: block;
+  line-height: 1.3;
+}
+.equipment-grid small {
+  font-size: 11px;
+  display: block;
+  line-height: 1.5;
+  margin-top: 8px;
+  color: #668271;
+}
+.equipment-grid ul {
+  padding-left: 16px;
+  font-size: 12px;
+  color: #486859;
+}
+.equipment-grid a {
+  font-size: 11px;
+  text-decoration: underline;
+}
+.equipment-guide .equipment-note {
+  font-size: 12px;
+}
+.equipment-grid details[open] {
+  background: #dcebe0;
+}
+.equipment-grid summary:after {
+  content: "Explore +";
+  font-size: 10px;
+  display: block;
+  margin-top: 15px;
+  color: #356f5a;
+}
+.equipment-grid details[open] summary:after {
+  content: "Close −";
+}
+@media (max-width: 600px) {
+  .equipment-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .equipment-grid details {
+    padding: 14px;
+  }
+  .equipment-guide .section-heading {
+    display: block;
+  }
+  .equipment-guide .section-heading a {
+    margin-top: 10px;
+  }
+}
+.source-context {
+  margin-top: 14px;
+  border-top: 1px solid #dce4d9;
+  padding-top: 10px;
+  font-size: 11px;
+  color: #60786a;
+}
+.source-context summary {
+  cursor: pointer;
+}
+.source-context dl {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 7px;
+  margin-bottom: 0;
+}
+.source-context dd {
+  margin: 0;
+}
+.source-context dt {
+  font-weight: 600;
+}
+.schedule p a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.map-pin.venue > span {
+  border-radius: 2px;
+}
+.place-evidence {
+  font-size: 11px;
+  color: #5f7c6b;
+  margin-bottom: 18px;
+}
+.place-evidence summary {
+  cursor: pointer;
+}
+.place-evidence a {
+  display: block;
+  margin-top: 8px;
+  text-decoration: underline;
+}
+.source-context dd {
+  overflow-wrap: anywhere;
+}
+.supplier .shipping-evidence {
+  font-size: 11px;
+  line-height: 1.6;
+  margin: 7px 0;
+}
+.supplier-evidence {
+  font-size: 12px;
+  border-top: 1px solid #d7e1d6;
+  padding: 12px 0;
+  margin-bottom: 12px;
+}
+.supplier-evidence summary {
+  cursor: pointer;
+  color: #3d715b;
+}
+.supplier-evidence > div {
+  border-top: 1px solid #dde7dc;
+  padding: 12px 0;
+}
+.supplier-evidence > div > a {
+  font-size: 12px;
+  text-decoration: underline;
+}
+.supplier-evidence p {
+  font-size: 12px;
+}
+.supplier small a {
+  overflow-wrap: anywhere;
+}

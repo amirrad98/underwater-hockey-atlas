@@ -1,5 +1,5 @@
 // Club facts synthesized from the field-level research catalog; original photos have separate provenance.
-import photoManifest from '../public/club/manifest.json'
+import photoManifest from '../public/club/manifest.json' with { type: 'json' }
 
 export interface ClubPhoto {
   id: string

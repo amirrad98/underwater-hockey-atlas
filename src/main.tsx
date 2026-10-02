@@ -18,151 +18,30 @@ import { WorldMap } from "./WorldMap";
 import "./style.css";
 import { suppliers, supplierSources, supplierNotice } from "./suppliers";
 import { equipment } from "./equipment";
+import { FormationBoard as Board, BoardPage } from "./playbook/Board";
+import { DrillsPage } from "./playbook/Drills";
+import { drills, scenarios } from "./playbook/data";
+import { ArticleContents, ArticleSections, ArticlePractice, LessonSourceNotes, Glossary, articleSearchText } from "./wiki/ArticleContent";
+import { registerOffline } from "./offline";
+import { Club } from "./ClubPage";
+import { wikiCatalog, resolveArticleId } from "./wiki/catalog";
 const link = (id: string) => `#/wiki/${id}`;
-function Board({ compact = false }: { compact?: boolean }) {
-  const [formation, setFormation] = useState("3–3");
-  const pts =
-    formation === "3–3"
-      ? [
-          [25, 34],
-          [50, 34],
-          [75, 34],
-          [25, 69],
-          [50, 69],
-          [75, 69],
-        ]
-      : [
-          [30, 29],
-          [70, 29],
-          [30, 53],
-          [70, 53],
-          [30, 77],
-          [70, 77],
-        ];
-  return (
-    <div className={`board-wrap ${compact ? "compact" : ""}`}>
-      <div className="board-top">
-        <span>TACTICAL FIELD NOTES</span>
-        <span>01 / TEAM SHAPE</span>
-      </div>
-      <svg
-        className="board"
-        viewBox="0 0 600 370"
-        role="img"
-        aria-label={`Conceptual ${formation} six-player formation, not to scale`}
-      >
-        <defs>
-          <pattern
-            id="grid"
-            width="30"
-            height="30"
-            patternUnits="userSpaceOnUse"
-          >
-            <path
-              d="M 30 0 L 0 0 0 30"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth=".5"
-            />
-          </pattern>
-          <marker
-            id="arrow"
-            viewBox="0 0 10 10"
-            refX="8"
-            refY="5"
-            markerWidth="5"
-            markerHeight="5"
-            orient="auto-start-reverse"
-          >
-            <path d="M0 0L10 5L0 10" fill="#8ee1d0" />
-          </marker>
-        </defs>
-        <rect x="30" y="15" width="540" height="330" rx="5" fill="url(#grid)" />
-        <rect
-          x="80"
-          y="30"
-          width="440"
-          height="310"
-          rx="3"
-          fill="none"
-          stroke="#81c5be"
-          strokeWidth="1.5"
-        />
-        <path
-          d="M80 185H520"
-          stroke="#81c5be"
-          strokeDasharray="5 7"
-          opacity=".4"
-        />
-        <path d="M240 32H360M240 338H360" stroke="#dfc785" strokeWidth="7" />
-        <circle
-          cx="300"
-          cy="185"
-          r="44"
-          fill="none"
-          stroke="#81c5be"
-          opacity=".4"
-        />
-        {pts.map(([x, y], i) => (
-          <g key={i}>
-            <path
-              d={`M${80 + x * 4.4} ${30 + y * 3.1 - 22}v-26`}
-              stroke="#8ee1d0"
-              strokeWidth="2"
-              markerEnd="url(#arrow)"
-              opacity=".7"
-            />
-            <circle
-              cx={80 + x * 4.4}
-              cy={30 + y * 3.1}
-              r="17"
-              fill={i < 3 ? "#91e0cf" : "#174952"}
-              stroke="#91e0cf"
-            />
-            <text
-              x={80 + x * 4.4}
-              y={35 + y * 3.1}
-              textAnchor="middle"
-              fill={i < 3 ? "#092f38" : "#c5f6e9"}
-              fontSize="13"
-            >
-              {i + 1}
-            </text>
-          </g>
-        ))}
-        <circle cx="322" cy="103" r="6" fill="#e1c17b" />
-        <text
-          x="45"
-          y="195"
-          transform="rotate(-90 45 195)"
-          fill="#85b0b1"
-          fontSize="10"
-          letterSpacing="3"
-        >
-          DIRECTION OF PLAY
-        </text>
-      </svg>
-      <div className="board-bottom">
-        <div className="segmented">
-          {["3–3", "2–2–2"].map((f) => (
-            <button
-              key={f}
-              aria-pressed={formation === f}
-              onClick={() => setFormation(f)}
-            >
-              {f}
-            </button>
-          ))}
-        </div>
-        <span>Conceptual · not to scale</span>
-      </div>
-    </div>
-  );
-}
 function App() {
   const [hash, setHash] = useState(location.hash || "#/atlas");
   const [menu, setMenu] = useState(false);
   const [query, setQuery] = useState("");
+  useEffect(() => {
+    if (!menu) return;
+    document.querySelector<HTMLElement>("header > nav a")?.focus();
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setMenu(false);
+        document.querySelector<HTMLElement>(".menu")?.focus();
+      }
+    };
+    addEventListener("keydown", closeOnEscape);
+    return () => removeEventListener("keydown", closeOnEscape);
+  }, [menu]);
   useEffect(() => {
     const f = () => {
       setHash(location.hash || "#/atlas");
@@ -179,6 +58,8 @@ function App() {
   const nav = [
     ["atlas", "Explore"],
     ["wiki", "Wiki"],
+    ["board", "Board"],
+    ["drills", "Drills"],
     ["world", "World"],
     ["resources", "Resources"],
     ["suppliers", "Suppliers"],
@@ -186,7 +67,7 @@ function App() {
   ];
   return (
     <>
-      <a className="skip" href="#main">
+      <a className="skip" href="#main" onClick={event => { event.preventDefault(); document.querySelector<HTMLElement>("main")?.focus(); }}>
         Skip to content
       </a>
       <header>
@@ -196,10 +77,11 @@ function App() {
             UNDERWATER HOCKEY<small>ATLAS + WIKI</small>
           </span>
         </a>
-        <nav aria-label="Main navigation" className={menu ? "open" : ""}>
+        <nav id="main-navigation" aria-label="Main navigation" className={menu ? "open" : ""}>
           {nav.map(([id, name]) => (
             <a
               key={id}
+              onClick={() => { setMenu(false); document.querySelector<HTMLElement>("main")?.focus(); }}
               href={`#/${id}`}
               aria-current={path.startsWith("#/" + id) ? "page" : undefined}
             >
@@ -210,6 +92,7 @@ function App() {
         <button
           className="menu"
           aria-label="Toggle navigation"
+          aria-controls="main-navigation"
           aria-expanded={menu}
           onClick={() => setMenu(!menu)}
         >
@@ -238,7 +121,13 @@ function App() {
         ) : path === "#/wiki" ? (
           <Wiki />
         ) : path.startsWith("#/wiki/") ? (
-          <ArticlePage id={decodeURIComponent(path.slice(7))} />
+          <ArticlePage key={path} id={decodeURIComponent(path.slice(7))} />
+        ) : path === "#/board" || path.startsWith("#/board/") ? (
+          <BoardPage id={path.startsWith("#/board/") ? decodeURIComponent(path.slice(8)) : undefined} />
+        ) : path === "#/drills" || path.startsWith("#/drills/") ? (
+          <DrillsPage key={path} id={path.startsWith("#/drills/") ? decodeURIComponent(path.slice(9)) : undefined} />
+        ) : path === "#/glossary" || path.startsWith("#/glossary/") ? (
+          <Glossary id={path.startsWith("#/glossary/") ? decodeURIComponent(path.slice(11)) : undefined} />
         ) : path === "#/world" ? (
           <World />
         ) : path === "#/resources" ? (
@@ -312,8 +201,8 @@ function Atlas() {
         </div>
         <div className="hero-board">
           <Board />
-          <a className="diagram-link" href={link("formations")}>
-            Read the formation field notes <ArrowUpRight size={16} />
+          <a className="diagram-link" href="#/board">
+            Open the tactical playbook <ArrowUpRight size={16} />
           </a>
         </div>
       </section>
@@ -485,6 +374,7 @@ function ArticleCard({ a }: { a: Article }) {
 }
 function Wiki() {
   const [cat, setCat] = useState("All");
+  const [level, setLevel] = useState("All");
   return (
     <div className="page">
       <PageHeading
@@ -492,6 +382,7 @@ function Wiki() {
         title="Knowledge worth diving into."
         body="Move from the visual atlas into the details. Official rules, coaching perspectives, and local knowledge keep their own context."
       />
+      <div className="wiki-practice-banner"><a href="#/board">Walk through a tactical sequence <ArrowUpRight size={17} /></a><a href="#/drills">Find a drill to practise <ArrowUpRight size={17} /></a></div>
       <div className="chips" aria-label="Article categories">
         {["All", ...new Set(articles.map((a) => a.category))].map((c) => (
           <button key={c} aria-pressed={cat === c} onClick={() => setCat(c)}>
@@ -499,13 +390,15 @@ function Wiki() {
           </button>
         ))}
       </div>
+      <div className="chips" aria-label="Reading level">{["All", "Newbie", "Intermediate"].map(item => <button key={item} aria-pressed={level === item} onClick={() => setLevel(item)}>{item === "All" ? "All reading levels" : item}</button>)}</div>
       <div className="article-grid">
         {articles
-          .filter((a) => cat === "All" || a.category === cat)
+          .filter((a) => (cat === "All" || a.category === cat) && (level === "All" || a.readerLevel === level))
           .map((a) => (
             <ArticleCard key={a.id} a={a} />
           ))}
       </div>
+      <section className="reading-paths"><h2>Follow a reading path</h2><div className="article-grid">{wikiCatalog.readingPaths.map(path => <div className="reading-path-card" key={path.id}><h3>{path.title}</h3><ol>{path.chapterIds.map(id => { const article = articles.find(item => item.id === resolveArticleId(id)); return article && <li key={id}><a href={link(article.id)}>{article.title}</a></li>; })}</ol></div>)}</div><a className="text-link" href="#/glossary">Explore the local concept glossary <ArrowUpRight size={17} /></a></section>
     </div>
   );
 }
@@ -543,7 +436,8 @@ function EquipmentGuide() {
   );
 }
 function ArticlePage({ id }: { id: string }) {
-  const a = articles.find((a) => a.id === id);
+  if (id === "timber-whales") return <Club />;
+  const a = articles.find((a) => a.id === resolveArticleId(id));
   if (!a)
     return (
       <div className="page">
@@ -559,6 +453,7 @@ function ArticlePage({ id }: { id: string }) {
       <PageHeading tag={a.category} title={a.title} body={a.summary} />
       <div className="article-layout">
         <article>
+          <ArticleContents article={a} />
           {id === "formations" && <Board compact />}
           {id === "equipment" && (
             <div className="equipment-panel">
@@ -567,20 +462,19 @@ function ArticlePage({ id }: { id: string }) {
             </div>
           )}
           {id === "equipment" && <EquipmentGuide />}
-          {a.sections.map((s) => (
-            <section key={s.heading}>
-              <h2>{s.heading}</h2>
-              <p>{s.body}</p>
-            </section>
-          ))}
+          <ArticleSections article={a} />
+          <ArticlePractice article={a} />
           <section>
             <h2>Sources & further reading</h2>
+            <details className="article-sources"><summary>Open {a.sourceIds.length} supporting source notes</summary>
+            <LessonSourceNotes article={a} />
             <div className="source-list">
               {a.sourceIds.map((id) => {
                 const s = resources.find((r) => r.id === id);
                 return s ? <Source key={id} r={s} /> : null;
               })}
             </div>
+            </details>
           </section>
         </article>
         <aside>
@@ -957,110 +851,11 @@ function Suppliers() {
     </div>
   );
 }
-function Club() {
-  const club = articles.find((a) => a.id === "timber-whales");
-  return (
-    <>
-      <section className="club-hero">
-        <div>
-          <div className="eyebrow">CLUB FIELD NOTES / CANADA</div>
-          <h1>
-            From the north.
-            <br />
-            Below the surface.
-          </h1>
-          <p>UNBC Timber Whales · Prince George, British Columbia</p>
-        </div>
-        <div className="club-mark large">
-          <Waves size={85} />
-          <span>TW</span>
-        </div>
-      </section>
-      <div className="page club-body">
-        <div className="schedule">
-          <div>
-            <small>FALL 2026 · CHECKED OCTOBER 2</small>
-            <h2>Meet at Canfor Leisure Pool.</h2>
-            <p>
-              Schedule from the{" "}
-              <a
-                href="https://www.instagram.com/p/DdNdRpuRzGU/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                September 12, 2026 club announcement
-              </a>
-              . Prince George local time. Confirm with the club before
-              attending.
-            </p>
-          </div>
-          <div>
-            <strong>Sunday</strong>
-            <span>17:45–18:45</span>
-          </div>
-          <div>
-            <strong>Wednesday</strong>
-            <span>21:00–22:00</span>
-          </div>
-        </div>
-        <div className="notice">
-          Older CUGA listings at Prince George Aquatic Centre describe an
-          outdated schedule. Public roster entries are undated; 2026 leadership
-          is unconfirmed.
-        </div>
-        {club ? (
-          <div className="article-layout">
-            <article>
-              {club.sections.map((s) => (
-                <section key={s.heading}>
-                  <h2>{s.heading}</h2>
-                  <p>{s.body}</p>
-                </section>
-              ))}
-              <h2>Club sources</h2>
-              {club.sourceIds.map((id) => {
-                const r = resources.find((r) => r.id === id);
-                return r ? <Source key={id} r={r} /> : null;
-              })}
-            </article>
-            <aside>
-              <div className="eyebrow">BEFORE YOU GO</div>
-              <a href={link("first-session")}>
-                Your first club session <ArrowUpRight size={16} />
-              </a>
-              <a href={link("equipment")}>
-                Equipment essentials <ArrowUpRight size={16} />
-              </a>
-              <a href={link("safety")}>
-                Safe participation <ArrowUpRight size={16} />
-              </a>
-              <a href="#/world">
-                More communities <ArrowUpRight size={16} />
-              </a>
-            </aside>
-          </div>
-        ) : (
-          <p>Detailed source notes are being prepared.</p>
-        )}
-      </div>
-    </>
-  );
-}
 function SearchPage({ query }: { query: string }) {
   const needle = query.trim().toLowerCase();
-  const found = needle
-    ? articles.filter((a) =>
-        (
-          a.title +
-          " " +
-          a.summary +
-          " " +
-          a.sections.map((s) => s.body).join(" ")
-        )
-          .toLowerCase()
-          .includes(needle),
-      )
-    : [];
+  const found = needle ? articles.filter(article => articleSearchText(article).includes(needle)) : [];
+  const drillMatches = needle ? drills.filter(drill => JSON.stringify(drill).toLowerCase().includes(needle)) : [];
+  const scenarioMatches = needle ? scenarios.filter(scenario => JSON.stringify(scenario).toLowerCase().includes(needle)) : [];
   const refs = needle
     ? resources.filter((r) =>
         (r.title + " " + r.note).toLowerCase().includes(needle),
@@ -1080,7 +875,7 @@ function SearchPage({ query }: { query: string }) {
         title={needle ? `Results for “${query}”` : "Search the atlas"}
         body={
           needle
-            ? `${found.length} articles, ${refs.length} resources and ${supplierMatches.length} suppliers`
+            ? `${found.length} articles, ${drillMatches.length} drills, ${scenarioMatches.length} scenarios, ${refs.length} resources and ${supplierMatches.length} suppliers`
             : "Enter a subject in the search field above."
         }
       />
@@ -1089,6 +884,8 @@ function SearchPage({ query }: { query: string }) {
           <ArticleCard key={a.id} a={a} />
         ))}
       </div>
+      {drillMatches.length > 0 && <section><h2>Drill matches</h2><div className="article-grid">{drillMatches.map(drill => <a className="article-card" href={`#/drills/${drill.id}`} key={drill.id}><small>{drill.level} · Drill</small><h3>{drill.title}<ArrowUpRight size={17} /></h3><p>{drill.purpose}</p></a>)}</div></section>}
+      {scenarioMatches.length > 0 && <section><h2>Tactical scenarios</h2><div className="article-grid">{scenarioMatches.map(scenario => <a className="article-card" href={`#/board/${scenario.id}`} key={scenario.id}><small>{scenario.level} · Board</small><h3>{scenario.title}<ArrowUpRight size={17} /></h3><p>{scenario.purpose}</p></a>)}</div></section>}
       {refs.length > 0 && (
         <>
           <h2>Resource matches</h2>
@@ -1116,7 +913,7 @@ function SearchPage({ query }: { query: string }) {
           </div>
         </>
       )}
-      {needle && !found.length && !refs.length && !supplierMatches.length && (
+      {needle && !found.length && !refs.length && !supplierMatches.length && !drillMatches.length && !scenarioMatches.length && (
         <div className="empty">
           <h2>No results yet</h2>
           <p>Try “equipment”, “rules”, “safety”, or “Timber Whales”.</p>
@@ -1131,3 +928,5 @@ createRoot(document.getElementById("root")!).render(
     <App />
   </React.StrictMode>,
 );
+
+registerOffline();

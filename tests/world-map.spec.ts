@@ -139,9 +139,8 @@ test('local basemap loads with external requests blocked and remains usable offl
   await expect(basemap).toBeVisible()
   await expect(basemap).toHaveJSProperty('naturalWidth', 360)
   await expect(page.locator('.map-pin')).toHaveCount(mapped.length)
-  // Existing global font requests are unrelated to map data. No map tile,
-  // geocoding service, CDN geography, or other third-party request is permitted.
-  expect(externalRequests.filter((url) => !/^https:\/\/fonts\.(googleapis|gstatic)\.com\//.test(url))).toEqual([])
+  // Fonts, geography and all core reading assets are local.
+  expect(externalRequests).toEqual([])
   await context.setOffline(true)
   const search = page.getByRole('textbox', { name: 'Search places', exact: true })
   await search.fill('FINS')

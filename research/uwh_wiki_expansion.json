@@ -1,0 +1,1854 @@
+{
+  "schemaVersion": "2.0",
+  "title": "Underwater Hockey Atlas: complete local learning chapters",
+  "createdAt": "2026-10-02",
+  "scope": "Fourteen independently readable expansions preserving the original chapter IDs. Original teaching prose, examples and exercises for local wiki integration; not official rules, professional certification or a validated training programme.",
+  "editorialPolicy": {
+    "content": "Render the lesson body locally. External links are supporting evidence or optional further reading, never a replacement for the explanation.",
+    "rules": "No detailed rule restatement, dimensions, sanctions, contact techniques or equipment-compliance claims are supplied. Current versioned rules, event instructions and qualified review govern those matters.",
+    "authorship": "Teaching sequences, fictional player examples, evaluation prompts, progression ideas and glossary explanations are independently authored. Linked sources support only the narrow facts identified in sourceNotes.",
+    "rights": "No source text quotations, copied diagrams, photographs, paid content, video downloads or mirrored manuals. Source availability is not a reuse licence.",
+    "safety": "Apply the shared safety notice plus each chapter’s practiceSafety. Exercises require adaptation by a competent coach; nothing is a solo underwater workout.",
+    "levels": "Newbie and intermediate describe reading/practice context, not an accredited proficiency grade. Intermediate coaching and DIY articles remain suitable for reading by beginners.",
+    "sourceLimits": "Source-derived summaries are narrowly bounded; long instructional passages are original examples, not expanded paraphrases. No source is used to justify a universal optimum or an unseen document’s contents.",
+    "review": "Technical review by a qualified underwater-hockey coach is recommended before using the suggested in-water activities."
+  },
+  "integrationNotes": [
+    "Replace or merge chapter content by stable id; retain existing internal links and matching diagramIds.",
+    "Render summary, objectives, every section paragraph/list, commonMistakes, progressions, practiceSafety and sourceNotes. Rendering only the old summary/text fields would discard the expansion.",
+    "Use readerLevel for a concise Newbie/Intermediate filter. A chapter can have multiple audiences without needing duplicate pages.",
+    "Resolve related as local chapter links and linkedConcepts as local glossary links. Do not turn these into outbound source links.",
+    "Keep safetyNotice and source verification caveats available on chapter pages. Display an original-coaching-content label distinct from Official rules.",
+    "Chapter diagramIds reference the existing original diagram specifications; use only those original or independently authorised assets.",
+    "Sources with failed or conflicting retrieval retain those caveats. A link is not evidence that its current full text was inspected."
+  ],
+  "safetyNotice": {
+    "id": "supervised-skill-practice",
+    "title": "Safety comes before the exercise",
+    "paragraphs": [
+      "In-water learning needs competent supervision, clear surface access and the club’s emergency arrangements. Never practise underwater breath-holding alone or hyperventilate before an underwater effort. Do not use maximum-hold challenges, submersion targets or pressure to stay down. Surface whenever needed and do not ignore the urge to breathe. Skill practice must not become a test of breath-hold capacity.",
+      "The session leader must adapt the activity, spacing and recovery to the participants and setting. Reading this wiki does not replace practical instruction, rescue training or individual medical advice."
+    ],
+    "sourceNotes": [
+      {
+        "sourceId": "ais-breathhold",
+        "url": "https://auf.com.au/wp-content/uploads/2024/12/AIS-Breath-Hold-Training-Position-Statement-October-2020.pdf",
+        "supports": "Supervision, avoiding solo breath-hold practice, hyperventilation and breath-hold challenges, responding to the urge to breathe, and keeping underwater-hockey skill training distinct from breath-hold-capacity testing."
+      },
+      {
+        "sourceId": "dan-freediving-risk",
+        "url": "https://world.dan.org/alert-diver/article/freediving-risk-assessments/",
+        "supports": "General need for setting-specific risk assessment, emergency planning and trained supervision. This is adjacent freediving context, not a hockey rule or a hockey-specific rescue protocol."
+      }
+    ],
+    "renderingRequirement": "Keep this notice visible or immediately available on every lesson; chapter-specific logistics supplement it. Do not hide it only in the source library."
+  },
+  "readingPaths": [
+    {
+      "id": "first-sessions",
+      "title": "First sessions",
+      "chapterIds": [
+        "start-with-a-club",
+        "equipment-fit",
+        "puck-control",
+        "passing-receiving",
+        "team-support",
+        "equipment-care"
+      ]
+    },
+    {
+      "id": "team-decisions",
+      "title": "Team decisions",
+      "chapterIds": [
+        "team-support",
+        "read-the-strike",
+        "formations",
+        "transition",
+        "small-sided-games",
+        "video-review"
+      ]
+    },
+    {
+      "id": "help-your-club",
+      "title": "Help your club",
+      "chapterIds": [
+        "coaching-pathways",
+        "small-sided-games",
+        "equipment-care",
+        "diy-boundaries",
+        "library-navigation"
+      ]
+    }
+  ],
+  "conceptGlossary": [
+    {
+      "id": "puck-control",
+      "title": "Control",
+      "definition": "Being able to make a deliberate next puck action, rather than merely being the player closest to it. This is a teaching definition, not a ruling on a disputed match."
+    },
+    {
+      "id": "first-touch",
+      "title": "First touch",
+      "definition": "The first deliberate stick contact when receiving the puck. In these lessons, judge whether it leaves a usable next action, not simply whether contact occurred."
+    },
+    {
+      "id": "passing-lane",
+      "title": "Passing lane",
+      "definition": "A currently usable route between the puck and a receiver. An unobstructed line on a diagram can disappear as players move or surface."
+    },
+    {
+      "id": "ready-signal",
+      "title": "Ready signal",
+      "definition": "A cue agreed for a particular supervised practice so partners know an exchange can begin. It is not an official referee signal."
+    },
+    {
+      "id": "support",
+      "title": "Support",
+      "definition": "A position or movement that gives a teammate a useful next option. Two nearby teammates can still offer only one crowded route."
+    },
+    {
+      "id": "width-and-depth",
+      "title": "Width and depth",
+      "definition": "In tactical diagrams, width means separation across the attacking direction; depth means separation along that direction. Tactical depth here does not mean a deeper underwater position."
+    },
+    {
+      "id": "turnover",
+      "title": "Turnover",
+      "definition": "A change of possession. The immediate learning task is to recognise who can control the next action and adjust teammates’ jobs."
+    },
+    {
+      "id": "formation",
+      "title": "Formation",
+      "definition": "An agreed reference for how a team distributes roles. State the club’s numbering convention and attacking direction; the label alone does not prescribe every position."
+    },
+    {
+      "id": "practice-constraint",
+      "title": "Practice constraint",
+      "definition": "One deliberately changed feature of a task, such as available targets or a receiver’s movement. Change it to reveal a particular decision, not merely to make an exercise harder."
+    },
+    {
+      "id": "practice-reset",
+      "title": "Practice reset",
+      "definition": "Stopping an exercise to reorganise, recover or discuss the task. It is an instructional choice, not a match-restart rule."
+    },
+    {
+      "id": "visible-evidence",
+      "title": "Visible evidence",
+      "definition": "What a viewer can actually observe in a demonstration or clip. Keep this separate from an interpretation of intention, and mark off-screen information as unknown."
+    },
+    {
+      "id": "equipment-system",
+      "title": "Equipment system",
+      "definition": "The complete worn setup and how its components work together. Fit, condition and applicable rule compliance are separate checks."
+    },
+    {
+      "id": "source-version",
+      "title": "Source version",
+      "definition": "The edition or publication date of the material itself. A recent access date says when it was checked, not when its contents were revised."
+    }
+  ],
+  "chapters": [
+    {
+      "id": "start-with-a-club",
+      "title": "Your first pool session",
+      "readerLevel": "newbie",
+      "category": "Getting started",
+      "summary": "A useful first session leaves you able to recognise the play, use borrowed equipment comfortably and take part in one simple exchange.",
+      "learningObjectives": [
+        "Identify the puck, attacking direction, teammates and session leader.",
+        "Complete a controlled touch-and-pass task.",
+        "Describe one skill to practise next time."
+      ],
+      "sections": [
+        {
+          "id": "start-with-a-club-orientation",
+          "heading": "Learn the map before the game",
+          "paragraphs": [
+            "Underwater hockey is a team game in which players use a short stick to move a puck along the pool bottom towards the opposing goal. Knowing that objective does not yet tell a newcomer where to look. Before entering, ask the coach to point out the playing space, your team identification, the direction of attack, the exit and the place for instructions.",
+            "Agree how to stop and attract the session leader’s attention. Ask who is providing supervision and what to do if equipment becomes uncomfortable. The club should explain its participation requirements and any local adaptations; this chapter is an orientation, not medical clearance."
+          ]
+        },
+        {
+          "id": "start-with-a-club-learning-loop",
+          "heading": "Try one clear task at a time",
+          "paragraphs": [
+            "An original first-session sequence is to separate getting oriented from contesting possession. A coach can adjust or omit any stage to match the person and pool."
+          ],
+          "steps": [
+            "Check the complete equipment setup with the coach, including the stick hand and the way protective items fit together.",
+            "Watch a demonstration from a position where you can see the puck. Say back the purpose in your own words, such as “send the puck to my partner where they can control it.”",
+            "In the assigned practice area, try a controlled touch followed by a short, unopposed pass. End the attempt freely; discuss one observation at the surface.",
+            "Add a choice between two available partners only when the simpler exchange feels manageable. Join adapted play when the coach considers it appropriate."
+          ]
+        },
+        {
+          "id": "start-with-a-club-example",
+          "heading": "A first-session example",
+          "paragraphs": [
+            "Leila keeps swimming towards wherever the puck was a moment ago. Her coach gives her a simpler observation task: find her nearest teammate before joining an exchange. In the next attempt she sees that the teammate already has the puck and offers a clear passing option. She has contributed without winning a contest or learning a complicated move.",
+            "At the end, record something observable: “I could receive with control when my partner waited until I was ready.” That is a useful starting point for the next session. “I need to stay down longer” is not the learning goal."
+          ]
+        }
+      ],
+      "commonMistakes": [
+        {
+          "mistake": "Trying to remember every rule immediately.",
+          "correction": "Ask for the few boundaries needed for the current task and learn the rest in context."
+        },
+        {
+          "mistake": "Treating a missed pass as failure.",
+          "correction": "Identify whether readiness, direction or pace caused the problem, then simplify that part."
+        }
+      ],
+      "progressions": [
+        "Start with a coach demonstration and one partner.",
+        "Move to a choice between partners, then a coach-adapted small game."
+      ],
+      "practiceSafety": "Use the club’s beginner arrangements and shared safety notice. The coach chooses a suitable area and keeps instruction, practice traffic and exits clearly organised.",
+      "related": [
+        "equipment-fit",
+        "puck-control",
+        "passing-receiving"
+      ],
+      "sourceNotes": [
+        {
+          "sourceId": "cmas-regulations",
+          "url": "https://www.cmas.org/hockey/how-to-regulations.html",
+          "supports": "Basic objective and equipment context; the hub also identifies official rules.",
+          "notClaimed": "The website’s brief introduction is not used for detailed dimensions, sanctions or competition procedures."
+        },
+        {
+          "sourceId": "atlantis-beginners",
+          "url": "https://wiki.atlantissports.org/en/club-organization/recruitment/beginner-classes",
+          "supports": "A club-published example of introductory classes.",
+          "notClaimed": "This original learning sequence is not copied from its lesson plan."
+        }
+      ],
+      "authoringNote": "Original atlas teaching explanation and suggested practice design, not an official curriculum or a validated training programme. Source notes identify bounded factual support or further context; they do not attribute these original examples to the source author. A qualified underwater-hockey coach should adapt and review in-water delivery.",
+      "audience": [
+        "new player",
+        "parent",
+        "coach"
+      ],
+      "level": "Newbie",
+      "sourceIds": [
+        "cmas-regulations",
+        "atlantis-beginners"
+      ],
+      "diagramIds": [
+        "learning-path"
+      ],
+      "linkedConcepts": [
+        "puck-control",
+        "ready-signal",
+        "practice-reset"
+      ],
+      "safetyNoticeId": "supervised-skill-practice",
+      "checkedAt": "2026-10-02",
+      "contentType": "original-educational-lesson",
+      "instructionalWordCount": 455,
+      "estimatedReadingMinutes": 3
+    },
+    {
+      "id": "puck-control",
+      "title": "Control before speed",
+      "readerLevel": "newbie",
+      "category": "Skills",
+      "summary": "Puck control is the ability to leave yourself a useful next action. Practise deliberate changes of direction before adding speed or an opponent.",
+      "learningObjectives": [
+        "Keep the puck within a usable working area.",
+        "Choose a direction instead of following a memorised pattern.",
+        "Notice a teammate while retaining control."
+      ],
+      "sections": [
+        {
+          "id": "puck-control-usable-reach",
+          "heading": "Find a usable working area",
+          "paragraphs": [
+            "Think of control as a relationship between the puck, your stick and your next intention. A puck can be close to your body yet awkward to play; it can also be moving cleanly just ahead of the stick. The useful question is whether you can make the next chosen touch without a desperate reach or an uncontrolled swipe.",
+            "Ask a coach to demonstrate an appropriate grip and puck movement for your handedness and stick. Begin without opposition. Explore a small change of direction, stop with the puck available, then choose another direction. Do not confuse finishing a decorative pattern with being ready to play."
+          ]
+        },
+        {
+          "id": "puck-control-choice-task",
+          "heading": "An original three-direction task",
+          "paragraphs": [
+            "The coach identifies three destinations using existing pool landmarks or approved markers outside the player’s working path. Label them left, right and forward from the learner’s starting viewpoint. The labels describe choices, not prescribed stick mechanics."
+          ],
+          "steps": [
+            "Show the intended destination before starting. Make a controlled puck movement towards it, then stop and review.",
+            "Vary the destination between attempts so the player must choose, rather than repeat the same sequence.",
+            "When control is comfortable, put a ready teammate at one destination. Finish with a usable pass, not simply a touch towards a marker.",
+            "Ask the learner which information they noticed. The coach observes whether looking towards a teammate disrupted the next touch."
+          ]
+        },
+        {
+          "id": "puck-control-example",
+          "heading": "Change the task to expose the problem",
+          "paragraphs": [
+            "Milo can trace a smooth figure pattern but loses possession whenever asked to pass right. Instead of making the figure faster, the coach practises the last controlled touch and the rightward release as two linked actions. Once that connection works, Milo returns to the direction-choice task.",
+            "The test is transfer: can the player finish a movement with an available pass? Improvement may look slower at first because the player is making a real choice. Increase only one challenge at a time so a mistake still tells you something useful."
+          ]
+        }
+      ],
+      "commonMistakes": [
+        {
+          "mistake": "Chasing the puck after every large touch.",
+          "correction": "Reduce the size and pace of the movement until the next touch stays deliberate."
+        },
+        {
+          "mistake": "Watching only the stick.",
+          "correction": "Make the partner visible before starting, then practise noticing them between controlled actions."
+        },
+        {
+          "mistake": "Adding pressure before the movement is reliable.",
+          "correction": "Return to the unopposed choice task and identify the specific difficulty."
+        }
+      ],
+      "progressions": [
+        "Choose the destination in advance.",
+        "Choose between two ready receivers.",
+        "Let the coach introduce a passive lane obstacle before any live contest."
+      ],
+      "practiceSafety": "Apply the shared safety notice. Keep separate working spaces and use only pool-approved markers; the coach teaches legal stick use before adding opposition.",
+      "related": [
+        "passing-receiving",
+        "small-sided-games",
+        "equipment-fit"
+      ],
+      "sourceNotes": [
+        {
+          "sourceId": "chicago-drills",
+          "url": "https://www.chicagounderwaterhockey.us/drills/",
+          "supports": "Lists puck-handling tutorial families, including changes of direction and figure patterns.",
+          "notClaimed": "The three-direction exercise and Milo example are original; embedded videos were not copied or rehosted."
+        }
+      ],
+      "authoringNote": "Original atlas teaching explanation and suggested practice design, not an official curriculum or a validated training programme. Source notes identify bounded factual support or further context; they do not attribute these original examples to the source author. A qualified underwater-hockey coach should adapt and review in-water delivery.",
+      "audience": [
+        "player",
+        "coach"
+      ],
+      "level": "Newbie",
+      "sourceIds": [
+        "chicago-drills"
+      ],
+      "diagramIds": [
+        "control-envelope"
+      ],
+      "linkedConcepts": [
+        "puck-control",
+        "first-touch",
+        "passing-lane"
+      ],
+      "safetyNoticeId": "supervised-skill-practice",
+      "checkedAt": "2026-10-02",
+      "contentType": "original-educational-lesson",
+      "instructionalWordCount": 451,
+      "estimatedReadingMinutes": 3
+    },
+    {
+      "id": "passing-receiving",
+      "title": "Make a pass usable",
+      "readerLevel": "newbie",
+      "category": "Skills",
+      "summary": "A useful pass ends with a teammate able to choose the next action. Practise delivery, readiness and the first controlled touch together.",
+      "learningObjectives": [
+        "Recognize a receiver who is ready and reachable.",
+        "Choose a delivery the receiver can control.",
+        "Evaluate the first touch rather than pass distance."
+      ],
+      "sections": [
+        {
+          "id": "passing-receiving-setup",
+          "heading": "Set up two receiving windows",
+          "paragraphs": [
+            "In a supervised club area, a coach identifies two clear receiving spaces using existing pool markings or approved flat markers. Two players use one puck. Keep other groups outside the passing corridor. Agree a visible ready signal at the surface and rehearse the arrangement there before beginning.",
+            "Start with the receiver stationary and a short, comfortable floor pass demonstrated by the coach. The receiver presents the stick where the puck is expected, watches its approach and makes a controlled first touch into reachable space. Stop if the receiving position becomes crowded."
+          ]
+        },
+        {
+          "id": "passing-receiving-choices",
+          "heading": "Choose before releasing",
+          "steps": [
+            "Look for the teammate, the clear route to them and the space beyond their receiving position. A visible teammate is not automatically an available receiver.",
+            "Match the pass to the receiver’s actual position and readiness. If they move or surface, retain control where comfortable or stop and reset; do not send a speculative puck after them.",
+            "After reception, let the receiver choose which window to use next. Discuss whether the delivery made that choice easier or required an awkward recovery."
+          ],
+          "paragraphs": []
+        },
+        {
+          "id": "passing-receiving-example",
+          "heading": "Worked example",
+          "paragraphs": [
+            "Mina is ready at the left window, but her stick faces the open central area. Jules passes gently toward that usable side. Mina controls the puck and turns toward the second window. Next attempt, Mina changes her orientation. Jules repeats the old placement and she must chase it. The lesson is to read today’s receiving picture rather than memorize a target."
+          ]
+        },
+        {
+          "id": "passing-receiving-evaluate",
+          "heading": "Coach the handover",
+          "paragraphs": [
+            "Review one completed exchange at the surface. Ask the receiver where they wanted the puck, then compare that with the passer’s intended target. Record whether the receiver controlled it, could see another option and remained comfortable. Separate an inaccurate delivery from an unclear receiving signal before changing the task."
+          ]
+        }
+      ],
+      "commonMistakes": [
+        {
+          "mistake": "Increasing power after a missed reception.",
+          "correction": "Shorten the pass and agree the receiving position first."
+        },
+        {
+          "mistake": "Treating a touched puck as a successful exchange.",
+          "correction": "Check whether the first touch left a usable next action."
+        }
+      ],
+      "progressions": [
+        "Easier: keep both receiving windows fixed and rehearse each exchange at the surface.",
+        "Harder: let the receiver choose a window before the pass, without adding speed or pressure."
+      ],
+      "practiceSafety": "The coach controls spacing and puck traffic, keeps surfacing routes clear, and applies the shared safety notice. This exercise uses controlled floor passes; raised-puck technique needs separate instruction.",
+      "related": [
+        "puck-control",
+        "team-support",
+        "read-the-strike",
+        "video-review"
+      ],
+      "sourceNotes": [
+        {
+          "sourceId": "atlantis-flick",
+          "url": "https://wiki.atlantissports.org/players/individual_fundamentals/puck_handling/passes/flicks_full_motion",
+          "supports": "The community page discusses flick technique and warns about the danger of a puck striking someone.",
+          "notClaimed": "It does not validate this floor-passing exercise, prescribe a universal technique, or establish the current rules."
+        }
+      ],
+      "authoringNote": "Original suggested teaching exercise and tactical example, not an authoritative or evidence-validated curriculum. A qualified club coach should adapt and review it.",
+      "audience": [
+        "player",
+        "coach"
+      ],
+      "level": "Newbie",
+      "sourceIds": [
+        "atlantis-flick"
+      ],
+      "diagramIds": [
+        "pass-and-move"
+      ],
+      "linkedConcepts": [
+        "first-touch",
+        "passing-lane",
+        "ready-signal"
+      ],
+      "safetyNoticeId": "supervised-skill-practice",
+      "checkedAt": "2026-10-02",
+      "contentType": "original-educational-lesson",
+      "instructionalWordCount": 415,
+      "estimatedReadingMinutes": 3
+    },
+    {
+      "id": "read-the-strike",
+      "title": "Read the first possession",
+      "readerLevel": "intermediate",
+      "category": "Tactics",
+      "summary": "Treat the opening puck encounter as an information problem. A plan should include what teammates will do when the first touch differs from expectations.",
+      "learningObjectives": [
+        "Distinguish first contact from controlled possession.",
+        "Identify an available next option after the opening encounter.",
+        "Prepare a different response when the other side has control."
+      ],
+      "sections": [
+        {
+          "id": "read-the-strike-setup",
+          "heading": "Begin after the race",
+          "paragraphs": [
+            "Use a board first, then a coach-supervised pool rehearsal. Put a puck at a comfortable practice location and assign a carrier, a nearby teammate and an observer. Rehearse the moment after first contact rather than running a head-to-head sprint. This isolates the decision without teaching start procedures or contact mechanics.",
+            "Before each attempt, the coach names one picture: your side controls the puck, the other side controls it, or ownership remains unclear. Players explain their first intended action at the surface. Treat these as practice scenarios, not official restart signals."
+          ]
+        },
+        {
+          "id": "read-the-strike-choices",
+          "heading": "Read three pieces of information",
+          "steps": [
+            "Find the puck’s actual movement. A touch that sends it away does not guarantee that your teammate can make another controlled action.",
+            "Identify who can use the next pass. Consider the teammate’s orientation and a clear route to their stick, not simply their position in the planned shape.",
+            "If the picture changes, update your job. Offer a receiving option when your side controls; locate useful recovery space when the other side controls; avoid everyone committing to the same uncertain destination."
+          ],
+          "paragraphs": []
+        },
+        {
+          "id": "read-the-strike-example",
+          "heading": "Worked example",
+          "paragraphs": [
+            "On the board, Noor expects a pass to the right after her teammate’s first touch. The coach moves the puck left and places an opponent token beside it. Noor first continues right out of habit. On the replay, she checks the new picture, names the lost connection and chooses an open recovery route toward her team’s end. The successful response is the updated decision, not winning a simulated race."
+          ]
+        },
+        {
+          "id": "read-the-strike-evaluate",
+          "heading": "Review the reason, then the result",
+          "paragraphs": [
+            "Ask each player what they believed about possession and which visual clue changed that belief. Compare answers with the observer’s account. In the pool, stop after the first meaningful choice and discuss on the surface. Praise noticing uncertainty early; a cautious reset can be better learning evidence than a lucky pass made without looking."
+          ]
+        }
+      ],
+      "commonMistakes": [
+        {
+          "mistake": "Assuming the planned first pass must happen.",
+          "correction": "Name the actual possession picture before judging the response."
+        },
+        {
+          "mistake": "Measuring the exercise by who arrives fastest.",
+          "correction": "Assess observation and the quality of the next option."
+        }
+      ],
+      "progressions": [
+        "Easier: use only two clearly different board pictures.",
+        "Harder: change one teammate’s availability after the initial picture, then explain the revised choice."
+      ],
+      "practiceSafety": "The coach separates rehearsal lanes, preserves free surfacing and applies the shared safety notice. Do not add contested sprint starts or physical engagement to this observation exercise.",
+      "related": [
+        "passing-receiving",
+        "team-support",
+        "transition",
+        "video-review"
+      ],
+      "sourceNotes": [
+        {
+          "sourceId": "atlantis-strike",
+          "url": "https://wiki.atlantissports.org/players/individual_fundamentals/moving_in_the_water/strikes/reaching_the_puck",
+          "supports": "The community page presents several post-strike choices and relates choices to teammates and space.",
+          "notClaimed": "Its tactical commentary is not authority for contact, positioning legality or restart procedure; this rehearsal is original."
+        }
+      ],
+      "authoringNote": "Original suggested teaching exercise and tactical example, not an authoritative or evidence-validated curriculum. A qualified club coach should adapt and review it.",
+      "audience": [
+        "player",
+        "coach"
+      ],
+      "level": "Intermediate",
+      "sourceIds": [
+        "atlantis-strike"
+      ],
+      "diagramIds": [
+        "strike-options"
+      ],
+      "linkedConcepts": [
+        "puck-control",
+        "turnover",
+        "support"
+      ],
+      "safetyNoticeId": "supervised-skill-practice",
+      "checkedAt": "2026-10-02",
+      "contentType": "original-educational-lesson",
+      "instructionalWordCount": 423,
+      "estimatedReadingMinutes": 3
+    },
+    {
+      "id": "team-support",
+      "title": "Offer a distinct next option",
+      "readerLevel": "newbie",
+      "category": "Teamwork",
+      "summary": "Support means making a useful action possible for the puck carrier. More teammates near the puck do not necessarily create more choices.",
+      "learningObjectives": [
+        "Recognize when two teammates offer the same option.",
+        "Adjust support to the carrier’s view and movement.",
+        "Include a surfaced teammate without pressuring their return."
+      ],
+      "sections": [
+        {
+          "id": "team-support-setup",
+          "heading": "Make an option map",
+          "paragraphs": [
+            "Start with three player tokens and a puck on a board. One token is the carrier; the other two are possible receivers. Draw an arrow for the intended direction of play. Ask the group to place the receivers so that each represents a different destination the carrier could actually reach.",
+            "Transfer the idea to a supervised open pool area with three players and one puck. Use generous spacing selected by the coach. Work cooperatively, without opponents. Pause after each exchange for a surface discussion, and allow any player to end the attempt whenever needed."
+          ]
+        },
+        {
+          "id": "team-support-choices",
+          "heading": "Test whether an option is real",
+          "steps": [
+            "Ask whether the carrier can see you and whether the puck has a clear route to your stick. Being somewhere nearby is only the beginning.",
+            "Compare your position with the other receiver. If both options require essentially the same pass, choose another comfortable space instead of shadowing your teammate.",
+            "Recheck after the carrier moves. A useful position is relative to the changing puck picture, not a permanent spot on the pool floor.",
+            "When a teammate surfaces, work with the options actually available. Stop and reset if needed. Nobody owes the exercise an immediate return underwater."
+          ],
+          "paragraphs": []
+        },
+        {
+          "id": "team-support-example",
+          "heading": "Worked example",
+          "paragraphs": [
+            "Alex carries toward the right-hand practice boundary. Bea and Cam both move ahead along that boundary, leaving Alex two names but one crowded route. On the board replay, Cam chooses a visible central receiving area. In the next attempt Alex can either continue to Bea or use Cam’s different angle. The group compares whether either option remained reachable as Alex turned."
+          ]
+        },
+        {
+          "id": "team-support-evaluate",
+          "heading": "Count useful alternatives",
+          "paragraphs": [
+            "At the surface, ask the carrier to identify the options they actually noticed. The receivers then describe what they intended to offer. If those accounts differ, change position or simplify movement before adding another player. Evaluate distinct receiving routes and comfortable control; avoid rewarding constant motion when it makes the picture harder to read."
+          ]
+        }
+      ],
+      "commonMistakes": [
+        {
+          "mistake": "Following the puck carrier into the same space.",
+          "correction": "Offer a different reachable destination."
+        },
+        {
+          "mistake": "Remaining in yesterday’s useful position.",
+          "correction": "Reassess the carrier’s view whenever play changes direction."
+        }
+      ],
+      "progressions": [
+        "Easier: place the three tokens and explain both receiving routes before moving.",
+        "Harder: let the carrier change direction once, then rebuild two distinct options."
+      ],
+      "practiceSafety": "The coach keeps crossing routes clear and applies the shared safety notice. A surfaced or resting participant is unavailable for that attempt; the exercise adapts around them.",
+      "related": [
+        "passing-receiving",
+        "formations",
+        "transition",
+        "small-sided-games"
+      ],
+      "sourceNotes": [
+        {
+          "sourceId": "atlantis-support",
+          "url": "https://wiki.atlantissports.org/en/Coaching/Level-2/Lesson-Plan-2/Level-2-Block-5",
+          "supports": "A further-reading community coaching link only; retrieved snapshots conflict, so no exact current contents are asserted.",
+          "notClaimed": "This lesson is not a paraphrase of that block, a fixed Atlantis curriculum, or a validated support drill."
+        }
+      ],
+      "authoringNote": "Original suggested teaching exercise and tactical example, not an authoritative or evidence-validated curriculum. A qualified club coach should adapt and review it.",
+      "audience": [
+        "player",
+        "coach"
+      ],
+      "level": "Newbie",
+      "sourceIds": [
+        "atlantis-support"
+      ],
+      "diagramIds": [
+        "support-triangle"
+      ],
+      "linkedConcepts": [
+        "support",
+        "passing-lane",
+        "width-and-depth"
+      ],
+      "safetyNoticeId": "supervised-skill-practice",
+      "checkedAt": "2026-10-02",
+      "contentType": "original-educational-lesson",
+      "instructionalWordCount": 427,
+      "estimatedReadingMinutes": 3
+    },
+    {
+      "id": "formations",
+      "title": "Agree what the shape means",
+      "readerLevel": "intermediate",
+      "category": "Tactics",
+      "summary": "A formation is a shared starting description. Make the notation, direction and responsibilities explicit before expecting a diagram to guide moving players.",
+      "learningObjectives": [
+        "Decode a formation using the club’s stated convention.",
+        "Describe responsibilities as the puck moves.",
+        "Compare shapes through observable trade-offs rather than rankings."
+      ],
+      "sections": [
+        {
+          "id": "formations-conventions",
+          "heading": "Label the diagram first",
+          "paragraphs": [
+            "Clubs may use different role names and numbering conventions. San Francisco’s guide counts lines from front to back: its 3-3 means three forwards and three backs, and its 2-3-1 describes two forwards, three midfielders and one back. Confirm your own club’s meaning instead of assuming those labels are universal.",
+            "On a board, draw the attacking direction, the puck and six player tokens. Label each line and explain whether left and right refer to the players’ attacking view. A formation number alone does not specify spacing, responsibilities or when a player is available."
+          ]
+        },
+        {
+          "id": "formations-setup",
+          "heading": "Run a three-picture comparison",
+          "steps": [
+            "Choose one familiar club shape. Place the puck centrally and ask each player which teammate they expect to connect with next.",
+            "Move the puck toward a side boundary. Move tokens one at a time, explaining which receiving option or recovery space each move preserves.",
+            "Change possession on the board. Ask who now provides a nearby connection and who watches space farther toward the team’s own end.",
+            "Repeat with a different agreed shape. Keep the same puck pictures so the comparison tests responsibilities rather than a more favorable scenario."
+          ],
+          "paragraphs": []
+        },
+        {
+          "id": "formations-example",
+          "heading": "Worked example",
+          "paragraphs": [
+            "A group compares two arrangements on the board. In the first, the puck carrier can identify two short receiving routes, but both distant tokens have moved toward the same side. In the second, a token stays farther across the pool, though the nearest connection becomes harder to reach. The coach asks which problem each arrangement solves and what new problem it creates. No shape wins merely by looking tidy."
+          ]
+        },
+        {
+          "id": "formations-evaluate",
+          "heading": "Ask players to explain the moving shape",
+          "paragraphs": [
+            "Invite someone other than the captain to reconstruct one picture from memory. Ask what changes if a particular teammate is unavailable. A useful shared plan produces compatible answers without requiring identical wording. Only then rehearse selected relationships cooperatively in the pool; a diagram is a communication aid, not a demand that everyone remain submerged in position."
+          ]
+        }
+      ],
+      "commonMistakes": [
+        {
+          "mistake": "Using a number without defining its direction.",
+          "correction": "Label the lines and attacking arrow before discussing roles."
+        },
+        {
+          "mistake": "Judging a shape only by its opening snapshot.",
+          "correction": "Compare the same arrangement across changing puck pictures."
+        }
+      ],
+      "progressions": [
+        "Easier: compare just two neighboring roles on the board.",
+        "Harder: remove one available player token and explain a temporary reorganization."
+      ],
+      "practiceSafety": "Cooperative pool rehearsals require coach-managed traffic and clear surface access under the shared safety notice. Position labels never justify delaying surfacing or occupying another player’s route.",
+      "related": [
+        "team-support",
+        "transition",
+        "video-review",
+        "coaching-pathways"
+      ],
+      "sourceNotes": [
+        {
+          "sourceId": "sfuwh-formations",
+          "url": "https://sfuwh.org/about-uwh/formations/",
+          "supports": "Supports the explicitly attributed front-to-back notation examples; other tactical material is club-specific.",
+          "notClaimed": "No universal terminology, superiority, physical engagement advice or legal interpretation is adopted."
+        },
+        {
+          "sourceId": "atlantis-132",
+          "url": "https://wiki.atlantissports.org/en/teams/formations/1-3-2",
+          "supports": "Further context: a community page discusses one 1-3-2 interpretation.",
+          "notClaimed": "Its role prescription and incomplete video placeholders are not reproduced or treated as a complete universal system."
+        }
+      ],
+      "authoringNote": "Original suggested teaching exercise and tactical example, not an authoritative or evidence-validated curriculum. A qualified club coach should adapt and review it.",
+      "audience": [
+        "player",
+        "coach",
+        "spectator"
+      ],
+      "level": "Intermediate",
+      "sourceIds": [
+        "sfuwh-formations",
+        "atlantis-132"
+      ],
+      "diagramIds": [
+        "formation-33",
+        "formation-321",
+        "formation-231",
+        "formation-132",
+        "formation-222"
+      ],
+      "linkedConcepts": [
+        "formation",
+        "width-and-depth",
+        "support"
+      ],
+      "safetyNoticeId": "supervised-skill-practice",
+      "checkedAt": "2026-10-02",
+      "contentType": "original-educational-lesson",
+      "instructionalWordCount": 427,
+      "estimatedReadingMinutes": 3
+    },
+    {
+      "id": "transition",
+      "title": "Change jobs when possession changes",
+      "readerLevel": "intermediate",
+      "category": "Teamwork",
+      "summary": "A turnover changes what the team needs. Practise noticing the change, choosing a useful new job and reconnecting before adding competitive pressure.",
+      "learningObjectives": [
+        "Identify an actual change of control.",
+        "Choose a new role that complements teammates.",
+        "Explain a recovery or support choice using observed space."
+      ],
+      "sections": [
+        {
+          "id": "transition-setup",
+          "heading": "Rehearse a clean change",
+          "paragraphs": [
+            "Begin on a board with two token teams, a puck and arrows showing attacking directions. Give one side clear possession. The coach then transfers the puck to a different token and asks everyone to reconsider their next action. This is an invented teaching cue, not a match restart.",
+            "For a pool version, the coach sets a spacious practice area and uses cooperative, planned changes of possession. Stop, surface and explain each new picture before another attempt. Players know in advance who will receive the puck; there is no need to practise tackles to learn the change of roles."
+          ]
+        },
+        {
+          "id": "transition-choices",
+          "heading": "Use the new picture",
+          "steps": [
+            "Confirm who can control the next puck action. If control is uncertain, describe that uncertainty instead of making the whole team act on a guess.",
+            "When your side gains control, identify a usable connection for the new carrier. Check whether moving farther ahead would leave them without a reachable teammate.",
+            "When your side loses control, look for an open recovery route and the space teammates are already covering. Avoid duplicating a teammate’s destination just because it is closest to the puck.",
+            "Update again when someone surfaces or the puck changes direction. The useful job may change before you reach your original destination."
+          ],
+          "paragraphs": []
+        },
+        {
+          "id": "transition-example",
+          "heading": "Worked example",
+          "paragraphs": [
+            "White has three tokens progressing along one side. The coach transfers the puck to Black near the middle. Two White players initially point toward that same token. On replay, each explains what their route would leave unattended. One chooses a separate recovery space toward White’s end. Black’s nearest teammate offers a short receiving option instead of immediately racing away. The group can now describe both teams’ new jobs."
+          ]
+        },
+        {
+          "id": "transition-evaluate",
+          "heading": "Compare recognition with response",
+          "paragraphs": [
+            "Ask when each player recognized the turnover and what changed their decision. The observer notes repeated destinations, lost connections and sensible resets. Review those separately: late recognition needs a simpler visual picture, while a poor role choice needs discussion of alternatives. Success means compatible decisions after the change, even if the practice sequence does not end in a goal."
+          ]
+        }
+      ],
+      "commonMistakes": [
+        {
+          "mistake": "Continuing an attacking run after the picture changes.",
+          "correction": "Locate control again and name the team’s new need."
+        },
+        {
+          "mistake": "Sending everyone toward the nearest puck position.",
+          "correction": "Compare destinations and preserve a different useful role."
+        }
+      ],
+      "progressions": [
+        "Easier: use predetermined board turnovers with no moving tokens.",
+        "Harder: add one unavailable teammate and reassess the remaining connections."
+      ],
+      "practiceSafety": "The coach selects uncluttered routes, avoids surprise physical contests and applies the shared safety notice. Planned turnovers never override someone’s need to stop or surface.",
+      "related": [
+        "read-the-strike",
+        "team-support",
+        "formations",
+        "small-sided-games"
+      ],
+      "sourceNotes": [
+        {
+          "sourceId": "atlantis-level2",
+          "url": "https://wiki.atlantissports.org/en/Coaching/Level-2/Lesson-Plan-2",
+          "supports": "The community overview links individual skills with support, decisions and game understanding.",
+          "notClaimed": "It does not establish this turnover exercise, validate its effectiveness or supply an authoritative transition system."
+        }
+      ],
+      "authoringNote": "Original suggested teaching exercise and tactical example, not an authoritative or evidence-validated curriculum. A qualified club coach should adapt and review it.",
+      "audience": [
+        "player",
+        "coach"
+      ],
+      "level": "Intermediate",
+      "sourceIds": [
+        "atlantis-level2"
+      ],
+      "diagramIds": [
+        "pressure-and-cover"
+      ],
+      "linkedConcepts": [
+        "turnover",
+        "support",
+        "puck-control"
+      ],
+      "safetyNoticeId": "supervised-skill-practice",
+      "checkedAt": "2026-10-02",
+      "contentType": "original-educational-lesson",
+      "instructionalWordCount": 447,
+      "estimatedReadingMinutes": 3
+    },
+    {
+      "id": "small-sided-games",
+      "title": "Give a small game one question",
+      "readerLevel": "intermediate",
+      "category": "Practice design",
+      "summary": "A smaller game can make a chosen decision easier to observe. Set one learning question, change one condition and discuss what actually happened.",
+      "learningObjectives": [
+        "Match a game constraint to a clear learning question.",
+        "Distinguish a tactical choice from execution quality.",
+        "Adapt the task when participation or comfort drops."
+      ],
+      "sections": [
+        {
+          "id": "small-sided-games-setup",
+          "heading": "Build a two-gate practice game",
+          "paragraphs": [
+            "With competent club supervision, select a spacious area away from other drills. Use pool markings or approved flat markers to identify two alternative target windows. Begin with two cooperative attackers and no opponent. Their task is to deliver a controlled floor pass to a ready teammate through either window.",
+            "The learning question is: did the carrier notice which route was available? Once the coach judges the group ready, add a third participant who indicates one window as unavailable without approaching or contacting anyone. The cue changes the decision; it does not create a tackling exercise. Stop and discuss each attempt at the surface."
+          ]
+        },
+        {
+          "id": "small-sided-games-choices",
+          "heading": "Make the constraint useful",
+          "steps": [
+            "Define success as choosing a clear route and controlling the reception. Explain this before play so scoring does not reward a lucky uncontrolled puck.",
+            "Let the carrier choose between passing and repositioning comfortably before the pass. Do not require a pass simply because the exercise is about passing.",
+            "Keep the cue stable during the first attempts. If players cannot see or interpret it, simplify the signal rather than increasing urgency.",
+            "Stop when a participant surfaces, the area becomes crowded or the task loses its learning purpose. Reset around the available group without penalizing a break."
+          ],
+          "paragraphs": []
+        },
+        {
+          "id": "small-sided-games-example",
+          "heading": "Worked example",
+          "paragraphs": [
+            "The left window is unavailable. Inez looks toward it, then chooses the right window, but her pass misses the receiver. The coach credits the observed choice and identifies delivery as the next question. On another attempt she completes a pass through the unavailable window. The controlled touch is useful, but it does not demonstrate reading the cue. Recording these separately prevents a single score from hiding the lesson."
+          ]
+        },
+        {
+          "id": "small-sided-games-evaluate",
+          "heading": "Change one variable",
+          "paragraphs": [
+            "At the surface, ask the carrier what they noticed and the receiver whether the delivery was usable. The observer records choice, control and comfort separately. Change only one feature next: window position, receiver movement or cue timing. If the change makes everyone rush, restore the earlier version. A different small game can later explore transitions under a coach’s locally appropriate rules."
+          ]
+        }
+      ],
+      "commonMistakes": [
+        {
+          "mistake": "Adding several constraints at once.",
+          "correction": "Retain one question and one new variable."
+        },
+        {
+          "mistake": "Rewarding only completed passes.",
+          "correction": "Review decision quality and execution as separate observations."
+        }
+      ],
+      "progressions": [
+        "Easier: point out the available window before each attempt.",
+        "Harder: let the receiver reposition while the cue remains fixed."
+      ],
+      "practiceSafety": "The coach sets group size, spacing and stop signals, and applies the shared safety notice. Markers must not obstruct surfacing or create entanglement; do not shrink space to manufacture physical pressure.",
+      "related": [
+        "puck-control",
+        "passing-receiving",
+        "team-support",
+        "transition",
+        "coaching-pathways"
+      ],
+      "sourceNotes": [
+        {
+          "sourceId": "atlantis-overloads",
+          "url": "https://wiki.atlantissports.org/en/Coaching/Level-2/Drill-Library-2/Level-2-Block-4",
+          "supports": "The community drill library includes small-sided numerical-advantage situations.",
+          "notClaimed": "This two-gate cooperative game is independently authored; the linked exercises, badges and curriculum are not reproduced or validated."
+        }
+      ],
+      "authoringNote": "Original suggested teaching exercise and tactical example, not an authoritative or evidence-validated curriculum. A qualified club coach should adapt and review it.",
+      "audience": [
+        "coach",
+        "player"
+      ],
+      "level": "Intermediate",
+      "sourceIds": [
+        "atlantis-overloads"
+      ],
+      "diagramIds": [
+        "two-versus-one"
+      ],
+      "linkedConcepts": [
+        "practice-constraint",
+        "practice-reset",
+        "first-touch"
+      ],
+      "safetyNoticeId": "supervised-skill-practice",
+      "checkedAt": "2026-10-02",
+      "contentType": "original-educational-lesson",
+      "instructionalWordCount": 448,
+      "estimatedReadingMinutes": 3
+    },
+    {
+      "id": "video-review",
+      "title": "Review one decision",
+      "readerLevel": "intermediate",
+      "category": "Match analysis",
+      "summary": "A short clip becomes useful when it answers a narrow question. Review what a player could see and choose, then turn that observation into one practice task.",
+      "learningObjectives": [
+        "Separate a visible observation from an interpretation.",
+        "Evaluate a choice without relying only on its outcome.",
+        "Create a practical next-session question."
+      ],
+      "sections": [
+        {
+          "id": "video-review-choose-question",
+          "heading": "Choose the question first",
+          "paragraphs": [
+            "“How did we play?” is too broad for a useful first review. Try “After a pass, did we offer another reachable option?” or “When possession changed, did someone cover the space behind the nearest defender?” Pick a sequence that includes the action just before the decision and what followed.",
+            "Use footage you are entitled to access. Ask the club about consent and storage before recording, sharing or publishing identifiable player clips, especially junior footage. A publicly viewable broadcast is not automatically permission to download and republish it."
+          ]
+        },
+        {
+          "id": "video-review-review-loop",
+          "heading": "A repeatable review method",
+          "paragraphs": [],
+          "steps": [
+            "Watch once at normal speed. Describe the phase and the direction of play without assigning blame.",
+            "Pause before the decision. Record visible teammates, opponents and passing lanes. Mark off-screen players and uncertain possession as unknown.",
+            "Write the chosen action and one plausible alternative. Ask whether the alternative was actually visible and available at that moment.",
+            "Watch the outcome, then find a comparable successful or unsuccessful example. Avoid building a theory from a single unusual clip.",
+            "Choose one behaviour to test in training and state how you will recognise it."
+          ]
+        },
+        {
+          "id": "video-review-example",
+          "heading": "Separate the pass from the outcome",
+          "paragraphs": [
+            "A pass reaches a teammate, but the receiver is immediately isolated. The review question is not simply whether the passer completed the pass. Look at what happened after release: did a second player move into a reachable supporting lane? Another clip may show the same pass working well because support arrived.",
+            "Conversely, a reasonable pass can fail through a poor first touch. That does not establish that the tactical choice was wrong. Keep “choice,” “execution” and “outcome” as separate notes so the practice response addresses the actual problem."
+          ]
+        },
+        {
+          "id": "video-review-record",
+          "heading": "Keep a compact record",
+          "paragraphs": [
+            "Use six fields: clip timestamp, review question, visible evidence, chosen action, uncertainty and next practice idea. For example: “Support after release; passer remained behind a closed lane; far-side player off screen; test two alternative support positions.” This is more actionable than a player rating and easier to discuss constructively."
+          ]
+        }
+      ],
+      "commonMistakes": [
+        {
+          "mistake": "Drawing arrows through an opponent or an unseen area.",
+          "correction": "Check whether the suggested lane was genuinely usable."
+        },
+        {
+          "mistake": "Watching only mistakes.",
+          "correction": "Compare examples where the same situation was handled well."
+        },
+        {
+          "mistake": "Presenting an interpretation as fact.",
+          "correction": "Label uncertainty and invite the player to explain what they saw."
+        }
+      ],
+      "progressions": [
+        "Review a single decision together.",
+        "Compare two similar situations.",
+        "Test one change in practice and review a later comparable clip."
+      ],
+      "practiceSafety": "Dryland review creates no in-water task by itself. Any resulting pool exercise needs its own coach-led setup and the shared safety notice.",
+      "related": [
+        "team-support",
+        "transition",
+        "small-sided-games"
+      ],
+      "sourceNotes": [
+        {
+          "sourceId": "ffessm-theses",
+          "url": "https://hockeysub.ffessm.fr/memoires-ef2",
+          "supports": "The federation’s coaching-project library includes video-analysis work.",
+          "notClaimed": "This review template is original and is not a reproduction or validation of a particular thesis."
+        },
+        {
+          "sourceId": "ffessm-video",
+          "url": "https://hockeysub.ffessm.fr/direct-video",
+          "supports": "An official route to competition video publishers.",
+          "notClaimed": "No specific clip has been cleared for copying, public republication or player assessment."
+        }
+      ],
+      "authoringNote": "Original atlas teaching explanation and suggested practice design, not an official curriculum or a validated training programme. Source notes identify bounded factual support or further context; they do not attribute these original examples to the source author. A qualified underwater-hockey coach should adapt and review in-water delivery.",
+      "audience": [
+        "coach",
+        "player",
+        "spectator"
+      ],
+      "level": "Intermediate",
+      "sourceIds": [
+        "ffessm-theses",
+        "ffessm-video"
+      ],
+      "diagramIds": [
+        "review-timeline"
+      ],
+      "linkedConcepts": [
+        "visible-evidence",
+        "passing-lane",
+        "support"
+      ],
+      "safetyNoticeId": "supervised-skill-practice",
+      "checkedAt": "2026-10-02",
+      "contentType": "original-educational-lesson",
+      "instructionalWordCount": 448,
+      "estimatedReadingMinutes": 3
+    },
+    {
+      "id": "equipment-fit",
+      "title": "Fit the whole kit",
+      "readerLevel": "newbie",
+      "category": "Equipment",
+      "summary": "Choose equipment as a working system. A comfortable item may become awkward when combined with a cap, mouth protection, glove or another part of the setup.",
+      "learningObjectives": [
+        "Describe a fit problem precisely.",
+        "Compare one equipment change at a time.",
+        "Separate personal preference from competition approval."
+      ],
+      "sections": [
+        {
+          "id": "equipment-fit-whole-system",
+          "heading": "Start with borrowing and fitting",
+          "paragraphs": [
+            "Ask the club which items it can lend and which personal items it expects you to provide. Try the complete setup with a knowledgeable coach before deciding what to buy. This avoids spending money to solve the wrong problem: a slipping mask, for example, may need a fitting review rather than a more expensive replacement.",
+            "Equipment categories commonly include a mask, snorkel and mouth protection, fins, cap with ear protection, glove and stick. The actual equipment must meet the applicable rules and event requirements. A seller’s description or another player’s recommendation does not establish compliance."
+          ]
+        },
+        {
+          "id": "equipment-fit-fit-check",
+          "heading": "A practical fitting conversation",
+          "paragraphs": [],
+          "bullets": [
+            "Mask and headgear: explain whether the view is clear, the mask shifts, or a strap presses uncomfortably. Have the coach check how the cap, ear protection and straps sit together.",
+            "Snorkel and mouth protection: check the intended combined arrangement with the coach and manufacturer’s instructions. Report any interference or discomfort rather than improvising an alteration.",
+            "Fins: describe where the foot pocket presses or slips. Compare comfort and control during a coach-approved trial; do not assume a stiffer or longer blade is automatically an upgrade.",
+            "Glove and stick: check that the glove allows a secure grip with the selected handedness and handle shape. Tell the coach if the combination changes the way you can hold the stick."
+          ]
+        },
+        {
+          "id": "equipment-fit-comparison",
+          "heading": "Compare fairly",
+          "paragraphs": [
+            "Keep a small trial note with the item, size, what changed and what remained difficult. Change one component where possible. If you change fins, mask and stick simultaneously, you will struggle to identify why the session felt different.",
+            "For example, Noor dislikes a borrowed stick because she repeatedly adjusts her hand. A second stick feels better, but the coach also notices the loan glove is oversized. Comparing both sticks with a properly fitted glove gives a more useful basis for choosing. This is a decision method, not a diagnosis of all grip problems."
+          ]
+        },
+        {
+          "id": "equipment-fit-buying",
+          "heading": "Before paying",
+          "paragraphs": [
+            "Confirm size, handedness where relevant, included parts, delivery destination, full delivered cost and return restrictions. Check replacement-part availability. Before competition, ask which rule edition applies and how equipment inspection is handled; personal comfort and official acceptance answer different questions."
+          ]
+        }
+      ],
+      "commonMistakes": [
+        {
+          "mistake": "Buying the most advanced-looking option first.",
+          "correction": "Use a trial to identify the function or fit problem you need to solve."
+        },
+        {
+          "mistake": "Treating pain or numbness as normal breaking-in.",
+          "correction": "Stop using the uncomfortable setup and seek appropriate assessment."
+        },
+        {
+          "mistake": "Assuming a club loan item is automatically competition-approved.",
+          "correction": "Check its condition and applicable event requirements."
+        }
+      ],
+      "progressions": [
+        "Begin with supervised loan-kit fitting.",
+        "Record one controlled comparison.",
+        "Build a personal kit list with care instructions and rule-check dates."
+      ],
+      "practiceSafety": "Apply the shared safety notice during trials. Damaged, uncomfortable or uncertain equipment should be assessed before play; this checklist is not a protective-equipment certification.",
+      "related": [
+        "equipment-care",
+        "diy-boundaries",
+        "start-with-a-club"
+      ],
+      "sourceNotes": [
+        {
+          "sourceId": "canam",
+          "url": "https://www.canamuwhgear.com/",
+          "supports": "Current storefront illustrates the main specialist equipment categories.",
+          "notClaimed": "No price, stock, shipping, product-superiority or safety certification claim is made."
+        },
+        {
+          "sourceId": "breier",
+          "url": "https://www.breier-sports.com/en/12-underwater-hockey-uwh-fins",
+          "supports": "Manufacturer offers different fin lengths, constructions and foot-pocket options.",
+          "notClaimed": "Commercial performance claims are not adopted as independent evidence or individual fitting advice."
+        },
+        {
+          "sourceId": "cmas-regulations",
+          "url": "https://www.cmas.org/hockey/how-to-regulations.html",
+          "supports": "Official entry point for applicable rule and equipment documents.",
+          "notClaimed": "This chapter does not reproduce technical specifications or approve a particular product."
+        }
+      ],
+      "authoringNote": "Original atlas teaching explanation and suggested practice design, not an official curriculum or a validated training programme. Source notes identify bounded factual support or further context; they do not attribute these original examples to the source author. A qualified underwater-hockey coach should adapt and review in-water delivery.",
+      "audience": [
+        "new player",
+        "player",
+        "club"
+      ],
+      "level": "Newbie",
+      "sourceIds": [
+        "canam",
+        "breier",
+        "cmas-regulations"
+      ],
+      "diagramIds": [
+        "gear-system"
+      ],
+      "linkedConcepts": [
+        "equipment-system",
+        "source-version"
+      ],
+      "safetyNoticeId": "supervised-skill-practice",
+      "checkedAt": "2026-10-02",
+      "contentType": "original-educational-lesson",
+      "instructionalWordCount": 482,
+      "estimatedReadingMinutes": 3
+    },
+    {
+      "id": "equipment-care",
+      "title": "Make kit inspection routine",
+      "readerLevel": "newbie",
+      "category": "Equipment",
+      "summary": "A consistent inspection and storage routine makes faults visible before equipment reaches the pool. Clubs also need a clear way to keep a suspect item out of circulation.",
+      "learningObjectives": [
+        "Inspect equipment without treating a quick check as certification.",
+        "Record and isolate a fault.",
+        "Follow item-specific cleaning and repair instructions."
+      ],
+      "sections": [
+        {
+          "id": "equipment-care-before-use",
+          "heading": "Check condition before fit",
+          "paragraphs": [
+            "Lay out the equipment so each item can be seen. Look for a change from its normal condition: a cracked or damaged surface, loose fitting, torn strap, exposed edge, displaced padding or a part that no longer stays in place. Then check how the complete setup fits. A comfortable fit cannot compensate for a damaged component.",
+            "Do not rely on a player remembering to mention a problem during a busy session. Give club equipment a simple identifier, using only a marking method approved for that item. The identifier should let someone describe the exact item without posting a player’s personal information."
+          ]
+        },
+        {
+          "id": "equipment-care-fault-path",
+          "heading": "Use a simple fault pathway",
+          "paragraphs": [],
+          "steps": [
+            "When a defect or uncertainty is found, set the item aside so it cannot be mistaken for ready-to-use kit.",
+            "Record the item identifier, date and observable fault. “Strap slips from buckle” is more useful than “mask bad.”",
+            "Ask the appropriate club equipment lead or manufacturer to decide whether inspection, approved repair or replacement is needed.",
+            "Return it to the ready area only after the responsible person records what was done and confirms it is suitable for the intended use."
+          ]
+        },
+        {
+          "id": "equipment-care-after-use",
+          "heading": "Clean and store by material",
+          "paragraphs": [
+            "Follow the manufacturer’s instructions for rinsing, cleaning, drying and storage. Different materials and components may need different treatment; an adhesive, solvent, heat source or disinfectant that suits one item may be unsuitable for another. Shared mouth-contact equipment needs the club’s hygiene procedure, not just an informal rinse.",
+            "Store ready, drying and awaiting-assessment items separately. Avoid packing a wet collection into a sealed bag and assuming somebody else will sort it later. A named end-of-session equipment role helps the routine survive when the usual organiser is absent."
+          ]
+        },
+        {
+          "id": "equipment-care-example",
+          "heading": "Close the loop on a small fault",
+          "paragraphs": [
+            "Glove G07 has lifting padding. The useful action is to remove it from the loan basket, record the location of the separation and obtain an assessment. Simply putting it at the bottom of the basket postpones the decision to the next unsuspecting player. A log is valuable because it changes what happens next, not because it is elaborate."
+          ]
+        }
+      ],
+      "commonMistakes": [
+        {
+          "mistake": "Using a temporary fix indefinitely.",
+          "correction": "Follow the approved repair route and record who cleared the item."
+        },
+        {
+          "mistake": "Keeping every item in the same bag.",
+          "correction": "Separate ready kit from drying or suspect equipment."
+        },
+        {
+          "mistake": "Copying a cleaning recipe between materials.",
+          "correction": "Use instructions for the actual product and component."
+        }
+      ],
+      "progressions": [
+        "Inspect your own kit before and after each use.",
+        "Add identifiers and a fault log for loan equipment.",
+        "Review repeated faults to improve purchasing and storage decisions."
+      ],
+      "practiceSafety": "Equipment work should follow manufacturer and club procedures. Keep sharp or suspect items out of player handling; apply the shared safety notice for any in-water check.",
+      "related": [
+        "equipment-fit",
+        "diy-boundaries",
+        "coaching-pathways"
+      ],
+      "sourceNotes": [
+        {
+          "sourceId": "moresport",
+          "url": "https://uwhstore.more-sport.com/en/articles/11-glove-for-underwater-hockey.html",
+          "supports": "The glove product page includes manufacturer-specific care advice.",
+          "notClaimed": "This original club inspection workflow is not the manufacturer’s protocol and does not extend its advice to other products."
+        }
+      ],
+      "authoringNote": "Original atlas teaching explanation and suggested practice design, not an official curriculum or a validated training programme. Source notes identify bounded factual support or further context; they do not attribute these original examples to the source author. A qualified underwater-hockey coach should adapt and review in-water delivery.",
+      "audience": [
+        "player",
+        "club"
+      ],
+      "level": "Newbie",
+      "sourceIds": [
+        "moresport"
+      ],
+      "diagramIds": [
+        "gear-inspection-loop"
+      ],
+      "linkedConcepts": [
+        "equipment-system"
+      ],
+      "safetyNoticeId": "supervised-skill-practice",
+      "checkedAt": "2026-10-02",
+      "contentType": "original-educational-lesson",
+      "instructionalWordCount": 470,
+      "estimatedReadingMinutes": 3
+    },
+    {
+      "id": "diy-boundaries",
+      "title": "Plan a safe DIY project",
+      "readerLevel": "intermediate",
+      "category": "Equipment",
+      "summary": "A useful DIY project begins with its failure consequences. Storage aids and tactics boards are different problems from protective equipment or pool infrastructure.",
+      "learningObjectives": [
+        "Separate an organisational aid from safety-critical playing equipment.",
+        "Define review and acceptance before construction.",
+        "Recognise when a specialist is needed."
+      ],
+      "sections": [
+        {
+          "id": "diy-boundaries-scope",
+          "heading": "Start with the job, not the material",
+          "paragraphs": [
+            "Write down what the proposed item should do, who will use it and where. “Keep dry sticks organised in the club cupboard” is a bounded project. “Make a cheaper protective glove” introduces questions about impact protection, skin contact, durability, grip and rules. Similar-looking objects can have very different consequences when they fail.",
+            "For a first project, choose an organisational aid outside the pool, such as labelled storage compartments or a dryland tactics board. Even these should be placed and finished so they do not create sharp edges, trip hazards or confusion about ready-to-use equipment."
+          ]
+        },
+        {
+          "id": "diy-boundaries-gates",
+          "heading": "Use four decision gates",
+          "paragraphs": [],
+          "steps": [
+            "Purpose: name the problem and the observable result you want. Ask whether an existing approved item already solves it.",
+            "Failure: list who could be harmed, what could break or detach, and whether the item contacts skin, players or pool surfaces.",
+            "Authority: identify the manufacturer guidance, club reviewer, pool operator or qualified specialist whose approval is needed. Check applicable equipment rules before committing to a design.",
+            "Acceptance: agree who inspects the finished item, how defects are recorded, and what removes it from use. A successful first trial does not establish long-term suitability."
+          ]
+        },
+        {
+          "id": "diy-boundaries-example",
+          "heading": "A low-risk project with a clear finish",
+          "paragraphs": [
+            "A club repeatedly mixes left- and right-handed loan sticks. It makes labelled cupboard dividers and photographs the intended storage arrangement. The acceptance check is straightforward: members can find the correct section, sticks are not damaged by storage, and suspect items remain in a separate area. No claim about playing performance is needed.",
+            "By contrast, altering a stick’s shape or adding glove padding changes playing equipment. Discuss it with an experienced maker and the relevant reviewer first. Do not infer skin suitability or protective performance from a historical tutorial or a material’s popularity."
+          ]
+        },
+        {
+          "id": "diy-boundaries-specialists",
+          "heading": "Know the boundary",
+          "paragraphs": [
+            "This lesson intentionally gives no recipes for protective compounds, lead casting, underwater electrical systems or structural goals. These require material, electrical, structural, health or pool-operation expertise beyond a wiki checklist. Refer the project to qualified specialists and the pool operator instead of treating successful home construction as permission to use it."
+          ]
+        }
+      ],
+      "commonMistakes": [
+        {
+          "mistake": "Building first and checking legality afterwards.",
+          "correction": "Confirm the relevant constraints before buying materials."
+        },
+        {
+          "mistake": "Assuming homemade means repairable indefinitely.",
+          "correction": "Set explicit inspection and retirement criteria with the responsible reviewer."
+        },
+        {
+          "mistake": "Copying an old tutorial’s materials without checking them.",
+          "correction": "Use current manufacturer instructions and appropriate specialist advice."
+        }
+      ],
+      "progressions": [
+        "Begin with a dry storage or teaching aid.",
+        "Document purpose, failure risks and acceptance.",
+        "Only consider playing equipment under competent, item-specific review."
+      ],
+      "practiceSafety": "Keep workshop work separate from play. Follow applicable tool and material precautions; no homemade item is certified by this article or by a successful informal trial.",
+      "related": [
+        "equipment-fit",
+        "equipment-care",
+        "library-navigation"
+      ],
+      "sourceNotes": [
+        {
+          "sourceId": "stirling-diy",
+          "url": "https://suhc.wordpress.com/stirling-underwater-hockey-club-faq/",
+          "supports": "Club FAQ documents a tradition of homemade equipment.",
+          "notClaimed": "That history does not establish material safety or endorse this original decision-gate method."
+        },
+        {
+          "sourceId": "cmas-regulations",
+          "url": "https://www.cmas.org/hockey/how-to-regulations.html",
+          "supports": "Rules and equipment guidance are located through the international authority.",
+          "notClaimed": "No DIY design is represented as meeting a rule edition or event inspection."
+        }
+      ],
+      "authoringNote": "Original atlas teaching explanation and suggested practice design, not an official curriculum or a validated training programme. Source notes identify bounded factual support or further context; they do not attribute these original examples to the source author. A qualified underwater-hockey coach should adapt and review in-water delivery.",
+      "audience": [
+        "club",
+        "experienced player"
+      ],
+      "level": "Intermediate",
+      "sourceIds": [
+        "stirling-diy",
+        "cmas-regulations"
+      ],
+      "diagramIds": [
+        "diy-decision-tree"
+      ],
+      "linkedConcepts": [
+        "equipment-system",
+        "source-version"
+      ],
+      "safetyNoticeId": "supervised-skill-practice",
+      "checkedAt": "2026-10-02",
+      "contentType": "original-educational-lesson",
+      "instructionalWordCount": 463,
+      "estimatedReadingMinutes": 3
+    },
+    {
+      "id": "coaching-pathways",
+      "title": "Coach one useful change",
+      "readerLevel": "intermediate",
+      "category": "Coaching",
+      "summary": "Good session design connects a specific observation to a manageable task. Formal coaching qualification and a readable lesson serve different purposes.",
+      "learningObjectives": [
+        "Write an observable learning objective.",
+        "Adapt one task without changing every variable.",
+        "Use feedback that helps the next attempt."
+      ],
+      "sections": [
+        {
+          "id": "coaching-pathways-responsibilities",
+          "heading": "Know your responsibilities",
+          "paragraphs": [
+            "Start with the coaching pathway and participation requirements recognised by your federation and club. A foreign course, online lesson or experienced playing background does not automatically establish local authorisation. For example, the British Octopush Association describes a Club Coaching Level 1 pathway with written and practical assessment; other systems have their own requirements.",
+            "Before a session, confirm who leads delivery, who provides supervision, how the emergency plan is implemented and where welfare concerns are raised. Those responsibilities should remain clear when a helper takes one group aside. A technical drill sheet is not a substitute for them."
+          ]
+        },
+        {
+          "id": "coaching-pathways-design",
+          "heading": "Build the session around one observation",
+          "paragraphs": [
+            "Use an objective a player can recognise: “After releasing a pass, offer another reachable option.” Avoid a vague aim such as “improve teamwork.” Demonstrate the starting picture and the intended behaviour, then let players explain the problem in their own words."
+          ],
+          "steps": [
+            "Choose a simple starting task that exposes the decision. Use a dryland explanation before the pool where helpful.",
+            "Observe the intended behaviour, not only the score. Note what the learner actually did.",
+            "Ask one short question, such as “Which space could your teammate still reach?” Listen before adding a correction.",
+            "Change one variable: space, available passing options or opponent pressure. Repeat the task only while it remains appropriate for the group.",
+            "Finish with a player explanation and one next step. Record the adjustment that helped."
+          ]
+        },
+        {
+          "id": "coaching-pathways-example",
+          "heading": "Make feedback specific",
+          "paragraphs": [
+            "A coach sees Sam complete a pass and stop moving. “Work harder” gives Sam little information. “After your pass, find a lane the receiver can use” names the next action. If Sam still struggles, replay the situation on a board with two possible support positions and discuss which is reachable.",
+            "If the entire group fails, first question the task: were the instructions clear, the space workable and the challenge appropriate? Repeating the same explanation more loudly is unlikely to reveal what players misunderstood."
+          ]
+        },
+        {
+          "id": "coaching-pathways-equity",
+          "heading": "Make the task accessible",
+          "paragraphs": [
+            "Ask about communication and access needs without requiring public disclosure of private health information. Offer a demonstration, a plain-language explanation and a chance to ask questions. Make expectations and selection decisions transparent. Praise useful decisions and constructive communication rather than tolerating discomfort or extending submersion."
+          ]
+        }
+      ],
+      "commonMistakes": [
+        {
+          "mistake": "Correcting several things at once.",
+          "correction": "Choose the one change most relevant to the objective."
+        },
+        {
+          "mistake": "Using a successful score as the only evidence.",
+          "correction": "Check whether the intended behaviour actually occurred."
+        },
+        {
+          "mistake": "Treating a qualification as the end of learning.",
+          "correction": "Seek observed feedback, reflect and verify current local requirements."
+        }
+      ],
+      "progressions": [
+        "Assist a qualified session leader with one bounded task.",
+        "Plan and review one complete learning activity.",
+        "Pursue the applicable assessed pathway and continuing development."
+      ],
+      "practiceSafety": "Pool delivery requires the club’s competent supervision, emergency arrangements and shared safety notice. A suggested lesson does not authorise independent coaching.",
+      "related": [
+        "small-sided-games",
+        "video-review",
+        "start-with-a-club"
+      ],
+      "sourceNotes": [
+        {
+          "sourceId": "boa-coaching",
+          "url": "https://www.gbuwh.co.uk/page/coaching",
+          "supports": "BOA describes a Club Coaching Level 1 course with written and practical assessment.",
+          "notClaimed": "This original teaching workflow is not its course content or a claim of qualification equivalence."
+        },
+        {
+          "sourceId": "boa-welfare",
+          "url": "https://www.gbuwh.co.uk/page/safeguarding-welfare",
+          "supports": "BOA provides jurisdiction-specific welfare, risk-assessment and conduct resources.",
+          "notClaimed": "Their detailed provisions are not rewritten as universal rules."
+        }
+      ],
+      "authoringNote": "Original atlas teaching explanation and suggested practice design, not an official curriculum or a validated training programme. Source notes identify bounded factual support or further context; they do not attribute these original examples to the source author. A qualified underwater-hockey coach should adapt and review in-water delivery.",
+      "audience": [
+        "coach",
+        "club"
+      ],
+      "level": "Intermediate",
+      "sourceIds": [
+        "boa-coaching",
+        "boa-welfare"
+      ],
+      "diagramIds": [
+        "coach-learning-loop"
+      ],
+      "linkedConcepts": [
+        "practice-constraint",
+        "visible-evidence",
+        "practice-reset"
+      ],
+      "safetyNoticeId": "supervised-skill-practice",
+      "checkedAt": "2026-10-02",
+      "contentType": "original-educational-lesson",
+      "instructionalWordCount": 482,
+      "estimatedReadingMinutes": 3
+    },
+    {
+      "id": "library-navigation",
+      "title": "Check a source before using it",
+      "readerLevel": "newbie",
+      "category": "Research literacy",
+      "summary": "The right source depends on the question. An official rule, a club lesson, a research paper and a shop page can all be useful without having the same authority.",
+      "learningObjectives": [
+        "Match a question to the right source type.",
+        "Check publication date separately from a recent page visit.",
+        "Use an old resource without silently treating it as current."
+      ],
+      "sections": [
+        {
+          "id": "library-navigation-source-types",
+          "heading": "Ask what the source can establish",
+          "paragraphs": [],
+          "bullets": [
+            "Official rules and event documents answer what is required in a specified competition. Check the governing authority, edition and any event-specific notices.",
+            "Federation education explains a pathway or teaching approach in its own system. It may not establish local coaching permission elsewhere.",
+            "Club lessons and coaching opinions offer ideas to try with appropriate supervision. They are not proof that one tactic is universally best.",
+            "Research addresses the question studied with the methods and participants reported. A measured average is not automatically a training prescription.",
+            "Commercial pages identify a seller’s products and claims. They do not independently establish superiority, personal fit or event acceptance."
+          ]
+        },
+        {
+          "id": "library-navigation-version-check",
+          "heading": "Make a small evidence record",
+          "paragraphs": [
+            "For a claim you intend to use, record the source title, organisation, document date or version, jurisdiction, access status and date checked. Keep an uncertainty field. “Listed by the federation; download unavailable” is a valid result, but it is different from reading the document itself.",
+            "The CMAS hub checked on 2 October 2026 lists Rules of Play labelled February 2025. That is a dated finding, not a promise that every future event uses that edition. A later crawl or a newly uploaded copy does not by itself establish revised rules."
+          ]
+        },
+        {
+          "id": "library-navigation-example",
+          "heading": "Resolve a conflict by question",
+          "paragraphs": [
+            "Imagine a familiar coaching handout, a current event bulletin and a retailer disagree about equipment. First ask whether the dispute concerns comfort, legality or availability. Use the event’s applicable official requirements for legality, a fitting conversation for comfort, and the seller’s current information for stock. Counting how many pages repeat a claim does not resolve the difference.",
+            "An older lesson can still be useful for discussing a passing decision. Keep the date visible, check any rule-dependent elements and remove outdated health advice. You do not have to adopt every recommendation in a source to learn from one bounded idea."
+          ]
+        },
+        {
+          "id": "library-navigation-reuse",
+          "heading": "Respect the source and the reader",
+          "paragraphs": [
+            "Write your own explanation and link the supporting material. Do not paste a manual, diagram or paid lesson into a repository just because it can be viewed online. Label original suggested exercises as original. Readers should understand the lesson locally and use citations to inspect evidence or explore further, rather than needing to leave the page to discover what the lesson means."
+          ]
+        }
+      ],
+      "commonMistakes": [
+        {
+          "mistake": "Calling a failed download “reviewed.”",
+          "correction": "Report the actual access status and avoid claims about unseen contents."
+        },
+        {
+          "mistake": "Mistaking popularity for authority.",
+          "correction": "Match authority to the exact question."
+        },
+        {
+          "mistake": "Treating a new check date as a new edition.",
+          "correction": "Record both fields separately."
+        }
+      ],
+      "progressions": [
+        "Classify one resource by purpose and authority.",
+        "Compare two sources that appear to disagree.",
+        "Maintain a dated evidence note for a rule-dependent claim."
+      ],
+      "practiceSafety": "This is a dryland information skill. Before using a resource in the pool, apply the shared safety notice and have a qualified coach review the proposed activity.",
+      "related": [
+        "coaching-pathways",
+        "equipment-fit",
+        "video-review"
+      ],
+      "sourceNotes": [
+        {
+          "sourceId": "cmas-regulations",
+          "url": "https://www.cmas.org/hockey/how-to-regulations.html",
+          "supports": "As checked on 2 October 2026, the hub lists Rules of Play labelled February 2025.",
+          "notClaimed": "No conclusion about every domestic competition or future edition is implied."
+        },
+        {
+          "sourceId": "boa-coaching",
+          "url": "https://www.gbuwh.co.uk/page/coaching",
+          "supports": "Provides a concrete example of federation-specific coaching education.",
+          "notClaimed": "Its qualification is not portrayed as universal authorisation."
+        }
+      ],
+      "authoringNote": "Original atlas teaching explanation and suggested practice design, not an official curriculum or a validated training programme. Source notes identify bounded factual support or further context; they do not attribute these original examples to the source author. A qualified underwater-hockey coach should adapt and review in-water delivery.",
+      "audience": [
+        "everyone"
+      ],
+      "level": "Newbie",
+      "sourceIds": [
+        "cmas-regulations",
+        "boa-coaching"
+      ],
+      "diagramIds": [
+        "source-confidence"
+      ],
+      "linkedConcepts": [
+        "source-version",
+        "visible-evidence"
+      ],
+      "safetyNoticeId": "supervised-skill-practice",
+      "checkedAt": "2026-10-02",
+      "contentType": "original-educational-lesson",
+      "instructionalWordCount": 499,
+      "estimatedReadingMinutes": 3
+    }
+  ],
+  "sources": [
+    {
+      "id": "ais-breathhold",
+      "title": "Breath Hold Training: Position Statement",
+      "url": "https://auf.com.au/wp-content/uploads/2024/12/AIS-Breath-Hold-Training-Position-Statement-October-2020.pdf",
+      "authority": "Australian Institute of Sport / Victorian Institute of Sport; UHA mirror",
+      "versionOrDate": "October 2020 position statement; 6-page AUF-hosted copy inspected",
+      "checkedAt": "2026-10-02",
+      "verificationStatus": "Publisher page or document body opened in expansion check on 2026-10-02",
+      "limitations": "AUF mirror opened in this expansion check. UHA mirror could not be fetched in this pass. Guidance supports general safety boundaries, not a personal clearance or breath-hold prescription.",
+      "reuse": "Linked for evidence or optional further reading; no third-party text, media or diagrams included.",
+      "alternateUrl": "https://underwaterhockeyaustralia.org.au/assets/documents/policies/Breath-Hold-Training-Position-Statement.pdf"
+    },
+    {
+      "id": "atlantis-132",
+      "title": "Atlantis 1-3-2 formation",
+      "url": "https://wiki.atlantissports.org/en/teams/formations/1-3-2",
+      "authority": "Community / publisher",
+      "versionOrDate": null,
+      "checkedAt": "2026-10-02",
+      "verificationStatus": "indexed text; direct cache miss",
+      "limitations": "Page has two variant headings and unfinished video slots. Do not imply those videos exist. Role names vary by country and club.",
+      "reuse": "Linked for evidence or optional further reading; no third-party text, media or diagrams included."
+    },
+    {
+      "id": "atlantis-beginners",
+      "title": "Atlantis beginner classes",
+      "url": "https://wiki.atlantissports.org/en/club-organization/recruitment/beginner-classes",
+      "authority": "Community / publisher",
+      "versionOrDate": "2024-04-27",
+      "checkedAt": "2026-10-02",
+      "verificationStatus": "Publisher page or document body opened in expansion check on 2026-10-02",
+      "limitations": "Simplified rule statements are educational, not authoritative; combine with safeguarding and supervision guidance.",
+      "reuse": "Linked for evidence or optional further reading; no third-party text, media or diagrams included."
+    },
+    {
+      "id": "atlantis-flick",
+      "title": "Atlantis flick: full motion",
+      "url": "https://wiki.atlantissports.org/players/individual_fundamentals/puck_handling/passes/flicks_full_motion",
+      "authority": "Community / publisher",
+      "versionOrDate": "2026-01-27",
+      "checkedAt": "2026-10-02",
+      "verificationStatus": "opened; text inspected",
+      "limitations": "Link the original lesson. Do not reproduce the motion prescription as universally correct or flick toward another player's head.",
+      "reuse": "Linked for evidence or optional further reading; no third-party text, media or diagrams included."
+    },
+    {
+      "id": "atlantis-level2",
+      "title": "Atlantis Level 2 lesson plan",
+      "url": "https://wiki.atlantissports.org/en/Coaching/Level-2/Lesson-Plan-2",
+      "authority": "Community / publisher",
+      "versionOrDate": null,
+      "checkedAt": "2026-10-02",
+      "verificationStatus": "opened blank; indexed text",
+      "limitations": "Opened with no extracted text; full text available in search. Relative edit date was shown; do not invent an exact publication date.",
+      "reuse": "Linked for evidence or optional further reading; no third-party text, media or diagrams included."
+    },
+    {
+      "id": "atlantis-overloads",
+      "title": "Atlantis attacking fundamentals",
+      "url": "https://wiki.atlantissports.org/en/Coaching/Level-2/Drill-Library-2/Level-2-Block-4",
+      "authority": "Community / publisher",
+      "versionOrDate": "2026-04-14",
+      "checkedAt": "2026-10-02",
+      "verificationStatus": "Publisher indexed text inspected; direct page extract empty in expansion check",
+      "limitations": "Do not copy its badge structure or drill wording; create a distinct original exercise card with attribution.",
+      "reuse": "Linked for evidence or optional further reading; no third-party text, media or diagrams included."
+    },
+    {
+      "id": "atlantis-strike",
+      "title": "Atlantis: reaching the puck",
+      "url": "https://wiki.atlantissports.org/players/individual_fundamentals/moving_in_the_water/strikes/reaching_the_puck",
+      "authority": "Community / publisher",
+      "versionOrDate": null,
+      "checkedAt": "2026-10-02",
+      "verificationStatus": "Publisher indexed text inspected; direct page extract empty in expansion check",
+      "limitations": "The commentary is tactical. Check legal positioning and physical engagement against the current official rules.",
+      "reuse": "Linked for evidence or optional further reading; no third-party text, media or diagrams included."
+    },
+    {
+      "id": "atlantis-support",
+      "title": "Atlantis Level 2 Block 5 (version conflict)",
+      "url": "https://wiki.atlantissports.org/en/Coaching/Level-2/Lesson-Plan-2/Level-2-Block-5",
+      "authority": "Community / publisher",
+      "versionOrDate": null,
+      "checkedAt": "2026-10-02",
+      "verificationStatus": "Conflicting direct and indexed snapshots remain unresolved; context link only",
+      "limitations": "Search-indexed snapshot says Support & Connection, edited 14 April 2026. Direct-open snapshot says Formation Under Pressure (2-3-1), with no document date. Current exact revision is unresolved. Use as a linked coaching resource, not a fixed curriculum or quoted authoritative passage.",
+      "reuse": "Linked for evidence or optional further reading; no third-party text, media or diagrams included."
+    },
+    {
+      "id": "boa-coaching",
+      "title": "British Octopush Association coaching scheme",
+      "url": "https://www.gbuwh.co.uk/page/coaching",
+      "authority": "Federation",
+      "versionOrDate": "2024-06-09",
+      "checkedAt": "2026-10-02",
+      "verificationStatus": "Publisher page or document body opened in expansion check on 2026-10-02",
+      "limitations": "Page updated 9 June 2024. Modules cover coaching, welfare, fitness, technique, planning, and practical delivery; verify next-course availability.",
+      "reuse": "Linked for evidence or optional further reading; no third-party text, media or diagrams included."
+    },
+    {
+      "id": "boa-welfare",
+      "title": "BOA Safeguarding and Welfare",
+      "url": "https://www.gbuwh.co.uk/page/safeguarding-welfare",
+      "authority": "British Octopush Association",
+      "versionOrDate": "Page updated 19 May 2026",
+      "checkedAt": "2026-10-02",
+      "verificationStatus": "Publisher page or document body opened in expansion check on 2026-10-02",
+      "limitations": "Jurisdiction-specific membership/medical requirements; seek professional assessment for individual medical questions.",
+      "reuse": "Linked for evidence or optional further reading; no third-party text, media or diagrams included."
+    },
+    {
+      "id": "breier",
+      "title": "Breier underwater-hockey fins",
+      "url": "https://www.breier-sports.com/en/12-underwater-hockey-uwh-fins",
+      "authority": "Commercial vendor",
+      "versionOrDate": null,
+      "checkedAt": "2026-10-02",
+      "verificationStatus": "Publisher page or document body opened in expansion check on 2026-10-02",
+      "limitations": "Treat performance claims as commercial claims. Fit and comfort matter; an expensive or stiffer fin is not automatically right for a beginner.",
+      "reuse": "Linked for evidence or optional further reading; no third-party text, media or diagrams included."
+    },
+    {
+      "id": "canam",
+      "title": "CanAm Underwater Hockey Gear",
+      "url": "https://www.canamuwhgear.com/",
+      "authority": "Commercial vendor",
+      "versionOrDate": null,
+      "checkedAt": "2026-10-02",
+      "verificationStatus": "Publisher page or document body opened in expansion check on 2026-10-02",
+      "limitations": "Primary storefront loaded. Confirm current shipping destination, stock, taxes, currency, and return terms before buying.",
+      "reuse": "Linked for evidence or optional further reading; no third-party text, media or diagrams included."
+    },
+    {
+      "id": "chicago-drills",
+      "title": "Chicago underwater hockey drill library",
+      "url": "https://www.chicagounderwaterhockey.us/drills/",
+      "authority": "Club",
+      "versionOrDate": null,
+      "checkedAt": "2026-10-02",
+      "verificationStatus": "Publisher page or document body opened in expansion check on 2026-10-02",
+      "limitations": "Excellent visual entry point. Videos are embedded third-party works; link rather than download or rehost.",
+      "reuse": "Linked for evidence or optional further reading; no third-party text, media or diagrams included."
+    },
+    {
+      "id": "cmas-regulations",
+      "title": "CMAS underwater hockey regulations hub",
+      "url": "https://www.cmas.org/hockey/how-to-regulations.html",
+      "authority": "Federation",
+      "versionOrDate": "2025-02 rules listing",
+      "checkedAt": "2026-10-02",
+      "verificationStatus": "Publisher page or document body opened in expansion check on 2026-10-02",
+      "limitations": "Hub lists Rules of Play February 2025. The equipment guide and rule download redirected to login when checked.",
+      "reuse": "Linked for evidence or optional further reading; no third-party text, media or diagrams included."
+    },
+    {
+      "id": "dan-freediving-risk",
+      "title": "Freediving Risk Assessments",
+      "url": "https://world.dan.org/alert-diver/article/freediving-risk-assessments/",
+      "authority": "Divers Alert Network; Jim Chimiak MD and Juan Valdivia-Valdivia MD",
+      "versionOrDate": "11 December 2023",
+      "checkedAt": "2026-10-02",
+      "verificationStatus": "Publisher page or document body opened in expansion check on 2026-10-02",
+      "limitations": "Adjacent freediving guidance, not UWH rules. Apply general principles with hockey-specific supervision and emergency plans.",
+      "reuse": "Linked for evidence or optional further reading; no third-party text, media or diagrams included."
+    },
+    {
+      "id": "ffessm-theses",
+      "title": "FFESSM MEF2 thesis library",
+      "url": "https://hockeysub.ffessm.fr/memoires-ef2",
+      "authority": "Federation",
+      "versionOrDate": "multiple dates",
+      "checkedAt": "2026-10-02",
+      "verificationStatus": "Publisher page or document body opened in expansion check on 2026-10-02",
+      "limitations": "Individual theses are dated proposals and evidence of coaching practice, not federation-wide mandates. Video-analysis thesis listed November 2015.",
+      "reuse": "Linked for evidence or optional further reading; no third-party text, media or diagrams included."
+    },
+    {
+      "id": "ffessm-video",
+      "title": "FFESSM direct-video hub",
+      "url": "https://hockeysub.ffessm.fr/direct-video",
+      "authority": "Federation",
+      "versionOrDate": "2025-03-28",
+      "checkedAt": "2026-10-02",
+      "verificationStatus": "opened",
+      "limitations": "The highlighted event is dated March 2025; use as a media-library route, not a claim of a current live broadcast.",
+      "reuse": "Linked for evidence or optional further reading; no third-party text, media or diagrams included."
+    },
+    {
+      "id": "moresport",
+      "title": "More-Sport underwater hockey",
+      "url": "https://uwhstore.more-sport.com/en/articles/11-glove-for-underwater-hockey.html",
+      "authority": "Commercial vendor",
+      "versionOrDate": null,
+      "checkedAt": "2026-10-02",
+      "verificationStatus": "Publisher page or document body opened in expansion check on 2026-10-02",
+      "limitations": "Vendor gives glove-care advice. Product photographs and descriptions remain vendor-owned.",
+      "reuse": "Linked for evidence or optional further reading; no third-party text, media or diagrams included."
+    },
+    {
+      "id": "sfuwh-formations",
+      "title": "San Francisco underwater hockey formations",
+      "url": "https://sfuwh.org/about-uwh/formations/",
+      "authority": "Club",
+      "versionOrDate": null,
+      "checkedAt": "2026-10-02",
+      "verificationStatus": "Publisher indexed text inspected; direct fetch timed out in expansion check",
+      "limitations": "Clearly label club-specific conventions. Do not reproduce its figures or endorse forceful language literally; current non-contact rules govern.",
+      "reuse": "Linked for evidence or optional further reading; no third-party text, media or diagrams included."
+    },
+    {
+      "id": "stirling-diy",
+      "title": "Stirling UWH equipment FAQ",
+      "url": "https://suhc.wordpress.com/stirling-underwater-hockey-club-faq/",
+      "authority": "Club",
+      "versionOrDate": null,
+      "checkedAt": "2026-10-02",
+      "verificationStatus": "Publisher page or document body opened in expansion check on 2026-10-02",
+      "limitations": "DIY does not guarantee protection or competition compliance. Refer makers to manufacturer chemical instructions and club equipment inspection.",
+      "reuse": "Linked for evidence or optional further reading; no third-party text, media or diagrams included."
+    }
+  ],
+  "validation": {
+    "chapterCount": 14,
+    "instructionalWordCount": 6337,
+    "wordCountRange": [
+      415,
+      499
+    ],
+    "wordCountMethod": "Summary, learning objectives, body paragraphs/lists, mistakes and corrections, progressions, and exercise-specific safety. Excludes headings, source notes and authoring metadata.",
+    "sectionCount": 54,
+    "conceptCount": 13,
+    "sourceCount": 20,
+    "allOriginalChapterIdsPreserved": true,
+    "relatedIdsResolve": true,
+    "conceptIdsResolve": true,
+    "sourceIdsResolve": true,
+    "uniqueSectionIds": true,
+    "copyrightCheck": "No quotations, copied media or reproduced third-party exercises included. Source summaries and explicitly attributed facts are brief; original scenarios provide the teaching depth.",
+    "safetyCheck": "Shared supervision and breath-hold-risk notice included. No solo apnea routines, hyperventilation, maximum-hold tasks, submersion prescriptions, contact mechanics or DIY hazardous-system recipes.",
+    "publicationStatus": "Local JSON only; not uploaded or published."
+  }
+}

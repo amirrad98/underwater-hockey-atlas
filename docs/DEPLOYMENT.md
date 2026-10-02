@@ -6,7 +6,7 @@ The owner explicitly authorized merging the tested foundation, making this repos
 
 `.github/workflows/pages.yml` builds and publishes on pushes to `main`, with a manual trigger also available. It checks types, lint, source integrity and production build before uploading `dist/`. After a merge, inspect the workflow and use its actual deployment URL; do not infer a domain from the account or repository name.
 
-The app builds for `/underwater-hockey-atlas/` and uses hash routes, so article navigation does not need server rewrites. The workflow publishes only `dist/`. Original research files and contributor docs are not copied into the web root. The rendered content contains source metadata, but no roster names or private owner information.
+The app builds for `/underwater-hockey-atlas/` and uses hash routes, so article navigation does not need server rewrites. The workflow publishes only `dist/`. Original research files and contributor docs are not copied into the web root. The feature enhancement includes the explicitly requested public website roster labels, portraits and logos as an undated snapshot, with current membership and roles unconfirmed. Authorized club media and their public provenance are local production assets. No private owner information or inferred photo identities are published. These feature-branch changes still require review and have not been merged or deployed.
 
 ## Operational boundaries
 

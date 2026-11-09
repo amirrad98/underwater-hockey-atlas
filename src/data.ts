@@ -3,14 +3,31 @@ import {
   importedResources,
   importedPlaces,
 } from "./research-data";
+import { integrateWiki } from "./wiki/catalog";
+import { integratePlaybookSources } from "./playbook/catalog";
 export interface Article {
   id: string;
   title: string;
   category: string;
   summary: string;
-  sections: { heading: string; body: string }[];
+  sections: { heading: string; body: string; paragraphs?: string[]; bullets?: string[]; steps?: string[]; callout?: string }[];
   sourceIds: string[];
   related: string[];
+  learningGoals?: string[];
+  checklist?: string[];
+  selfChecks?: { question: string; answer: string }[];
+  drillIds?: string[];
+  scenarioIds?: string[];
+  editorialStatus?: string;
+  updatedAt?: string;
+  commonMistakes?: { mistake: string; correction: string }[];
+  progressions?: string[];
+  practiceSafety?: string;
+  linkedConcepts?: string[];
+  sourceNotes?: { sourceId: string; url: string; supports: string; notClaimed?: string }[];
+  readerLevel?: string;
+  estimatedReadingMinutes?: number;
+  originalLesson?: Record<string, unknown>;
 }
 export interface Resource {
   version?: string;
@@ -571,7 +588,7 @@ const starterAliases = new Map(
     importedByUrl.get(canonicalSourceUrl(source.url))?.id ?? source.id,
   ]),
 );
-export const resources: Resource[] = [
+const baseResources: Resource[] = [
   ...importedResources,
   ...starterResources.filter(
     (source) =>
@@ -580,7 +597,7 @@ export const resources: Resource[] = [
   ),
 ];
 const importedIds = new Set(importedArticles.map((article) => article.id));
-export const articles: Article[] = [
+const baseArticles: Article[] = [
   ...starterArticles
     .filter((article) => !importedIds.has(article.id))
     .map((article) => ({
@@ -590,3 +607,9 @@ export const articles: Article[] = [
   ...importedArticles,
 ];
 export const places: Place[] = importedPlaces;
+const expandedWiki = integrateWiki(baseArticles, baseResources, canonicalSourceUrl);
+const expandedPlaybook = integratePlaybookSources(expandedWiki.resources, canonicalSourceUrl);
+export const resources: Resource[] = expandedPlaybook.resources;
+export const playbookSourceAliases = expandedPlaybook.sourceAliases;
+export const articles: Article[] = expandedWiki.articles;
+export const lessonSourceAliases = expandedWiki.sourceAliases;

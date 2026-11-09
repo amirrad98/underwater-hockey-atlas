@@ -8,9 +8,12 @@
     "build": "tsc -b && vite build",
     "typecheck": "tsc --noEmit",
     "lint": "eslint .",
-    "test": "tsx --test tests/content.test.ts",
+    "map:build": "tsx scripts/build_world_map.ts",
+    "map:check": "tsx scripts/build_world_map.ts --check",
+    "test": "npm run map:check && tsx --test tests/*.test.ts",
     "test:ui": "playwright test",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test:offline": "npm run build && playwright test -c playwright.offline.config.ts"
   },
   "dependencies": {
     "react": "^19.0.0",

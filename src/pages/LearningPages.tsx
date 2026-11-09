@@ -4,8 +4,8 @@ import {
   ArrowUpRight,
   BookOpen,
   Compass,
-  Globe2,
-  Waves,
+  MapPin,
+  MoveUpRight,
 } from "lucide-react";
 import { articles, resources } from "../data";
 import { equipment } from "../equipment";
@@ -18,6 +18,7 @@ import {
 } from "../catalog";
 import type { CatalogPageProps } from "../navigation";
 import { Board, Equipment } from "../components/Diagrams";
+import { TimberwhalesLogo } from "../components/TimberwhalesLogo";
 import {
   ArticleCard,
   EmptyState,
@@ -30,120 +31,62 @@ import {
 export function HomePage() {
   return (
     <>
-      <section className="home-hero">
-        <div className="hero-intro">
-          <div className="eyebrow">
-            <span className="status-dot" /> THE UNDERWATER HOCKEY ATLAS
+      <section className="field-hero" aria-labelledby="home-heading">
+        <div className="field-hero-copy">
+          <div className="eyebrow field-kicker"><span /> THE UNDERWATER HOCKEY ATLAS</div>
+          <h1 id="home-heading">Hockey, below <span>the surface.</span></h1>
+          <p>A field guide to a different kind of game. Learn the basics, find your people, and get ready for the pool.</p>
+          <div className="field-hero-actions">
+            <a className="button" href={articleHref("first-session")}>Your first session <ArrowRight size={18} aria-hidden="true" /></a>
+            <a className="text-link" href="#/clubs">Find a club <ArrowUpRight size={18} aria-hidden="true" /></a>
           </div>
-          <h1>
-            Learn the game.
-            <br />
-            <span>Find your community.</span>
-          </h1>
-          <p>
-            A practical guide to underwater hockey, from your first club session
-            to the skills, equipment, and people behind the sport.
-          </p>
+          <a className="field-equipment-link" href="#/equipment"><Equipment /> <span>New to the kit? <strong>Start with the essentials.</strong></span> <ArrowRight size={16} aria-hidden="true" /></a>
         </div>
-        <div className="home-portals">
-          <a href={articleHref("first-session")}>
-            <span className="portal-icon">
-              <BookOpen size={24} />
-            </span>
-            <div>
-              <small>01 / START HERE</small>
-              <h2>Learn the basics</h2>
-              <p>What to expect at your first session.</p>
-            </div>
-            <ArrowUpRight size={22} aria-hidden="true" />
-          </a>
-          <a href="#/clubs">
-            <span className="portal-icon">
-              <Globe2 size={24} />
-            </span>
-            <div>
-              <small>02 / FIND YOUR PEOPLE</small>
-              <h2>Find a club</h2>
-              <p>Explore clubs, places, and organizations.</p>
-            </div>
-            <ArrowUpRight size={22} aria-hidden="true" />
-          </a>
-          <a href="#/equipment">
-            <span className="portal-icon">
-              <Equipment />
-            </span>
-            <div>
-              <small>03 / GET EQUIPPED</small>
-              <h2>Explore equipment</h2>
-              <p>Understand the kit and find suppliers.</p>
-            </div>
-            <ArrowUpRight size={22} aria-hidden="true" />
-          </a>
-        </div>
-        <div className="home-hero-foot">
-          <span>INDEPENDENT. CONNECTED. SOURCED.</span>
-          <a href="#/library">
-            Explore the source library <ArrowRight size={15} />
-          </a>
+        <section className="featured-club" aria-labelledby="featured-club-heading">
+          <div className="featured-club-top"><span className="eyebrow">CLUB SPOTLIGHT</span><span>01 / CANADA</span></div>
+          <a className="featured-club-art" href="#/clubs/timber-whales" aria-label="Meet the UNBC Timber Whales"><TimberwhalesLogo /></a>
+          <div className="featured-club-caption">
+            <div><span className="featured-location"><MapPin size={13} aria-hidden="true" /> Prince George, British Columbia</span><h2 id="featured-club-heading">Meet the Timberwhales.</h2></div>
+            <a href="#/clubs/timber-whales" className="round-link" aria-label="View the Timber Whales club profile"><MoveUpRight size={23} aria-hidden="true" /></a>
+          </div>
+        </section>
+      </section>
+
+      <section className="field-routes" aria-label="Explore the atlas">
+        <div className="field-routes-inner">
+          {[
+            ["01", "Learn the game", "Guides for your next session", "#/learn"],
+            ["02", "Find your people", "Clubs and places to play", "#/clubs"],
+            ["03", "Know your kit", "Equipment and suppliers", "#/equipment"],
+          ].map(([number, title, description, href]) => (
+            <a key={number} href={href}><span className="route-number">{number}</span><span><strong>{title}</strong><small>{description}</small></span><ArrowUpRight size={21} aria-hidden="true" /></a>
+          ))}
         </div>
       </section>
-      <div className="page home-content">
-        <section className="beginner-path" aria-labelledby="beginner-heading">
-          <div className="section-heading">
-            <div>
-              <div className="eyebrow">BEFORE YOUR FIRST SESSION</div>
-              <h2 id="beginner-heading">Three useful reads.</h2>
-            </div>
-            <a className="text-link" href="#/learn">
-              All learning guides <ArrowRight size={16} />
-            </a>
+
+      <div className="page field-home-content">
+        <section className="field-start" aria-labelledby="beginner-heading">
+          <div className="field-section-intro">
+            <div className="eyebrow">A GOOD PLACE TO START</div>
+            <h2 id="beginner-heading">You don’t need to <br />know it all to jump in.</h2>
+            <p>Get a feel for the game, learn what to bring, and arrive with a few good questions.</p>
+            <a className="text-link" href="#/learn?group=getting-started">All beginner guides <ArrowRight size={16} aria-hidden="true" /></a>
           </div>
-          <div className="reading-path">
+          <div className="field-reading-list">
             {[
-              [
-                "first-session",
-                "Your first session",
-                "Arriving, joining in, and asking the right questions.",
-              ],
-              [
-                "equipment",
-                "Equipment essentials",
-                "What the kit does and what to ask your club about.",
-              ],
-              [
-                "safety",
-                "Safe participation",
-                "Supervision, preparation, and looking after each other.",
-              ],
+              ["start-here", "How the game works", "The puck, the pool, and the people on your team."],
+              ["equipment", "What you’ll need", "A simple introduction to masks, fins, sticks, and the rest."],
+              ["safety", "Before you get in", "Supervision, preparation, and looking after each other."],
             ].map(([id, title, body], i) => (
-              <a href={articleHref(id)} key={id}>
-                <span className="step-number">0{i + 1}</span>
-                <div>
-                  <h3>{title}</h3>
-                  <p>{body}</p>
-                </div>
-                <ArrowUpRight size={18} aria-hidden="true" />
-              </a>
+              <a href={articleHref(id)} key={id}><span className="reading-number">0{i + 1}</span><div><h3>{title}</h3><p>{body}</p></div><ArrowUpRight size={20} aria-hidden="true" /></a>
             ))}
           </div>
         </section>
-        <section className="home-club" aria-labelledby="home-club-heading">
-          <div className="club-mark" aria-hidden="true">
-            <Waves size={50} />
-            <span>TW</span>
-          </div>
-          <div>
-            <div className="eyebrow">FEATURED CLUB / PRINCE GEORGE, CANADA</div>
-            <h2 id="home-club-heading">UNBC Timber Whales</h2>
-            <p>
-              A local starting point in northern British Columbia. Meet the club
-              and explore its story.
-            </p>
-          </div>
-          <a className="button secondary" href="#/clubs/timber-whales">
-            Meet the club <ArrowRight size={16} />
-          </a>
+        <section className="field-next" aria-labelledby="next-heading">
+          <div><div className="eyebrow">ALREADY PLAYING?</div><h2 id="next-heading">Bring something new<br />to your next session.</h2><p>Puck control, passing, positioning, and the thinking behind a good team.</p><a className="button" href="#/learn?group=skills-tactics">Explore skills &amp; tactics <ArrowRight size={17} aria-hidden="true" /></a></div>
+          <div className="field-tactics"><Board compact /><a href={articleHref("formations")}>Read the formation guide <ArrowUpRight size={16} aria-hidden="true" /></a></div>
         </section>
+        <aside className="field-library"><BookOpen size={25} aria-hidden="true" /><div><strong>Go straight to the source.</strong><span>Rulebooks, coaching resources, and research, with context for each reference.</span></div><a className="text-link" href="#/library">Browse the library <ArrowRight size={17} aria-hidden="true" /></a></aside>
       </div>
     </>
   );
@@ -160,9 +103,21 @@ export function LearnPage({ params, updateQuery }: CatalogPageProps) {
       articleOwner(article) === "learn" &&
       (!group || getArticleGroup(article) === group),
   );
+  // Keep the complete index in learning order while preserving search ranking.
+  if (!q.trim()) {
+    const beginnerOrder = ["start-here", "first-session", "learning-path"];
+    guides.sort((a, b) => {
+      const topicDifference = learnGroups.findIndex((item) => item.id === getArticleGroup(a)) -
+        learnGroups.findIndex((item) => item.id === getArticleGroup(b));
+      if (topicDifference) return topicDifference;
+      if (getArticleGroup(a) !== "getting-started") return 0;
+      const priority = (id: string) => beginnerOrder.includes(id) ? beginnerOrder.indexOf(id) : beginnerOrder.length;
+      return priority(a.id) - priority(b.id);
+    });
+  }
   const activeGroup = learnGroups.find((item) => item.id === group);
   return (
-    <div className="page">
+    <div className="page learn-page">
       <PageHeading
         eyebrow="LEARN"
         title="Understand the game."
@@ -204,6 +159,13 @@ export function LearnPage({ params, updateQuery }: CatalogPageProps) {
             value={q}
             onChange={(value) => updateQuery({ q: value }, { replace: true })}
           />
+          {!group && !q.trim() && (
+            <a className="learn-start" href={articleHref("first-session")}>
+              <span className="learn-start-icon"><BookOpen size={25} aria-hidden="true" /></span>
+              <span><small>NEW TO UNDERWATER HOCKEY?</small><strong>Start with your first session.</strong><span>A short guide to arriving, joining in, and what to ask.</span></span>
+              <ArrowRight size={22} aria-hidden="true" />
+            </a>
+          )}
           {activeGroup && (
             <div className="topic-intro">
               <h2>{activeGroup.label}</h2>
@@ -234,7 +196,7 @@ export function LearnPage({ params, updateQuery }: CatalogPageProps) {
             {guides.length} {guides.length === 1 ? "guide" : "guides"}
             {q && <> matching “{q}”</>}
           </div>
-          <div className="article-grid">
+          <div className="article-grid guide-index">
             {guides.map((article) => (
               <ArticleCard article={article} key={article.id} />
             ))}
@@ -514,12 +476,9 @@ export function ClubPage() {
         <PageHeading
           eyebrow="PRINCE GEORGE, BRITISH COLUMBIA"
           title="UNBC Timber Whales"
-          description="A northern community with a story beneath the surface."
+          description="Underwater hockey in Prince George, British Columbia. Find the published session details, prepare for a first visit, and get to know the club."
         />
-        <div className="club-mark" aria-hidden="true">
-          <Waves size={52} />
-          <span>TW</span>
-        </div>
+        <TimberwhalesLogo className="club-profile-logo" />
       </div>
       <section
         className="club-schedule"
@@ -549,11 +508,8 @@ export function ClubPage() {
           <strong>21:00–22:00</strong>
         </div>
       </section>
-      <p className="notice">
-        Older CUGA listings at Prince George Aquatic Centre describe an outdated
-        schedule. Public roster entries are undated; 2026 leadership is
-        unconfirmed.
-      </p>
+      <div className="club-visit-actions"><a className="button" href="https://www.instagram.com/p/DdNdRpuRzGU/" target="_blank" rel="noreferrer">Check the club announcement <ArrowUpRight size={17} aria-hidden="true" /><span className="sr-only"> (opens in a new tab)</span></a><a className="text-link" href={articleHref("first-session")}>Planning your first visit? <ArrowRight size={17} aria-hidden="true" /></a></div>
+      <details className="club-record-note"><summary>About these club details</summary><p>Older CUGA listings at Prince George Aquatic Centre describe an outdated schedule. Public roster entries are undated; 2026 leadership is unconfirmed. The schedule above is the published fall 2026 schedule, not a live availability feed. Confirm with the club before attending.</p></details>
       <div className="article-layout">
         <article className="article-body">
           {club?.sections.map((section) => (

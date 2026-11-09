@@ -1,4 +1,4 @@
-import { readFile, mkdir, writeFile } from "node:fs/promises";
+import { readFile, readdir, mkdir, writeFile } from "node:fs/promises";
 import { dirname, resolve, basename } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -14,6 +14,20 @@ if (scripts.length !== 1)
   throw new Error(
     "Expected one bundled script; review the preview packager before adding split chunks.",
   );
+const assetPrefix = scripts[0][1].slice(0, scripts[0][1].lastIndexOf("/") + 1);
+const embeddedAssets = [];
+const mimeTypes = { ".jpg": "image/jpeg", ".jpeg": "image/jpeg", ".png": "image/png", ".svg": "image/svg+xml", ".webp": "image/webp", ".woff": "font/woff", ".woff2": "font/woff2", ".ttf": "font/ttf" };
+for (const name of await readdir(resolve(dist, "assets"))) {
+  const extension = name.slice(name.lastIndexOf("."));
+  const mime = mimeTypes[extension];
+  if (!mime) continue;
+  const data = await readFile(resolve(dist, "assets", name));
+  embeddedAssets.push([`${assetPrefix}${name}`, `data:${mime};base64,${data.toString("base64")}`]);
+}
+function inlineAssets(source) {
+  for (const [path, data] of embeddedAssets) source = source.replaceAll(path, data);
+  return source;
+}
 for (const [tag, source] of scripts) {
   const script = await readFile(
     resolve(dist, "assets", basename(source)),
@@ -22,7 +36,7 @@ for (const [tag, source] of scripts) {
   html = html.replace(
     tag,
     () =>
-      `<script type="module">${script.replaceAll("</script", "<\\/script")}</script>`,
+      `<script type="module">${inlineAssets(script).replaceAll("</script", "<\\/script")}</script>`,
   );
 }
 for (const [tag, source] of [
@@ -34,7 +48,7 @@ for (const [tag, source] of [
   );
   html = html.replace(
     tag,
-    () => `<style>${style.replaceAll("</style", "<\\/style")}</style>`,
+    () => `<style>${inlineAssets(style).replaceAll("</style", "<\\/style")}</style>`,
   );
 }
 const favicon = await readFile(resolve(dist, "favicon.svg"), "utf8");

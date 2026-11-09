@@ -5,7 +5,7 @@ import { articleHref } from "../src/catalog";
 
 const base = "/underwater-hockey-atlas/";
 const mainRoutes = [
-  ["atlas", /^Learn the game\./],
+  ["atlas", "Hockey, below the surface."],
   ["learn", "Understand the game."],
   ["clubs", "Clubs & places"],
   ["equipment", "Know your kit."],
@@ -39,8 +39,16 @@ async function assertNoOverflow(page: Page) {
     .toBeLessThanOrEqual(1);
 }
 
-async function search(page: Page, query: string) {
+async function openSearch(page: Page) {
   const field = page.getByLabel("Search the atlas", { exact: true });
+  if (!(await field.isVisible())) {
+    await page.getByRole("button", { name: "Open site search", exact: true }).click();
+  }
+  return field;
+}
+
+async function search(page: Page, query: string) {
+  const field = await openSearch(page);
   await field.fill(query);
   await field.press("Enter");
   await expect(page).toHaveURL(/#\/search\?q=/);
@@ -357,11 +365,10 @@ test("opening a guide and returning restores its topic and scroll position", asy
 
 test("directory keeps all records searchable and map selection independent of pagination", async ({
   page,
-  isMobile,
 }) => {
   await page.goto(`${base}#/clubs`);
   await expect(
-    page.getByRole("button", { name: isMobile ? "List" : "Map", exact: true }),
+    page.getByRole("button", { name: "List", exact: true }),
   ).toHaveAttribute("aria-pressed", "true");
   await expect(page.getByTestId("place-result")).toHaveCount(20);
   await expect(
@@ -458,7 +465,7 @@ test("skip link keeps the route and keyboard navigation closes cleanly", async (
   await page.keyboard.press("Enter");
   await expect(page.locator("main")).toBeFocused();
   await expect(page).toHaveURL(initialUrl);
-  const searchField = page.getByLabel("Search the atlas", { exact: true });
+  const searchField = await openSearch(page);
   await searchField.focus();
   await expect(searchField).toBeFocused();
   await page.screenshot({
@@ -481,17 +488,51 @@ test("skip link keeps the route and keyboard navigation closes cleanly", async (
   }
 });
 
-test("busy layouts reflow at 360 and 768 CSS pixels", async ({
+test("repeated header searches move focus to results and result jumps clear the masthead", async ({ page }) => {
+  await page.goto(`${base}#/search?q=equipment`);
+  await search(page, "rules");
+  await expect(page.locator("main")).toBeFocused();
+  await expect(page.getByRole("heading", { level: 1 })).toContainText("rules");
+  await page.locator(".search-jumps").getByRole("button", { name: /^Sources/ }).click();
+  await expect(page.locator("#search-sources")).toBeFocused();
+  const layout = await page.evaluate(() => ({
+    headingTop: document.querySelector("#search-sources")!.getBoundingClientRect().top,
+    headerBottom: document.querySelector(".site-header")!.getBoundingClientRect().bottom,
+  }));
+  expect(layout.headingTop).toBeGreaterThanOrEqual(layout.headerBottom);
+});
+
+test("search shortcut requires a modifier and mobile Escape restores its trigger", async ({ page, isMobile }) => {
+  await page.goto(`${base}#/atlas`);
+  const searchField = page.getByLabel("Search the atlas", { exact: true });
+  await page.keyboard.press("/");
+  await expect(searchField).not.toBeFocused();
+  await page.keyboard.press("Control+k");
+  await expect(searchField).toBeFocused();
+  await searchField.fill("puck/control");
+  await expect(searchField).toHaveValue("puck/control");
+  await page.keyboard.press("Escape");
+  if (isMobile) {
+    const trigger = page.getByRole("button", { name: "Open site search", exact: true });
+    await expect(trigger).toBeFocused();
+    await expect(trigger).toHaveAttribute("aria-expanded", "false");
+    await expect(searchField).not.toBeVisible();
+  }
+});
+
+test("busy layouts reflow at 320, 360 and 768 CSS pixels", async ({
   page,
 }, testInfo) => {
   test.skip(
     testInfo.project.name !== "desktop",
     "Viewport coverage is shared between projects",
   );
-  for (const width of [360, 768]) {
+  for (const width of [320, 360, 768]) {
     await page.setViewportSize({ width, height: 900 });
     for (const route of [
+      "atlas",
       "learn",
+      "clubs/timber-whales",
       "clubs?view=map",
       "library",
       "equipment/suppliers",

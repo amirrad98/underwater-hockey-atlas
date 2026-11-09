@@ -41,7 +41,7 @@ duplicating the record.
   pagination. Changing a filter clears the selection.
 - Library and directory pagination applies after searching the complete dataset,
   with 20 results per page. All matching records with coordinates remain on the map.
-- Mobile starts with List unless the URL explicitly selects Map.
+- The directory starts with List on every viewport unless the URL explicitly selects Map.
 - Global and scoped searches share token, case, whitespace, and accent matching.
 
 ## Content and source preservation
@@ -69,6 +69,8 @@ schedule retains its original date and confirmation notice.
 - `src/components/Diagrams.tsx`: original equipment and formation illustrations.
 - `src/pages/LearningPages.tsx`: Home, Learn, Equipment, article and club pages.
 - `src/pages/CatalogPages.tsx`: Library, directory and supplier pages.
+- `src/components/TimberwhalesLogo.tsx`: the unchanged supplied club artwork.
+- `src/editorial.css`: forest/gold visual system, bundled fonts, and responsive layouts.
 - `src/main.tsx`: shared shell, primary navigation and grouped global search.
 
 ## Review preview
@@ -76,7 +78,8 @@ schedule retains its original date and confirmation notice.
 Run `npm run build`, then `node scripts/build_review_preview.mjs` to generate
 `docs/review/preview.html`. Download and open that file in a browser to review the
 app without a development server. Its code, styles, favicon and catalog are
-embedded; web fonts and external source links still use the network.
+embedded, including the logo and fonts. External source links require the network;
+the preview itself opens offline.
 
 This preview is a review artifact. The production Pages configuration continues
 to build from `main` through the existing workflow.

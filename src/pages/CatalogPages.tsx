@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import {
   ArrowUpRight,
   ExternalLink,
@@ -23,6 +23,7 @@ import {
   getPage,
 } from "../catalog";
 import { canonicalHash } from "../navigation";
+import { TimberwhalesLogo } from "../components/TimberwhalesLogo";
 import {
   PageHeading,
   SearchField,
@@ -167,17 +168,19 @@ export function LibraryPage({ params, updateQuery }: CatalogPageProps) {
       <PageHeading
         eyebrow="Original sources"
         title="Source library"
-        description="Find rulebooks, coaching material, research and club information. Each source keeps its dates, access conditions and review notes."
+        description="Rulebooks, coaching material, research and club information, with the original sources close at hand."
       />
-      <div className="catalog-intro-note">
+      <details className="catalog-directory-note catalog-library-help">
+        <summary>About these sources</summary>
         <p>
-          Checked, indexed and historical records are labelled individually.
+          Each source keeps its dates, access conditions and review notes.
+          Checked, indexed and historical records are labelled individually.{" "}
+          <a href="#/wiki/library-navigation">
+            Understand the source labels
+            <ArrowUpRight size={14} aria-hidden="true" />
+          </a>
         </p>
-        <a className="text-link" href="#/wiki/library-navigation">
-          Understand the source labels{" "}
-          <ArrowUpRight size={15} aria-hidden="true" />
-        </a>
-      </div>
+      </details>
 
       {selected && (
         <section
@@ -222,12 +225,15 @@ export function LibraryPage({ params, updateQuery }: CatalogPageProps) {
         onSubmit={(event) => event.preventDefault()}
       >
         <div className="catalog-primary-filters">
-          <SearchField
-            label="Search resources"
-            placeholder="Title, topic or publisher"
-            value={q}
-            onChange={(value) => setFilter("q", value, true)}
-          />
+          <div className="catalog-search-filter">
+            <span aria-hidden="true">Search the library</span>
+            <SearchField
+              label="Search resources"
+              placeholder="Title, topic or publisher"
+              value={q}
+              onChange={(value) => setFilter("q", value, true)}
+            />
+          </div>
           <SelectFilter
             label="Topic"
             value={topic}
@@ -359,49 +365,53 @@ function PlaceCard({
     <article
       className={`catalog-place place-card${expanded ? " is-expanded" : ""}`}
     >
-      <div className="catalog-record-meta">
-        <span>{place.country}</span>
-        <span>{place.region}</span>
+      <div className="catalog-record-identity">
+        <div className="catalog-record-meta">
+          <span>{place.country}</span>
+          <span>{place.region}</span>
+        </div>
+        <h3>
+          {onSelect ? (
+            <button
+              type="button"
+              className="catalog-title-button"
+              onClick={onSelect}
+            >
+              {place.name}
+              <ArrowUpRight size={17} aria-hidden="true" />
+            </button>
+          ) : (
+            place.name
+          )}
+        </h3>
+        {summary && <p className="catalog-place-summary">{summary}</p>}
+        {status && <p className="catalog-status">{status}</p>}
+        {!summary && !status && (
+          <p className="catalog-place-summary">{place.description}</p>
+        )}
       </div>
-      <h3>
-        {onSelect ? (
-          <button
-            type="button"
-            className="catalog-title-button"
-            onClick={onSelect}
-          >
-            {place.name}
-            <ArrowUpRight size={17} aria-hidden="true" />
-          </button>
-        ) : (
-          place.name
-        )}
-      </h3>
-      {summary && <p className="catalog-place-summary">{summary}</p>}
-      {status && <p className="catalog-status">{status}</p>}
-      {!summary && !status && (
-        <p className="catalog-place-summary">{place.description}</p>
-      )}
-      <p className="catalog-precision">
-        <MapPin size={14} aria-hidden="true" />
-        <span>{place.precision}</span>
-      </p>
-      {checked && <p className="catalog-checked">Catalog checked {checked}</p>}
-      <div className="catalog-record-actions">
-        {place.url.startsWith("#/") ? (
-          <a className="text-link" href={canonicalHash(place.url)}>
-            View club profile <ArrowUpRight size={14} aria-hidden="true" />
-          </a>
-        ) : (
-          <a
-            className="text-link"
-            href={place.url}
-            target="_blank"
-            rel="noreferrer"
-          >
-            Visit organization <ExternalLink size={14} aria-hidden="true" />
-          </a>
-        )}
+      <div className="catalog-record-context">
+        <p className="catalog-precision">
+          <MapPin size={14} aria-hidden="true" />
+          <span>{place.precision}</span>
+        </p>
+        {checked && <p className="catalog-checked">Catalog checked {checked}</p>}
+        <div className="catalog-record-actions">
+          {place.url.startsWith("#/") ? (
+            <a className="text-link" href={canonicalHash(place.url)}>
+              View club profile <ArrowUpRight size={14} aria-hidden="true" />
+            </a>
+          ) : (
+            <a
+              className="text-link"
+              href={place.url}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Visit organization <ExternalLink size={14} aria-hidden="true" />
+            </a>
+          )}
+        </div>
       </div>
       <details className="catalog-evidence" open={expanded || undefined}>
         <summary>Details &amp; source evidence</summary>
@@ -506,15 +516,7 @@ function SchematicMap({
 }
 
 export function ClubsPage({ params, updateQuery }: CatalogPageProps) {
-  const [defaultView] = useState(() =>
-    window.matchMedia("(max-width: 700px)").matches ? "list" : "map",
-  );
-  const view =
-    params.get("view") === "list"
-      ? "list"
-      : params.get("view") === "map"
-        ? "map"
-        : defaultView;
+  const view = params.get("view") === "map" ? "map" : "list";
   const q = params.get("q") || "";
   const shown = filterPlaces(places, q);
   const paged = getPage(shown, Number(params.get("page") || 1), 20);
@@ -550,13 +552,15 @@ export function ClubsPage({ params, updateQuery }: CatalogPageProps) {
         description="Find clubs, national organizations and known venues. Confirm current sessions with the organization before you go."
       />
       <div className="catalog-feature-link">
-        <div>
-          <span className="eyebrow">Club spotlight</span>
-          <a href="#/clubs/timber-whales">
-            Timber Whales <ArrowUpRight size={16} aria-hidden="true" />
-          </a>
-          <span>Prince George, Canada</span>
-        </div>
+        <a className="catalog-club-spotlight" href="#/clubs/timber-whales">
+          <TimberwhalesLogo className="catalog-club-logo" />
+          <span className="catalog-club-copy">
+            <small>Club spotlight</small>
+            <strong>UNBC Timberwhales</strong>
+            <span>Prince George, British Columbia</span>
+          </span>
+          <ArrowUpRight size={20} aria-hidden="true" />
+        </a>
         <a className="text-link" href="#/wiki/world-guide">
           About this directory <ArrowUpRight size={14} aria-hidden="true" />
         </a>
@@ -568,7 +572,7 @@ export function ClubsPage({ params, updateQuery }: CatalogPageProps) {
       >
         <SearchField
           label="Search places"
-          placeholder="Club, country, city or venue"
+          placeholder="Club or location"
           value={q}
           onChange={(value) =>
             updateQuery(
@@ -677,27 +681,33 @@ function SupplierCard({
     <article
       className={`catalog-supplier supplier${expanded ? " is-expanded" : ""}`}
     >
-      <div className="catalog-record-meta">
-        <span>{supplier.country}</span>
-        <span>{supplier.kind}</span>
+      <div className="catalog-record-identity">
+        <div className="catalog-record-meta">
+          <span>{supplier.country}</span>
+          <span>{supplier.kind}</span>
+        </div>
+        <h3>
+          <a href={supplier.url} target="_blank" rel="noreferrer">
+            {supplier.name}
+            <ExternalLink size={17} aria-hidden="true" />
+          </a>
+        </h3>
       </div>
-      <h3>
-        <a href={supplier.url} target="_blank" rel="noreferrer">
-          {supplier.name}
-          <ExternalLink size={17} aria-hidden="true" />
-        </a>
-      </h3>
-      <p className="catalog-supplier-summary">{supplier.note}</p>
-      <ul className="catalog-gear-tags" aria-label="Gear categories">
-        {supplier.categories.map((category) => (
-          <li key={category}>{category}</li>
-        ))}
-      </ul>
-      <div className="catalog-shipping">
-        <strong>Canada shipping</strong>
-        <p>{supplier.canadaShipping || "Unknown; confirm with supplier"}</p>
+      <div className="catalog-supplier-description">
+        <p className="catalog-supplier-summary">{supplier.note}</p>
+        <ul className="catalog-gear-tags" aria-label="Gear categories">
+          {supplier.categories.map((category) => (
+            <li key={category}>{category}</li>
+          ))}
+        </ul>
       </div>
-      <p className="catalog-checked">Catalog checked {supplier.checked}</p>
+      <div className="catalog-record-context">
+        <div className="catalog-shipping">
+          <strong>Canada shipping</strong>
+          <p>{supplier.canadaShipping || "Unknown; confirm with supplier"}</p>
+        </div>
+        <p className="catalog-checked">Catalog checked {supplier.checked}</p>
+      </div>
       <details
         className="catalog-evidence supplier-evidence"
         open={expanded || undefined}
@@ -824,12 +834,15 @@ export function SuppliersPage({ params, updateQuery }: CatalogPageProps) {
         onSubmit={(event) => event.preventDefault()}
       >
         <div className="catalog-primary-filters">
-          <SearchField
-            label="Search suppliers"
-            placeholder="Supplier name or equipment"
-            value={q}
-            onChange={(value) => setFilter("q", value, true)}
-          />
+          <div className="catalog-search-filter">
+            <span aria-hidden="true">Find a supplier</span>
+            <SearchField
+              label="Search suppliers"
+              placeholder="Supplier name or equipment"
+              value={q}
+              onChange={(value) => setFilter("q", value, true)}
+            />
+          </div>
           <SelectFilter
             label="Gear category"
             value={category}

@@ -1,69 +1,94 @@
-# Reorganization review
+# Timberwhales visual and usability review
 
-This branch implements the approved navigation and usability plan. Review the app
-by downloading [preview.html](preview.html) and opening the downloaded file in a
-browser. Its application code, styles, favicon and catalogs are embedded. Web
-fonts and external source links still require a network connection.
+Prepared November 8, 2026 for the existing draft PR #4.
 
-The preview is generated from the production build. It does not deploy the site.
+## Open the working preview
+
+[Download preview.html](preview.html?raw=1), save it locally, and open it in a
+browser. The application, catalog, original club logo, fonts, and favicon are
+embedded. The local pages and interactions work without a network connection;
+external source links open their original websites.
+
+The preview contains the same application as the production build. It is a
+review artifact, and is not the published GitHub Pages site.
 
 ## What changed
 
-- Four main destinations: Learn, Clubs & places, Equipment, and Library.
-- A shorter Home page with three starting tasks, beginner reads, and a club spotlight.
-- Five Learn groups, with equipment guides and suppliers together under Equipment.
-- Shorter Library filters, optional detailed filters, active filter chips, and 20 results per page.
-- Global search across all content types with exact selected-record destinations.
-- URL-based collection state, preserved browser Back position, and legacy route aliases.
-- Mobile List defaults, a keyboard-operable menu, clear focus indicators, and a working skip link.
-- Shared navigation, catalog and page components replacing the single large application file.
-
-The original 27 articles, 207 resource records, 57 places and 12 suppliers remain
-available. The raw research catalogs, generated source records and equipment data
-are unchanged. Source details retain access qualifications, dates, status, rights
-and shipping evidence. See [the full implementation notes](../REORGANIZATION.md).
+- Forest green, warm white, and restrained gold give the atlas a stronger visual
+  identity informed by the supplied club artwork.
+- The homepage has a clear first-session action and a prominent Timberwhales
+  feature. An interactive formation diagram provides an entry for returning players.
+- The approved primary sections remain Learn, Clubs & places, Equipment, and Library.
+- Learn is a compact index in topic order with an explicit beginner entry.
+- Directory and supplier results use aligned rows. The directory starts in List
+  view on every device; an explicit Map URL retains the schematic map.
+- Library explanations and evidence are available through disclosures. Phone
+  filters are full-width so selected values remain readable.
+- Mobile search is an expandable header control. Ctrl/Cmd+K focuses search,
+  Escape closes it, and submitting a query moves focus to the results.
+- Sticky-header offsets keep article contents, selected records, and search
+  result jumps visible. Existing URLs and browser Back behavior are retained.
+- The original logo file is unchanged. Its blank margins are handled by the
+  display frame, without redrawing or recoloring the artwork.
 
 ## Screenshots
 
-| View | Preview |
-| --- | --- |
-| Home on desktop | [home-desktop.png](home-desktop.png) |
-| Learn on desktop | [learn-desktop.png](learn-desktop.png) |
-| Clubs & places on desktop | [clubs-desktop.png](clubs-desktop.png) |
-| Library on mobile | [library-mobile.png](library-mobile.png) |
-| Suppliers on mobile | [suppliers-mobile.png](suppliers-mobile.png) |
+| Page | Desktop | Phone |
+| --- | --- | --- |
+| Home | [Full page](home-desktop.png), [first screen](review-cover.png) | [Full page](home-mobile.png) |
+| Learn | [Desktop](learn-desktop.png) | [Phone](learn-mobile.png) |
+| Clubs & places | [Desktop](clubs-desktop.png) | [Phone](clubs-mobile.png) |
+| Timberwhales profile | [Desktop](club-desktop.png) | [Phone](club-mobile.png) |
+| Equipment | [Desktop](equipment-desktop.png) | [Phone](equipment-mobile.png) |
+| Suppliers | [Desktop](suppliers-desktop.png) | [Phone](suppliers-mobile.png) |
+| Library | [Desktop](library-desktop.png) | [Phone](library-mobile.png) |
+
+![Homepage preview](review-cover.png)
+
+## Design review
+
+An independent screenshot and source review scored the revised design **93/100**.
+This is a subjective design assessment, not a measured visitor-success rate or
+an accessibility certification.
+
+| Category | Score |
+| --- | ---: |
+| Visual identity and hierarchy | 24/25 |
+| Navigation and task clarity | 23/25 |
+| Responsive layout and readability | 23/25 |
+| Accessibility and interaction consistency | 23/25 |
+| Total | 93/100 |
+
+The first review scored 89/100. The revised version corrected cramped mobile
+navigation rows, clipped select text, a heading spacing issue, an unmodified
+single-character shortcut, repeated-search focus loss, and search jumps hidden
+behind the header. A narrow-phone schedule overflow was also corrected.
 
 ## Verification
 
-Verified on 2026-11-08:
-
 | Check | Result |
 | --- | --- |
-| TypeScript | Passed |
-| ESLint | Passed |
-| Content and catalog tests | 18 passed |
-| Production build | Passed |
-| Browser suite | 36 passed, 2 intentional skips, 0 failed |
-| Standalone downloaded-file preview | Home and Library navigation passed, 20 rows displayed, no page errors |
-| Research and generated data diff | No changes |
+| TypeScript, ESLint, production build | Passed |
+| Content and catalog suite | 18 passed |
+| Chromium browser suite | 40 passed, 2 intentional shared-viewport skips, 0 failed |
+| Direct-file preview | No external asset requests, page errors, or captured overflow |
+| Supplied logo | Byte-for-byte match with the uploaded JPEG |
 
-The UI suite covers all 27 article routes, main navigation, old bookmarks,
-exact search destinations, global and scoped search parity, pagination, filters,
-directory pins, supplier evidence, browser Back state and scroll restoration,
-skip links and mobile keyboard behavior. The map shows all 13 records with
-coordinates independently of the 20-row directory page.
+The content and catalog suite retains all 27 articles, 207 source records,
+57 directory entries, and 12 suppliers. Raw research catalogs, generated source
+data, original links, and evidence qualifications are unchanged.
 
-Browser checks used Chromium 153 at a 1440 by 1000 desktop viewport and an
-emulated 390 by 844 mobile viewport. Additional checks covered 360 and 768 CSS
-pixels and a 720 CSS-pixel viewport with 2x pixel density. No horizontal overflow
-was detected in the checked layouts. The density check is responsive reflow
-coverage, not native browser zoom operation. The two skipped mobile cases are
-duplicate executions of reflow checks already run in the desktop project.
+Browser coverage includes desktop and phone routes, source evidence, exact
+search destinations, filters, pagination, map selection, Back restoration,
+keyboard search, the skip link, and navigation focus. Reflow is checked at
+320, 360, and 768 CSS pixels, plus a 720 CSS-pixel viewport at 2x pixel density.
+The density check does not operate native browser zoom.
 
-Visual review found no blocking layout issue in the captured desktop and mobile
-views. This is automated and visual review, not a usability study with visitors.
+The standalone preview was also opened directly from disk. Fifteen captures
+across the main pages showed no horizontal overflow or page errors. Its fonts
+and logo loaded locally, with no external asset requests.
 
-## Reproduce
+Run the checks with:
 
 ```sh
 npm ci
@@ -76,11 +101,16 @@ npm run test:ui
 node scripts/build_review_preview.mjs
 ```
 
-`CHROMIUM_PATH` can select an existing Chromium executable. The review environment
-used a headless Chromium package installed outside the repository, without
-changing project dependencies. The existing GitHub Actions workflow installs
-Playwright's Chromium for CI.
+`CHROMIUM_PATH` can select an installed Chromium executable. The final GitHub
+verification status is available in [PR #4](https://github.com/amirrad98/underwater-hockey-atlas/pull/4/checks).
 
-The build retains Vite's large-chunk advisory because the full source catalog is
-bundled. The current JavaScript bundle is about 158 kB gzipped. The map remains a
-schematic geographic grid, and records without coordinates remain in the list.
+## Remaining limits
+
+Some secondary source metadata and diagram labels remain small. The optional
+map is a schematic coordinate grid, and the underlying source dates remain
+visible. This redesign does not reverify club schedules or supplier information.
+Visitor usability sessions and manual screen-reader testing have not been
+performed. Vite retains its existing large-chunk advisory because the full
+source catalog is bundled, at roughly 159 kB gzipped for JavaScript.
+
+The draft is ready for the owner's design review before merge and publication.

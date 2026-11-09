@@ -20,6 +20,7 @@ import {
 } from "./pages/LearningPages";
 import { ClubsPage, LibraryPage, SuppliersPage } from "./pages/CatalogPages";
 import "./style.css";
+import "./editorial.css";
 
 const navigation = [
   { id: "learn", label: "Learn", href: "#/learn" },
@@ -31,8 +32,11 @@ const navigation = [
 function App() {
   const router = useAtlasRouter();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
   const [query, setQuery] = useState("");
   const menuButton = useRef<HTMLButtonElement>(null);
+  const searchButton = useRef<HTMLButtonElement>(null);
+  const searchInput = useRef<HTMLInputElement>(null);
   const searchQuery =
     router.path === "#/search" ? router.params.get("q") || "" : "";
   const articleId = router.path.startsWith("#/wiki/")
@@ -43,6 +47,7 @@ function App() {
 
   useEffect(() => {
     setMenuOpen(false);
+    setSearchOpen(false);
     setQuery(searchQuery);
     const pageTitle =
       article?.title ||
@@ -63,6 +68,18 @@ function App() {
         : `${pageTitle} | Underwater Hockey Atlas`;
   }, [router.href, searchQuery, article?.title, active]);
 
+  useEffect(() => {
+    const shortcut = (event: KeyboardEvent) => {
+      if (event.key.toLowerCase() !== "k" || !(event.ctrlKey || event.metaKey) || event.altKey) return;
+      event.preventDefault();
+      setSearchOpen(true);
+      setMenuOpen(false);
+      requestAnimationFrame(() => searchInput.current?.focus());
+    };
+    window.addEventListener("keydown", shortcut);
+    return () => window.removeEventListener("keydown", shortcut);
+  }, []);
+
   const props = { params: router.params, updateQuery: router.updateQuery };
   return (
     <div
@@ -72,6 +89,10 @@ function App() {
         if (event.key === "Escape" && menuOpen) {
           setMenuOpen(false);
           menuButton.current?.focus();
+        } else if (event.key === "Escape" && searchOpen) {
+          setSearchOpen(false);
+          if (searchButton.current?.getBoundingClientRect().width) searchButton.current.focus();
+          else searchInput.current?.blur();
         }
       }}
     >
@@ -93,11 +114,26 @@ function App() {
           href="#/atlas"
           aria-label="Underwater Hockey Atlas home"
         >
-          <Waves size={30} aria-hidden="true" />
+          <span className="brand-symbol"><Waves size={25} aria-hidden="true" /></span>
           <span>
             UNDERWATER HOCKEY<small>ATLAS &amp; FIELD GUIDE</small>
           </span>
         </a>
+        <button
+          ref={searchButton}
+          className="mobile-search-toggle"
+          type="button"
+          aria-label="Open site search"
+          aria-expanded={searchOpen}
+          aria-controls="site-search"
+          onClick={() => {
+            setSearchOpen((open) => !open);
+            setMenuOpen(false);
+            if (!searchOpen) requestAnimationFrame(() => searchInput.current?.focus());
+          }}
+        >
+          {searchOpen ? <X size={21} aria-hidden="true" /> : <Search size={21} aria-hidden="true" />}
+        </button>
         <button
           ref={menuButton}
           className="menu-toggle"
@@ -105,7 +141,10 @@ function App() {
           aria-label="Toggle navigation"
           aria-expanded={menuOpen}
           aria-controls="main-navigation"
-          onClick={() => setMenuOpen((open) => !open)}
+          onClick={() => {
+            setMenuOpen((open) => !open);
+            setSearchOpen(false);
+          }}
         >
           {menuOpen ? <X size={23} /> : <Menu size={23} />}
         </button>
@@ -132,20 +171,29 @@ function App() {
           ))}
         </nav>
         <form
-          className="header-search"
+          id="site-search"
+          className={`header-search ${searchOpen ? "is-open" : ""}`}
           role="search"
           aria-label="Site search"
           onSubmit={(event) => {
             event.preventDefault();
+            setSearchOpen(false);
             router.navigate(
               `#/search${query.trim() ? `?q=${encodeURIComponent(query.trim())}` : ""}`,
             );
+            // Query changes stay on the same route, so also move focus to the
+            // results when the submitted mobile search field is collapsed.
+            requestAnimationFrame(() => {
+              document.getElementById("main")?.focus({ preventScroll: true });
+              window.scrollTo(0, 0);
+            });
           }}
         >
           <label>
             <Search size={17} aria-hidden="true" />
             <span className="sr-only">Search the atlas</span>
             <input
+              ref={searchInput}
               type="search"
               placeholder="Search the atlas"
               value={query}
@@ -190,7 +238,7 @@ function App() {
       <footer className="site-footer">
         <div>
           <a className="brand" href="#/atlas">
-            <Waves size={25} />
+            <span className="brand-symbol"><Waves size={25} aria-hidden="true" /></span>
             <span>
               UNDERWATER HOCKEY<small>ATLAS &amp; FIELD GUIDE</small>
             </span>

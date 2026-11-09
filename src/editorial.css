@@ -1,0 +1,409 @@
+/* Shared visual system. Fonts are bundled so previews and hosted pages match. */
+@font-face {
+  font-family: "Atlas Sans";
+  src: url("./assets/fonts/open-sans.woff") format("woff");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Atlas Sans";
+  src: url("./assets/fonts/open-sans-bold.woff") format("woff");
+  font-weight: 600 800;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Atlas Display";
+  src: url("./assets/fonts/open-sans-condensed-bold.woff") format("woff");
+  font-weight: 700;
+  font-display: swap;
+}
+
+:root {
+  font-family: "Atlas Sans", Arial, sans-serif;
+  color: #172c25;
+  background: #f8f7f2;
+  --ink: #172c25;
+  --ocean: #143e32;
+  --aqua: #c9dacb;
+  --paper: #f8f7f2;
+  --panel: #fff;
+  --line: #d7dcd3;
+  --muted: #59665d;
+  --teal: #245b43;
+  --gold: #c99b21;
+}
+h1, h2, h3 { font-family: "Atlas Sans", Arial, sans-serif; font-weight: 700; }
+h1 { font-size: clamp(36px, 3.6vw, 52px); letter-spacing: -2px; }
+h2 { font-size: 30px; letter-spacing: -1.2px; }
+h3 { letter-spacing: -.5px; }
+p { line-height: 1.75; }
+.eyebrow { font-size: 10px; letter-spacing: 1.7px; }
+.button { min-height: 50px; padding: 13px 21px; border-radius: 3px; font-size: 13px; font-weight: 700; }
+.button:hover { background: #235740; }
+.button.secondary { background: white; border-color: #bbc6bc; }
+.text-link { font-weight: 700; }
+a, button { touch-action: manipulation; }
+button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible,
+summary:focus-visible, [tabindex="-1"]:focus-visible { outline-color: #9b6f09; }
+.page { padding-top: 42px; }
+.page-heading { max-width: 920px; margin-bottom: 28px; }
+.page-heading p { font-size: 15px; max-width: 730px; }
+.breadcrumb { font-size: 12px; margin-bottom: 24px; }
+
+/* A compact masthead keeps the destinations visible as visitors read. */
+.site-header { min-height: 82px; gap: 28px; background: #fff; position: sticky; top: 0; z-index: 30; }
+.brand { gap: 11px; font-size: 10px; letter-spacing: 1px; line-height: 1.7; }
+.brand small { font-size: 8px; letter-spacing: 2.2px; }
+.brand-symbol { display: flex; align-items: center; justify-content: center; width: 42px; height: 42px; background: var(--ocean); color: #f8f7f2; border-radius: 50%; }
+.primary-navigation a { padding: 28px 0 25px; font-size: 13px; }
+.primary-navigation a[aria-current] { border-color: var(--gold); }
+.header-search { background: #f6f7f2; border-color: #e3e6de; border-radius: 4px; }
+.header-search input { font-size: 12px; }
+.header-search button { min-height: 42px; min-width: 42px; }
+.mobile-search-toggle { display: none; }
+.skip-link { z-index: 100; }
+main, [data-results-start], .article-section, .article-sources, .catalog-selection, .search-section { scroll-margin-top: 105px; }
+.article-sidebar, .learning-sidebar { top: 110px; }
+
+/* The supplied file is intact; the frame removes only its blank white margin. */
+.timberwhales-logo { aspect-ratio: 1.55; width: 100%; overflow: hidden; background: white; }
+.timberwhales-logo img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 51%; }
+
+/* Home: one strong starting action and a recognizable club identity. */
+.field-hero { width: min(1288px, 89.5%); margin: auto; display: grid; grid-template-columns: 1.12fr 1fr; gap: clamp(40px, 6vw, 90px); align-items: center; padding: 62px 0 66px; }
+.field-kicker { display: flex; align-items: center; gap: 10px; color: #3f5b49; margin: 0 0 26px; }
+.field-kicker > span { width: 9px; height: 9px; background: var(--gold); border-radius: 50%; }
+.field-hero h1 { font-family: "Atlas Display", Impact, sans-serif; font-size: clamp(70px, 7.25vw, 108px); line-height: 1.02; font-weight: 700; letter-spacing: -3.8px; }
+.field-hero h1 > span { display: block; color: var(--teal); }
+.field-hero-copy > p { margin: 24px 0 26px; font-size: 16px; max-width: 430px; }
+.field-hero-actions { display: flex; align-items: center; gap: 28px; }
+.field-hero-actions .button { gap: 27px; }
+.field-equipment-link { display: flex; align-items: center; gap: 12px; width: fit-content; max-width: 100%; padding: 20px 0 0; margin-top: 28px; border-top: 1px solid var(--line); font-size: 11px; color: var(--muted); }
+.field-equipment-link > svg:first-child { width: 34px; height: 23px; color: #3c6651; }
+.field-equipment-link strong { color: var(--ink); font-weight: 700; }
+.field-equipment-link:hover strong { text-decoration: underline; text-underline-offset: 3px; }
+.featured-club { align-self: center; background: #fff; border: 1px solid #d8ddd2; border-top: 5px solid var(--gold); border-radius: 2px; box-shadow: 10px 10px 0 #e9e9df; }
+.featured-club-top { display: flex; align-items: center; justify-content: space-between; padding: 20px 25px 0; color: #5c695d; }
+.featured-club-top .eyebrow { margin: 0; font-size: 9px; }
+.featured-club-top > span:last-child { font-size: 9px; letter-spacing: 1px; }
+.featured-club-art { display: block; padding: 17px 19px 16px; }
+.featured-club-art .timberwhales-logo { aspect-ratio: 1.5; }
+.featured-club-caption { display: flex; align-items: center; justify-content: space-between; gap: 16px; background: var(--ocean); color: #fff; padding: 25px; }
+.featured-location { display: flex; align-items: center; gap: 6px; color: #d0dfcf; font-size: 10px; margin-bottom: 8px; }
+.featured-club-caption h2 { color: #fff; font-size: clamp(20px, 1.9vw, 27px); letter-spacing: -.8px; }
+.round-link { display: flex; align-items: center; justify-content: center; flex-shrink: 0; width: 45px; height: 45px; background: var(--gold); color: #17372a; border-radius: 50%; }
+.round-link:hover { background: #e4ba43; }
+.field-routes { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: #eeeee5; }
+.field-routes-inner { width: min(1288px, 89.5%); display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin: auto; }
+.field-routes a { display: flex; align-items: center; gap: 20px; padding: 26px 30px; }
+.field-routes a:first-child { padding-left: 0; }
+.field-routes a:last-child { padding-right: 0; }
+.field-routes a + a { border-left: 1px solid #d2d7cb; }
+.field-routes a > svg { margin-left: auto; }
+.field-routes a:hover strong { color: #376b46; }
+.route-number { font-family: "Atlas Display", sans-serif; font-size: 24px; color: #657b61; }
+.field-routes strong { display: block; font-size: 17px; letter-spacing: -.3px; }
+.field-routes small { display: block; font-size: 11px; color: var(--muted); margin-top: 4px; }
+.field-home-content { padding-top: 60px; padding-bottom: 44px; }
+.field-start { display: grid; grid-template-columns: .9fr 1.1fr; gap: 85px; align-items: start; }
+.field-section-intro { padding-top: 10px; }
+.field-section-intro h2 { font-size: clamp(26px, 2.5vw, 36px); line-height: 1.25; letter-spacing: -1.4px; }
+.field-section-intro p { font-size: 14px; margin: 18px 0; max-width: 350px; }
+.field-section-intro > a { margin-top: 6px; }
+.field-reading-list { border-top: 1px solid #bfc9bd; }
+.field-reading-list > a { display: flex; gap: 20px; align-items: center; padding: 23px 0; border-bottom: 1px solid var(--line); }
+.reading-number { font-size: 11px; color: #597052; }
+.field-reading-list h3 { font-size: 18px; }
+.field-reading-list p { font-size: 12px; margin: 7px 0 0; line-height: 1.65; }
+.field-reading-list > a > svg { margin-left: auto; }
+.field-reading-list > a:hover h3 { text-decoration: underline; text-underline-offset: 4px; }
+.field-next { display: grid; grid-template-columns: 1fr 1fr; gap: 85px; align-items: center; padding: 38px 44px; margin-top: 60px; background: #e8ecdf; }
+.field-next h2 { font-size: 30px; line-height: 1.25; }
+.field-next p { font-size: 14px; max-width: 380px; margin: 16px 0 23px; }
+.field-next .eyebrow { color: #4e694a; }
+.field-tactics { min-width: 0; }
+.field-tactics .board-wrap { background: #143e32; border-color: #143e32; border-radius: 2px; }
+.field-tactics > a { display: flex; align-items: center; justify-content: space-between; padding: 11px 1px 0; font-size: 11px; color: var(--teal); }
+.field-tactics > a:hover { text-decoration: underline; }
+.field-library { display: flex; align-items: center; gap: 22px; padding: 35px 0 0; }
+.field-library > svg { color: #577152; }
+.field-library strong { display: block; font-size: 15px; letter-spacing: -.3px; }
+.field-library span { display: block; font-size: 12px; color: var(--muted); margin-top: 5px; }
+.field-library > a { margin-left: auto; flex-shrink: 0; }
+
+/* Learn reads like an index, with a useful beginner entry before the catalog. */
+.learn-start { display: flex; align-items: center; gap: 18px; padding: 23px; margin-top: 22px; background: var(--ocean); color: white; border-radius: 3px; }
+.learn-start-icon { display: flex; align-items: center; justify-content: center; width: 48px; height: 48px; border: 1px solid #70876b; border-radius: 50%; color: #e4c464; flex-shrink: 0; }
+.learn-start > span:nth-child(2) { display: flex; flex-direction: column; gap: 7px; }
+.learn-start small { font-size: 9px; letter-spacing: 1.5px; color: #ccd9c7; }
+.learn-start strong { font-size: 20px; letter-spacing: -.5px; }
+.learn-start > span > span { font-size: 12px; color: #c6d7c5; }
+.learn-start > svg { margin-left: auto; }
+.learn-start:hover { background: #20533e; }
+.learning-sidebar > button[aria-pressed="true"] { color: #173e2e; background: #e5ebdc; box-shadow: inset 3px 0 0 var(--gold); }
+.guide-index { grid-template-columns: 1fr; gap: 0; }
+.guide-index .article-card { display: grid; grid-template-columns: 128px minmax(0, 1fr); gap: 7px 22px; padding: 22px 8px; background: transparent; border: 0; border-bottom: 1px solid var(--line); border-radius: 0; }
+.guide-index .article-card > small { grid-column: 1; grid-row: 1/4; margin: 5px 0 0; font-size: 11px; line-height: 1.6; color: #49613f; }
+.guide-index .article-card h3, .guide-index .article-card p, .guide-index .card-meta { grid-column: 2; }
+.guide-index .article-card h3 { font-size: 18px; }
+.guide-index .article-card p { font-size: 13px; margin: 0; }
+.guide-index .card-meta { margin: 3px 0 0; font-size: 10px; color: #66715d; }
+.guide-index .article-card:hover { background: #efefe5; }
+.learn-results .results-heading { margin-bottom: 0; }
+.topic-intro { margin-top: 24px; }
+.article-contents { background: #edefe3; border-left: 3px solid #b98f22; border-radius: 0; }
+.article-section { margin-bottom: 34px; }
+.article-body { max-width: 800px; }
+.article-section p { font-size: 16px; line-height: 1.9; }
+.article-card, .source-card, .search-result { border-radius: 3px; }
+.source-card h3 { font-size: 15px; }
+.source-details > summary { min-height: 36px; display: list-item; font-size: 11px; }
+.equipment-intro { background: #e9edde; }
+.equipment-grid details { border-radius: 2px; }
+.equipment-number { font-family: "Atlas Display", sans-serif; font-size: 20px; color: #687954; line-height: 1; }
+.equipment-illustration { color: #315b39; }
+.equipment-grid strong { font-size: 16px; }
+
+/* Club identity and practical attendance information come before its history. */
+.club-heading { display: grid; grid-template-columns: minmax(0, 1fr) 280px; gap: 50px; align-items: center; padding-bottom: 34px; border-bottom: 1px solid var(--line); }
+.club-profile-logo { border: 1px solid #e0e3d8; }
+.club-heading .page-heading p { max-width: 610px; font-size: 14px; }
+.club-schedule { background: #edf0e5; border-color: #d5ddcc; border-radius: 3px; padding: 28px; }
+.club-schedule .eyebrow { font-size: 10px; }
+.schedule-time strong { font-family: "Atlas Display", sans-serif; font-size: 31px; letter-spacing: -.4px; }
+.schedule-time span { font-size: 13px; }
+.club-visit-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 22px; margin-top: 22px; }
+.club-record-note { margin: 22px 0 36px; padding-bottom: 22px; border-bottom: 1px solid var(--line); }
+.club-record-note > summary { font-size: 12px; color: #4f6447; min-height: 40px; width: fit-content; padding: 9px 0; }
+.club-record-note p { max-width: 900px; font-size: 13px; }
+
+.site-footer { background: var(--ocean); padding-block: 35px; color: white; border-top: 0; }
+.site-footer .brand-symbol { background: #315745; color: #e8eedd; }
+.site-footer p { color: #c3d1bf; font-size: 11px; }
+.site-footer nav, .footer-club { color: #e2ebdb; }
+.site-footer nav a, .footer-club { min-height: 32px; }
+.site-footer .footer-club { border-bottom: 1px solid #54715b; padding-bottom: 9px; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .button, .round-link, .field-reading-list a, .guide-index .article-card, .learn-start { transition: background-color 150ms, color 150ms; }
+  .round-link:hover svg { transform: translate(2px, -2px); }
+  .round-link svg { transition: transform 150ms; }
+}
+
+@media (max-width: 1120px) {
+  .site-header { gap: 20px; }
+  .brand { font-size: 9px; }
+  .brand-symbol { width: 38px; height: 38px; }
+  .primary-navigation { gap: 20px; }
+  .primary-navigation a { font-size: 12px; }
+  .field-hero { width: 92%; gap: 40px; padding-block: 48px; }
+  .field-hero h1 { font-size: 82px; letter-spacing: -2.7px; }
+  .field-hero-copy > p { font-size: 14px; }
+  .field-hero-actions { gap: 20px; }
+  .featured-club-caption { padding: 22px; }
+  .field-routes-inner { width: 92%; }
+  .field-routes a { gap: 15px; padding-inline: 24px; }
+  .field-routes strong { font-size: 15px; }
+  .field-start { gap: 50px; }
+  .field-next { gap: 50px; padding: 32px; }
+  .club-heading { grid-template-columns: minmax(0, 1fr) 240px; gap: 30px; }
+}
+
+@media (max-width: 960px) {
+  .site-header { padding-block: 12px; min-height: 74px; }
+  .primary-navigation a { font-size: 15px; padding: 13px 12px; }
+  .primary-navigation { background: #fff; }
+  .primary-navigation a[aria-current] { background: #edf0e6; border-left: 3px solid var(--gold); }
+  .brand { font-size: 10px; }
+  .field-hero { gap: 30px; }
+  .field-hero h1 { font-size: 72px; letter-spacing: -2.3px; }
+  .field-kicker { font-size: 9px; letter-spacing: 1.2px; }
+  .featured-club-top { padding: 15px 18px 0; }
+  .featured-club-top > span:last-child { font-size: 8px; }
+  .featured-club-art { padding-inline: 12px; }
+  .featured-club-caption { padding: 18px; gap: 10px; }
+  .featured-club-caption h2 { font-size: 20px; }
+  .featured-location { font-size: 9px; }
+  .round-link { width: 40px; height: 40px; }
+  .field-equipment-link { font-size: 10px; }
+  .field-hero-actions { flex-wrap: wrap; gap: 16px; }
+  .field-routes a { gap: 12px; padding-inline: 20px; }
+  .field-routes small { font-size: 10px; }
+  .field-routes strong { font-size: 14px; }
+  .field-start { gap: 35px; }
+  .field-next { gap: 30px; }
+  .field-next h2 { font-size: 27px; }
+  .field-library { gap: 16px; }
+  .field-library > div { max-width: 390px; }
+  .guide-index .article-card { grid-template-columns: 100px minmax(0, 1fr); gap: 7px 16px; }
+  .guide-index .article-card h3 { font-size: 17px; }
+  .schedule-time strong { font-size: 30px; }
+}
+
+@media (max-width: 760px) {
+  .field-hero { width: 90%; grid-template-columns: 1fr; padding: 34px 0 38px; gap: 32px; }
+  .field-hero-copy { max-width: 560px; }
+  .field-kicker { margin-bottom: 20px; }
+  .field-hero h1 { font-size: clamp(64px, 11vw, 85px); letter-spacing: -2.5px; line-height: 1.02; }
+  .field-hero-copy > p { font-size: 15px; margin: 21px 0 23px; max-width: 460px; }
+  .field-hero-actions { gap: 25px; }
+  .field-equipment-link { margin-top: 22px; padding-top: 16px; font-size: 11px; }
+  .featured-club { width: 100%; max-width: 560px; display: grid; grid-template-columns: 1fr 1.1fr; box-shadow: 6px 6px 0 #e9e9df; }
+  .featured-club-top { grid-column: 1 / -1; padding: 14px 18px 0; }
+  .featured-club-art { padding: 12px 8px 14px; }
+  .featured-club-caption { background: white; color: var(--ink); padding: 20px 16px 16px 10px; gap: 12px; }
+  .featured-club-caption h2 { color: var(--ink); font-size: 21px; }
+  .featured-location { color: #5c6c55; font-size: 10px; line-height: 1.5; }
+  .featured-location svg { display: none; }
+  .round-link { width: 36px; height: 36px; }
+  .round-link svg { width: 19px; }
+  .field-routes-inner { width: 90%; }
+  .field-routes a { flex-wrap: wrap; gap: 8px; padding: 18px 15px; align-content: start; position: relative; }
+  .field-routes a > span:nth-child(2) { width: 100%; }
+  .field-routes a > svg { position: absolute; top: 21px; right: 12px; width: 17px; }
+  .field-routes a:last-child > svg { right: 0; }
+  .route-number { font-size: 20px; }
+  .field-routes strong { font-size: 13px; line-height: 1.4; }
+  .field-routes small { font-size: 10px; line-height: 1.6; }
+  .field-home-content { padding-top: 36px; padding-bottom: 30px; }
+  .field-start { grid-template-columns: 1fr; gap: 26px; }
+  .field-section-intro { padding: 0; }
+  .field-section-intro h2 { font-size: 29px; }
+  .field-section-intro h2 br { display: none; }
+  .field-section-intro p { max-width: 550px; margin-block: 13px; }
+  .field-section-intro > a { margin-top: 3px; }
+  .field-reading-list > a { padding-block: 21px; }
+  .field-reading-list h3 { font-size: 17px; }
+  .field-next { margin-top: 36px; grid-template-columns: 1fr 1fr; gap: 25px; padding: 25px; }
+  .field-next h2 { font-size: 25px; }
+  .field-next p { font-size: 13px; }
+  .field-next .button { font-size: 12px; padding-inline: 15px; }
+  .field-library { flex-wrap: wrap; padding-top: 26px; align-items: start; }
+  .field-library > div { flex: 1; max-width: none; }
+  .field-library > a { margin-left: 41px; flex-basis: calc(100% - 41px); }
+  .learn-start { margin-top: 18px; padding: 20px; }
+  .learn-start strong { font-size: 18px; }
+  .learning-sidebar { padding-bottom: 16px; gap: 8px; }
+  .learning-sidebar > button { min-height: 44px; font-size: 12px; background: white; }
+  .learning-sidebar > button[aria-pressed="true"] { box-shadow: none; border-color: #315c3e; background: var(--ocean); color: white; }
+  .learning-sidebar > .eyebrow { display: none; }
+  .learn-layout { gap: 20px; }
+  .guide-index .article-card { grid-template-columns: 110px minmax(0, 1fr); }
+  .page-heading h1 { font-size: 38px; letter-spacing: -1.5px; }
+  .article-page h1 { font-size: 34px; }
+  .article-sidebar { position: static; }
+  .club-heading { gap: 25px; grid-template-columns: minmax(0, 1fr) 210px; }
+  .club-heading h1 { font-size: 35px; }
+  .club-heading .page-heading p { font-size: 13px; }
+  .club-schedule { padding: 25px; }
+  .club-visit-actions { gap: 18px; }
+}
+
+@media (max-width: 520px) {
+  .site-header { grid-template-columns: minmax(0, 1fr) 42px 42px; gap: 3px; padding: 11px 5%; min-height: 70px; }
+  .brand { font-size: 8px; letter-spacing: .9px; gap: 9px; }
+  .brand small { font-size: 7px; letter-spacing: 1.65px; }
+  .brand-symbol { width: 35px; height: 35px; }
+  .brand-symbol svg { width: 22px; }
+  .menu-toggle { grid-column: 3; min-width: 42px; min-height: 44px; padding: 7px; }
+  .mobile-search-toggle { grid-column: 2; grid-row: 1; display: flex; align-items: center; justify-content: center; border: 0; min-width: 42px; min-height: 44px; padding: 7px; border-radius: 3px; }
+  .mobile-search-toggle[aria-expanded="true"] { background: #e8ecdf; }
+  .header-search { display: none; grid-column: 1/-1; grid-row: 2; width: 100%; margin-top: 9px; }
+  .header-search.is-open { display: flex; }
+  .header-search input { font-size: 16px; }
+  .header-search button { min-height: 44px; }
+  .primary-navigation { padding-inline: 5%; }
+  main, [data-results-start], .article-section, .article-sources, .catalog-selection, .search-section { scroll-margin-top: 90px; }
+  .page { padding-top: 27px; }
+  .page-heading { margin-bottom: 22px; }
+  .page-heading h1 { font-size: 33px; letter-spacing: -1.2px; }
+  .page-heading p { font-size: 13px; line-height: 1.7; margin-top: 13px; }
+  .eyebrow { font-size: 9px; }
+  .field-hero { gap: 28px; padding-top: 29px; }
+  .field-kicker { font-size: 8px; letter-spacing: 1.4px; gap: 8px; }
+  .field-kicker > span { width: 7px; height: 7px; }
+  .field-hero h1 { font-size: clamp(56px, 16.4vw, 78px); letter-spacing: -2.3px; }
+  .field-hero-copy > p { font-size: 14px; max-width: 340px; }
+  .field-hero-actions { gap: 22px; }
+  .field-hero-actions .button { font-size: 12px; padding: 12px 16px; gap: 19px; }
+  .field-hero-actions .text-link { font-size: 12px; }
+  .field-equipment-link { font-size: 10px; gap: 9px; }
+  .field-equipment-link > svg:first-child { width: 29px; }
+  .featured-club { grid-template-columns: .9fr 1.1fr; }
+  .featured-club-top { padding: 13px 14px 0; }
+  .featured-club-top .eyebrow, .featured-club-top > span:last-child { font-size: 8px; }
+  .featured-club-art { padding: 11px 5px 11px 10px; }
+  .featured-club-caption { padding: 18px 12px 15px 9px; flex-wrap: wrap; gap: 10px; }
+  .featured-club-caption h2 { font-size: 19px; letter-spacing: -.6px; }
+  .featured-location { font-size: 9px; margin-bottom: 5px; }
+  .round-link { width: 32px; height: 32px; }
+  .featured-club-caption .round-link { width: 44px; height: 44px; }
+  .field-routes-inner { grid-template-columns: 1fr; }
+  .field-routes a, .field-routes a:first-child, .field-routes a:last-child { flex-wrap: nowrap; padding: 17px 0; gap: 20px; }
+  .field-routes a + a { border-left: 0; border-top: 1px solid var(--line); }
+  .field-routes a > span:nth-child(2) { width: auto; }
+  .field-routes a > svg { position: static; margin-left: auto; width: 20px; }
+  .field-routes strong { font-size: 14px; }
+  .field-routes small { font-size: 12px; margin-top: 3px; }
+  .field-section-intro h2 { font-size: 27px; letter-spacing: -1px; }
+  .field-reading-list > a { gap: 15px; }
+  .field-reading-list h3 { font-size: 16px; }
+  .field-reading-list p { font-size: 12px; }
+  .field-next { grid-template-columns: 1fr; padding: 25px; }
+  .field-next h2 { font-size: 27px; }
+  .field-next .button { font-size: 12px; }
+  .field-next p { font-size: 13px; max-width: 300px; }
+  .field-tactics { margin-top: 2px; }
+  .field-library strong { font-size: 14px; }
+  .field-library span { font-size: 11px; line-height: 1.65; }
+  .learn-start { gap: 13px; padding: 18px 16px; }
+  .learn-start-icon { display: none; }
+  .learn-start strong { font-size: 17px; }
+  .learn-start small { font-size: 8px; letter-spacing: 1.2px; }
+  .learn-start > span > span { font-size: 11px; }
+  .guide-index .article-card { display: flex; gap: 7px; padding: 20px 0; }
+  .guide-index .article-card > small { font-size: 10px; margin: 0 0 1px; }
+  .guide-index .article-card h3 { font-size: 16px; }
+  .guide-index .article-card p { font-size: 12px; }
+  .guide-index .card-meta { font-size: 10px; }
+  .article-page h1 { font-size: 32px; }
+  .article-section h2 { font-size: 23px; }
+  .article-section p { font-size: 15px; line-height: 1.85; }
+  .source-card h3 { font-size: 14px; }
+  .equipment-intro h2 { font-size: 25px; }
+  .club-heading { grid-template-columns: 1fr; gap: 20px; padding-bottom: 25px; margin-bottom: 25px; }
+  .club-profile-logo { max-width: 250px; justify-self: start; }
+  .club-heading h1 { font-size: 35px; }
+  .club-schedule { padding: 23px 20px; gap: 22px 16px; }
+  .club-schedule h2 { font-size: 25px; }
+  .club-schedule .eyebrow { font-size: 8px; }
+  .schedule-time { padding-left: 14px; }
+  .schedule-time strong { font-size: 28px; }
+  .club-visit-actions .button { font-size: 12px; width: 100%; }
+  .club-record-note { margin-bottom: 28px; }
+  .site-footer { padding-block: 29px; gap: 23px; }
+  .site-footer nav { gap: 8px 40px; width: 100%; }
+  .site-footer .brand { font-size: 9px; }
+  .site-footer .brand small { font-size: 8px; }
+  .site-footer .footer-club { flex-basis: auto; font-size: 12px; }
+}
+
+@media (max-width: 360px) {
+  .brand { font-size: 7px; gap: 7px; letter-spacing: .7px; }
+  .brand small { font-size: 6px; letter-spacing: 1.5px; }
+  .brand-symbol { width: 30px; height: 30px; }
+  .field-hero-actions { gap: 17px; }
+  .field-hero-actions .button { gap: 12px; }
+  .field-routes a { padding-inline: 0; }
+  .featured-club-caption h2 { font-size: 17px; }
+  .field-equipment-link { font-size: 9px; }
+  .field-equipment-link > svg { width: 14px; }
+  .club-schedule { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+  .schedule-time { display: flex; justify-content: space-between; align-items: center; border-left: 0; border-top: 1px solid #c4d0bc; padding: 14px 0 0; }
+  .schedule-time span { margin-bottom: 0; }
+}
+
+@media (max-width: 420px) {
+  .catalog-page .catalog-primary-filters { grid-template-columns: minmax(0, 1fr); }
+  .catalog-page .catalog-filter select { width: 100%; }
+}

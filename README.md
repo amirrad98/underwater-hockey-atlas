@@ -1,6 +1,12 @@
-# Underwater Hockey Atlas + Wiki
+# Underwater Hockey Atlas
 
 An integrated visual atlas of underwater hockey, connected to wiki articles and a curated resource library. Explore the sport through skills, equipment, formations and geography, then follow the sources. A dedicated UNBC Timber Whales profile connects the club to the wider sport.
+
+## Explore the atlas
+
+The interface has four main sections: **Learn**, **Clubs & places**, **Equipment**, and **Library**. Suppliers sit within Equipment, and the Timber Whales profile sits within Clubs & places. Home offers a short starting path for new visitors. Existing article links and section bookmarks continue to work.
+
+Search, filters, pagination and Map/List choices are reflected in URLs. Global search links directly to the matching article or record, and browser Back restores the previous collection state and scroll position. See the [navigation and usability notes](docs/REORGANIZATION.md) for the route mapping and implementation details.
 
 This repository contains a foundational, static content prototype. No account, backend or production secrets are required. It is not an exhaustive encyclopedia or a replacement for qualified coaching and current competition rules.
 
@@ -45,4 +51,6 @@ Pages eligibility was confirmed in GitHub Settings and GitHub Actions was enable
 
 ## Review evidence
 
-See the [desktop/mobile screenshots](docs/SCREENSHOTS.md) and [verification record](docs/VERIFICATION.md). The main JavaScript bundle is approximately 148 kB gzipped because the prototype ships its source metadata; future expansion should split route content or load source details on demand.
+The current reorganization has a [standalone preview, screenshots and verification notes](docs/review/README.md). To build the preview yourself, run `npm run build` followed by `node scripts/build_review_preview.mjs`, then open `docs/review/preview.html` in a browser.
+
+The foundation's [desktop/mobile screenshots](docs/SCREENSHOTS.md) and [verification record](docs/VERIFICATION.md) remain available as historical evidence. The current main JavaScript bundle is approximately 158 kB gzipped because the prototype ships its source metadata; future expansion should split route content or load source details on demand.

@@ -8,7 +8,7 @@
     "build": "tsc -b && vite build",
     "typecheck": "tsc --noEmit",
     "lint": "eslint .",
-    "test": "tsx --test tests/content.test.ts",
+    "test": "node --import tsx --test tests/content.test.ts tests/catalog.test.ts",
     "test:ui": "playwright test",
     "preview": "vite preview"
   },

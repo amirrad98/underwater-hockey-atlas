@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test'
 import { places } from '../src/data'
 
 const mapped = places.filter((place) => place.lat !== null && place.lon !== null)
-const worldRoute = '/underwater-hockey-atlas/#/world'
+const worldRoute = '/underwater-hockey-atlas/#/atlas/world'
 
 test('world overview renders real land and keeps every pin on the same projection', async ({ page }, testInfo) => {
   await page.goto(worldRoute)

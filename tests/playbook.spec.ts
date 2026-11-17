@@ -4,7 +4,7 @@ import { scenarios, drills, formations } from '../src/playbook/data';
 test('every tactical snapshot renders real positions, availability, carrier and complete action paths', async ({ page }) => {
   test.setTimeout(90_000); // This case inspects all ten scenarios and 36 complete result frames.
   for (const scenario of scenarios) {
-    await page.goto(`/underwater-hockey-atlas/#/board/${scenario.id}`);
+    await page.goto(`/underwater-hockey-atlas/#/atlas/board/${scenario.id}`);
     const player = page.locator('.scenario-player');
     await expect(player.getByRole('heading', { name: scenario.title, exact: true })).toBeVisible();
     await expect(player.getByText(scenario.surfacingPolicy, { exact: true })).toBeVisible();
@@ -42,7 +42,7 @@ test('every tactical snapshot renders real positions, availability, carrier and 
 });
 
 test('board controls work by keyboard, reset on scenario change and link to local practice', async ({ page }) => {
-  await page.goto('/underwater-hockey-atlas/#/board');
+  await page.goto('/underwater-hockey-atlas/#/atlas/board');
   const next = page.getByRole('button', { name: 'Next', exact: true });
   await next.focus(); await page.keyboard.press('Enter');
   await expect(page.locator('.step-reading')).toContainText('STEP 1');
@@ -51,17 +51,17 @@ test('board controls work by keyboard, reset on scenario change and link to loca
   await page.getByRole('button', { name: 'Previous', exact: true }).click();
   await expect(page.getByRole('button', { name: 'Initial frame', exact: true })).toHaveAttribute('aria-current', 'step');
   await page.getByLabel('Choose a scenario').selectOption(scenarios[1].id);
-  await expect(page).toHaveURL(new RegExp(`#/board/${scenarios[1].id}$`));
+  await expect(page).toHaveURL(new RegExp(`#/atlas/board/${scenarios[1].id}$`));
   await expect(page.getByRole('button', { name: 'Initial frame', exact: true })).toHaveAttribute('aria-current', 'step');
-  await page.locator('.scenario-player a[href^="#/drills/"]').first().click();
+  await page.locator('.scenario-player a[href^="#/atlas/drills/"]').first().click();
   await expect(page.getByRole('heading', { name: 'Run the drill', exact: true })).toBeVisible();
-  await page.locator('aside a[href^="#/wiki/"]').first().click();
+  await page.locator('aside a[href^="#/atlas/wiki/"]').first().click();
   await expect(page.locator('.article-contents')).toBeVisible();
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1)).toBe(true);
 });
 
 test('formation choices render all six reference roles and complete teaching notes', async ({ page }) => {
-  await page.goto('/underwater-hockey-atlas/#/board');
+  await page.goto('/underwater-hockey-atlas/#/atlas/board');
   const board = page.locator('.formation-section');
   for (const formation of formations) {
     await board.getByRole('button', { name: formation.name, exact: true }).click();
@@ -75,7 +75,7 @@ test('formation choices render all six reference roles and complete teaching not
 
 test('every drill has full procedure, rotation, coaching guidance, adaptations and safety', async ({ page }) => {
   for (const drill of drills) {
-    await page.goto(`/underwater-hockey-atlas/#/drills/${drill.id}`);
+    await page.goto(`/underwater-hockey-atlas/#/atlas/drills/${drill.id}`);
     await expect(page.getByRole('heading', { level: 1 })).toHaveText(drill.title);
     for (const text of [drill.setup, ...drill.procedure, drill.resetAndRotation, ...drill.coachObservations, drill.adaptations.easier, drill.adaptations.harder, ...drill.debriefQuestions, ...drill.safety]) await expect(page.getByText(text, { exact: true })).toBeVisible();
     await page.locator('.playbook-sources summary').click();
@@ -85,23 +85,23 @@ test('every drill has full procedure, rotation, coaching guidance, adaptations a
 });
 
 test('drill filtering and shared search open local lessons, drills and boards', async ({ page }) => {
-  await page.goto('/underwater-hockey-atlas/#/drills');
+  await page.goto('/underwater-hockey-atlas/#/atlas/drills');
   await page.getByRole('textbox', { name: 'Search drills', exact: true }).fill('no-such-drill-zzzz');
   await expect(page.getByRole('heading', { name: 'No matching drills', exact: true })).toBeVisible();
   await page.getByRole('button', { name: 'Reset drill filters' }).click();
   await expect(page.locator('.article-grid a')).toHaveCount(drills.length);
   const search = page.getByRole('textbox', { name: 'Search atlas and wiki' });
   await search.fill('support'); await search.press('Enter');
-  await expect(page.locator('main a[href^="#/wiki/"]').first()).toBeVisible();
-  await expect(page.locator('main a[href^="#/drills/"]').first()).toBeVisible();
-  await expect(page.locator('main a[href^="#/board/"]').first()).toBeVisible();
+  await expect(page.locator('main a[href^="#/atlas/wiki/"]').first()).toBeVisible();
+  await expect(page.locator('main a[href^="#/atlas/drills/"]').first()).toBeVisible();
+  await expect(page.locator('main a[href^="#/atlas/board/"]').first()).toBeVisible();
 });
 
 test('mobile navigation has distinct touch targets and does not cover the page', async ({ page, isMobile }) => {
   test.skip(!isMobile, 'Mobile menu test');
   for (const width of [320, 390]) {
     await page.setViewportSize({ width, height: 844 });
-    await page.goto('/underwater-hockey-atlas/#/board');
+    await page.goto('/underwater-hockey-atlas/#/atlas/board');
     await page.getByRole('button', { name: 'Toggle navigation' }).click();
     await expect(page.locator('header > nav a').first()).toBeFocused();
     await page.keyboard.press('Escape');
@@ -115,8 +115,12 @@ test('mobile navigation has distinct touch targets and does not cover the page',
     const navBox = await page.locator('header > nav').boundingBox();
     const mainBox = await page.locator('main').boundingBox();
     expect(navBox!.y + navBox!.height).toBeLessThanOrEqual(mainBox!.y);
-    await page.locator('header > nav').getByRole('link', { name: 'Board', exact: true }).click();
+    await page.locator('header > nav').getByRole('link', { name: 'UWH Atlas', exact: true }).click();
     await expect(page.getByRole('button', { name: 'Toggle navigation' })).toHaveAttribute('aria-expanded', 'false');
+    await expect(page).toHaveURL(/#\/atlas$/);
+    for (const link of await page.locator('nav.subnav a').all()) expect((await link.boundingBox())!.height).toBeGreaterThanOrEqual(44);
+    await page.locator('nav.subnav').getByRole('link', { name: 'Board', exact: true }).click();
+    await expect(page).toHaveURL(/#\/atlas\/board$/);
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1)).toBe(true);
   }
 });

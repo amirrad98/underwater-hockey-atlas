@@ -34,7 +34,7 @@ test('a worker update and refresh use the new shell and assets, including offlin
   await new Promise<void>(resolve => server.listen(0, '127.0.0.1', resolve));
   const address = server.address();
   if (!address || typeof address === 'string') throw new Error('Expected a local HTTP port');
-  const url = `http://127.0.0.1:${address.port}/underwater-hockey-atlas/#/wiki/passing`;
+  const url = `http://127.0.0.1:${address.port}/underwater-hockey-atlas/#/atlas/wiki/passing`;
   try {
     await page.goto(url);
     await page.evaluate(async () => { await navigator.serviceWorker.ready; if (!navigator.serviceWorker.controller) await new Promise<void>(resolve => navigator.serviceWorker.addEventListener('controllerchange', () => resolve(), { once: true })); });

@@ -77,9 +77,9 @@ export function SourceEvidence({ sourceIds, editorialStatus }: { sourceIds: stri
 
 export function PracticeLinks({ articleIds = [], drillIds = [], scenarioIds = [] }: { articleIds?: string[]; drillIds?: string[]; scenarioIds?: string[] }) {
   return <div className="practice-links">
-    {articleIds.map(id => { const article = articles.find(item => item.id === id); return article && <a key={`article-${id}`} href={`#/wiki/${id}`}><small>READ</small><span>{article.title}</span><ArrowUpRight size={16} /></a>; })}
-    {drillIds.map(id => { const drill = drills.find(item => item.id === id); return drill && <a key={`drill-${id}`} href={`#/drills/${id}`}><small>PRACTISE</small><span>{drill.title}</span><ArrowUpRight size={16} /></a>; })}
-    {scenarioIds.map(id => { const scenario = scenarios.find(item => item.id === id); return scenario && <a key={`scenario-${id}`} href={`#/board/${id}`}><small>VISUALIZE</small><span>{scenario.title}</span><ArrowUpRight size={16} /></a>; })}
+    {articleIds.map(id => { const article = articles.find(item => item.id === id); return article && <a key={`article-${id}`} href={`#/atlas/wiki/${id}`}><small>READ</small><span>{article.title}</span><ArrowUpRight size={16} /></a>; })}
+    {drillIds.map(id => { const drill = drills.find(item => item.id === id); return drill && <a key={`drill-${id}`} href={`#/atlas/drills/${id}`}><small>PRACTISE</small><span>{drill.title}</span><ArrowUpRight size={16} /></a>; })}
+    {scenarioIds.map(id => { const scenario = scenarios.find(item => item.id === id); return scenario && <a key={`scenario-${id}`} href={`#/atlas/board/${id}`}><small>VISUALIZE</small><span>{scenario.title}</span><ArrowUpRight size={16} /></a>; })}
   </div>;
 }
 
@@ -126,15 +126,15 @@ function ScenarioPlayer({ scenario }: { scenario: Scenario }) {
 
 export function BoardPage({ id }: { id?: string }) {
   const scenario = id ? scenarios.find(item => item.id === id) : scenarios[0];
-  if (!scenario) return <div className="page"><h1>Scenario not found</h1><a href="#/board">Browse the tactical board</a></div>;
+  if (!scenario) return <div className="page"><h1>Scenario not found</h1><a href="#/atlas/board">Browse the tactical board</a></div>;
   return <div className="page playbook-page">
     <div className="page-heading"><div className="eyebrow">THE TACTICAL BOARD</div><h1>Read the play. Move together.</h1><p>Walk through a play one decision at a time. Follow the puck, compare support positions, and discuss the next move.</p></div>
-    <div className="playbook-toolbar"><label>Choose a scenario<select aria-label="Choose a scenario" value={scenario.id} onChange={event => { location.hash = `/board/${event.target.value}`; }}>{scenarios.map(item => <option key={item.id} value={item.id}>{item.title}</option>)}</select></label><a className="text-link" href="#/drills">Open the drill library <ArrowUpRight size={17} /></a></div>
+    <div className="playbook-toolbar"><label>Choose a scenario<select aria-label="Choose a scenario" value={scenario.id} onChange={event => { location.hash = `/atlas/board/${event.target.value}`; }}>{scenarios.map(item => <option key={item.id} value={item.id}>{item.title}</option>)}</select></label><a className="text-link" href="#/atlas/drills">Open the drill library <ArrowUpRight size={17} /></a></div>
     <PlaybookSafety />
     <ScenarioPlayer key={scenario.id} scenario={scenario} />
-    <section className="formation-section"><div><div className="eyebrow">THE STARTING SHAPE</div><h2>Compare formations.</h2><p>A formation is a shared starting reference. Read each player’s responsibility, then consider how that shape changes around the puck.</p><a className="text-link" href="#/wiki/formations">Read the formation guide <ArrowUpRight size={17} /></a></div><FormationBoard compact /></section>
+    <section className="formation-section"><div><div className="eyebrow">THE STARTING SHAPE</div><h2>Compare formations.</h2><p>A formation is a shared starting reference. Read each player’s responsibility, then consider how that shape changes around the puck.</p><a className="text-link" href="#/atlas/wiki/formations">Read the formation guide <ArrowUpRight size={17} /></a></div><FormationBoard compact /></section>
     <section className="board-coach-guide"><h2>{playbookCatalog.coachGuide.title}</h2><ol>{playbookCatalog.coachGuide.procedure.map(item => <li key={item}>{item}</li>)}</ol><h3>Discussion prompts</h3><PointList items={playbookCatalog.coachGuide.discussionPrompts} /><p>{playbookCatalog.coachGuide.sessionPlanning}</p></section>
     <section className="board-concepts"><h2>Ideas behind the board</h2>{playbookCatalog.concepts.map(concept => <details key={concept.id}><summary>{concept.title}</summary><p>{concept.body}</p></details>)}</section>
-    <section><h2>Explore the playbook</h2><div className="article-grid">{scenarios.map(item => <a className="article-card" href={`#/board/${item.id}`} key={item.id}><small>{item.level} · {item.steps.length} steps</small><h3>{item.title}<ArrowUpRight size={17} /></h3><p>{item.purpose}</p></a>)}</div></section>
+    <section><h2>Explore the playbook</h2><div className="article-grid">{scenarios.map(item => <a className="article-card" href={`#/atlas/board/${item.id}`} key={item.id}><small>{item.level} · {item.steps.length} steps</small><h3>{item.title}<ArrowUpRight size={17} /></h3><p>{item.purpose}</p></a>)}</div></section>
   </div>;
 }

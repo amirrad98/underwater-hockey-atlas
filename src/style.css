@@ -1764,3 +1764,12 @@ main:focus {
 .supplier small a {
   overflow-wrap: anywhere;
 }
+
+/* Site shell: club brand and the atlas section bar */
+.brand img { width: 44px; height: 44px; object-fit: contain; border-radius: 50%; }
+nav.subnav { display: flex; position: static; align-items: center; gap: 26px; margin: 0; padding: 0 5.2%; background: var(--ocean); color: #d9ece6; overflow-x: auto; box-shadow: none; border: 0; scrollbar-width: none; }
+nav.subnav span { font-size: 10px; letter-spacing: 2.4px; font-weight: 700; color: var(--aqua); flex-shrink: 0; }
+nav.subnav a { font-size: 13px; padding: 14px 0 11px; border-bottom: 3px solid transparent; flex-shrink: 0; color: inherit; font-weight: 400; }
+nav.subnav a[aria-current] { border-color: var(--aqua); color: #fff; font-weight: 600; }
+nav.subnav a:focus-visible { outline-offset: -3px; }
+@media (max-width: 850px) { nav.subnav { padding: 0 4%; gap: 20px; } nav.subnav a { min-height: 44px; display: flex; align-items: center; padding: 3px 0 0; } }

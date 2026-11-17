@@ -262,7 +262,7 @@ const starterResources: Resource[] = [
   {
     id: "timber-notes",
     title: "Timber Whales · supplied research notes",
-    url: "#/wiki/timber-whales",
+    url: "#/",
     publisher: "Project research handoff",
     topic: "Clubs",
     language: "English",

@@ -16,22 +16,22 @@ test('first load stores all core routes and local assets for offline reload', as
   await context.setOffline(true);
   await page.reload();
   await expect(page.getByRole('heading', { level: 1 })).toContainText('depth of play');
-  for (const route of ['wiki/passing', 'glossary/support', 'world', 'club', 'search?q=passing', `drills/${drills[0].id}`, `board/${scenarios[0].id}`]) {
+  for (const route of ['atlas/wiki/passing', 'atlas/glossary/support', 'atlas/world', '', 'atlas/search?q=passing', `atlas/drills/${drills[0].id}`, `atlas/board/${scenarios[0].id}`]) {
     await page.goto(`/underwater-hockey-atlas/#/${route}`);
     await page.reload();
     await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
     await expect(page.getByRole('heading', { name: /not found/i })).toHaveCount(0);
-    if (route.startsWith('board/')) {
+    if (route.startsWith('atlas/board/')) {
       await page.getByRole('button', { name: 'Next', exact: true }).click();
       await expect(page.locator('.step-reading')).toContainText('STEP 1');
     }
-    if (route === 'world') {
+    if (route === 'atlas/world') {
       const map = page.locator('.world-map');
       await expect(map).toBeVisible();
       await expect(page.locator('.world-basemap')).toHaveJSProperty('naturalWidth', 360);
       await expect(page.locator('.map-pin')).toHaveCount(13);
     }
-    if (route === 'club') {
+    if (route === '') {
       if (clubProfile.gallery.length > 6) await page.getByRole('button', { name: `Show all ${clubProfile.gallery.length} photos`, exact: true }).click();
       for (const [index, photo] of clubProfile.gallery.entries()) {
         const image = page.locator('.club-gallery img').nth(index);
@@ -74,7 +74,7 @@ test('first load stores all core routes and local assets for offline reload', as
 });
 
 test('worker updates delete only this project’s old caches', async ({ page }) => {
-  await page.goto('/underwater-hockey-atlas/#/wiki');
+  await page.goto('/underwater-hockey-atlas/#/atlas/wiki');
   await page.evaluate(async () => { await navigator.serviceWorker.ready; });
   await page.evaluate(async () => {
     for (const key of ['unrelated-project-v1', 'uwh-atlas:/other-site/:old', 'uwh-atlas:/underwater-hockey-atlas/:old']) await caches.open(key);

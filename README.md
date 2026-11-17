@@ -1,6 +1,6 @@
-# Underwater Hockey Atlas + Wiki
+# UNBC Timber Whales · Underwater Hockey
 
-An integrated visual atlas of underwater hockey, connected to wiki articles and a curated resource library. Explore the sport through skills, equipment, formations and geography, then follow the sources. A dedicated UNBC Timber Whales profile connects the club to the wider sport.
+The UNBC Timber Whales club website. The club profile is the home page (`#/`); everything about underwater hockey in general — the wiki, tactical board, drills, world directory, resource library, supplier directory, glossary and search — lives under the atlas subpage (`#/atlas`, e.g. `#/atlas/wiki/passing`). Links from earlier releases (`#/wiki/…`, `#/club`, …) redirect to their new locations.
 
 This repository contains a static, locally readable learning site. No account, backend or production secrets are required. It is not an exhaustive encyclopedia or a replacement for qualified coaching and current competition rules.
 

@@ -23,11 +23,17 @@ import { DrillsPage } from "./playbook/Drills";
 import { drills, scenarios } from "./playbook/data";
 import { ArticleContents, ArticleSections, ArticlePractice, LessonSourceNotes, Glossary, articleSearchText } from "./wiki/ArticleContent";
 import { registerOffline } from "./offline";
-import { Club } from "./ClubPage";
-import { clubProfile } from "./club-profile";
+import { ClubHome, ClubJoin, ClubTeam, ClubGalleryPage, ClubAbout } from "./ClubPage";
 import { localClubAsset } from "./ClubMedia";
 import { wikiCatalog, resolveArticleId } from "./wiki/catalog";
 const link = (id: string) => `#/atlas/wiki/${id}`;
+const clubNav = [
+  ["", "Home"],
+  ["join", "Join"],
+  ["team", "Team"],
+  ["gallery", "Gallery"],
+  ["about", "About"],
+];
 const atlasSections = [
   ["", "Overview"],
   ["wiki", "Wiki"],
@@ -41,9 +47,11 @@ const atlasSections = [
 const legacyRoute = /^#\/(wiki|board|drills|glossary|world|resources|suppliers|search)(?=[/?]|$)/;
 function currentHash() {
   const raw = location.hash;
-  const next = !raw || raw === "#" || /^#\/club\/?$/.test(raw) || /^#\/atlas\/wiki\/timber-whales\/?$/.test(raw)
+  const next = !raw || raw === "#" || /^#\/club\/?$/.test(raw)
     ? "#/"
-    : raw.replace(legacyRoute, "#/atlas/$1");
+    : /^#\/(atlas\/)?wiki\/timber-whales\/?$/.test(raw)
+      ? "#/about"
+      : raw.replace(legacyRoute, "#/atlas/$1");
   if (next !== raw) history.replaceState(null, "", next);
   return next;
 }
@@ -81,7 +89,6 @@ function App() {
   const [section, ...rest] = atlasPath.split("/");
   const sub = rest.length ? decodeURIComponent(rest.join("/")) : undefined;
   const focusMain = () => { setMenu(false); document.querySelector<HTMLElement>("main")?.focus(); };
-  const logo = clubProfile.logos[0];
   return (
     <>
       <a className="skip" href="#main" onClick={event => { event.preventDefault(); document.querySelector<HTMLElement>("main")?.focus(); }}>
@@ -89,13 +96,12 @@ function App() {
       </a>
       <header>
         <a className="brand" href="#/">
-          <img src={localClubAsset(logo.src)} width={logo.width} height={logo.height} alt="" />
-          <span>
-            UNBC TIMBER WHALES<small>UNDERWATER HOCKEY</small>
-          </span>
+          <img src={localClubAsset("brand/horizontal-light.svg")} width={251} height={68} alt="UNBC TimberWhales" />
         </a>
         <nav id="main-navigation" aria-label="Main navigation" className={menu ? "open" : ""}>
-          <a onClick={focusMain} href="#/" aria-current={path === "#/" ? "page" : undefined}>Club</a>
+          {clubNav.map(([id, name]) => (
+            <a key={id} onClick={focusMain} href={`#/${id}`} aria-current={path === `#/${id}` ? "page" : undefined}>{name}</a>
+          ))}
           <a onClick={focusMain} href="#/atlas" aria-current={inAtlas ? "page" : undefined}>UWH Atlas</a>
         </nav>
         <button
@@ -107,6 +113,22 @@ function App() {
         >
           {menu ? <X /> : <Menu />}
         </button>
+      </header>
+      {inAtlas && (
+        <div className="atlas-bar">
+        <nav className="subnav" aria-label="Atlas sections">
+          <span>UWH ATLAS</span>
+          {atlasSections.map(([id, name]) => (
+            <a
+              key={id}
+              onClick={focusMain}
+              href={id ? `#/atlas/${id}` : "#/atlas"}
+              aria-current={(section === "glossary" ? "wiki" : section) === id ? "page" : undefined}
+            >
+              {name}
+            </a>
+          ))}
+        </nav>
         <form
           className="header-search"
           onSubmit={(e) => {
@@ -123,25 +145,19 @@ function App() {
           />
           <kbd>↵</kbd>
         </form>
-      </header>
-      {inAtlas && (
-        <nav className="subnav" aria-label="Atlas sections">
-          <span>UWH ATLAS</span>
-          {atlasSections.map(([id, name]) => (
-            <a
-              key={id}
-              onClick={focusMain}
-              href={id ? `#/atlas/${id}` : "#/atlas"}
-              aria-current={(section === "glossary" ? "wiki" : section) === id ? "page" : undefined}
-            >
-              {name}
-            </a>
-          ))}
-        </nav>
+        </div>
       )}
       <main id="main" tabIndex={-1}>
         {path === "#/" ? (
-          <Club />
+          <ClubHome />
+        ) : path === "#/join" ? (
+          <ClubJoin />
+        ) : path === "#/team" ? (
+          <ClubTeam />
+        ) : path === "#/gallery" ? (
+          <ClubGalleryPage />
+        ) : path === "#/about" ? (
+          <ClubAbout />
         ) : !inAtlas ? (
           <div className="page">
             <h1>Page not found</h1>
@@ -176,19 +192,23 @@ function App() {
       </main>
       <footer>
         <a className="brand" href="#/">
-          <Waves />
-          <span>
-            UNBC TIMBER WHALES<small>UNDERWATER HOCKEY · PRINCE GEORGE, BC</small>
-          </span>
+          <img src={localClubAsset("brand/horizontal-dark.svg")} width={251} height={68} alt="UNBC TimberWhales" />
         </a>
-        <p>
-          The club site, with an independent atlas of the sport.
-          <br />
-          Original diagrams. Sources always in view.
+        <div className="footer-tagline">
+          <small>UNDERWATER HOCKEY / PRINCE GEORGE</small>
+          <strong>Swim as one</strong>
+        </div>
+        <nav className="footer-nav" aria-label="Footer">
+          <a href="#/join">Join a practice</a>
+          <a href="#/team">Team</a>
+          <a href="#/gallery">Gallery</a>
+          <a href="#/about">About</a>
+          <a href="#/atlas">UWH Atlas</a>
+          <a href="mailto:timberwhales@unbc.ca">timberwhales@unbc.ca</a>
+        </nav>
+        <p className="footer-note">
+          UNBC TimberWhales, Prince George, British Columbia. Atlas diagrams are original; sources stay in view.
         </p>
-        <a href="#/atlas">
-          Explore the UWH atlas <ArrowUpRight size={16} />
-        </a>
       </footer>
     </>
   );
@@ -199,7 +219,7 @@ function Atlas() {
       <section className="hero">
         <div className="hero-copy">
           <div className="eyebrow">
-            <span /> THE SPORT BELOW THE SURFACE
+            <span /> UWH ATLAS / THE SPORT BELOW THE SURFACE
           </div>
           <h1>
             A different
@@ -308,13 +328,10 @@ function Atlas() {
           </a>
         </div>
         <a className="club-feature" href="#/">
-          <div className="club-mark">
-            <Waves size={66} />
-            <span>TW</span>
-          </div>
+          <img className="club-mark" src={localClubAsset("brand/primary-light.svg")} width={134} height={85} alt="" />
           <div>
-            <small>CLUB SPOTLIGHT · PRINCE GEORGE, CANADA</small>
-            <h3>UNBC Timber Whales</h3>
+            <small>HOME CLUB / PRINCE GEORGE, CANADA</small>
+            <h3>UNBC TimberWhales</h3>
             <p>A northern community with a story beneath the surface.</p>
             <span className="text-link">
               Meet the club <ArrowUpRight size={18} />
@@ -942,7 +959,7 @@ function SearchPage({ query }: { query: string }) {
       {needle && !found.length && !refs.length && !supplierMatches.length && !drillMatches.length && !scenarioMatches.length && (
         <div className="empty">
           <h2>No results yet</h2>
-          <p>Try “equipment”, “rules”, “safety”, or “Timber Whales”.</p>
+          <p>Try “equipment”, “rules”, “safety”, or “TimberWhales”.</p>
           <a href="#/atlas/wiki">Browse all articles</a>
         </div>
       )}

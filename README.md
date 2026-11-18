@@ -1,6 +1,12 @@
 # UNBC Timber Whales · Underwater Hockey
 
-The UNBC Timber Whales club website. The club profile is the home page (`#/`); everything about underwater hockey in general — the wiki, tactical board, drills, world directory, resource library, supplier directory, glossary and search — lives under the atlas subpage (`#/atlas`, e.g. `#/atlas/wiki/passing`). Links from earlier releases (`#/wiki/…`, `#/club`, …) redirect to their new locations.
+The UNBC TimberWhales club website, styled from the club's brand kit (v1.0, Deep End colourway: navy, aqua and foam; Anton headlines, Archivo text; logos, fonts and favicon under `public/brand/` and `public/fonts/`).
+
+Site structure:
+
+- `#/` Home, `#/join` practices and joining, `#/team` published roster, `#/gallery` photographs, `#/about` club history and sources.
+- `#/atlas` everything about underwater hockey in general: wiki, tactical board, drills, world directory, resource library, supplier directory, glossary and search (for example `#/atlas/wiki/passing`).
+- Links from earlier releases (`#/wiki/…`, `#/club`, …) redirect to their new locations.
 
 This repository contains a static, locally readable learning site. No account, backend or production secrets are required. It is not an exhaustive encyclopedia or a replacement for qualified coaching and current competition rules.
 
@@ -43,7 +49,7 @@ All 27 still photographs from the official 2023–2024 gallery and both website 
 
 The stepped tactical board and drill library render `research/uwh_playbook_expansion.json`: five six-player formation studies, ten tactical sequences with 36 steps, 14 drill cards, six concepts and 12 source records. Readers can inspect each decision frame, follow distinct movement, carry and pass paths, and move between related lessons, scenarios and drills. The examples are original coaching interpretations with explicit opponent, surfacing and supervision assumptions. The content checks independently replay every ordered action into its recorded next state and validate possession, availability and linked references.
 
-Local DM Sans and Manrope fonts and a production-only, project-scoped offline cache are implemented. Offline availability requires an initial online load and a successful browser cache installation; development mode does not install the service worker. Final production and browser verification is recorded separately when complete.
+Local Anton, Archivo and Archivo Black fonts (SIL Open Font License, from the brand kit) and a production-only, project-scoped offline cache are implemented. Offline availability requires an initial online load and a successful browser cache installation; development mode does not install the service worker. Final production and browser verification is recorded separately when complete.
 
 ## Review and delivery
 

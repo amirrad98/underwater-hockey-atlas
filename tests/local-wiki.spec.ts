@@ -1,6 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { wikiCatalog, resolveArticleId } from '../src/wiki/catalog';
 import { clubProfile } from '../src/club-profile';
+import { clubSectionPage } from '../src/club-pages';
 
 test('expanded lessons render their full teaching body and optional evidence locally', async ({ page }) => {
   const external: string[] = [];
@@ -42,12 +43,18 @@ test('reading paths, keyboard contents and concept links stay on local routes', 
   await expect(page.locator('main')).toBeFocused();
 });
 
-test('club profile shows full local facts with dated source context', async ({ page }) => {
-  await page.goto('/underwater-hockey-atlas/#/');
-  for (const section of clubProfile.sections) {
-    await expect(page.getByRole('heading', { name: section.title, exact: true })).toBeVisible();
-    for (const fact of section.facts) await expect(page.getByText(fact.text, { exact: true })).toBeVisible();
+test('club pages show full local facts with dated source context', async ({ page }) => {
+  for (const clubPage of ['join', 'about']) {
+    await page.goto(`/underwater-hockey-atlas/#/${clubPage}`);
+    const sections = clubProfile.sections.filter(section => clubSectionPage[section.id] === clubPage);
+    expect(sections.length).toBeGreaterThan(0);
+    for (const section of sections) {
+      await expect(page.getByRole('heading', { name: section.title, exact: true })).toBeVisible();
+      for (const fact of section.facts) await expect(page.locator('main dl').getByText(fact.text, { exact: true })).toBeVisible();
+    }
   }
+  expect(clubProfile.sections.every(section => clubSectionPage[section.id])).toBe(true);
+  await page.goto('/underwater-hockey-atlas/#/team');
   await expect(page.getByText(clubProfile.roster.note, { exact: true })).toBeVisible();
 });
 
@@ -56,15 +63,8 @@ test('club photo gallery renders every local photograph with natural proportions
   expect(clubProfile.gallery).toHaveLength(27);
   const externalRequests: string[] = [];
   page.on('request', request => { if (!new URL(request.url()).hostname.match(/^(127\.0\.0\.1|localhost)$/)) externalRequests.push(request.url()); });
-  await page.goto('/underwater-hockey-atlas/#/');
+  await page.goto('/underwater-hockey-atlas/#/gallery');
   const images = page.locator('.club-gallery img');
-  await expect(images).toHaveCount(Math.min(6, clubProfile.gallery.length));
-  if (clubProfile.gallery.length > 6) {
-    const expand = page.getByRole('button', { name: `Show all ${clubProfile.gallery.length} photos`, exact: true });
-    await expand.focus();
-    await page.keyboard.press('Enter');
-    await expect(page.getByRole('button', { name: 'Show fewer photos', exact: true })).toHaveAttribute('aria-expanded', 'true');
-  }
   await expect(images).toHaveCount(clubProfile.gallery.length);
   for (const [index, photo] of clubProfile.gallery.entries()) {
     const figure = page.locator('.club-gallery figure').nth(index);
@@ -87,11 +87,7 @@ test('club photo gallery renders every local photograph with natural proportions
   }
   expect(externalRequests).toEqual([]);
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1)).toBe(true);
-  if (clubProfile.gallery.length > 6) {
-    await page.getByRole('button', { name: 'Show fewer photos', exact: true }).click();
-    await expect(images).toHaveCount(6);
-    await expect(page.locator('.club-gallery [role="status"]')).toHaveText(`Showing 6 of ${clubProfile.gallery.length} photographs`);
-  }
+  await expect(page.locator('.club-gallery [role="status"]')).toHaveText(`${clubProfile.gallery.length} photographs`);
 });
 
 test('club hero and published roster show local portraits, explicit logo placeholders and undated labels', async ({ page }) => {
@@ -102,9 +98,7 @@ test('club hero and published roster show local portraits, explicit logo placeho
   page.on('response', response => { if (response.url().includes('/club/')) mediaResponses.set(new URL(response.url()).pathname, response.headers()['content-type'] ?? ''); });
   await page.goto('/underwater-hockey-atlas/#/');
   await expect(page.locator('.club-hero-photo')).toContainText('FROM THE 2023–2024 CLUB GALLERY');
-  await expect(page.locator('.club-roster .roster-freshness')).toHaveText(clubProfile.roster.note);
-  await expect(page.locator('.club-roster')).toContainText('do not establish current membership or office');
-  const heroPhotos = [{ selector: '.club-hero-photo img', photo: clubProfile.hero }, { selector: '.club-header-logo', photo: clubProfile.logos[0] }];
+  const heroPhotos = [{ selector: '.club-hero-photo img', photo: clubProfile.hero }];
   for (const { selector, photo } of heroPhotos) {
     const image = page.locator(selector);
     await image.evaluate(element => (element as HTMLImageElement).decode());
@@ -112,6 +106,9 @@ test('club hero and published roster show local portraits, explicit logo placeho
     await expect(image).toHaveJSProperty('naturalHeight', photo.height);
     await expect(image).toHaveAttribute('src', `/underwater-hockey-atlas/${photo.src}`);
   }
+  await page.goto('/underwater-hockey-atlas/#/team');
+  await expect(page.locator('.club-roster .roster-freshness')).toHaveText(clubProfile.roster.note);
+  await expect(page.locator('.club-roster')).toContainText('do not establish current membership or office');
   await expect(page.locator('.club-roster-card')).toHaveCount(20);
   expect(clubProfile.roster.people.filter(person => !person.usesLogoPlaceholder)).toHaveLength(12);
   expect(clubProfile.roster.people.filter(person => person.usesLogoPlaceholder)).toHaveLength(8);

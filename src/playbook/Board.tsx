@@ -15,35 +15,35 @@ export function TacticalDiagram({ state, actions = [], title, description }: {
   return <svg className="board tactical-diagram" viewBox="0 0 600 440" role="img" aria-labelledby={`${id}-title ${id}-desc`}>
     <title id={`${id}-title`}>{title}</title><desc id={`${id}-desc`}>{description}</desc>
     <defs>
-      <pattern id={`${id}-grid`} width="25" height="25" patternUnits="userSpaceOnUse"><path d="M25 0H0V25" fill="none" stroke="#7fadaf" strokeWidth=".6" opacity=".25" /></pattern>
-      {['pass', 'move', 'carry'].map(kind => <marker key={kind} id={`${id}-${kind}`} viewBox="0 0 10 10" refX="30" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill={kind === 'pass' ? '#edc97b' : '#9be8d6'} /></marker>)}
+      <pattern id={`${id}-grid`} width="25" height="25" patternUnits="userSpaceOnUse"><path d="M25 0H0V25" fill="none" stroke="#D9ECFA" strokeWidth=".6" opacity=".25" /></pattern>
+      {['pass', 'move', 'carry'].map(kind => <marker key={kind} id={`${id}-${kind}`} viewBox="0 0 10 10" refX="30" refY="5" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill={kind === 'pass' ? '#E8B429' : '#1AA7E6'} /></marker>)}
     </defs>
-    <rect x="50" y="25" width="500" height="380" rx="5" fill={`url(#${id}-grid)`} stroke="#81c5be" />
-    <path d="M50 215H550" stroke="#81c5be" strokeDasharray="5 7" opacity=".35" />
-    <path d="M260 26H340M260 404H340" stroke="#edc97b" strokeWidth="6" />
-    <text x="300" y="16" textAnchor="middle" fill="#c5dfdc" fontSize="11" letterSpacing="2">TEAM A ATTACKS ↑</text>
-    <text x="300" y="430" textAnchor="middle" fill="#c5dfdc" fontSize="11" letterSpacing="2">TEAM B ATTACKS ↓</text>
+    <rect x="50" y="25" width="500" height="380" rx="5" fill={`url(#${id}-grid)`} stroke="#FFFFFF" />
+    <path d="M50 215H550" stroke="#FFFFFF" strokeDasharray="5 7" opacity=".35" />
+    <path d="M260 26H340M260 404H340" stroke="#E8B429" strokeWidth="6" />
+    <text x="300" y="16" textAnchor="middle" fill="#D9ECFA" fontSize="11" letterSpacing="2">TEAM A ATTACKS ↑</text>
+    <text x="300" y="430" textAnchor="middle" fill="#D9ECFA" fontSize="11" letterSpacing="2">TEAM B ATTACKS ↓</text>
     {actions.map(action => {
       const points = action.path.map(point => { const mapped = xy(point); return `${mapped.x},${mapped.y}`; }).join(' ');
       const moving = ['pass', 'move', 'carry'].includes(action.kind);
       if (!moving) return null;
       return <g key={action.order} data-action-kind={action.kind} data-actor-id={action.actorId}>
         <title>{action.order}. {action.actorId}: {action.note}</title>
-        {action.kind === 'carry' && <polyline points={points} fill="none" stroke="#edc97b" strokeWidth="7" strokeLinejoin="round" />}
-        <polyline points={points} fill="none" stroke={action.kind === 'pass' ? '#edc97b' : '#9be8d6'} strokeWidth={action.kind === 'carry' ? 3 : 2.8} strokeLinejoin="round" strokeDasharray={action.kind === 'pass' ? '7 5' : undefined} markerEnd={`url(#${id}-${action.kind})`} />
+        {action.kind === 'carry' && <polyline points={points} fill="none" stroke="#E8B429" strokeWidth="7" strokeLinejoin="round" />}
+        <polyline points={points} fill="none" stroke={action.kind === 'pass' ? '#E8B429' : '#1AA7E6'} strokeWidth={action.kind === 'carry' ? 3 : 2.8} strokeLinejoin="round" strokeDasharray={action.kind === 'pass' ? '7 5' : undefined} markerEnd={`url(#${id}-${action.kind})`} />
       </g>;
     })}
     {state.players.map(player => {
       const position = xy(player.position), reference = player.availability !== 'available';
-      const color = player.team === 'A' ? '#9be8d6' : '#eaae9c';
+      const color = player.team === 'A' ? '#1AA7E6' : '#FFFFFF';
       return <g key={player.id} data-player-id={player.id} data-x={player.position.x} data-y={player.position.y} data-availability={player.availability}>
         <title>{player.id} · {player.label} · {player.role} · {player.availability}</title>
-        {player.team === 'A' ? <circle cx={position.x} cy={position.y} r="17" fill={reference ? '#0d3944' : color} stroke={color} strokeWidth="2" /> : <rect x={position.x - 16} y={position.y - 16} width="32" height="32" rx="4" fill={reference ? '#0d3944' : color} stroke={color} strokeWidth="2" />}
-        <text x={position.x} y={position.y + 4} textAnchor="middle" fill={reference ? color : '#082f39'} fontSize="11" fontWeight="700">{player.id}</text>
-        {reference && <g><circle cx={position.x + 16} cy={position.y - 16} r="8" fill="#f0eee1" /><text x={position.x + 16} y={position.y - 13} textAnchor="middle" fill="#123d40" fontSize="9" fontWeight="700">{player.availability === 'surface' ? 'S' : 'R'}</text></g>}
+        {player.team === 'A' ? <circle cx={position.x} cy={position.y} r="17" fill={reference ? '#071A33' : color} stroke={color} strokeWidth="2" /> : <rect x={position.x - 16} y={position.y - 16} width="32" height="32" rx="4" fill={reference ? '#071A33' : color} stroke={color} strokeWidth="2" />}
+        <text x={position.x} y={position.y + 4} textAnchor="middle" fill={reference ? color : '#071A33'} fontSize="11" fontWeight="700">{player.id}</text>
+        {reference && <g><circle cx={position.x + 16} cy={position.y - 16} r="8" fill="#FFFFFF" /><text x={position.x + 16} y={position.y - 13} textAnchor="middle" fill="#0C2A52" fontSize="9" fontWeight="700">{player.availability === 'surface' ? 'S' : 'R'}</text></g>}
       </g>;
     })}
-    <g data-puck-carrier={state.puck.carrierId ?? 'none'}><title>Puck{state.puck.carrierId ? ` controlled by ${state.puck.carrierId}` : ', no current carrier'}</title><circle cx={xy(state.puck.position).x + (state.puck.carrierId ? 20 : 0)} cy={xy(state.puck.position).y + (state.puck.carrierId ? 12 : 0)} r="8" fill="#edc97b" stroke="#052b34" strokeWidth="2" /><text x={xy(state.puck.position).x + (state.puck.carrierId ? 20 : 0)} y={xy(state.puck.position).y + (state.puck.carrierId ? 15 : 3)} textAnchor="middle" fill="#052b34" fontSize="8" fontWeight="700">P</text></g>
+    <g data-puck-carrier={state.puck.carrierId ?? 'none'}><title>Puck{state.puck.carrierId ? ` controlled by ${state.puck.carrierId}` : ', no current carrier'}</title><circle cx={xy(state.puck.position).x + (state.puck.carrierId ? 20 : 0)} cy={xy(state.puck.position).y + (state.puck.carrierId ? 12 : 0)} r="8" fill="#E8B429" stroke="#071A33" strokeWidth="2" /><text x={xy(state.puck.position).x + (state.puck.carrierId ? 20 : 0)} y={xy(state.puck.position).y + (state.puck.carrierId ? 15 : 3)} textAnchor="middle" fill="#071A33" fontSize="8" fontWeight="700">P</text></g>
   </svg>;
 }
 

@@ -45,7 +45,7 @@ test('resources expose functional filters and source links', async ({ page }) =>
 test('all sections support repeat navigation without overflow', async ({ page }, testInfo) => {
   const errors: string[] = []
   page.on('pageerror', error => errors.push(error.message))
-  for (const route of ['atlas', 'atlas/wiki', 'atlas/world', 'atlas/resources', 'atlas/suppliers', '', 'atlas']) {
+  for (const route of ['atlas', 'atlas/wiki', 'atlas/world', 'atlas/resources', 'atlas/suppliers', '', 'join', 'team', 'gallery', 'about', 'atlas']) {
     await page.goto(`/underwater-hockey-atlas/#/${route}`)
     await expect(page.getByRole('heading', { level: 1 })).toBeVisible()
     const aside = page.locator('main aside')
@@ -124,7 +124,7 @@ test('supplier directory filters and resets verified records', async ({ page }) 
 
 test('club is the home page and earlier atlas links still resolve', async ({ page }) => {
   await page.goto('/underwater-hockey-atlas/')
-  await expect(page.getByRole('heading', { level: 1 })).toContainText('From the north')
+  await expect(page.getByRole('heading', { level: 1 })).toContainText('Swim as one')
   await expect(page.locator('nav.subnav')).toHaveCount(0)
   await page.goto('/underwater-hockey-atlas/#/wiki/passing')
   await expect(page).toHaveURL(/#\/atlas\/wiki\/passing$/)
@@ -132,5 +132,5 @@ test('club is the home page and earlier atlas links still resolve', async ({ pag
   await expect(page.locator('nav.subnav a[aria-current]')).toHaveText('Wiki')
   await page.goto('/underwater-hockey-atlas/#/club')
   await expect(page).toHaveURL(/#\/$/)
-  await expect(page.getByRole('heading', { level: 1 })).toContainText('From the north')
+  await expect(page.getByRole('heading', { level: 1 })).toContainText('Swim as one')
 })

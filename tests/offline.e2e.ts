@@ -16,7 +16,7 @@ test('first load stores all core routes and local assets for offline reload', as
   await context.setOffline(true);
   await page.reload();
   await expect(page.getByRole('heading', { level: 1 })).toContainText('depth of play');
-  for (const route of ['atlas/wiki/passing', 'atlas/glossary/support', 'atlas/world', '', 'atlas/search?q=passing', `atlas/drills/${drills[0].id}`, `atlas/board/${scenarios[0].id}`]) {
+  for (const route of ['atlas/wiki/passing', 'atlas/glossary/support', 'atlas/world', 'join', 'about', '', 'atlas/search?q=passing', `atlas/drills/${drills[0].id}`, `atlas/board/${scenarios[0].id}`]) {
     await page.goto(`/underwater-hockey-atlas/#/${route}`);
     await page.reload();
     await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
@@ -32,7 +32,7 @@ test('first load stores all core routes and local assets for offline reload', as
       await expect(page.locator('.map-pin')).toHaveCount(13);
     }
     if (route === '') {
-      if (clubProfile.gallery.length > 6) await page.getByRole('button', { name: `Show all ${clubProfile.gallery.length} photos`, exact: true }).click();
+      await page.goto('/underwater-hockey-atlas/#/gallery');
       for (const [index, photo] of clubProfile.gallery.entries()) {
         const image = page.locator('.club-gallery img').nth(index);
         await image.scrollIntoViewIfNeeded();
@@ -47,8 +47,9 @@ test('first load stores all core routes and local assets for offline reload', as
         }, photo.originalSrc);
         expect(original).toEqual({ width: photo.width, height: photo.height });
       }
+      await page.goto('/underwater-hockey-atlas/#/team');
       await expect(page.locator('.club-roster-card')).toHaveCount(20);
-      for (const image of await page.locator('.club-roster-card img, .club-hero-photo img, .club-header-logo').all()) {
+      for (const image of await page.locator('.club-roster-card img').all()) {
         await image.scrollIntoViewIfNeeded();
         await image.evaluate(element => (element as HTMLImageElement).decode());
         expect(await image.evaluate(element => (element as HTMLImageElement).naturalWidth)).toBeGreaterThan(0);
@@ -69,7 +70,7 @@ test('first load stores all core routes and local assets for offline reload', as
   }
   await page.evaluate(() => document.fonts.ready);
   const loadedFonts = await page.evaluate(() => Array.from(document.fonts).filter(font => font.status === 'loaded').map(font => font.family.replaceAll('"', '')));
-  expect(loadedFonts).toEqual(expect.arrayContaining(['DM Sans', 'Manrope']));
+  expect(loadedFonts).toEqual(expect.arrayContaining(['Archivo', 'Anton']));
   expect(external).toEqual([]);
 });
 

@@ -58,7 +58,7 @@ The local World basemap derives from Natural Earth's public-domain `ne_110m_land
 
 ## Local assets and offline scope
 
-DM Sans and Manrope are bundled with their SIL Open Font License files under `public/fonts/`. No runtime font service is needed. The production build generates a service worker from the emitted local assets; registration and cache cleanup are scoped to the application's base path. A browser must first load the site online and finish cache installation before offline reading can work. External source pages, contacts and videos are not mirrored into that cache. Feature-branch build and browser evidence belongs in `docs/VERIFICATION.md`; implementation alone is not evidence that an offline test passed.
+Anton, Archivo and Archivo Black (supplied with the UNBC TimberWhales brand kit) are bundled with their SIL Open Font License files under `public/fonts/`. No runtime font service is needed. The production build generates a service worker from the emitted local assets; registration and cache cleanup are scoped to the application's base path. A browser must first load the site online and finish cache installation before offline reading can work. External source pages, contacts and videos are not mirrored into that cache. Feature-branch build and browser evidence belongs in `docs/VERIFICATION.md`; implementation alone is not evidence that an offline test passed.
 
 ## Contributing
 

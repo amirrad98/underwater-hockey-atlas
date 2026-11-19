@@ -26,7 +26,7 @@
 .club-hero-photo img { width: 100%; height: auto; display: block; }
 .club-hero-photo figcaption { padding: 16px 22px; }
 .club-hero-photo figcaption strong { font-size: 10px; letter-spacing: 1.4px; }
-.club-hero .club-hero-photo p { color: #56635C; max-width: none; font-size: 13px; margin: 10px 0; }
+.club-hero .club-hero-photo p { color: #56635C; max-width: none; font-size: 13px; margin: 10px 0 0; }
 .club-photo-source { font-size: 11px; margin: 14px 0 0; overflow-wrap: anywhere; }
 .club-photo-source summary { cursor: pointer; line-height: 1.6; }
 .club-photo-source p { font-size: 11px; line-height: 1.7; }

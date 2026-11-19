@@ -16,7 +16,7 @@ import {
 import { articles, resources, places, type Article } from "./data";
 import { WorldMap } from "./WorldMap";
 import "./style.css";
-import { suppliers, supplierSources, supplierNotice } from "./suppliers";
+import { suppliers } from "./suppliers";
 import { equipment } from "./equipment";
 import { FormationBoard as Board, BoardPage } from "./playbook/Board";
 import { DrillsPage } from "./playbook/Drills";
@@ -218,9 +218,6 @@ function Atlas() {
     <>
       <section className="hero">
         <div className="hero-copy">
-          <div className="eyebrow">
-            <span /> UWH ATLAS / THE SPORT BELOW THE SURFACE
-          </div>
           <h1>
             A different
             <br />
@@ -248,9 +245,6 @@ function Atlas() {
         </div>
         <div className="hero-board">
           <Board />
-          <a className="diagram-link" href="#/atlas/board">
-            Open the tactical playbook <ArrowUpRight size={16} />
-          </a>
         </div>
       </section>
       <section className="section">
@@ -304,9 +298,7 @@ function Atlas() {
                 <span>{c.n}</span>
               </div>
               <small>{c.sub}</small>
-              <h3>
-                {c.title} <ArrowUpRight size={18} />
-              </h3>
+              <h3>{c.title}</h3>
               <p>{c.body}</p>
             </a>
           ))}
@@ -333,9 +325,7 @@ function Atlas() {
             <small>HOME CLUB / PRINCE GEORGE, CANADA</small>
             <h3>UNBC TimberWhales</h3>
             <p>A northern community with a story beneath the surface.</p>
-            <span className="text-link">
-              Meet the club <ArrowUpRight size={18} />
-            </span>
+            <span className="text-link">Meet the club</span>
           </div>
         </a>
       </section>
@@ -362,7 +352,6 @@ function Atlas() {
             <span>0{i + 1}</span>
             <h3>{title}</h3>
             <p>{body}</p>
-            <ArrowUpRight size={18} />
           </a>
         ))}
       </section>
@@ -763,7 +752,6 @@ function Suppliers() {
         title="Find the people behind the kit."
         body="An independent supplier directory. Compare gear categories and location, then confirm suitability and availability directly with the supplier."
       />
-      <div className="notice">{supplierNotice}</div>
       <div className="filters">
         <label className="resource-search">
           <Search size={18} />
@@ -818,12 +806,9 @@ function Suppliers() {
       <div className="resource-grid">
         {result.map((s) => (
           <div className="source supplier" key={s.id}>
-            <div className="source-head">
-              <span className="badge">{s.kind}</span>
-              <span>{s.country}</span>
-            </div>
+            <div className="source-head">{s.country}</div>
             <a href={s.url} target="_blank" rel="noreferrer">
-              {s.name} <ExternalLink size={15} />
+              {s.name}
             </a>
             <p>{s.note}</p>
             <div className="gear-tags">
@@ -842,38 +827,6 @@ function Suppliers() {
               <dt>Club orders</dt>
               <dd>{s.clubOrders || "Unknown"}</dd>
             </dl>
-            <details className="supplier-evidence">
-              <summary>Verification & source evidence</summary>
-              <p>{s.verification}</p>
-              {s.notes.map((note) => (
-                <p key={note}>{note}</p>
-              ))}
-              {s.sourceIds.map((id) => {
-                const source = supplierSources.find((item) => item.id === id);
-                return source ? (
-                  <div key={id}>
-                    <a
-                      href={source.publicCitationUrl || source.url}
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      {source.title} <ExternalLink size={12} />
-                    </a>
-                    <p>{source.evidenceSummary}</p>
-                    <small>
-                      {source.access.replaceAll("_", " ")} · {source.checkedAt}
-                    </small>
-                    {source.accessNote && <p>{source.accessNote}</p>}
-                  </div>
-                ) : null;
-              })}
-            </details>
-            <small>
-              Checked {s.checked} ·{" "}
-              <a href={s.sourceUrl} target="_blank" rel="noreferrer">
-                Source record
-              </a>
-            </small>
           </div>
         ))}
       </div>

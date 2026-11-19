@@ -1,4 +1,3 @@
-import { ArrowUpRight } from 'lucide-react';
 import { clubProfile, type ClubPhoto } from './club-profile';
 
 export const localClubAsset = (path: string) => `${import.meta.env.BASE_URL}${path}`;
@@ -15,11 +14,19 @@ export function ClubHero() {
       <h1>Swim as one.</h1>
       <p>The underwater hockey team of the University of Northern British Columbia. Student-led, back in the pool since fall 2023, and open to new players.</p>
       <div className="hero-actions">
-        <a className="button aqua" href="#/join">Join a practice <ArrowUpRight size={17} /></a>
-        <a className="text-link" href="#/atlas">New to the sport? Open the UWH atlas <ArrowUpRight size={17} /></a>
+        <a className="button aqua" href="#/join">Join a practice</a>
+        <a className="text-link" href="#/atlas">New to the sport? Open the UWH atlas</a>
       </div>
     </div>
-    <figure className="club-hero-photo"><a href={localClubAsset(photo.originalSrc)} target="_blank" rel="noreferrer" aria-label="Open full 2023–2024 club gallery photograph"><img src={localClubAsset(photo.src)} width={photo.width} height={photo.height} alt={photo.alt} fetchPriority="high" /></a><figcaption><strong>FROM THE 2023–2024 CLUB GALLERY</strong><p>{photo.caption}</p><ClubPhotoSource photo={photo} /></figcaption></figure>
+    <figure className="club-hero-photo">
+      <a href={localClubAsset(photo.originalSrc)} target="_blank" rel="noreferrer" aria-label="Open full 2023–2024 club gallery photograph">
+        <img src={localClubAsset(photo.src)} width={photo.width} height={photo.height} alt={photo.alt} fetchPriority="high" />
+      </a>
+      <figcaption>
+        <strong>FROM THE 2023–2024 CLUB GALLERY</strong>
+        <p>{photo.caption}</p>
+      </figcaption>
+    </figure>
   </section>;
 }
 

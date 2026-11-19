@@ -42,7 +42,7 @@ function ContactBand() {
     <div className="contact-actions">
       <a className="button aqua" href="mailto:timberwhales@unbc.ca"><Mail size={17} /> timberwhales@unbc.ca</a>
       <a className="text-link" href="https://www.instagram.com/unbctimberwhales/" target="_blank" rel="noreferrer"><Instagram size={17} /> @unbctimberwhales</a>
-      <a className="text-link" href="#/join">How joining works <ArrowUpRight size={17} /></a>
+      <a className="text-link" href="#/join">How joining works</a>
     </div>
   </section>;
 }
@@ -66,7 +66,7 @@ export function ClubHome() {
         ['join', '01', 'Join a practice', 'Practice times, what a first session looks like, membership and the gear the club lends.'],
         ['team', '02', 'Meet the team', 'The players and roles published on the club roster.'],
         ['gallery', '03', 'See the club', `${clubProfile.gallery.length} photographs from the 2023–2024 season.`],
-      ].map(([id, n, title, body]) => <a key={id} href={`#/${id}`}><span>{n}</span><h3>{title} <ArrowUpRight size={20} /></h3><p>{body}</p></a>)}
+      ].map(([id, n, title, body]) => <a key={id} href={`#/${id}`}><span>{n}</span><h3>{title}</h3><p>{body}</p></a>)}
     </section>
     <section className="home-photos" aria-label="Photographs from the club gallery">
       {photos.map(photo => <a key={photo.id} href="#/gallery" aria-label={`Open the gallery: ${photo.alt}`}><img src={localClubAsset(photo.src)} width={photo.width} height={photo.height} alt={photo.alt} loading="lazy" decoding="async" /></a>)}
@@ -84,7 +84,7 @@ export function ClubHome() {
           ['#/atlas/wiki/equipment', 'Know your kit', 'From mask to fins.'],
           ['#/atlas/wiki/rules', 'Understand the game', 'Rules and how they vary.'],
           ['#/atlas/board', 'Tactical board', 'Walk through a play, step by step.'],
-        ].map(([href, title, body]) => <a key={href} href={href}><h3>{title}</h3><p>{body}</p><ArrowUpRight size={18} /></a>)}
+        ].map(([href, title, body]) => <a key={href} href={href}><h3>{title}</h3><p>{body}</p></a>)}
       </div>
     </section>
     <ContactBand />

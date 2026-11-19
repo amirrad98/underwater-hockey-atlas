@@ -1,4 +1,3 @@
-import "./world-map.css";
 import { Globe2 } from "lucide-react";
 import type { Place } from "./data";
 import { WORLD_EXTENT, projectWorldPoint } from "./map-projection";

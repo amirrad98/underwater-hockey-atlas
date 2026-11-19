@@ -29,12 +29,10 @@ test('expanded lessons render their full teaching body and optional evidence loc
 test('reading paths, keyboard contents and concept links stay on local routes', async ({ page }) => {
   await page.goto('/underwater-hockey-atlas/#/atlas/wiki');
   await page.getByRole('button', { name: 'Intermediate', exact: true }).click();
-  await expect(page.locator('.guide-index .article-card')).toHaveCount(wikiCatalog.chapters.filter(chapter => chapter.level === 'Intermediate').length);
+  await expect(page.locator('.page > .article-grid .article-card')).toHaveCount(wikiCatalog.chapters.filter(chapter => chapter.level === 'Intermediate').length);
   await page.locator('.reading-paths a[href="#/atlas/wiki/first-session"]').first().click();
   const section = wikiCatalog.chapters[0].sections[1];
-  const contents = page.locator('.article-contents:visible');
-  if (await contents.getAttribute('open') === null) await contents.locator('summary').click();
-  const tocButton = contents.getByRole('button', { name: section.heading });
+  const tocButton = page.locator('.article-contents').getByRole('button', { name: section.heading });
   await tocButton.focus();
   await page.keyboard.press('Enter');
   await expect(page.getByRole('heading', { name: section.heading, exact: true })).toBeFocused();
@@ -150,5 +148,5 @@ test('skip link is hidden until focused and moves focus without changing the rou
   await expect(skip).toBeVisible();
   await page.keyboard.press('Enter');
   await expect(page.locator('main')).toBeFocused();
-  await expect(page).toHaveURL(/#\/atlas\/learn$/);
+  await expect(page).toHaveURL(/#\/atlas\/wiki$/);
 });

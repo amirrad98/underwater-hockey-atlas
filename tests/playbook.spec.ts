@@ -56,7 +56,7 @@ test('board controls work by keyboard, reset on scenario change and link to loca
   await page.locator('.scenario-player a[href^="#/atlas/drills/"]').first().click();
   await expect(page.getByRole('heading', { name: 'Run the drill', exact: true })).toBeVisible();
   await page.locator('aside a[href^="#/atlas/wiki/"]').first().click();
-  await expect(page.locator('.article-contents:visible')).toBeVisible();
+  await expect(page.locator('.article-contents')).toBeVisible();
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1)).toBe(true);
 });
 
@@ -90,8 +90,7 @@ test('drill filtering and shared search open local lessons, drills and boards', 
   await expect(page.getByRole('heading', { name: 'No matching drills', exact: true })).toBeVisible();
   await page.getByRole('button', { name: 'Reset drill filters' }).click();
   await expect(page.locator('.article-grid a')).toHaveCount(drills.length);
-  const search = page.getByRole('searchbox', { name: 'Search the atlas', exact: true });
-  if (!(await search.isVisible())) await page.getByRole('button', { name: 'Open site search' }).click();
+  const search = page.getByRole('textbox', { name: 'Search atlas and wiki' });
   await search.fill('support'); await search.press('Enter');
   await expect(page.locator('main a[href^="#/atlas/wiki/"]').first()).toBeVisible();
   await expect(page.locator('main a[href^="#/atlas/drills/"]').first()).toBeVisible();
@@ -116,10 +115,11 @@ test('mobile navigation has distinct touch targets and does not cover the page',
     const navBox = await page.locator('header > nav').boundingBox();
     const mainBox = await page.locator('main').boundingBox();
     expect(navBox!.y + navBox!.height).toBeLessThanOrEqual(mainBox!.y);
-    await page.locator('header > nav').getByRole('link', { name: 'Learn', exact: true }).click();
+    await page.locator('header > nav').getByRole('link', { name: 'UWH Atlas', exact: true }).click();
     await expect(page.getByRole('button', { name: 'Toggle navigation' })).toHaveAttribute('aria-expanded', 'false');
-    await expect(page).toHaveURL(/#\/atlas\/learn$/);
-    await page.getByRole('navigation', { name: 'Practice tools' }).getByRole('link', { name: 'Tactical board' }).click();
+    await expect(page).toHaveURL(/#\/atlas$/);
+    for (const link of await page.locator('nav.subnav a').all()) expect((await link.boundingBox())!.height).toBeGreaterThanOrEqual(44);
+    await page.locator('nav.subnav').getByRole('link', { name: 'Board', exact: true }).click();
     await expect(page).toHaveURL(/#\/atlas\/board$/);
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1)).toBe(true);
   }

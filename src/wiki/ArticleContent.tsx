@@ -35,6 +35,10 @@ export function ArticlePractice({ article }: { article: Article }) {
   return <section className="article-practice"><h2>From reading to practice</h2><PracticeLinks drillIds={drillIds} scenarioIds={scenarioIds} /></section>;
 }
 
+export function articleSearchText(article: Article): string {
+  return [article.title, article.category, article.summary, ...article.sections.flatMap(section => [section.heading, section.body, ...(section.paragraphs ?? []), ...(section.bullets ?? []), ...(section.steps ?? []), section.callout ?? '']), ...(article.learningGoals ?? []), ...(article.checklist ?? []), ...(article.selfChecks ?? []).flatMap(check => [check.question, check.answer]), ...(article.commonMistakes ?? []).flatMap(item => [item.mistake, item.correction]), ...(article.progressions ?? []), article.practiceSafety ?? ''].join(' ').toLowerCase();
+}
+
 export function LessonSourceNotes({ article }: { article: Article }) {
   if (!article.sourceNotes?.length) return null;
   return <div className="lesson-source-notes"><h3>What the sources support</h3>{article.sourceNotes.map(note => <div key={note.sourceId}><p>{note.supports}</p>{note.notClaimed && <p className="evidence-boundary">{note.notClaimed}</p>}<a href={note.url} target="_blank" rel="noreferrer">Inspect original source ↗</a></div>)}</div>;

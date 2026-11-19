@@ -26,9 +26,10 @@ test('article source and related links resolve, and articles have substantive se
 test('source metadata and internal resource routes remain explicit', () => {
   for (const resource of resources) {
     for (const key of ['publisher', 'topic', 'language', 'audience', 'authority', 'access', 'status', 'date', 'note'] as const) assert.ok(resource[key], `${resource.id} missing ${key}`)
+    if (resource.url === '#/') continue // club home page
     if (resource.url.startsWith('#/')) {
-      assert.ok(resource.url.startsWith('#/wiki/'), `${resource.id}: unsupported internal route`)
-      assert.ok(articles.some(article => resource.url === `#/wiki/${article.id}`))
+      assert.ok(resource.url.startsWith('#/atlas/wiki/'), `${resource.id}: unsupported internal route`)
+      assert.ok(articles.some(article => resource.url === `#/atlas/wiki/${article.id}`))
     } else assert.equal(new URL(resource.url).protocol, 'https:')
   }
 })

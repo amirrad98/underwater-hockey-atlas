@@ -1,30 +1,34 @@
 # Navigation and usability reorganization
 
 The approved structure organizes the existing atlas around four visitor tasks.
-The logo returns to Home, and the mobile menu also includes an explicit Home link.
+The Atlas logo returns to `#/atlas`, and the mobile menu also includes an explicit Home link.
 
 | Section | Canonical route | Primary content |
 | --- | --- | --- |
-| Learn | `#/learn` | Getting started, skills and tactics, rules and safety, coaching, history and research |
-| Clubs & places | `#/clubs` | Searchable directory, Map/List views, organization and place evidence |
-| Equipment | `#/equipment` | Equipment guide, care, DIY boundaries, and suppliers |
-| Library | `#/library` | External references, readable filters, full source context |
+| Learn | `#/atlas/learn` | Getting started, skills and tactics, rules and safety, coaching, history and research |
+| Clubs & places | `#/atlas/clubs` | Searchable directory, Map/List views, organization and place evidence |
+| Equipment | `#/atlas/equipment` | Equipment guide, care, DIY boundaries, and suppliers |
+| Library | `#/atlas/library` | External references, readable filters, full source context |
 
-Suppliers use `#/equipment/suppliers`. The featured Timber Whales profile uses
-`#/clubs/timber-whales`. Article records retain their IDs and `#/wiki/{id}` URLs,
+Suppliers use `#/atlas/equipment/suppliers`. The featured Timber Whales profile uses
+`#/atlas/clubs/timber-whales`. Article records retain their IDs and `#/atlas/wiki/{id}` URLs,
 except the duplicate Timber Whales article route resolves to the canonical profile.
 
 ## Existing bookmarks
 
 | Existing route | Destination |
 | --- | --- |
-| `#/atlas` | Home |
-| `#/wiki` | `#/learn` |
-| `#/world` | `#/clubs` |
-| `#/resources` | `#/library` |
-| `#/suppliers` | `#/equipment/suppliers` |
-| `#/club` | `#/clubs/timber-whales` |
-| `#/wiki/timber-whales` | `#/clubs/timber-whales` |
+| `#/`, `#/club` | Club homepage at `#/` |
+| `#/atlas` | Redesigned Atlas homepage |
+| `#/wiki`, `#/atlas/wiki` | `#/atlas/learn` |
+| `#/world` | `#/atlas/clubs` |
+| `#/atlas/world` | `#/atlas/clubs?view=map` |
+| `#/resources`, `#/atlas/resources` | `#/atlas/library` |
+| `#/suppliers`, `#/atlas/suppliers` | `#/atlas/equipment/suppliers` |
+| `#/wiki/timber-whales` | `#/atlas/clubs/timber-whales` |
+
+The short URLs from the design preview also resolve under `#/atlas`.
+The club’s Join, Team, Gallery, and About pages keep their site-root URLs.
 
 Aliases retain query strings. Each article activates its primary section and uses
 that section in its breadcrumb. Contextual links can expose it elsewhere without
@@ -40,7 +44,7 @@ duplicating the record.
 - An exact search result reveals and focuses its selected record independently of
   pagination. Changing a filter clears the selection.
 - Library and directory pagination applies after searching the complete dataset,
-  with 20 results per page. All matching records with coordinates remain on the map.
+  with 20 results per page. All matching records with coordinates remain on the local Natural Earth map.
 - The directory starts with List on every viewport unless the URL explicitly selects Map.
 - Global and scoped searches share token, case, whitespace, and accent matching.
 
@@ -71,14 +75,15 @@ schedule retains its original date and confirmation notice.
 - `src/pages/CatalogPages.tsx`: Library, directory and supplier pages.
 - `src/components/TimberwhalesLogo.tsx`: the unchanged supplied club artwork.
 - `src/editorial.css`: forest/gold visual system, bundled fonts, and responsive layouts.
-- `src/main.tsx`: shared shell, primary navigation and grouped global search.
+- `src/main.tsx`: Atlas navigation, grouped global search, and section selection.
+- `src/ClubSite.tsx`: club homepage, navigation, roster, gallery, and joining information.
 
 ## Review preview
 
 Run `npm run build`, then `node scripts/build_review_preview.mjs` to generate
-`docs/review/preview.html`. Download and open that file in a browser to review the
+`dist/preview.html`. Download and open that file in a browser to review the
 app without a development server. Its code, styles, favicon and catalog are
-embedded, including the logo and fonts. External source links require the network;
+embedded, including both sets of fonts, the basemap, and club photographs. External source links require the network;
 the preview itself opens offline.
 
 This preview is a review artifact. The production Pages configuration continues

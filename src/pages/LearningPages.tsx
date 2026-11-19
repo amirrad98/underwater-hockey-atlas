@@ -8,6 +8,9 @@ import {
   MoveUpRight,
 } from "lucide-react";
 import { articles, resources } from "../data";
+import { wikiCatalog, resolveArticleId } from "../wiki/catalog";
+import { ArticlePractice, ArticleSections, LessonSourceNotes } from "../wiki/ArticleContent";
+import { FormationBoard } from "../playbook/Board";
 import { equipment } from "../equipment";
 import {
   articleHref,
@@ -38,16 +41,16 @@ export function HomePage() {
           <p>A field guide to a different kind of game. Learn the basics, find your people, and get ready for the pool.</p>
           <div className="field-hero-actions">
             <a className="button" href={articleHref("first-session")}>Your first session <ArrowRight size={18} aria-hidden="true" /></a>
-            <a className="text-link" href="#/clubs">Find a club <ArrowUpRight size={18} aria-hidden="true" /></a>
+            <a className="text-link" href="#/atlas/clubs">Find a club <ArrowUpRight size={18} aria-hidden="true" /></a>
           </div>
-          <a className="field-equipment-link" href="#/equipment"><Equipment /> <span>New to the kit? <strong>Start with the essentials.</strong></span> <ArrowRight size={16} aria-hidden="true" /></a>
+          <a className="field-equipment-link" href="#/atlas/equipment"><Equipment /> <span>New to the kit? <strong>Start with the essentials.</strong></span> <ArrowRight size={16} aria-hidden="true" /></a>
         </div>
         <section className="featured-club" aria-labelledby="featured-club-heading">
           <div className="featured-club-top"><span className="eyebrow">CLUB SPOTLIGHT</span><span>01 / CANADA</span></div>
-          <a className="featured-club-art" href="#/clubs/timber-whales" aria-label="Meet the UNBC Timber Whales"><TimberwhalesLogo /></a>
+          <a className="featured-club-art" href="#/atlas/clubs/timber-whales" aria-label="Meet the UNBC Timber Whales"><TimberwhalesLogo /></a>
           <div className="featured-club-caption">
             <div><span className="featured-location"><MapPin size={13} aria-hidden="true" /> Prince George, British Columbia</span><h2 id="featured-club-heading">Meet the Timberwhales.</h2></div>
-            <a href="#/clubs/timber-whales" className="round-link" aria-label="View the Timber Whales club profile"><MoveUpRight size={23} aria-hidden="true" /></a>
+            <a href="#/atlas/clubs/timber-whales" className="round-link" aria-label="View the Timber Whales club profile"><MoveUpRight size={23} aria-hidden="true" /></a>
           </div>
         </section>
       </section>
@@ -55,9 +58,9 @@ export function HomePage() {
       <section className="field-routes" aria-label="Explore the atlas">
         <div className="field-routes-inner">
           {[
-            ["01", "Learn the game", "Guides for your next session", "#/learn"],
-            ["02", "Find your people", "Clubs and places to play", "#/clubs"],
-            ["03", "Know your kit", "Equipment and suppliers", "#/equipment"],
+            ["01", "Learn the game", "Guides for your next session", "#/atlas/learn"],
+            ["02", "Find your people", "Clubs and places to play", "#/atlas/clubs"],
+            ["03", "Know your kit", "Equipment and suppliers", "#/atlas/equipment"],
           ].map(([number, title, description, href]) => (
             <a key={number} href={href}><span className="route-number">{number}</span><span><strong>{title}</strong><small>{description}</small></span><ArrowUpRight size={21} aria-hidden="true" /></a>
           ))}
@@ -70,7 +73,7 @@ export function HomePage() {
             <div className="eyebrow">A GOOD PLACE TO START</div>
             <h2 id="beginner-heading">You don’t need to <br />know it all to jump in.</h2>
             <p>Get a feel for the game, learn what to bring, and arrive with a few good questions.</p>
-            <a className="text-link" href="#/learn?group=getting-started">All beginner guides <ArrowRight size={16} aria-hidden="true" /></a>
+            <a className="text-link" href="#/atlas/learn?group=getting-started">All beginner guides <ArrowRight size={16} aria-hidden="true" /></a>
           </div>
           <div className="field-reading-list">
             {[
@@ -83,10 +86,10 @@ export function HomePage() {
           </div>
         </section>
         <section className="field-next" aria-labelledby="next-heading">
-          <div><div className="eyebrow">ALREADY PLAYING?</div><h2 id="next-heading">Bring something new<br />to your next session.</h2><p>Puck control, passing, positioning, and the thinking behind a good team.</p><a className="button" href="#/learn?group=skills-tactics">Explore skills &amp; tactics <ArrowRight size={17} aria-hidden="true" /></a></div>
-          <div className="field-tactics"><Board compact /><a href={articleHref("formations")}>Read the formation guide <ArrowUpRight size={16} aria-hidden="true" /></a></div>
+          <div><div className="eyebrow">ALREADY PLAYING?</div><h2 id="next-heading">Bring something new<br />to your next session.</h2><p>Puck control, passing, positioning, and the thinking behind a good team.</p><a className="button" href="#/atlas/learn?group=skills-tactics">Explore skills &amp; tactics <ArrowRight size={17} aria-hidden="true" /></a></div>
+          <div className="field-tactics"><Board compact /><a href="#/atlas/board">Open the tactical board <ArrowUpRight size={16} aria-hidden="true" /></a></div>
         </section>
-        <aside className="field-library"><BookOpen size={25} aria-hidden="true" /><div><strong>Go straight to the source.</strong><span>Rulebooks, coaching resources, and research, with context for each reference.</span></div><a className="text-link" href="#/library">Browse the library <ArrowRight size={17} aria-hidden="true" /></a></aside>
+        <aside className="field-library"><BookOpen size={25} aria-hidden="true" /><div><strong>Go straight to the source.</strong><span>Rulebooks, coaching resources, and research, with context for each reference.</span></div><a className="text-link" href="#/atlas/library">Browse the library <ArrowRight size={17} aria-hidden="true" /></a></aside>
       </div>
     </>
   );
@@ -98,9 +101,10 @@ export function LearnPage({ params, updateQuery }: CatalogPageProps) {
     ? requested
     : "";
   const q = params.get("q") || "";
+  const level = params.get("level") || "";
   const guides = (q.trim() ? searchCatalog(q).articles : articles).filter(
     (article) =>
-      articleOwner(article) === "learn" &&
+      (level ? article.readerLevel === level : articleOwner(article) === "learn") &&
       (!group || getArticleGroup(article) === group),
   );
   // Keep the complete index in learning order while preserving search ranking.
@@ -128,8 +132,8 @@ export function LearnPage({ params, updateQuery }: CatalogPageProps) {
           <div className="eyebrow">BROWSE BY TOPIC</div>
           <button
             type="button"
-            aria-pressed={!group}
-            onClick={() => updateQuery({ group: null })}
+            aria-pressed={!group && !level}
+            onClick={() => updateQuery({ group: null, level: null })}
           >
             All guides <ArrowRight size={15} />
           </button>
@@ -144,10 +148,22 @@ export function LearnPage({ params, updateQuery }: CatalogPageProps) {
               <ArrowRight size={15} />
             </button>
           ))}
+          <div className="eyebrow">READING LEVEL</div>
+          {["Newbie", "Intermediate"].map((value) => (
+            <button type="button" key={value} aria-pressed={level === value}
+              onClick={() => updateQuery({ level: level === value ? null : value })}>
+              {value}
+            </button>
+          ))}
+          <nav className="related-guides" aria-label="Practice tools">
+            <a href="#/atlas/board">Tactical board <ArrowUpRight size={15} /></a>
+            <a href="#/atlas/drills">Drill library <ArrowUpRight size={15} /></a>
+            <a href="#/atlas/glossary">Concept glossary <ArrowUpRight size={15} /></a>
+          </nav>
           <div className="sidebar-note">
             <Compass size={21} />
             <p>Choosing your kit?</p>
-            <a className="text-link" href="#/equipment">
+            <a className="text-link" href="#/atlas/equipment">
               Open the equipment guide <ArrowUpRight size={14} />
             </a>
           </div>
@@ -159,7 +175,7 @@ export function LearnPage({ params, updateQuery }: CatalogPageProps) {
             value={q}
             onChange={(value) => updateQuery({ q: value }, { replace: true })}
           />
-          {!group && !q.trim() && (
+          {!group && !level && !q.trim() && (
             <a className="learn-start" href={articleHref("first-session")}>
               <span className="learn-start-icon"><BookOpen size={25} aria-hidden="true" /></span>
               <span><small>NEW TO UNDERWATER HOCKEY?</small><strong>Start with your first session.</strong><span>A short guide to arriving, joining in, and what to ask.</span></span>
@@ -204,13 +220,27 @@ export function LearnPage({ params, updateQuery }: CatalogPageProps) {
           {!guides.length && (
             <EmptyState
               title="No matching guides"
-              onReset={() => updateQuery({ q: null, group: null })}
+              onReset={() => updateQuery({ q: null, group: null, level: null })}
             >
               <p>Try another term or choose a different topic.</p>
             </EmptyState>
           )}
         </section>
       </div>
+      <section className="reading-paths">
+        <h2>Follow a reading path</h2>
+        <div className="article-grid three-columns">
+          {wikiCatalog.readingPaths.map((path) => (
+            <div className="reading-path-card" key={path.id}>
+              <h3>{path.title}</h3>
+              <ol>{path.chapterIds.map((id) => {
+                const chapter = articles.find((item) => item.id === resolveArticleId(id));
+                return chapter && <li key={id}><a href={articleHref(chapter.id)}>{chapter.title}</a></li>;
+              })}</ol>
+            </div>
+          ))}
+        </div>
+      </section>
     </div>
   );
 }
@@ -244,7 +274,7 @@ export function EquipmentPage() {
       <section aria-labelledby="equipment-reading" className="section-gap">
         <div className="section-heading">
           <h2 id="equipment-reading">Choosing and caring for gear.</h2>
-          <a className="text-link" href="#/equipment/suppliers">
+          <a className="text-link" href="#/atlas/equipment/suppliers">
             Browse suppliers <ArrowRight size={16} />
           </a>
         </div>
@@ -289,7 +319,7 @@ export function EquipmentChecklist() {
                   <li key={point}>{point}</li>
                 ))}
               </ul>
-              <a className="text-link" href="#/library?topic=Equipment">
+              <a className="text-link" href="#/atlas/library?topic=Equipment">
                 Equipment sources <ArrowUpRight size={14} />
               </a>
             </div>
@@ -311,10 +341,10 @@ const ownerLabels = {
   library: "Library",
 };
 const ownerPaths = {
-  learn: "#/learn",
-  clubs: "#/clubs",
-  equipment: "#/equipment",
-  library: "#/library",
+  learn: "#/atlas/learn",
+  clubs: "#/atlas/clubs",
+  equipment: "#/atlas/equipment",
+  library: "#/atlas/library",
 };
 
 function ArticleContents({
@@ -354,7 +384,7 @@ export function ArticlePage({ id }: { id: string }) {
         <EmptyState title="Article not found">
           <p>
             That article link could not be found.{" "}
-            <a href="#/learn">Browse the learning guides.</a>
+            <a href="#/atlas/learn">Browse the learning guides.</a>
           </p>
         </EmptyState>
       </div>
@@ -380,7 +410,7 @@ export function ArticlePage({ id }: { id: string }) {
         {owner === "learn" && groupLabel && (
           <>
             <span aria-hidden="true">/</span>
-            <a href={`#/learn?group=${group}`}>{groupLabel}</a>
+            <a href={`#/atlas/learn?group=${group}`}>{groupLabel}</a>
           </>
         )}
       </nav>
@@ -398,31 +428,21 @@ export function ArticlePage({ id }: { id: string }) {
               mobile
             />
           )}
-          {id === "formations" && <Board />}
+          {id === "formations" && <FormationBoard compact />}
           {id === "equipment" && (
             <div className="article-callout">
               <Equipment />
               <p>
                 Explore the equipment checklist and supplier directory together.
               </p>
-              <a className="text-link" href="#/equipment">
+              <a className="text-link" href="#/atlas/equipment">
                 Equipment overview <ArrowRight size={16} />
               </a>
             </div>
           )}
-          {article.sections.map((section, i) => (
-            <section
-              className="article-section"
-              key={section.heading}
-              id={`article-section-${i}`}
-              tabIndex={-1}
-            >
-              <h2>{section.heading}</h2>
-              <p>{section.body}</p>
-            </section>
-          ))}
+          <ArticleSections article={article} />
+          <ArticlePractice article={article} />
           <section
-            className="article-sources"
             id="article-section-sources"
             tabIndex={-1}
           >
@@ -430,15 +450,15 @@ export function ArticlePage({ id }: { id: string }) {
               <h2>Sources &amp; further reading</h2>
               <span className="muted">{sources.length} references</span>
             </div>
-            <p className="inline-note">
-              Each source retains its own date, access conditions, and review
-              status.
-            </p>
-            <div className="source-list">
-              {sources.map((resource) => (
-                <SourceCard key={resource.id} resource={resource} compact />
-              ))}
-            </div>
+            <details className="article-sources">
+              <summary>Open {sources.length} supporting source notes</summary>
+              <LessonSourceNotes article={article} />
+              <div className="source-list">
+                {sources.map((resource) => (
+                  <SourceCard key={resource.id} resource={resource} compact />
+                ))}
+              </div>
+            </details>
           </section>
         </article>
         <aside className="article-sidebar">
@@ -468,7 +488,7 @@ export function ClubPage() {
   return (
     <div className="page club-page">
       <nav className="breadcrumb" aria-label="Breadcrumb">
-        <a href="#/clubs">Clubs &amp; places</a>
+        <a href="#/atlas/clubs">Clubs &amp; places</a>
         <span aria-hidden="true">/</span>
         <span>Timber Whales</span>
       </nav>
@@ -508,7 +528,7 @@ export function ClubPage() {
           <strong>21:00–22:00</strong>
         </div>
       </section>
-      <div className="club-visit-actions"><a className="button" href="https://www.instagram.com/p/DdNdRpuRzGU/" target="_blank" rel="noreferrer">Check the club announcement <ArrowUpRight size={17} aria-hidden="true" /><span className="sr-only"> (opens in a new tab)</span></a><a className="text-link" href={articleHref("first-session")}>Planning your first visit? <ArrowRight size={17} aria-hidden="true" /></a></div>
+      <div className="club-visit-actions"><a className="button" href="#/">TimberWhales club homepage <ArrowRight size={17} aria-hidden="true" /></a><a className="button" href="https://www.instagram.com/p/DdNdRpuRzGU/" target="_blank" rel="noreferrer">Check the club announcement <ArrowUpRight size={17} aria-hidden="true" /><span className="sr-only"> (opens in a new tab)</span></a><a className="text-link" href={articleHref("first-session")}>Planning your first visit? <ArrowRight size={17} aria-hidden="true" /></a></div>
       <details className="club-record-note"><summary>About these club details</summary><p>Older CUGA listings at Prince George Aquatic Centre describe an outdated schedule. Public roster entries are undated; 2026 leadership is unconfirmed. The schedule above is the published fall 2026 schedule, not a live availability feed. Confirm with the club before attending.</p></details>
       <div className="article-layout">
         <article className="article-body">
@@ -536,14 +556,14 @@ export function ClubPage() {
             <a href={articleHref("first-session")}>
               Your first session <ArrowUpRight size={15} />
             </a>
-            <a href="#/equipment">
+            <a href="#/atlas/equipment">
               Equipment essentials <ArrowUpRight size={15} />
             </a>
             <a href={articleHref("safety")}>
               Safe participation <ArrowUpRight size={15} />
             </a>
           </div>
-          <a className="text-link" href="#/clubs">
+          <a className="text-link" href="#/atlas/clubs">
             <ArrowLeft size={15} /> All clubs &amp; places
           </a>
         </aside>

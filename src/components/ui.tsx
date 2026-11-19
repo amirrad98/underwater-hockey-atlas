@@ -169,13 +169,13 @@ export function EquipmentTabs({ active }: { active: "guide" | "suppliers" }) {
   return (
     <nav className="section-tabs" aria-label="Equipment navigation">
       <a
-        href="#/equipment"
+        href="#/atlas/equipment"
         aria-current={active === "guide" ? "page" : undefined}
       >
         Equipment guide
       </a>
       <a
-        href="#/equipment/suppliers"
+        href="#/atlas/equipment/suppliers"
         aria-current={active === "suppliers" ? "page" : undefined}
       >
         Suppliers

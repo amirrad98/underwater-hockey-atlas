@@ -17,12 +17,18 @@ if (scripts.length !== 1)
 const assetPrefix = scripts[0][1].slice(0, scripts[0][1].lastIndexOf("/") + 1);
 const embeddedAssets = [];
 const mimeTypes = { ".jpg": "image/jpeg", ".jpeg": "image/jpeg", ".png": "image/png", ".svg": "image/svg+xml", ".webp": "image/webp", ".woff": "font/woff", ".woff2": "font/woff2", ".ttf": "font/ttf" };
-for (const name of await readdir(resolve(dist, "assets"))) {
-  const extension = name.slice(name.lastIndexOf("."));
-  const mime = mimeTypes[extension];
-  if (!mime) continue;
-  const data = await readFile(resolve(dist, "assets", name));
-  embeddedAssets.push([`${assetPrefix}${name}`, `data:${mime};base64,${data.toString("base64")}`]);
+const base = assetPrefix.slice(0, -"assets/".length);
+const clubImages = {};
+for (const directory of ["assets", "fonts", "brand", "club"]) {
+  for (const name of await readdir(resolve(dist, directory))) {
+    const mime = mimeTypes[name.slice(name.lastIndexOf("."))];
+    if (!mime) continue;
+    const path = `${directory}/${name}`;
+    const bytes = await readFile(resolve(dist, path));
+    const uri = `data:${mime};base64,${bytes.toString("base64")}`;
+    if (directory === "club" || directory === "brand") clubImages[path] = uri;
+    else embeddedAssets.push([base + path, uri]);
+  }
 }
 function inlineAssets(source) {
   for (const [path, data] of embeddedAssets) source = source.replaceAll(path, data);
@@ -58,9 +64,9 @@ html = html.replace(
 );
 html = html.replace(
   "<head>",
-  "<head>\n<!-- Standalone review preview. Generated from the production build. -->",
+  () => `<head>\n<script type="application/json" id="club-preview-assets">${JSON.stringify(clubImages).replaceAll("<", "\\u003c")}</script>`,
 );
-const output = resolve(root, "docs/review/preview.html");
+const output = resolve(dist, "preview.html");
 await mkdir(dirname(output), { recursive: true });
 await writeFile(output, html);
 console.log(`Saved standalone review preview: ${output}`);

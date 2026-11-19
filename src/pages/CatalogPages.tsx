@@ -2,7 +2,6 @@ import { useEffect, useRef } from "react";
 import {
   ArrowUpRight,
   ExternalLink,
-  Globe2,
   MapPin,
   SlidersHorizontal,
   X,
@@ -23,6 +22,7 @@ import {
   getPage,
 } from "../catalog";
 import { canonicalHash } from "../navigation";
+import { WorldMap } from "../WorldMap";
 import { TimberwhalesLogo } from "../components/TimberwhalesLogo";
 import {
   PageHeading,
@@ -104,7 +104,7 @@ function CloseSelection({
 function useSelectedRecord(selected: string | null) {
   const ref = useRef<HTMLElement>(null);
   useEffect(() => {
-    if (selected && ref.current) {
+    if (selected && ref.current && !document.activeElement?.matches(".map-pin")) {
       ref.current.focus({ preventScroll: true });
       ref.current.scrollIntoView({ block: "nearest", behavior: "auto" });
     }
@@ -175,7 +175,7 @@ export function LibraryPage({ params, updateQuery }: CatalogPageProps) {
         <p>
           Each source keeps its dates, access conditions and review notes.
           Checked, indexed and historical records are labelled individually.{" "}
-          <a href="#/wiki/library-navigation">
+          <a href="#/atlas/wiki/library-navigation">
             Understand the source labels
             <ArrowUpRight size={14} aria-hidden="true" />
           </a>
@@ -442,79 +442,6 @@ function PlaceCard({
   );
 }
 
-function SchematicMap({
-  shown,
-  selectedId,
-  onSelect,
-}: {
-  shown: Place[];
-  selectedId: string | null;
-  onSelect: (id: string) => void;
-}) {
-  const pinned = shown.filter(
-    (place) => place.lat !== null && place.lon !== null,
-  );
-  return (
-    <section
-      className="catalog-map-panel map-panel"
-      aria-label="Schematic community map"
-    >
-      <div className="catalog-map-heading">
-        <Globe2 size={20} aria-hidden="true" />
-        <div>
-          <h2>Community map</h2>
-          <p>
-            Schematic geographic grid. Coordinate precision varies by record.
-          </p>
-        </div>
-      </div>
-      <div className="catalog-world-map">
-        {[-60, -30, 0, 30, 60].map((lat) => (
-          <div
-            className="catalog-latitude"
-            style={{ top: `${((90 - lat) / 180) * 100}%` }}
-            key={lat}
-          >
-            <span>{lat}°</span>
-          </div>
-        ))}
-        {[-120, -60, 0, 60, 120].map((lon) => (
-          <div
-            className="catalog-longitude"
-            style={{ left: `${((lon + 180) / 360) * 100}%` }}
-            key={lon}
-          />
-        ))}
-        {pinned.map((place) => (
-          <button
-            key={place.id}
-            type="button"
-            className={`catalog-map-pin map-pin${selectedId === place.id ? " is-selected" : ""}${place.lon! > 90 ? " is-near-east" : place.lon! < -90 ? " is-near-west" : ""}`}
-            style={{
-              left: `${((place.lon! + 180) / 360) * 100}%`,
-              top: `${((90 - place.lat!) / 180) * 100}%`,
-            }}
-            aria-label={`${place.name}: ${place.precision}`}
-            aria-pressed={selectedId === place.id}
-            title={place.name}
-            onClick={() => onSelect(place.id)}
-          >
-            <span
-              className={`catalog-map-dot${/city|town|area|suburb|island/i.test(place.precision) ? " is-approximate" : ""}`}
-            />
-            <span className="catalog-map-tooltip">{place.name}</span>
-          </button>
-        ))}
-      </div>
-      <p className="catalog-map-note">
-        {pinned.length} {pinned.length === 1 ? "record has" : "records have"}{" "}
-        coordinates. All {shown.length} matching entries, including unpinned
-        records, remain in the directory.
-      </p>
-    </section>
-  );
-}
-
 export function ClubsPage({ params, updateQuery }: CatalogPageProps) {
   const view = params.get("view") === "map" ? "map" : "list";
   const q = params.get("q") || "";
@@ -552,7 +479,7 @@ export function ClubsPage({ params, updateQuery }: CatalogPageProps) {
         description="Find clubs, national organizations and known venues. Confirm current sessions with the organization before you go."
       />
       <div className="catalog-feature-link">
-        <a className="catalog-club-spotlight" href="#/clubs/timber-whales">
+        <a className="catalog-club-spotlight" href="#/atlas/clubs/timber-whales">
           <TimberwhalesLogo className="catalog-club-logo" />
           <span className="catalog-club-copy">
             <small>Club spotlight</small>
@@ -561,7 +488,7 @@ export function ClubsPage({ params, updateQuery }: CatalogPageProps) {
           </span>
           <ArrowUpRight size={20} aria-hidden="true" />
         </a>
-        <a className="text-link" href="#/wiki/world-guide">
+        <a className="text-link" href="#/atlas/wiki/world-guide">
           About this directory <ArrowUpRight size={14} aria-hidden="true" />
         </a>
       </div>
@@ -614,9 +541,9 @@ export function ClubsPage({ params, updateQuery }: CatalogPageProps) {
         <div
           className={`catalog-map-layout${selected ? " has-selection" : ""}`}
         >
-          <SchematicMap
-            shown={shown}
-            selectedId={selectedId}
+          <WorldMap
+            places={shown}
+            selected={selectedId}
             onSelect={selectPlace}
           />
           {selectedPanel}

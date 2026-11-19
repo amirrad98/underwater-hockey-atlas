@@ -51,7 +51,7 @@ async function search(page: Page, query: string) {
   const field = await openSearch(page);
   await field.fill(query);
   await field.press("Enter");
-  await expect(page).toHaveURL(/#\/search\?q=/);
+  await expect(page).toHaveURL(/#\/atlas\/search\?q=/);
 }
 
 test("primary navigation uses four sections and equipment has its own secondary navigation", async ({
@@ -69,7 +69,7 @@ test("primary navigation uses four sections and equipment has its own secondary 
     nav.getByRole("link", { name: "Suppliers", exact: true }),
   ).toHaveCount(0);
   await nav.getByRole("link", { name: "Equipment", exact: true }).click();
-  await expect(page).toHaveURL(/#\/equipment$/);
+  await expect(page).toHaveURL(/#\/atlas\/equipment$/);
   const equipmentNav = page.getByRole("navigation", {
     name: "Equipment navigation",
     exact: true,
@@ -77,7 +77,7 @@ test("primary navigation uses four sections and equipment has its own secondary 
   await equipmentNav
     .getByRole("link", { name: "Suppliers", exact: true })
     .click();
-  await expect(page).toHaveURL(/#\/equipment\/suppliers$/);
+  await expect(page).toHaveURL(/#\/atlas\/equipment\/suppliers$/);
   await expect(
     equipmentNav.getByRole("link", { name: "Suppliers", exact: true }),
   ).toHaveAttribute("aria-current", "page");
@@ -88,11 +88,11 @@ test("home gives a direct first-session entry and keeps the club featured", asyn
 }) => {
   await page.goto(`${base}#/atlas`);
   await expect(
-    page.locator('main a[href="#/clubs/timber-whales"]').first(),
+    page.locator('main a[href="#/atlas/clubs/timber-whales"]').first(),
   ).toBeVisible();
-  await page.locator('main a[href="#/wiki/first-session"]').first().click();
+  await page.locator('main a[href="#/atlas/wiki/first-session"]').first().click();
   await expect(
-    page.getByRole("heading", { name: "Your first session", level: 1 }),
+    page.getByRole("heading", { name: "Your first pool session", level: 1 }),
   ).toBeVisible();
 });
 
@@ -125,12 +125,13 @@ test("legacy section and club bookmarks resolve to the reorganized pages", async
   page,
 }) => {
   const aliases = [
-    ["wiki", "learn"],
-    ["world", "clubs"],
-    ["resources", "library"],
-    ["suppliers", "equipment/suppliers"],
-    ["club", "clubs/timber-whales"],
-    ["wiki/timber-whales", "clubs/timber-whales"],
+    ["wiki", "atlas/learn"],
+    ["atlas/wiki", "atlas/learn"],
+    ["world", "atlas/clubs"],
+    ["resources", "atlas/library"],
+    ["suppliers", "atlas/equipment/suppliers"],
+    ["club", ""],
+    ["wiki/timber-whales", "atlas/clubs/timber-whales"],
   ];
   for (const [oldRoute, canonical] of aliases) {
     await page.goto(`${base}#/${oldRoute}`);
@@ -160,7 +161,7 @@ test("every article remains reachable with sources and a clear primary section",
     ).toHaveCount(0);
     expect(await page.locator("main .source-card").count()).toBeGreaterThan(0);
   }
-  await page.goto(`${base}#/wiki/equipment-care`);
+  await page.goto(`${base}#/atlas/wiki/equipment-care`);
   const nav = await openPrimaryNavigation(page);
   await expect(
     nav.getByRole("link", { name: "Equipment", exact: true }),
@@ -173,7 +174,7 @@ test("global search finds a directory record and opens that exact place", async 
   await page.goto(`${base}#/atlas`);
   await search(page, place.name);
   await page.locator(`main a[href*="selected=${place.id}"]`).first().click();
-  await expect(page).toHaveURL(new RegExp(`#/clubs\\?.*selected=${place.id}`));
+  await expect(page).toHaveURL(new RegExp(`#/atlas/clubs\\?.*selected=${place.id}`));
   const detail = page.getByTestId("selected-record");
   await expect(
     detail.getByRole("heading", { name: place.name, exact: true }),
@@ -189,7 +190,7 @@ test("supplier search opens the selected record with shipping qualifications", a
   await search(page, supplier.name);
   await page.locator(`main a[href*="selected=${supplier.id}"]`).first().click();
   await expect(page).toHaveURL(
-    new RegExp(`#/equipment/suppliers\\?.*selected=${supplier.id}`),
+    new RegExp(`#/atlas/equipment/suppliers\\?.*selected=${supplier.id}`),
   );
   const detail = page.getByTestId("selected-record");
   await expect(
@@ -228,7 +229,7 @@ test("all matching directory and supplier links preserve the global search resul
   await page
     .getByRole("link", { name: "All matching places", exact: true })
     .click();
-  await expect(page).toHaveURL(/#\/clubs\?q=session/);
+  await expect(page).toHaveURL(/#\/atlas\/clubs\?q=session/);
   await expect(
     page
       .getByRole("region", { name: "Directory results", exact: true })
@@ -242,14 +243,14 @@ test("all matching directory and supplier links preserve the global search resul
   await page
     .getByRole("link", { name: "All matching suppliers", exact: true })
     .click();
-  await expect(page).toHaveURL(/#\/equipment\/suppliers\?q=shipping/);
+  await expect(page).toHaveURL(/#\/atlas\/equipment\/suppliers\?q=shipping/);
   await expect(page.getByTestId("supplier-result")).toHaveCount(supplierCount);
 });
 
 test("library paginates the complete collection and resets the page when filtering", async ({
   page,
 }) => {
-  await page.goto(`${base}#/library`);
+  await page.goto(`${base}#/atlas/library`);
   const rows = page.getByTestId("resource-result");
   await expect(rows).toHaveCount(20);
   await expect(
@@ -277,7 +278,7 @@ test("library paginates the complete collection and resets the page when filteri
 test("library filters use readable facets and stay visible when more filters are closed", async ({
   page,
 }) => {
-  await page.goto(`${base}#/library`);
+  await page.goto(`${base}#/atlas/library`);
   const topic = page.getByLabel("Topic", { exact: true });
   await topic.selectOption({ label: "Equipment" });
   await expect(page).toHaveURL(/topic=Equipment/);
@@ -305,7 +306,7 @@ test("library filters use readable facets and stay visible when more filters are
 test("Back restores collection filters and pagination, and search input follows its URL", async ({
   page,
 }) => {
-  await page.goto(`${base}#/library?language=English&page=2`);
+  await page.goto(`${base}#/atlas/library?language=English&page=2`);
   await expect(page.getByLabel("Language", { exact: true })).toHaveValue(
     "English",
   );
@@ -315,7 +316,7 @@ test("Back restores collection filters and pagination, and search input follows 
     .getAttribute("data-resource-id");
   const nav = await openPrimaryNavigation(page);
   await nav.getByRole("link", { name: "Learn", exact: true }).click();
-  await expect(page).toHaveURL(/#\/learn$/);
+  await expect(page).toHaveURL(/#\/atlas\/learn$/);
   await page.goBack();
   await expect(page).toHaveURL(/language=English/);
   await expect(page).toHaveURL(/page=2/);
@@ -326,7 +327,7 @@ test("Back restores collection filters and pagination, and search input follows 
     "data-resource-id",
     firstId!,
   );
-  await page.goto(`${base}#/search?q=equipment`);
+  await page.goto(`${base}#/atlas/search?q=equipment`);
   await expect(
     page.getByLabel("Search the atlas", { exact: true }),
   ).toHaveValue("equipment");
@@ -340,7 +341,7 @@ test("Back restores collection filters and pagination, and search input follows 
 test("opening a guide and returning restores its topic and scroll position", async ({
   page,
 }) => {
-  await page.goto(`${base}#/learn?group=skills-tactics`);
+  await page.goto(`${base}#/atlas/learn?group=skills-tactics`);
   await expect(
     page.getByRole("button", { name: "Skills & tactics", exact: true }),
   ).toHaveAttribute("aria-pressed", "true");
@@ -349,9 +350,9 @@ test("opening a guide and returning restores its topic and scroll position", asy
   const scrollBefore = await page.evaluate(() => window.scrollY);
   expect(scrollBefore).toBeGreaterThan(0);
   await lastGuide.click();
-  await expect(page).toHaveURL(/#\/wiki\//);
+  await expect(page).toHaveURL(/#\/atlas\/wiki\//);
   await page.goBack();
-  await expect(page).toHaveURL(/#\/learn\?group=skills-tactics$/);
+  await expect(page).toHaveURL(/#\/atlas\/learn\?group=skills-tactics$/);
   await expect(
     page.getByRole("button", { name: "Skills & tactics", exact: true }),
   ).toHaveAttribute("aria-pressed", "true");
@@ -366,7 +367,7 @@ test("opening a guide and returning restores its topic and scroll position", asy
 test("directory keeps all records searchable and map selection independent of pagination", async ({
   page,
 }) => {
-  await page.goto(`${base}#/clubs`);
+  await page.goto(`${base}#/atlas/clubs`);
   await expect(
     page.getByRole("button", { name: "List", exact: true }),
   ).toHaveAttribute("aria-pressed", "true");
@@ -398,7 +399,7 @@ test("an explicit map view survives a mobile reload and unpinned records remain 
   page,
 }) => {
   const unpinned = places.find((record) => record.lat === null)!;
-  await page.goto(`${base}#/clubs?view=map&selected=${unpinned.id}`);
+  await page.goto(`${base}#/atlas/clubs?view=map&selected=${unpinned.id}`);
   await expect(
     page.getByRole("button", { name: "Map", exact: true }),
   ).toHaveAttribute("aria-pressed", "true");
@@ -417,7 +418,7 @@ test("an explicit map view survives a mobile reload and unpinned records remain 
 test("supplier filters and evidence retain the original record qualifications", async ({
   page,
 }) => {
-  await page.goto(`${base}#/equipment/suppliers`);
+  await page.goto(`${base}#/atlas/equipment/suppliers`);
   const first = suppliers[0];
   await page
     .getByLabel("Gear category", { exact: true })
@@ -458,7 +459,7 @@ test("skip link keeps the route and keyboard navigation closes cleanly", async (
   page,
   isMobile,
 }, testInfo) => {
-  await page.goto(`${base}#/learn`);
+  await page.goto(`${base}#/atlas/learn`);
   const initialUrl = page.url();
   const skip = page.getByRole("link", { name: "Skip to content", exact: true });
   await skip.focus();
@@ -489,7 +490,7 @@ test("skip link keeps the route and keyboard navigation closes cleanly", async (
 });
 
 test("repeated header searches move focus to results and result jumps clear the masthead", async ({ page }) => {
-  await page.goto(`${base}#/search?q=equipment`);
+  await page.goto(`${base}#/atlas/search?q=equipment`);
   await search(page, "rules");
   await expect(page.locator("main")).toBeFocused();
   await expect(page.getByRole("heading", { level: 1 })).toContainText("rules");
@@ -568,4 +569,17 @@ test("desktop content reflows at 720 CSS pixels with 2x pixel density", async ({
     });
   }
   await context.close();
+});
+
+test("the club homepage links into the redesigned atlas and old article bookmarks still work", async ({ page }) => {
+  await page.goto(base);
+  await expect(page.getByRole("heading", { level: 1 })).toContainText("Swim as one");
+  await page.getByRole("link", { name: "New to the sport? Open the UWH atlas" }).click();
+  await expect(page).toHaveURL(/#\/atlas$/);
+  await expect(page.getByRole("heading", { level: 1 })).toHaveText("Hockey, below the surface.");
+  await page.goto(base + "#/wiki/passing");
+  await expect(page).toHaveURL(/#\/atlas\/wiki\/passing$/);
+  await expect(page.getByRole("heading", { level: 1 })).toHaveText("Make a pass usable");
+  await page.getByRole("link", { name: "TimberWhales club homepage" }).click();
+  await expect(page.getByRole("heading", { level: 1 })).toContainText("Swim as one");
 });

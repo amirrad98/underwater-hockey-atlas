@@ -1,4 +1,5 @@
-:root {
+@scope (html:has(.app-shell)) {
+:scope {
   font-family: "DM Sans", system-ui, sans-serif;
   color: #15383e;
   background: #f7f6f0;
@@ -1468,11 +1469,10 @@ p a,
   }
   .primary-navigation {
     display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    padding: 12px 4% 20px;
+    position: static;
+    grid-column: 1 / -1;
+    grid-row: 2;
+    padding: 8px 0 0;
     background: #fcfcf6;
     border-bottom: 1px solid #cad7c7;
     box-shadow: 0 12px 20px #13312d12;
@@ -2024,4 +2024,5 @@ p a,
     scroll-behavior: auto !important;
     transition-duration: 0.01ms !important;
   }
+}
 }

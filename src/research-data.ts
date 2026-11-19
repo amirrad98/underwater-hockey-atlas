@@ -12330,7 +12330,7 @@ export const importedPlaces: Place[] = [
     "lon": -122.7478262,
     "precision": "Municipality-linked venue point; not separately surveyed",
     "description": "Canfor Leisure Pool, Prince George. Fall 2026 schedule from 12 September club announcement; older CUGA venue is historical.",
-    "url": "#/wiki/timber-whales",
+    "url": "#/",
     "sourceIds": [
       "club-fall-2026-schedule",
       "club-city-aquatics",

@@ -1,6 +1,6 @@
 # Timberwhales visual and usability review
 
-Prepared November 8, 2026 for the existing draft PR #4.
+Design snapshot prepared November 8, 2026 for PR #4. The integrated site keeps the TimberWhales club homepage at `#/` and opens this redesign at `#/atlas`.
 
 ## Open the working preview
 
@@ -9,8 +9,7 @@ browser. The application, catalog, original club logo, fonts, and favicon are
 embedded. The local pages and interactions work without a network connection;
 external source links open their original websites.
 
-The preview contains the same application as the production build. It is a
-review artifact, and is not the published GitHub Pages site.
+The linked file captures the original design review at commit `ba93243`. To create a single-file preview of the current integrated site, run `npm run build` followed by `node scripts/build_review_preview.mjs` and open `dist/preview.html`.
 
 ## What changed
 

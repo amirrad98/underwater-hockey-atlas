@@ -18,7 +18,8 @@
   font-display: swap;
 }
 
-:root {
+@scope (html:has(.app-shell)) {
+:scope {
   font-family: "Atlas Sans", Arial, sans-serif;
   color: #172c25;
   background: #f8f7f2;
@@ -406,4 +407,10 @@ main, [data-results-start], .article-section, .article-sources, .catalog-selecti
 @media (max-width: 420px) {
   .catalog-page .catalog-primary-filters { grid-template-columns: minmax(0, 1fr); }
   .catalog-page .catalog-filter select { width: 100%; }
+}
+.skip-link:not(:focus) { clip-path: inset(50%); }
+.article-body h2[tabindex] { scroll-margin-top: 110px; }
+.learning-sidebar nav a { display: flex; justify-content: space-between; padding: 8px 0; }
+.reading-paths a, .lesson-concepts a { color: var(--teal); }
+
 }

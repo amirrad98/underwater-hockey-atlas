@@ -63,16 +63,16 @@ test("every current article has one primary home and Learn uses all five groups"
 });
 
 test("article destinations preserve existing article identities and unify the club profile", () => {
-  assert.equal(articleHref("timber-whales"), "#/clubs/timber-whales");
+  assert.equal(articleHref("timber-whales"), "#/atlas/clubs/timber-whales");
   for (const article of articles.filter((a) => a.id !== "timber-whales")) {
-    assert.equal(articleHref(article.id), `#/wiki/${article.id}`);
+    assert.equal(articleHref(article.id), `#/atlas/wiki/${article.id}`);
   }
-  assert.equal(articleHref("a/b?c"), "#/wiki/a%2Fb%3Fc");
+  assert.equal(articleHref("a/b?c"), "#/atlas/wiki/a%2Fb%3Fc");
 });
 
 test("all catalog resources receive readable facets without modifying original records", () => {
   const before = JSON.stringify(resources);
-  assert.equal(resources.length, 207);
+  assert.equal(resources.length, 208);
   const keys: FacetKey[] = [
     "topics",
     "languages",
@@ -190,7 +190,7 @@ test("access facets preserve explicit restrictions and uncertainty from merged e
 
 test("resource filters operate on the full catalog and match all selected facets", () => {
   const full = filterResources(resources, { q: "  ", topic: "", language: "" });
-  assert.equal(full.length, 207);
+  assert.equal(full.length, resources.length);
   assert.equal(full[0], resources[0]);
   const subset = filterResources(resources, {
     topic: "Rules & refereeing",
@@ -226,6 +226,8 @@ test("global search includes directory places and suppliers as well as articles 
     articles: [],
     places: [],
     suppliers: [],
+    drills: [],
+    scenarios: [],
     resources: [],
   });
   const place = places.find((p) => p.name.includes("Timber Whales"))!;
@@ -251,6 +253,8 @@ test("global search includes directory places and suppliers as well as articles 
     articles: [],
     places: [],
     suppliers: [],
+    drills: [],
+    scenarios: [],
     resources: [],
   });
 });

@@ -19,18 +19,30 @@ import {
   LearnPage,
 } from "./pages/LearningPages";
 import { ClubsPage, LibraryPage, SuppliersPage } from "./pages/CatalogPages";
+import { ClubSite } from "./ClubSite";
+import { BoardPage } from "./playbook/Board";
+import { DrillsPage } from "./playbook/Drills";
+import { Glossary } from "./wiki/ArticleContent";
+import { resolveArticleId } from "./wiki/catalog";
+import { registerOffline } from "./offline";
 import "./style.css";
 import "./editorial.css";
 
 const navigation = [
-  { id: "learn", label: "Learn", href: "#/learn" },
-  { id: "clubs", label: "Clubs & places", href: "#/clubs" },
-  { id: "equipment", label: "Equipment", href: "#/equipment" },
-  { id: "library", label: "Library", href: "#/library" },
+  { id: "learn", label: "Learn", href: "#/atlas/learn" },
+  { id: "clubs", label: "Clubs & places", href: "#/atlas/clubs" },
+  { id: "equipment", label: "Equipment", href: "#/atlas/equipment" },
+  { id: "library", label: "Library", href: "#/atlas/library" },
 ];
 
 function App() {
   const router = useAtlasRouter();
+  if (router.path === "#/atlas" || router.path.startsWith("#/atlas/"))
+    return <AtlasSite router={router} />;
+  return <ClubSite router={router} />;
+}
+
+function AtlasSite({ router }: { router: ReturnType<typeof useAtlasRouter> }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
   const [query, setQuery] = useState("");
@@ -38,12 +50,15 @@ function App() {
   const searchButton = useRef<HTMLButtonElement>(null);
   const searchInput = useRef<HTMLInputElement>(null);
   const searchQuery =
-    router.path === "#/search" ? router.params.get("q") || "" : "";
-  const articleId = router.path.startsWith("#/wiki/")
-    ? safeDecode(router.path.slice(7))
+    router.path === "#/atlas/search" ? router.params.get("q") || "" : "";
+  const articleId = router.path.startsWith("#/atlas/wiki/")
+    ? resolveArticleId(safeDecode(router.path.slice("#/atlas/wiki/".length)))
     : "";
   const article = articles.find((item) => item.id === articleId);
-  const active = article ? articleOwner(article) : router.path.split("/")[1];
+  const [, , section = "atlas", ...detail] = router.path.split("/");
+  const id = detail.length ? safeDecode(detail.join("/")) : undefined;
+  const active = article ? articleOwner(article)
+    : ["board", "drills", "glossary"].includes(section) ? "learn" : section;
 
   useEffect(() => {
     setMenuOpen(false);
@@ -51,6 +66,7 @@ function App() {
     setQuery(searchQuery);
     const pageTitle =
       article?.title ||
+      ({ board: "Tactical board", drills: "Drill library", glossary: "Glossary" } as Record<string, string>)[section] ||
       (
         {
           atlas: "Underwater Hockey Atlas",
@@ -66,7 +82,7 @@ function App() {
       pageTitle === "Underwater Hockey Atlas"
         ? pageTitle
         : `${pageTitle} | Underwater Hockey Atlas`;
-  }, [router.href, searchQuery, article?.title, active]);
+  }, [router.href, searchQuery, article?.title, active, section]);
 
   useEffect(() => {
     const shortcut = (event: KeyboardEvent) => {
@@ -79,6 +95,10 @@ function App() {
     window.addEventListener("keydown", shortcut);
     return () => window.removeEventListener("keydown", shortcut);
   }, []);
+
+  useEffect(() => {
+    if (menuOpen) document.querySelector<HTMLElement>("#main-navigation a")?.focus();
+  }, [menuOpen]);
 
   const props = { params: router.params, updateQuery: router.updateQuery };
   return (
@@ -179,7 +199,7 @@ function App() {
             event.preventDefault();
             setSearchOpen(false);
             router.navigate(
-              `#/search${query.trim() ? `?q=${encodeURIComponent(query.trim())}` : ""}`,
+              `#/atlas/search${query.trim() ? `?q=${encodeURIComponent(query.trim())}` : ""}`,
             );
             // Query changes stay on the same route, so also move focus to the
             // results when the submitted mobile search field is collapsed.
@@ -208,22 +228,28 @@ function App() {
       <main id="main" tabIndex={-1}>
         {router.path === "#/atlas" ? (
           <HomePage />
-        ) : router.path === "#/learn" ? (
+        ) : router.path === "#/atlas/learn" ? (
           <LearnPage {...props} />
-        ) : router.path === "#/clubs" ? (
+        ) : router.path === "#/atlas/clubs" ? (
           <ClubsPage {...props} />
-        ) : router.path === "#/clubs/timber-whales" ? (
+        ) : router.path === "#/atlas/clubs/timber-whales" ? (
           <ClubPage />
-        ) : router.path === "#/equipment" ? (
+        ) : router.path === "#/atlas/equipment" ? (
           <EquipmentPage />
-        ) : router.path === "#/equipment/suppliers" ? (
+        ) : router.path === "#/atlas/equipment/suppliers" ? (
           <SuppliersPage {...props} />
-        ) : router.path === "#/library" ? (
+        ) : router.path === "#/atlas/library" ? (
           <LibraryPage {...props} />
-        ) : router.path === "#/search" ? (
+        ) : router.path === "#/atlas/search" ? (
           <SearchPage {...props} />
+        ) : section === "board" ? (
+          <BoardPage id={id} />
+        ) : section === "drills" ? (
+          <DrillsPage key={router.path} id={id} />
+        ) : section === "glossary" ? (
+          <Glossary id={id} />
         ) : articleId ? (
-          <ArticlePage id={articleId} />
+          <ArticlePage key={articleId} id={articleId} />
         ) : (
           <div className="page">
             <EmptyState title="Page not found">
@@ -250,13 +276,13 @@ function App() {
           </p>
         </div>
         <nav aria-label="Footer navigation">
-          <a href="#/learn">Learn the game</a>
-          <a href="#/clubs">Clubs &amp; places</a>
-          <a href="#/equipment">Equipment</a>
-          <a href="#/library">Source library</a>
+          <a href="#/atlas/learn">Learn the game</a>
+          <a href="#/atlas/clubs">Clubs &amp; places</a>
+          <a href="#/atlas/equipment">Equipment</a>
+          <a href="#/atlas/library">Source library</a>
         </nav>
-        <a className="footer-club" href="#/clubs/timber-whales">
-          Meet the Timber Whales <ArrowUpRight size={15} />
+        <a className="footer-club" href="#/">
+          TimberWhales club homepage <ArrowUpRight size={15} />
         </a>
       </footer>
     </div>
@@ -278,7 +304,7 @@ function SearchPage({ params, updateQuery }: CatalogPageProps) {
     found.articles.length +
     found.places.length +
     found.suppliers.length +
-    found.resources.length;
+    found.resources.length + found.drills.length + found.scenarios.length;
   const sourceQuery = encodeURIComponent(query.trim());
   return (
     <div className="page search-page">
@@ -304,6 +330,8 @@ function SearchPage({ params, updateQuery }: CatalogPageProps) {
         <nav className="search-jumps" aria-label="Search result types">
           {[
             ["guides", "Guides", found.articles.length],
+            ["drills", "Drills", found.drills.length],
+            ["scenarios", "Tactical scenarios", found.scenarios.length],
             ["places", "Clubs & places", found.places.length],
             ["suppliers", "Suppliers", found.suppliers.length],
             ["sources", "Sources", found.resources.length],
@@ -340,6 +368,22 @@ function SearchPage({ params, updateQuery }: CatalogPageProps) {
           </div>
         </section>
       )}
+      {[
+        { id: "drills", title: "Drills", route: "drills", results: found.drills },
+        { id: "scenarios", title: "Tactical scenarios", route: "board", results: found.scenarios },
+      ].map(({ id, title, route, results }) => results.length > 0 && (
+        <section key={id} className="search-section" id={`search-${id}`} tabIndex={-1}>
+          <div className="section-heading"><h2>{title} <span className="heading-count">{results.length}</span></h2></div>
+          <div className="search-result-list">
+            {results.map((item) => (
+              <a className="search-result" key={item.id} href={`#/atlas/${route}/${item.id}`}>
+                <div><h3>{item.title}</h3><p>{item.purpose}</p></div>
+                <ArrowUpRight size={19} aria-hidden="true" />
+              </a>
+            ))}
+          </div>
+        </section>
+      ))}
       {found.places.length > 0 && (
         <section className="search-section" id="search-places" tabIndex={-1}>
           <div className="section-heading">
@@ -349,7 +393,7 @@ function SearchPage({ params, updateQuery }: CatalogPageProps) {
             </h2>
             <a
               className="text-link"
-              href={`#/clubs?q=${sourceQuery}&view=list`}
+              href={`#/atlas/clubs?q=${sourceQuery}&view=list`}
             >
               All matching places <ArrowRight size={16} />
             </a>
@@ -358,7 +402,7 @@ function SearchPage({ params, updateQuery }: CatalogPageProps) {
             {found.places.slice(0, 6).map((item) => (
               <a
                 className="search-result"
-                href={`#/clubs?selected=${encodeURIComponent(item.id)}&view=list`}
+                href={`#/atlas/clubs?selected=${encodeURIComponent(item.id)}&view=list`}
                 key={item.id}
               >
                 <div>
@@ -383,7 +427,7 @@ function SearchPage({ params, updateQuery }: CatalogPageProps) {
             </h2>
             <a
               className="text-link"
-              href={`#/equipment/suppliers?q=${sourceQuery}`}
+              href={`#/atlas/equipment/suppliers?q=${sourceQuery}`}
             >
               All matching suppliers <ArrowRight size={16} />
             </a>
@@ -392,7 +436,7 @@ function SearchPage({ params, updateQuery }: CatalogPageProps) {
             {found.suppliers.slice(0, 6).map((item) => (
               <a
                 className="search-result"
-                href={`#/equipment/suppliers?selected=${encodeURIComponent(item.id)}`}
+                href={`#/atlas/equipment/suppliers?selected=${encodeURIComponent(item.id)}`}
                 key={item.id}
               >
                 <div>
@@ -415,7 +459,7 @@ function SearchPage({ params, updateQuery }: CatalogPageProps) {
               Sources{" "}
               <span className="heading-count">{found.resources.length}</span>
             </h2>
-            <a className="text-link" href={`#/library?q=${sourceQuery}`}>
+            <a className="text-link" href={`#/atlas/library?q=${sourceQuery}`}>
               All matching sources <ArrowRight size={16} />
             </a>
           </div>
@@ -425,7 +469,7 @@ function SearchPage({ params, updateQuery }: CatalogPageProps) {
                 <SourceCard resource={item} compact />
                 <a
                   className="source-library-link"
-                  href={`#/library?selected=${encodeURIComponent(item.id)}`}
+                  href={`#/atlas/library?selected=${encodeURIComponent(item.id)}`}
                 >
                   Open this source in the library <ArrowUpRight size={14} />
                 </a>
@@ -441,10 +485,10 @@ function SearchPage({ params, updateQuery }: CatalogPageProps) {
             <a href={articleHref("first-session")}>
               Your first session <ArrowRight size={16} />
             </a>
-            <a href="#/equipment">
+            <a href="#/atlas/equipment">
               Equipment guide <ArrowRight size={16} />
             </a>
-            <a href="#/clubs">
+            <a href="#/atlas/clubs">
               Clubs &amp; places <ArrowRight size={16} />
             </a>
           </div>
@@ -456,7 +500,7 @@ function SearchPage({ params, updateQuery }: CatalogPageProps) {
             Try a shorter term, a country, or a topic such as “equipment” or
             “passing”.
           </p>
-          <a className="text-link" href="#/learn">
+          <a className="text-link" href="#/atlas/learn">
             Browse learning guides <ArrowRight size={16} />
           </a>
         </EmptyState>
@@ -470,3 +514,5 @@ createRoot(document.getElementById("root")!).render(
     <App />
   </StrictMode>,
 );
+
+registerOffline();

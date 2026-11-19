@@ -6,6 +6,7 @@ import {
   type Place,
   type Resource,
 } from "./data";
+import { drills, scenarios } from "./playbook/data";
 import { suppliers, type Supplier } from "./suppliers";
 
 export const learnGroups = [
@@ -52,6 +53,7 @@ const articleGroups: Record<string, string> = {
   Skills: "skills-tactics",
   Tactics: "skills-tactics",
   Teamplay: "skills-tactics",
+  Teamwork: "skills-tactics",
   Rules: "rules-safety",
   Safety: "rules-safety",
   "Practice design": "coaching",
@@ -69,8 +71,8 @@ export function getArticleGroup(article: Article): string {
 
 export function articleHref(id: string): string {
   return id === "timber-whales"
-    ? "#/clubs/timber-whales"
-    : `#/wiki/${encodeURIComponent(id)}`;
+    ? "#/atlas/clubs/timber-whales"
+    : `#/atlas/wiki/${encodeURIComponent(id)}`;
 }
 
 export interface ResourceFacets {
@@ -606,23 +608,24 @@ export function filterSuppliers(
   );
 }
 
+function articleSearchText(article: Article): string {
+  return [article.title, article.category, article.summary, ...article.sections.flatMap(section => [section.heading, section.body, ...(section.paragraphs ?? []), ...(section.bullets ?? []), ...(section.steps ?? []), section.callout ?? '']), ...(article.learningGoals ?? []), ...(article.checklist ?? []), ...(article.selfChecks ?? []).flatMap(check => [check.question, check.answer]), ...(article.commonMistakes ?? []).flatMap(item => [item.mistake, item.correction]), ...(article.progressions ?? []), article.practiceSafety ?? ''].join(' ').toLowerCase();
+}
+
 export function searchCatalog(query: string): {
   articles: Article[];
   places: Place[];
   suppliers: Supplier[];
   resources: Resource[];
+  drills: typeof drills;
+  scenarios: typeof scenarios;
 } {
   if (!query.trim())
-    return { articles: [], places: [], suppliers: [], resources: [] };
+    return { articles: [], places: [], suppliers: [], resources: [], drills: [], scenarios: [] };
   return {
-    articles: articles.filter((article) =>
-      matchesQuery(query, [
-        article.title,
-        article.summary,
-        article.category,
-        ...article.sections.flatMap((s) => [s.heading, s.body]),
-      ]),
-    ),
+    articles: articles.filter((article) => matchesQuery(query, [articleSearchText(article)])),
+    drills: drills.filter((drill) => matchesQuery(query, [JSON.stringify(drill)])),
+    scenarios: scenarios.filter((scenario) => matchesQuery(query, [JSON.stringify(scenario)])),
     places: filterPlaces(places, query),
     suppliers: filterSuppliers(suppliers, { q: query }),
     resources: resources.filter((resource) =>

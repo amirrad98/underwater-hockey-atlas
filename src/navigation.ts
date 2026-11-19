@@ -13,19 +13,43 @@ export type CatalogPageProps = {
   updateQuery: (changes: QueryChanges, options?: QueryOptions) => void;
 };
 
-const aliases: Record<string, string> = {
-  "#/": "#/atlas",
-  "#/wiki": "#/learn",
-  "#/world": "#/clubs",
-  "#/resources": "#/library",
-  "#/suppliers": "#/equipment/suppliers",
-  "#/club": "#/clubs/timber-whales",
-  "#/wiki/timber-whales": "#/clubs/timber-whales",
+const sectionAliases: Record<string, string> = {
+  wiki: "learn",
+  world: "clubs",
+  resources: "library",
+  suppliers: "equipment/suppliers",
 };
+const atlasSections = new Set([
+  "learn", "clubs", "equipment", "library", "wiki", "board", "drills",
+  "glossary", "world", "resources", "suppliers", "search",
+]);
 
 export function canonicalHash(hash: string) {
-  const [path, query] = (hash || "#/atlas").split("?");
-  return `${aliases[path] || path}${query ? `?${query}` : ""}`;
+  const start = hash.indexOf("?");
+  const rawPath = start === -1 ? hash : hash.slice(0, start);
+  const path = rawPath.replace(/\/+$/, "") || "#";
+  const query = new URLSearchParams(start === -1 ? "" : hash.slice(start + 1));
+  let destination = path;
+  if (path === "#" || path === "#/club") {
+    destination = "#/";
+  } else {
+    const parts = path.slice(2).split("/");
+    const inAtlas = parts[0] === "atlas";
+    if (inAtlas) parts.shift();
+    const [section, ...detail] = parts;
+    if (atlasSections.has(section)) {
+      if (section === "wiki" && detail.join("/") === "timber-whales") {
+        destination = "#/atlas/clubs/timber-whales";
+      } else {
+        const canonical = detail.length ? section : sectionAliases[section] || section;
+        destination = ["#/atlas", canonical, ...detail].join("/");
+      }
+      // The published world-map bookmark opened directly on the map.
+      if (inAtlas && section === "world" && !query.has("view")) query.set("view", "map");
+    }
+  }
+  const search = query.toString();
+  return search ? destination + "?" + search : destination;
 }
 
 export function parseHash(hash: string) {

@@ -5,8 +5,8 @@ The UNBC TimberWhales club website, styled from the club's brand kit (v1.0, Deep
 Site structure:
 
 - `#/` Home, `#/join` practices and joining, `#/team` published roster, `#/gallery` photographs, `#/about` club history and sources.
-- `#/atlas` everything about underwater hockey in general: wiki, tactical board, drills, world directory, resource library, supplier directory, glossary and search (for example `#/atlas/wiki/passing`).
-- Links from earlier releases (`#/wiki/…`, `#/club`, …) redirect to their new locations.
+- `#/atlas` opens the field guide. Its four sections are Learn, Clubs & places, Equipment, and Library. Learn includes the tactical board, drill library, reading paths, and glossary. Clubs & places includes the world map.
+- Existing bookmarks retain their destinations and query settings, including `#/atlas/wiki/passing` and `#/atlas/world`. See [Atlas navigation](docs/REORGANIZATION.md) for the route table.
 
 This repository contains a static, locally readable learning site. No account, backend or production secrets are required. It is not an exhaustive encyclopedia or a replacement for qualified coaching and current competition rules.
 
@@ -55,7 +55,7 @@ Local Anton, Archivo and Archivo Black fonts (SIL Open Font License, from the br
 
 The foundation was prepared and tested in PR #1. The owner subsequently authorized merging the tested work, making this repository public, and publishing GitHub Pages. No paid-plan upgrade, collaborator changes or new credentials are needed. CI checks production compilation and content integrity. Browser tests cover shared search, navigation, history and mobile layout.
 
-The local-wiki, tactical-playbook, map and club enhancements are under review in feature PR #3 on `feat/local-wiki-tactical-playbook`. They have not been merged or deployed; the existing live `main` site is unchanged by this branch. The completed media transfer is included in that review; actual browser and offline evidence is recorded in the verification log.
+PR #3 introduced the local lessons, tactical playbook, Natural Earth map, and club media. PR #4 reorganizes the Atlas around player tasks. The [original design review](docs/review/README.md) includes screenshots and a downloadable snapshot of the proposed design.
 
 ## GitHub Pages
 

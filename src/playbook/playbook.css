@@ -85,10 +85,10 @@
 .adaptations h3 { margin-top: 0; }
 .wiki-practice-banner { display: flex; flex-wrap: wrap; gap: 18px 30px; padding: 20px 24px; border: 1px solid var(--line); margin-bottom: 30px; background: #EEF7FC; }
 .wiki-practice-banner a { font-size: 14px; font-weight: 600; display: flex; align-items: center; gap: 10px; }
-header { gap: 24px; }
-header > nav { gap: 19px; }
-@media (max-width: 1250px) and (min-width: 851px) { header { flex-wrap: wrap; height: auto; padding-top: 18px; padding-bottom: 14px; gap: 8px 24px; } header > nav { order: 3; margin: 0 auto; flex-basis: 100%; justify-content: center; } header > nav a { padding: 10px 0 8px; } .header-search { margin-left: auto; } }
-@media (max-width: 850px) { .scenario-layout, .formation-section { grid-template-columns: 1fr; gap: 25px; } .formation-section { margin-top: 40px; } .formation-board { width: 100%; } .step-reading { margin-top: 4px; } header > nav { gap: 0; } }
+.club-shell header { gap: 24px; }
+.club-shell header > nav { gap: 19px; }
+@media (max-width: 1250px) and (min-width: 851px) { .club-shell header { flex-wrap: wrap; height: auto; padding-top: 18px; padding-bottom: 14px; gap: 8px 24px; } .club-shell header > nav { order: 3; margin: 0 auto; flex-basis: 100%; justify-content: center; } .club-shell header > nav a { padding: 10px 0 8px; } .club-shell .header-search { margin-left: auto; } }
+@media (max-width: 850px) { .scenario-layout, .formation-section { grid-template-columns: 1fr; gap: 25px; } .formation-section { margin-top: 40px; } .formation-board { width: 100%; } .step-reading { margin-top: 4px; } .club-shell header > nav { gap: 0; } }
 @media (max-width: 600px) { .playbook-toolbar { align-items: stretch; } .playbook-toolbar label { width: 100%; } .playbook-toolbar select { width: 100%; } .board-controls button { padding: 10px 8px; font-size: 12px; } .scenario-layout .board-wrap { padding: 15px 10px; } .adaptations { grid-template-columns: 1fr; } .article-contents, .reading-checklist, .learning-goals { padding: 16px 18px; } .formation-board .board-top { letter-spacing: 1px; } .drill-kit { grid-template-columns: 1fr; gap: 4px; } .drill-kit dd { margin-bottom: 12px; } .formation-section .compact { max-width: 100%; } }
 .lesson-meta { font-size: 12px; color: #56635C; }
 .lesson-safety { border-left: 3px solid #56635C; background: #EEF7FC; margin: 18px 0 28px; padding: 15px 20px; }
@@ -108,12 +108,12 @@ header > nav { gap: 19px; }
 .glossary-list > section { margin-bottom: 35px; border-bottom: 1px solid var(--line); }
 .reading-path-card { border: 1px solid var(--line); border-radius: 0; padding: 22px; background: #FFFFFF; }
 @media (max-width: 850px) {
-  header { height: auto; min-height: 85px; padding-top: 18px; padding-bottom: 18px; }
-  header > nav { position: static; order: 5; width: 100%; flex-basis: 100%; padding: 12px 0 0; box-shadow: none; border: 0; margin: 0; gap: 8px 16px; }
-  header > nav.open { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); }
-  header > nav a { padding: 10px 6px; text-align: center; min-height: 44px; white-space: normal; border-radius: 0; }
+  .club-shell header { height: auto; min-height: 85px; padding-top: 18px; padding-bottom: 18px; }
+  .club-shell header > nav { position: static; order: 5; width: 100%; flex-basis: 100%; padding: 12px 0 0; box-shadow: none; border: 0; margin: 0; gap: 8px 16px; }
+  .club-shell header > nav.open { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .club-shell header > nav a { padding: 10px 6px; text-align: center; min-height: 44px; white-space: normal; border-radius: 0; }
 }
-@media (max-width: 600px) { header > nav.open { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) { .club-shell header > nav.open { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .availability-note { font-size: 13px; padding: 13px 18px; background: #EEF7FC; border-left: 3px solid #56635C; color: #56635C; }
 .frame-state { font-size: 12px; text-align: center; color: #56635C; }
 .before-toggle { display: flex; align-items: center; gap: 10px; font-size: 13px; padding: 10px 0; cursor: pointer; }

@@ -1,7 +1,10 @@
 import { ArrowUpRight } from 'lucide-react';
 import { clubProfile, type ClubPhoto } from './club-profile';
 
-export const localClubAsset = (path: string) => `${import.meta.env.BASE_URL}${path}`;
+// The downloadable single-file preview carries public images inside the HTML.
+const previewIndex = document.getElementById('club-preview-assets')?.textContent;
+const embeddedAssets: Record<string, string> = previewIndex ? JSON.parse(previewIndex) : {};
+export const localClubAsset = (path: string) => embeddedAssets[path] ?? `${import.meta.env.BASE_URL}${path}`;
 
 export function ClubPhotoSource({ photo }: { photo: ClubPhoto }) {
   return <details className="club-photo-source"><summary>Image source & reuse</summary><p>{photo.credit}</p><p>{photo.rights}</p><a href={photo.sourcePageUrl} target="_blank" rel="noreferrer">{photo.sourcePageTitle} ↗</a><br /><a href={photo.sourceUrl} target="_blank" rel="noreferrer">Original published image ↗</a></details>;

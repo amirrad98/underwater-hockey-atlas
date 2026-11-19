@@ -1,975 +1,518 @@
-import React, { useEffect, useState } from "react";
+import { StrictMode, useEffect, useRef, useState } from "react";
 import { createRoot } from "react-dom/client";
+import { ArrowRight, ArrowUpRight, Menu, Search, Waves, X } from "lucide-react";
+import { articles } from "./data";
+import { articleHref, articleOwner, searchCatalog } from "./catalog";
+import { useAtlasRouter, type CatalogPageProps } from "./navigation";
 import {
-  Search,
-  Waves,
-  Globe2,
-  BookOpen,
-  ArrowUpRight,
-  Compass,
-  Menu,
-  X,
-  ExternalLink,
-  SlidersHorizontal,
-  MapPin,
-} from "lucide-react";
-import { articles, resources, places, type Article } from "./data";
-import { WorldMap } from "./WorldMap";
-import "./style.css";
-import { suppliers, supplierSources, supplierNotice } from "./suppliers";
-import { equipment } from "./equipment";
-import { FormationBoard as Board, BoardPage } from "./playbook/Board";
+  ArticleCard,
+  EmptyState,
+  PageHeading,
+  SearchField,
+  SourceCard,
+} from "./components/ui";
+import {
+  ArticlePage,
+  ClubPage,
+  EquipmentPage,
+  HomePage,
+  LearnPage,
+} from "./pages/LearningPages";
+import { ClubsPage, LibraryPage, SuppliersPage } from "./pages/CatalogPages";
+import { ClubSite } from "./ClubSite";
+import { BoardPage } from "./playbook/Board";
 import { DrillsPage } from "./playbook/Drills";
-import { drills, scenarios } from "./playbook/data";
-import { ArticleContents, ArticleSections, ArticlePractice, LessonSourceNotes, Glossary, articleSearchText } from "./wiki/ArticleContent";
+import { Glossary } from "./wiki/ArticleContent";
+import { resolveArticleId } from "./wiki/catalog";
 import { registerOffline } from "./offline";
-import { ClubHome, ClubJoin, ClubTeam, ClubGalleryPage, ClubAbout } from "./ClubPage";
-import { localClubAsset } from "./ClubMedia";
-import { wikiCatalog, resolveArticleId } from "./wiki/catalog";
-const link = (id: string) => `#/atlas/wiki/${id}`;
-const clubNav = [
-  ["", "Home"],
-  ["join", "Join"],
-  ["team", "Team"],
-  ["gallery", "Gallery"],
-  ["about", "About"],
+import "./style.css";
+import "./editorial.css";
+
+const navigation = [
+  { id: "learn", label: "Learn", href: "#/atlas/learn" },
+  { id: "clubs", label: "Clubs & places", href: "#/atlas/clubs" },
+  { id: "equipment", label: "Equipment", href: "#/atlas/equipment" },
+  { id: "library", label: "Library", href: "#/atlas/library" },
 ];
-const atlasSections = [
-  ["", "Overview"],
-  ["wiki", "Wiki"],
-  ["board", "Board"],
-  ["drills", "Drills"],
-  ["world", "World"],
-  ["resources", "Resources"],
-  ["suppliers", "Suppliers"],
-];
-// Earlier releases served the atlas at the site root; keep those links working.
-const legacyRoute = /^#\/(wiki|board|drills|glossary|world|resources|suppliers|search)(?=[/?]|$)/;
-function currentHash() {
-  const raw = location.hash;
-  const next = !raw || raw === "#" || /^#\/club\/?$/.test(raw)
-    ? "#/"
-    : /^#\/(atlas\/)?wiki\/timber-whales\/?$/.test(raw)
-      ? "#/about"
-      : raw.replace(legacyRoute, "#/atlas/$1");
-  if (next !== raw) history.replaceState(null, "", next);
-  return next;
-}
+
 function App() {
-  const [hash, setHash] = useState(currentHash);
-  const [menu, setMenu] = useState(false);
+  const router = useAtlasRouter();
+  if (router.path === "#/atlas" || router.path.startsWith("#/atlas/"))
+    return <AtlasSite router={router} />;
+  return <ClubSite router={router} />;
+}
+
+function AtlasSite({ router }: { router: ReturnType<typeof useAtlasRouter> }) {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
   const [query, setQuery] = useState("");
+  const menuButton = useRef<HTMLButtonElement>(null);
+  const searchButton = useRef<HTMLButtonElement>(null);
+  const searchInput = useRef<HTMLInputElement>(null);
+  const searchQuery =
+    router.path === "#/atlas/search" ? router.params.get("q") || "" : "";
+  const articleId = router.path.startsWith("#/atlas/wiki/")
+    ? resolveArticleId(safeDecode(router.path.slice("#/atlas/wiki/".length)))
+    : "";
+  const article = articles.find((item) => item.id === articleId);
+  const [, , section = "atlas", ...detail] = router.path.split("/");
+  const id = detail.length ? safeDecode(detail.join("/")) : undefined;
+  const active = article ? articleOwner(article)
+    : ["board", "drills", "glossary"].includes(section) ? "learn" : section;
+
   useEffect(() => {
-    if (!menu) return;
-    document.querySelector<HTMLElement>("header > nav a")?.focus();
-    const closeOnEscape = (event: KeyboardEvent) => {
-      if (event.key === "Escape") {
-        setMenu(false);
-        document.querySelector<HTMLElement>(".menu")?.focus();
-      }
-    };
-    addEventListener("keydown", closeOnEscape);
-    return () => removeEventListener("keydown", closeOnEscape);
-  }, [menu]);
+    setMenuOpen(false);
+    setSearchOpen(false);
+    setQuery(searchQuery);
+    const pageTitle =
+      article?.title ||
+      ({ board: "Tactical board", drills: "Drill library", glossary: "Glossary" } as Record<string, string>)[section] ||
+      (
+        {
+          atlas: "Underwater Hockey Atlas",
+          learn: "Learn",
+          clubs: "Clubs & places",
+          equipment: "Equipment",
+          library: "Source library",
+          search: "Search",
+        } as Record<string, string>
+      )[active] ||
+      "Underwater Hockey Atlas";
+    document.title =
+      pageTitle === "Underwater Hockey Atlas"
+        ? pageTitle
+        : `${pageTitle} | Underwater Hockey Atlas`;
+  }, [router.href, searchQuery, article?.title, active, section]);
+
   useEffect(() => {
-    const f = () => {
-      setHash(currentHash());
-      setMenu(false);
-      window.scrollTo(0, 0);
+    const shortcut = (event: KeyboardEvent) => {
+      if (event.key.toLowerCase() !== "k" || !(event.ctrlKey || event.metaKey) || event.altKey) return;
+      event.preventDefault();
+      setSearchOpen(true);
+      setMenuOpen(false);
+      requestAnimationFrame(() => searchInput.current?.focus());
     };
-    addEventListener("hashchange", f);
-    return () => removeEventListener("hashchange", f);
+    window.addEventListener("keydown", shortcut);
+    return () => window.removeEventListener("keydown", shortcut);
   }, []);
-  const path = hash.split("?")[0];
+
   useEffect(() => {
-    document.querySelector<HTMLElement>("main")?.focus({ preventScroll: true });
-  }, [path]);
-  const inAtlas = path === "#/atlas" || path.startsWith("#/atlas/");
-  const atlasPath = inAtlas ? path.slice(8) : "";
-  const [section, ...rest] = atlasPath.split("/");
-  const sub = rest.length ? decodeURIComponent(rest.join("/")) : undefined;
-  const focusMain = () => { setMenu(false); document.querySelector<HTMLElement>("main")?.focus(); };
+    if (menuOpen) document.querySelector<HTMLElement>("#main-navigation a")?.focus();
+  }, [menuOpen]);
+
+  const props = { params: router.params, updateQuery: router.updateQuery };
   return (
-    <>
-      <a className="skip" href="#main" onClick={event => { event.preventDefault(); document.querySelector<HTMLElement>("main")?.focus(); }}>
+    <div
+      className="app-shell"
+      onClick={router.followLink}
+      onKeyDown={(event) => {
+        if (event.key === "Escape" && menuOpen) {
+          setMenuOpen(false);
+          menuButton.current?.focus();
+        } else if (event.key === "Escape" && searchOpen) {
+          setSearchOpen(false);
+          if (searchButton.current?.getBoundingClientRect().width) searchButton.current.focus();
+          else searchInput.current?.blur();
+        }
+      }}
+    >
+      <a
+        className="skip-link"
+        href="#main"
+        onClick={(event) => {
+          event.preventDefault();
+          const main = document.getElementById("main");
+          main?.focus();
+          main?.scrollIntoView({ block: "start" });
+        }}
+      >
         Skip to content
       </a>
-      <header>
-        <a className="brand" href="#/">
-          <img src={localClubAsset("brand/horizontal-light.svg")} width={251} height={68} alt="UNBC TimberWhales" />
-        </a>
-        <nav id="main-navigation" aria-label="Main navigation" className={menu ? "open" : ""}>
-          {clubNav.map(([id, name]) => (
-            <a key={id} onClick={focusMain} href={`#/${id}`} aria-current={path === `#/${id}` ? "page" : undefined}>{name}</a>
-          ))}
-          <a onClick={focusMain} href="#/atlas" aria-current={inAtlas ? "page" : undefined}>UWH Atlas</a>
-        </nav>
-        <button
-          className="menu"
-          aria-label="Toggle navigation"
-          aria-controls="main-navigation"
-          aria-expanded={menu}
-          onClick={() => setMenu(!menu)}
+      <header className="site-header">
+        <a
+          className="brand"
+          href="#/atlas"
+          aria-label="Underwater Hockey Atlas home"
         >
-          {menu ? <X /> : <Menu />}
+          <span className="brand-symbol"><Waves size={25} aria-hidden="true" /></span>
+          <span>
+            UNDERWATER HOCKEY<small>ATLAS &amp; FIELD GUIDE</small>
+          </span>
+        </a>
+        <button
+          ref={searchButton}
+          className="mobile-search-toggle"
+          type="button"
+          aria-label="Open site search"
+          aria-expanded={searchOpen}
+          aria-controls="site-search"
+          onClick={() => {
+            setSearchOpen((open) => !open);
+            setMenuOpen(false);
+            if (!searchOpen) requestAnimationFrame(() => searchInput.current?.focus());
+          }}
+        >
+          {searchOpen ? <X size={21} aria-hidden="true" /> : <Search size={21} aria-hidden="true" />}
         </button>
-      </header>
-      {inAtlas && (
-        <div className="atlas-bar">
-        <nav className="subnav" aria-label="Atlas sections">
-          <span>UWH ATLAS</span>
-          {atlasSections.map(([id, name]) => (
+        <button
+          ref={menuButton}
+          className="menu-toggle"
+          type="button"
+          aria-label="Toggle navigation"
+          aria-expanded={menuOpen}
+          aria-controls="main-navigation"
+          onClick={() => {
+            setMenuOpen((open) => !open);
+            setSearchOpen(false);
+          }}
+        >
+          {menuOpen ? <X size={23} /> : <Menu size={23} />}
+        </button>
+        <nav
+          id="main-navigation"
+          className={`primary-navigation ${menuOpen ? "is-open" : ""}`}
+          aria-label="Main navigation"
+        >
+          <a
+            className="mobile-home"
+            href="#/atlas"
+            aria-current={active === "atlas" ? "page" : undefined}
+          >
+            Home
+          </a>
+          {navigation.map((item) => (
             <a
-              key={id}
-              onClick={focusMain}
-              href={id ? `#/atlas/${id}` : "#/atlas"}
-              aria-current={(section === "glossary" ? "wiki" : section) === id ? "page" : undefined}
+              href={item.href}
+              key={item.id}
+              aria-current={active === item.id ? "page" : undefined}
             >
-              {name}
+              {item.label}
             </a>
           ))}
         </nav>
         <form
-          className="header-search"
-          onSubmit={(e) => {
-            e.preventDefault();
-            location.hash = `/atlas/search?q=${encodeURIComponent(query)}`;
+          id="site-search"
+          className={`header-search ${searchOpen ? "is-open" : ""}`}
+          role="search"
+          aria-label="Site search"
+          onSubmit={(event) => {
+            event.preventDefault();
+            setSearchOpen(false);
+            router.navigate(
+              `#/atlas/search${query.trim() ? `?q=${encodeURIComponent(query.trim())}` : ""}`,
+            );
+            // Query changes stay on the same route, so also move focus to the
+            // results when the submitted mobile search field is collapsed.
+            requestAnimationFrame(() => {
+              document.getElementById("main")?.focus({ preventScroll: true });
+              window.scrollTo(0, 0);
+            });
           }}
         >
-          <Search size={17} />
-          <input
-            aria-label="Search atlas and wiki"
-            placeholder="Search the atlas"
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-          />
-          <kbd>↵</kbd>
+          <label>
+            <Search size={17} aria-hidden="true" />
+            <span className="sr-only">Search the atlas</span>
+            <input
+              ref={searchInput}
+              type="search"
+              placeholder="Search the atlas"
+              value={query}
+              onChange={(event) => setQuery(event.target.value)}
+            />
+          </label>
+          <button type="submit" aria-label="Submit search">
+            <ArrowRight size={16} />
+          </button>
         </form>
-        </div>
-      )}
+      </header>
       <main id="main" tabIndex={-1}>
-        {path === "#/" ? (
-          <ClubHome />
-        ) : path === "#/join" ? (
-          <ClubJoin />
-        ) : path === "#/team" ? (
-          <ClubTeam />
-        ) : path === "#/gallery" ? (
-          <ClubGalleryPage />
-        ) : path === "#/about" ? (
-          <ClubAbout />
-        ) : !inAtlas ? (
-          <div className="page">
-            <h1>Page not found</h1>
-            <a href="#/">Return to the club home page</a>
-          </div>
-        ) : !section ? (
-          <Atlas />
-        ) : section === "wiki" ? (
-          sub ? <ArticlePage key={path} id={sub} /> : <Wiki />
+        {router.path === "#/atlas" ? (
+          <HomePage />
+        ) : router.path === "#/atlas/learn" ? (
+          <LearnPage {...props} />
+        ) : router.path === "#/atlas/clubs" ? (
+          <ClubsPage {...props} />
+        ) : router.path === "#/atlas/clubs/timber-whales" ? (
+          <ClubPage />
+        ) : router.path === "#/atlas/equipment" ? (
+          <EquipmentPage />
+        ) : router.path === "#/atlas/equipment/suppliers" ? (
+          <SuppliersPage {...props} />
+        ) : router.path === "#/atlas/library" ? (
+          <LibraryPage {...props} />
+        ) : router.path === "#/atlas/search" ? (
+          <SearchPage {...props} />
         ) : section === "board" ? (
-          <BoardPage id={sub} />
+          <BoardPage id={id} />
         ) : section === "drills" ? (
-          <DrillsPage key={path} id={sub} />
+          <DrillsPage key={router.path} id={id} />
         ) : section === "glossary" ? (
-          <Glossary id={sub} />
-        ) : section === "world" && !sub ? (
-          <World />
-        ) : section === "resources" && !sub ? (
-          <Resources />
-        ) : section === "suppliers" && !sub ? (
-          <Suppliers />
-        ) : section === "search" && !sub ? (
-          <SearchPage
-            query={new URLSearchParams(hash.split("?")[1]).get("q") || ""}
-          />
+          <Glossary id={id} />
+        ) : articleId ? (
+          <ArticlePage key={articleId} id={articleId} />
         ) : (
           <div className="page">
-            <h1>Page not found</h1>
-            <a href="#/atlas">Return to the atlas</a>
+            <EmptyState title="Page not found">
+              <p>
+                That page could not be found.{" "}
+                <a href="#/atlas">Return to the atlas.</a>
+              </p>
+            </EmptyState>
           </div>
         )}
       </main>
-      <footer>
-        <a className="brand" href="#/">
-          <img src={localClubAsset("brand/horizontal-dark.svg")} width={251} height={68} alt="UNBC TimberWhales" />
-        </a>
-        <div className="footer-tagline">
-          <small>UNDERWATER HOCKEY / PRINCE GEORGE</small>
-          <strong>Swim as one</strong>
-        </div>
-        <nav className="footer-nav" aria-label="Footer">
-          <a href="#/join">Join a practice</a>
-          <a href="#/team">Team</a>
-          <a href="#/gallery">Gallery</a>
-          <a href="#/about">About</a>
-          <a href="#/atlas">UWH Atlas</a>
-          <a href="mailto:timberwhales@unbc.ca">timberwhales@unbc.ca</a>
-        </nav>
-        <p className="footer-note">
-          UNBC TimberWhales, Prince George, British Columbia. Atlas diagrams are original; sources stay in view.
-        </p>
-      </footer>
-    </>
-  );
-}
-function Atlas() {
-  return (
-    <>
-      <section className="hero">
-        <div className="hero-copy">
-          <div className="eyebrow">
-            <span /> UWH ATLAS / THE SPORT BELOW THE SURFACE
-          </div>
-          <h1>
-            A different
-            <br />
-            depth of play.
-          </h1>
-          <p>
-            Six players. One puck. A whole new perspective.
-            <br />
-            Explore the game, understand the craft, and find
-            <br className="desktop" /> your place in the underwater hockey
-            world.
-          </p>
-          <div className="hero-actions">
-            <a className="button aqua" href="#/atlas/wiki">
-              Open the field guide <BookOpen size={17} />
-            </a>
-            <a className="text-link" href="#/atlas/world">
-              Find your community <ArrowUpRight size={17} />
-            </a>
-          </div>
-          <div className="hero-foot">
-            <span>01 — EXPLORE & UNDERSTAND</span>
-            <span>FOUNDATION EDITION / 2026</span>
-          </div>
-        </div>
-        <div className="hero-board">
-          <Board />
-          <a className="diagram-link" href="#/atlas/board">
-            Open the tactical playbook <ArrowUpRight size={16} />
-          </a>
-        </div>
-      </section>
-      <section className="section">
-        <div className="section-heading">
-          <div>
-            <div className="eyebrow">CHOOSE YOUR DEPTH</div>
-            <h2>Every way into the game.</h2>
-          </div>
-          <a className="text-link" href="#/atlas/wiki">
-            All wiki articles <ArrowUpRight size={17} />
-          </a>
-        </div>
-        <div className="explore-grid">
-          {[
-            {
-              id: "first-session",
-              n: "01",
-              title: "Start at the surface",
-              sub: "NEW TO THE SPORT",
-              body: "Your first session, the rhythm of the game, and what to bring.",
-              icon: <Waves />,
-            },
-            {
-              id: "puck-control",
-              n: "02",
-              title: "Develop your craft",
-              sub: "SKILLS & TACTICS",
-              body: "Puck control, support, positioning, and playing as a team.",
-              icon: <Compass />,
-            },
-            {
-              id: "equipment",
-              n: "03",
-              title: "Know your kit",
-              sub: "EQUIPMENT GUIDE",
-              body: "From mask to fins: understand the tools of the sport.",
-              icon: <Equipment />,
-            },
-            {
-              id: "rules",
-              n: "04",
-              title: "Understand the game",
-              sub: "RULES & REFERENCE",
-              body: "Official rules, local variations, and the difference between them.",
-              icon: <BookOpen />,
-            },
-          ].map((c) => (
-            <a href={link(c.id)} className="explore-card" key={c.id}>
-              <div className="card-art">
-                {c.icon}
-                <span>{c.n}</span>
-              </div>
-              <small>{c.sub}</small>
-              <h3>
-                {c.title} <ArrowUpRight size={18} />
-              </h3>
-              <p>{c.body}</p>
-            </a>
-          ))}
-        </div>
-      </section>
-      <section className="community">
+      <footer className="site-footer">
         <div>
-          <div className="eyebrow">THE GAME HAS NO SINGLE HOME</div>
-          <h2>
-            One sport.
-            <br />A world of communities.
-          </h2>
-          <p>
-            Meet the organizations and clubs keeping the puck moving. Start with
-            our home-water spotlight in northern British Columbia.
-          </p>
-          <a className="button dark" href="#/atlas/world">
-            Explore the world directory <Globe2 size={18} />
-          </a>
-        </div>
-        <a className="club-feature" href="#/">
-          <img className="club-mark" src={localClubAsset("brand/primary-light.svg")} width={134} height={85} alt="" />
-          <div>
-            <small>HOME CLUB / PRINCE GEORGE, CANADA</small>
-            <h3>UNBC TimberWhales</h3>
-            <p>A northern community with a story beneath the surface.</p>
-            <span className="text-link">
-              Meet the club <ArrowUpRight size={18} />
+          <a className="brand" href="#/atlas">
+            <span className="brand-symbol"><Waves size={25} aria-hidden="true" /></span>
+            <span>
+              UNDERWATER HOCKEY<small>ATLAS &amp; FIELD GUIDE</small>
             </span>
-          </div>
-        </a>
-      </section>
-      <section className="section learning">
-        <div>
-          <div className="eyebrow">A LITTLE DIRECTION</div>
-          <h2>Your first three dives.</h2>
-          <p>A reading path for your first club session.</p>
-        </div>
-        {[
-          [
-            "first-session",
-            "Get your bearings",
-            "What to expect when you arrive.",
-          ],
-          [
-            "equipment",
-            "Meet the equipment",
-            "Fit, function, and club guidance.",
-          ],
-          ["safety", "Play with care", "Supervision and safe participation."],
-        ].map(([id, title, body], i) => (
-          <a href={link(id)} key={id}>
-            <span>0{i + 1}</span>
-            <h3>{title}</h3>
-            <p>{body}</p>
-            <ArrowUpRight size={18} />
           </a>
-        ))}
-      </section>
-    </>
-  );
-}
-function Equipment() {
-  return (
-    <svg viewBox="0 0 140 75" role="img" aria-label="Conceptual mask diagram">
-      <path
-        d="M15 20Q70 1 125 20L118 52Q100 69 82 49L70 33L58 49Q40 69 22 52Z"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="3"
-      />
-      <path
-        d="M29 25L55 21L54 42Q40 59 29 43ZM85 21L111 25V43Q100 59 86 42Z"
-        fill="currentColor"
-        opacity=".16"
-      />
-    </svg>
-  );
-}
-function PageHeading({
-  tag,
-  title,
-  body,
-}: {
-  tag: string;
-  title: string;
-  body: string;
-}) {
-  return (
-    <div className="page-heading">
-      <div className="eyebrow">{tag}</div>
-      <h1>{title}</h1>
-      <p>{body}</p>
-    </div>
-  );
-}
-function ArticleCard({ a }: { a: Article }) {
-  return (
-    <a className="article-card" href={link(a.id)}>
-      <small>{a.category}</small>
-      <h3>
-        {a.title}
-        <ArrowUpRight size={18} />
-      </h3>
-      <p>{a.summary}</p>
-      <span>{a.sourceIds.length} source references</span>
-    </a>
-  );
-}
-function Wiki() {
-  const [cat, setCat] = useState("All");
-  const [level, setLevel] = useState("All");
-  return (
-    <div className="page">
-      <PageHeading
-        tag="THE CONNECTED FIELD GUIDE"
-        title="Knowledge worth diving into."
-        body="Move from the visual atlas into the details. Official rules, coaching perspectives, and local knowledge keep their own context."
-      />
-      <div className="wiki-practice-banner"><a href="#/atlas/board">Walk through a tactical sequence <ArrowUpRight size={17} /></a><a href="#/atlas/drills">Find a drill to practise <ArrowUpRight size={17} /></a></div>
-      <div className="chips" aria-label="Article categories">
-        {["All", ...new Set(articles.map((a) => a.category))].map((c) => (
-          <button key={c} aria-pressed={cat === c} onClick={() => setCat(c)}>
-            {c}
-          </button>
-        ))}
-      </div>
-      <div className="chips" aria-label="Reading level">{["All", "Newbie", "Intermediate"].map(item => <button key={item} aria-pressed={level === item} onClick={() => setLevel(item)}>{item === "All" ? "All reading levels" : item}</button>)}</div>
-      <div className="article-grid">
-        {articles
-          .filter((a) => (cat === "All" || a.category === cat) && (level === "All" || a.readerLevel === level))
-          .map((a) => (
-            <ArticleCard key={a.id} a={a} />
-          ))}
-      </div>
-      <section className="reading-paths"><h2>Follow a reading path</h2><div className="article-grid">{wikiCatalog.readingPaths.map(path => <div className="reading-path-card" key={path.id}><h3>{path.title}</h3><ol>{path.chapterIds.map(id => { const article = articles.find(item => item.id === resolveArticleId(id)); return article && <li key={id}><a href={link(article.id)}>{article.title}</a></li>; })}</ol></div>)}</div><a className="text-link" href="#/atlas/glossary">Explore the local concept glossary <ArrowUpRight size={17} /></a></section>
-    </div>
-  );
-}
-function EquipmentGuide() {
-  return (
-    <section className="equipment-guide">
-      <div className="section-heading">
-        <h2>The kit, piece by piece.</h2>
-        <a className="text-link" href="#/atlas/suppliers">
-          Find suppliers <ArrowUpRight size={16} />
-        </a>
-      </div>
-      <div className="equipment-grid">
-        {equipment.map((e, i) => (
-          <details key={e.item}>
-            <summary>
-              <span>0{i + 1}</span>
-              <strong>{e.item}</strong>
-              <small>{e.function}</small>
-            </summary>
-            <ul>
-              {e.compare.map((c) => (
-                <li key={c}>{c}</li>
-              ))}
-            </ul>
-            <a href="#/atlas/resources">Compare with original sources</a>
-          </details>
-        ))}
-      </div>
-      <p className="equipment-note">
-        Original research checklist. Fit and preference do not establish
-        competition compliance; consult the applicable rules and your club.
-      </p>
-    </section>
-  );
-}
-function ArticlePage({ id }: { id: string }) {
-  const a = articles.find((a) => a.id === resolveArticleId(id));
-  if (!a)
-    return (
-      <div className="page">
-        <h1>Article not found</h1>
-        <a href="#/atlas/wiki">Browse the wiki</a>
-      </div>
-    );
-  return (
-    <div className="page article-page">
-      <a className="breadcrumb" href="#/atlas/wiki">
-        Wiki / {a.category}
-      </a>
-      <PageHeading tag={a.category} title={a.title} body={a.summary} />
-      <div className="article-layout">
-        <article>
-          <ArticleContents article={a} />
-          {id === "formations" && <Board compact />}
-          {id === "equipment" && (
-            <div className="equipment-panel">
-              <Equipment />
-              <span>Mask · conceptual equipment illustration</span>
-            </div>
-          )}
-          {id === "equipment" && <EquipmentGuide />}
-          <ArticleSections article={a} />
-          <ArticlePractice article={a} />
-          <section>
-            <h2>Sources & further reading</h2>
-            <details className="article-sources"><summary>Open {a.sourceIds.length} supporting source notes</summary>
-            <LessonSourceNotes article={a} />
-            <div className="source-list">
-              {a.sourceIds.map((id) => {
-                const s = resources.find((r) => r.id === id);
-                return s ? <Source key={id} r={s} /> : null;
-              })}
-            </div>
-            </details>
-          </section>
-        </article>
-        <aside>
-          <div className="eyebrow">KEEP EXPLORING</div>
-          {a.related.map((id) => {
-            const other = articles.find((x) => x.id === id);
-            return other ? (
-              <a key={id} href={link(id)}>
-                {other.title}
-                <ArrowUpRight size={16} />
-              </a>
-            ) : null;
-          })}
           <p>
-            Sources retain their own dates, jurisdictions and access conditions.
-            Coaching diagrams are conceptual, not official rule illustrations.
-          </p>
-          <a href="#/atlas/resources">
-            Full resource library <ExternalLink size={16} />
-          </a>
-        </aside>
-      </div>
-    </div>
-  );
-}
-function Source({ r }: { r: (typeof resources)[number] }) {
-  return (
-    <div className="source">
-      <div className="source-head">
-        <span className="badge">{r.authority}</span>
-        <span>
-          {r.language} · {r.access}
-        </span>
-      </div>
-      <a href={r.url} target="_blank" rel="noreferrer">
-        {r.title} <ExternalLink size={15} />
-      </a>
-      <p>{r.note}</p>
-      <small>
-        {r.publisher} · {r.status} · {r.date}
-        {r.checkedAt && <> · Catalog review {r.checkedAt}</>}
-      </small>
-      <details className="source-context">
-        <summary>Version, geography & reuse</summary>
-        <dl>
-          <dt>Version / edition</dt>
-          <dd>{r.version || "See source; no single edition asserted"}</dd>
-          <dt>Jurisdiction / geography</dt>
-          <dd>{r.jurisdiction || "See source context"}</dd>
-          <dt>Rights</dt>
-          <dd>
-            {r.rights ||
-              "Link only. No permission to redistribute third-party media is assumed."}
-          </dd>
-        </dl>
-      </details>
-    </div>
-  );
-}
-function Resources() {
-  const [filters, setFilters] = useState<Record<string, string>>({});
-  const [q, setQ] = useState("");
-  const keys = [
-    "topic",
-    "language",
-    "audience",
-    "authority",
-    "access",
-  ] as const;
-  const result = resources.filter(
-    (r) =>
-      (r.title + " " + r.note + " " + r.publisher)
-        .toLowerCase()
-        .includes(q.toLowerCase()) &&
-      keys.every((k) => !filters[k] || r[k] === filters[k]),
-  );
-  return (
-    <div className="page">
-      <PageHeading
-        tag="FOLLOW THE EVIDENCE"
-        title="A library with context."
-        body="Read the original. Every resource carries an editorial note, an access label, and a clear indication of what was checked."
-      />
-      <div className="notice">
-        A curated foundation, not an exhaustive encyclopedia. Checked, indexed,
-        historical and restricted sources retain their original review notes.
-        Inclusion does not imply every linked page was directly inspected.
-      </div>
-      <div className="filters">
-        <label className="resource-search">
-          <Search size={18} />
-          <input
-            aria-label="Search resources"
-            placeholder="Search resources"
-            value={q}
-            onChange={(e) => setQ(e.target.value)}
-          />
-        </label>
-        {keys.map((k) => (
-          <label key={k}>
-            {k[0].toUpperCase() + k.slice(1)}
-            <select
-              aria-label={k[0].toUpperCase() + k.slice(1)}
-              value={filters[k] || ""}
-              onChange={(e) => setFilters({ ...filters, [k]: e.target.value })}
-            >
-              <option value="">All</option>
-              {[...new Set(resources.map((r) => r[k]))].map((v) => (
-                <option key={v}>{v}</option>
-              ))}
-            </select>
-          </label>
-        ))}
-      </div>
-      <div className="results-line">
-        <span>{result.length} resources</span>
-        <button
-          onClick={() => {
-            setFilters({});
-            setQ("");
-          }}
-        >
-          Reset filters <SlidersHorizontal size={15} />
-        </button>
-      </div>
-      <div className="resource-grid">
-        {result.map((r) => (
-          <Source key={r.id} r={r} />
-        ))}
-      </div>
-      {!result.length && (
-        <div className="empty">
-          <h2>No matching resources</h2>
-          <p>Try another term or reset your filters.</p>
-        </div>
-      )}
-    </div>
-  );
-}
-function World() {
-  const [view, setView] = useState("Map");
-  const [selected, setSelected] = useState<string | null>(null);
-  const [q, setQ] = useState("");
-  const shown = places.filter((p) =>
-    (p.name + " " + p.country + " " + p.region)
-      .toLowerCase()
-      .includes(q.toLowerCase()),
-  );
-  return (
-    <div className="page">
-      <PageHeading
-        tag="PEOPLE & PLACES"
-        title="Find your patch of blue."
-        body="Explore national organizations, representative clubs and known venues. Each record keeps its coordinate precision and evidence; a marker is not a guarantee of a current session."
-      />
-      <div className="world-controls">
-        <label className="resource-search">
-          <Search size={18} />
-          <input
-            aria-label="Search places"
-            placeholder="Search country or community"
-            value={q}
-            onChange={(e) => setQ(e.target.value)}
-          />
-        </label>
-        <div className="segmented light">
-          {["Map", "List"].map((v) => (
-            <button
-              key={v}
-              aria-pressed={view === v}
-              onClick={() => setView(v)}
-            >
-              {v}
-            </button>
-          ))}
-        </div>
-      </div>
-      {view === "Map" && (
-        <WorldMap places={shown} selected={selected} onSelect={setSelected} />
-      )}
-      <div className="results-line">{shown.length} directory entries</div>
-      <div className="article-grid">
-        {shown
-          .sort((a, b) => Number(b.id === selected) - Number(a.id === selected))
-          .map((p) => (
-            <div
-              key={p.id}
-              className={`place-card ${p.id === selected ? "selected" : ""}`}
-            >
-              <small>
-                <MapPin size={14} />
-                {p.country} · {p.region}
-              </small>
-              <h3>{p.name}</h3>
-              <p>{p.description}</p>
-              <span className="precision">{p.precision}</span>
-              {p.sourceIds && (
-                <details className="place-evidence">
-                  <summary>Source evidence</summary>
-                  {p.sourceIds.map((id) => {
-                    const source = resources.find((r) => r.id === id);
-                    return source ? (
-                      <a
-                        href={source.url}
-                        key={id}
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        {source.title} · {source.status} · {source.date}
-                      </a>
-                    ) : null;
-                  })}
-                </details>
-              )}
-              <a href={p.url} target="_blank" rel="noreferrer">
-                Visit organization <ExternalLink size={15} />
-              </a>
-            </div>
-          ))}
-      </div>
-      {!shown.length && (
-        <div className="empty">
-          No matching places. Try a country or community name.
-        </div>
-      )}
-    </div>
-  );
-}
-function Suppliers() {
-  const [q, setQ] = useState("");
-  const [category, setCategory] = useState("");
-  const [country, setCountry] = useState("");
-  const result = suppliers.filter(
-    (s) =>
-      (s.name + " " + s.note).toLowerCase().includes(q.toLowerCase()) &&
-      (!category || s.categories.includes(category)) &&
-      (!country || s.country === country),
-  );
-  return (
-    <div className="page">
-      <PageHeading
-        tag="EQUIPMENT SOURCES"
-        title="Find the people behind the kit."
-        body="An independent supplier directory. Compare gear categories and location, then confirm suitability and availability directly with the supplier."
-      />
-      <div className="notice">{supplierNotice}</div>
-      <div className="filters">
-        <label className="resource-search">
-          <Search size={18} />
-          <input
-            aria-label="Search suppliers"
-            placeholder="Search suppliers"
-            value={q}
-            onChange={(e) => setQ(e.target.value)}
-          />
-        </label>
-        <label>
-          Gear category
-          <select
-            aria-label="Gear category"
-            value={category}
-            onChange={(e) => setCategory(e.target.value)}
-          >
-            <option value="">All categories</option>
-            {[...new Set(suppliers.flatMap((s) => s.categories))]
-              .sort()
-              .map((c) => (
-                <option key={c}>{c}</option>
-              ))}
-          </select>
-        </label>
-        <label>
-          Country
-          <select
-            aria-label="Supplier country"
-            value={country}
-            onChange={(e) => setCountry(e.target.value)}
-          >
-            <option value="">All countries</option>
-            {[...new Set(suppliers.map((s) => s.country))].sort().map((c) => (
-              <option key={c}>{c}</option>
-            ))}
-          </select>
-        </label>
-      </div>
-      <div className="results-line">
-        <span>{result.length} suppliers</span>
-        <button
-          onClick={() => {
-            setQ("");
-            setCategory("");
-            setCountry("");
-          }}
-        >
-          Reset filters
-        </button>
-      </div>
-      <div className="resource-grid">
-        {result.map((s) => (
-          <div className="source supplier" key={s.id}>
-            <div className="source-head">
-              <span className="badge">{s.kind}</span>
-              <span>{s.country}</span>
-            </div>
-            <a href={s.url} target="_blank" rel="noreferrer">
-              {s.name} <ExternalLink size={15} />
-            </a>
-            <p>{s.note}</p>
-            <div className="gear-tags">
-              {s.categories.map((c) => (
-                <span key={c}>{c}</span>
-              ))}
-            </div>
-            <dl>
-              <dt>Canada shipping</dt>
-              <dd>
-                {s.canadaShipping || "Unknown — confirm with supplier"}
-                <p className="shipping-evidence">{s.shippingEvidence}</p>
-              </dd>
-              <dt>Custom orders</dt>
-              <dd>{s.customOrders || "Unknown"}</dd>
-              <dt>Club orders</dt>
-              <dd>{s.clubOrders || "Unknown"}</dd>
-            </dl>
-            <details className="supplier-evidence">
-              <summary>Verification & source evidence</summary>
-              <p>{s.verification}</p>
-              {s.notes.map((note) => (
-                <p key={note}>{note}</p>
-              ))}
-              {s.sourceIds.map((id) => {
-                const source = supplierSources.find((item) => item.id === id);
-                return source ? (
-                  <div key={id}>
-                    <a
-                      href={source.publicCitationUrl || source.url}
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      {source.title} <ExternalLink size={12} />
-                    </a>
-                    <p>{source.evidenceSummary}</p>
-                    <small>
-                      {source.access.replaceAll("_", " ")} · {source.checkedAt}
-                    </small>
-                    {source.accessNote && <p>{source.accessNote}</p>}
-                  </div>
-                ) : null;
-              })}
-            </details>
-            <small>
-              Checked {s.checked} ·{" "}
-              <a href={s.sourceUrl} target="_blank" rel="noreferrer">
-                Source record
-              </a>
-            </small>
-          </div>
-        ))}
-      </div>
-      {!result.length && (
-        <div className="empty">
-          <h2>
-            {suppliers.length
-              ? "No matching suppliers"
-              : "Supplier verification in progress"}
-          </h2>
-          <p>
-            {suppliers.length
-              ? "Try another category or country."
-              : "The directory will open with checked supplier records. Shipping, custom orders and club terms remain unknown unless a source states them."}
+            An independent guide to the sport.
+            <br />
+            Original diagrams, connected sources.
           </p>
         </div>
-      )}
+        <nav aria-label="Footer navigation">
+          <a href="#/atlas/learn">Learn the game</a>
+          <a href="#/atlas/clubs">Clubs &amp; places</a>
+          <a href="#/atlas/equipment">Equipment</a>
+          <a href="#/atlas/library">Source library</a>
+        </nav>
+        <a className="footer-club" href="#/">
+          TimberWhales club homepage <ArrowUpRight size={15} />
+        </a>
+      </footer>
     </div>
   );
 }
-function SearchPage({ query }: { query: string }) {
-  const needle = query.trim().toLowerCase();
-  const found = needle ? articles.filter(article => articleSearchText(article).includes(needle)) : [];
-  const drillMatches = needle ? drills.filter(drill => JSON.stringify(drill).toLowerCase().includes(needle)) : [];
-  const scenarioMatches = needle ? scenarios.filter(scenario => JSON.stringify(scenario).toLowerCase().includes(needle)) : [];
-  const refs = needle
-    ? resources.filter((r) =>
-        (r.title + " " + r.note).toLowerCase().includes(needle),
-      )
-    : [];
-  const supplierMatches = needle
-    ? suppliers.filter((s) =>
-        (s.name + " " + s.country + " " + s.categories.join(" ") + " " + s.note)
-          .toLowerCase()
-          .includes(needle),
-      )
-    : [];
+
+function safeDecode(value: string) {
+  try {
+    return decodeURIComponent(value);
+  } catch {
+    return value;
+  }
+}
+
+function SearchPage({ params, updateQuery }: CatalogPageProps) {
+  const query = params.get("q") || "";
+  const found = searchCatalog(query);
+  const total =
+    found.articles.length +
+    found.places.length +
+    found.suppliers.length +
+    found.resources.length + found.drills.length + found.scenarios.length;
+  const sourceQuery = encodeURIComponent(query.trim());
   return (
-    <div className="page">
+    <div className="page search-page">
       <PageHeading
-        tag="EXPLORE THE CONNECTIONS"
-        title={needle ? `Results for “${query}”` : "Search the atlas"}
-        body={
-          needle
-            ? `${found.length} articles, ${drillMatches.length} drills, ${scenarioMatches.length} scenarios, ${refs.length} resources and ${supplierMatches.length} suppliers`
-            : "Enter a subject in the search field above."
+        eyebrow="SEARCH"
+        title={
+          query.trim() ? `Results for “${query.trim()}”` : "Search the atlas"
         }
+        description="Find learning guides, clubs and places, equipment suppliers, and original sources."
       />
-      <div className="article-grid">
-        {found.map((a) => (
-          <ArticleCard key={a.id} a={a} />
-        ))}
-      </div>
-      {drillMatches.length > 0 && <section><h2>Drill matches</h2><div className="article-grid">{drillMatches.map(drill => <a className="article-card" href={`#/atlas/drills/${drill.id}`} key={drill.id}><small>{drill.level} · Drill</small><h3>{drill.title}<ArrowUpRight size={17} /></h3><p>{drill.purpose}</p></a>)}</div></section>}
-      {scenarioMatches.length > 0 && <section><h2>Tactical scenarios</h2><div className="article-grid">{scenarioMatches.map(scenario => <a className="article-card" href={`#/atlas/board/${scenario.id}`} key={scenario.id}><small>{scenario.level} · Board</small><h3>{scenario.title}<ArrowUpRight size={17} /></h3><p>{scenario.purpose}</p></a>)}</div></section>}
-      {refs.length > 0 && (
-        <>
-          <h2>Resource matches</h2>
-          <div className="resource-grid">
-            {refs.map((r) => (
-              <Source key={r.id} r={r} />
+      <SearchField
+        label="Search all content"
+        placeholder="Try a skill, club, country, or supplier"
+        value={query}
+        onChange={(value) => updateQuery({ q: value }, { replace: true })}
+      />
+      {query.trim() && (
+        <div className="results-heading" role="status">
+          {total} {total === 1 ? "match" : "matches"} across the atlas
+        </div>
+      )}
+      {total > 0 && (
+        <nav className="search-jumps" aria-label="Search result types">
+          {[
+            ["guides", "Guides", found.articles.length],
+            ["drills", "Drills", found.drills.length],
+            ["scenarios", "Tactical scenarios", found.scenarios.length],
+            ["places", "Clubs & places", found.places.length],
+            ["suppliers", "Suppliers", found.suppliers.length],
+            ["sources", "Sources", found.resources.length],
+          ]
+            .filter(([, , count]) => Number(count) > 0)
+            .map(([id, label, count]) => (
+              <button
+                type="button"
+                key={id}
+                onClick={() => {
+                  const section = document.getElementById(`search-${id}`);
+                  section?.scrollIntoView({ block: "start" });
+                  section?.focus({ preventScroll: true });
+                }}
+              >
+                {label}
+                <span>{count}</span>
+              </button>
+            ))}
+        </nav>
+      )}
+      {found.articles.length > 0 && (
+        <section className="search-section" id="search-guides" tabIndex={-1}>
+          <div className="section-heading">
+            <h2>
+              Guides{" "}
+              <span className="heading-count">{found.articles.length}</span>
+            </h2>
+          </div>
+          <div className="article-grid three-columns">
+            {found.articles.map((item) => (
+              <ArticleCard key={item.id} article={item} />
             ))}
           </div>
-        </>
+        </section>
       )}
-      {supplierMatches.length > 0 && (
-        <>
-          <h2>Supplier matches</h2>
-          <div className="article-grid">
-            {supplierMatches.map((s) => (
-              <a className="article-card" href="#/atlas/suppliers" key={s.id}>
-                <small>
-                  {s.country} · {s.kind}
-                </small>
-                <h3>{s.name}</h3>
-                <p>{s.note}</p>
-                <span>Open supplier directory</span>
+      {[
+        { id: "drills", title: "Drills", route: "drills", results: found.drills },
+        { id: "scenarios", title: "Tactical scenarios", route: "board", results: found.scenarios },
+      ].map(({ id, title, route, results }) => results.length > 0 && (
+        <section key={id} className="search-section" id={`search-${id}`} tabIndex={-1}>
+          <div className="section-heading"><h2>{title} <span className="heading-count">{results.length}</span></h2></div>
+          <div className="search-result-list">
+            {results.map((item) => (
+              <a className="search-result" key={item.id} href={`#/atlas/${route}/${item.id}`}>
+                <div><h3>{item.title}</h3><p>{item.purpose}</p></div>
+                <ArrowUpRight size={19} aria-hidden="true" />
               </a>
             ))}
           </div>
-        </>
+        </section>
+      ))}
+      {found.places.length > 0 && (
+        <section className="search-section" id="search-places" tabIndex={-1}>
+          <div className="section-heading">
+            <h2>
+              Clubs &amp; places{" "}
+              <span className="heading-count">{found.places.length}</span>
+            </h2>
+            <a
+              className="text-link"
+              href={`#/atlas/clubs?q=${sourceQuery}&view=list`}
+            >
+              All matching places <ArrowRight size={16} />
+            </a>
+          </div>
+          <div className="search-result-list">
+            {found.places.slice(0, 6).map((item) => (
+              <a
+                className="search-result"
+                href={`#/atlas/clubs?selected=${encodeURIComponent(item.id)}&view=list`}
+                key={item.id}
+              >
+                <div>
+                  <small>
+                    {item.country} · {item.region}
+                  </small>
+                  <h3>{item.name}</h3>
+                  <p>{item.description}</p>
+                </div>
+                <ArrowUpRight size={19} aria-hidden="true" />
+              </a>
+            ))}
+          </div>
+        </section>
       )}
-      {needle && !found.length && !refs.length && !supplierMatches.length && !drillMatches.length && !scenarioMatches.length && (
-        <div className="empty">
-          <h2>No results yet</h2>
-          <p>Try “equipment”, “rules”, “safety”, or “TimberWhales”.</p>
-          <a href="#/atlas/wiki">Browse all articles</a>
+      {found.suppliers.length > 0 && (
+        <section className="search-section" id="search-suppliers" tabIndex={-1}>
+          <div className="section-heading">
+            <h2>
+              Suppliers{" "}
+              <span className="heading-count">{found.suppliers.length}</span>
+            </h2>
+            <a
+              className="text-link"
+              href={`#/atlas/equipment/suppliers?q=${sourceQuery}`}
+            >
+              All matching suppliers <ArrowRight size={16} />
+            </a>
+          </div>
+          <div className="search-result-list">
+            {found.suppliers.slice(0, 6).map((item) => (
+              <a
+                className="search-result"
+                href={`#/atlas/equipment/suppliers?selected=${encodeURIComponent(item.id)}`}
+                key={item.id}
+              >
+                <div>
+                  <small>
+                    {item.country} · {item.categories.join(", ")}
+                  </small>
+                  <h3>{item.name}</h3>
+                  <p>{item.note}</p>
+                </div>
+                <ArrowUpRight size={19} aria-hidden="true" />
+              </a>
+            ))}
+          </div>
+        </section>
+      )}
+      {found.resources.length > 0 && (
+        <section className="search-section" id="search-sources" tabIndex={-1}>
+          <div className="section-heading">
+            <h2>
+              Sources{" "}
+              <span className="heading-count">{found.resources.length}</span>
+            </h2>
+            <a className="text-link" href={`#/atlas/library?q=${sourceQuery}`}>
+              All matching sources <ArrowRight size={16} />
+            </a>
+          </div>
+          <div className="source-list">
+            {found.resources.slice(0, 6).map((item) => (
+              <div key={item.id}>
+                <SourceCard resource={item} compact />
+                <a
+                  className="source-library-link"
+                  href={`#/atlas/library?selected=${encodeURIComponent(item.id)}`}
+                >
+                  Open this source in the library <ArrowUpRight size={14} />
+                </a>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+      {!query.trim() && (
+        <div className="search-suggestions">
+          <h2>A few places to start</h2>
+          <div>
+            <a href={articleHref("first-session")}>
+              Your first session <ArrowRight size={16} />
+            </a>
+            <a href="#/atlas/equipment">
+              Equipment guide <ArrowRight size={16} />
+            </a>
+            <a href="#/atlas/clubs">
+              Clubs &amp; places <ArrowRight size={16} />
+            </a>
+          </div>
         </div>
+      )}
+      {query.trim() && total === 0 && (
+        <EmptyState title="No matches yet">
+          <p>
+            Try a shorter term, a country, or a topic such as “equipment” or
+            “passing”.
+          </p>
+          <a className="text-link" href="#/atlas/learn">
+            Browse learning guides <ArrowRight size={16} />
+          </a>
+        </EmptyState>
       )}
     </div>
   );
 }
+
 createRoot(document.getElementById("root")!).render(
-  <React.StrictMode>
+  <StrictMode>
     <App />
-  </React.StrictMode>,
+  </StrictMode>,
 );
 
 registerOffline();

@@ -15,8 +15,8 @@ test('first load stores all core routes and local assets for offline reload', as
   expect(scope).toBe('http://127.0.0.1:4197/underwater-hockey-atlas/');
   await context.setOffline(true);
   await page.reload();
-  await expect(page.getByRole('heading', { level: 1 })).toContainText('depth of play');
-  for (const route of ['atlas/wiki/passing', 'atlas/glossary/support', 'atlas/world', 'join', 'about', '', 'atlas/search?q=passing', `atlas/drills/${drills[0].id}`, `atlas/board/${scenarios[0].id}`]) {
+  await expect(page.getByRole('heading', { level: 1 })).toHaveText('Hockey, below the surface.');
+  for (const route of ['atlas/learn', 'atlas/library', 'atlas/equipment/suppliers', 'atlas/wiki/passing', 'atlas/glossary/support', 'atlas/world', 'join', 'about', '', 'atlas/search?q=passing', `atlas/drills/${drills[0].id}`, `atlas/board/${scenarios[0].id}`]) {
     await page.goto(`/underwater-hockey-atlas/#/${route}`);
     await page.reload();
     await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
@@ -68,9 +68,20 @@ test('first load stores all core routes and local assets for offline reload', as
       }
     }
   }
-  await page.evaluate(() => document.fonts.ready);
-  const loadedFonts = await page.evaluate(() => Array.from(document.fonts).filter(font => font.status === 'loaded').map(font => font.family.replaceAll('"', '')));
-  expect(loadedFonts).toEqual(expect.arrayContaining(['Archivo', 'Anton']));
+  // Each section uses its own locally hosted typefaces.
+  for (const [route, expectedFonts] of [
+    ['atlas', ['Atlas Sans', 'Atlas Display']],
+    ['', ['Archivo', 'Anton']],
+  ] as const) {
+    await page.goto(`/underwater-hockey-atlas/#/${route}`);
+    await page.reload();
+    await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
+    const loadedFonts = await page.evaluate(async () => {
+      await document.fonts.ready;
+      return Array.from(document.fonts).filter(font => font.status === 'loaded').map(font => font.family.replaceAll('"', ''));
+    });
+    expect(loadedFonts).toEqual(expect.arrayContaining([...expectedFonts]));
+  }
   expect(external).toEqual([]);
 });
 
